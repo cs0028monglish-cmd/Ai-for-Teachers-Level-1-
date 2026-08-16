@@ -630,3 +630,103 @@ html[dir="rtl"] .pop-card h3{font-family:var(--ar); font-weight:700; line-height
 html[dir="rtl"] .gptui{font-family:var(--ar); font-size:15.5px; line-height:1.7}
 html[dir="rtl"] .gpt-sec{font-family:var(--ar); letter-spacing:0; font-size:13.5px;
   font-weight:700; text-transform:none}
+
+/* ============================================================
+   SESSION 2 · The RCTF matching game
+   Drag a fragment of a real prompt into the letter it belongs to.
+   Works with the mouse (drag) and with the keyboard (select, then
+   select the zone). All wording lives in the HTML, never here.
+   ============================================================ */
+.game{margin:22px 0 4px; background:var(--bg-2); border:1px solid var(--line);
+  border-radius:var(--r-lg); padding:22px}
+.game-head{display:flex; align-items:center; justify-content:space-between;
+  gap:14px; flex-wrap:wrap; margin-bottom:14px}
+.game-score{margin:0; font-family:var(--mono); font-size:13px; font-weight:500;
+  letter-spacing:.16em; text-transform:uppercase; color:var(--muted)}
+html[dir="rtl"] .game-score{font-family:var(--ar); letter-spacing:0;
+  text-transform:none; font-size:16px; font-weight:700}
+.game-hint{margin:0 0 14px; font-size:15.5px; line-height:1.6; color:var(--muted)}
+
+.game-board{display:grid; gap:14px}
+@media (min-width:1040px){
+  .game-board{grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr); align-items:start}
+  .game-pool{max-height:560px; overflow:auto}
+  .game-zones{margin-top:0; grid-template-columns:1fr}
+  .zone{min-height:0}
+}
+.game-pool{display:flex; flex-wrap:wrap; gap:10px; min-height:70px; padding:14px;
+  border:1.5px dashed var(--line); border-radius:var(--r-md); background:var(--surface);
+  transition:border-color var(--t-fast) var(--ease)}
+.game-pool.is-over{border-color:var(--accent)}
+.game-pool.is-clear{border-color:var(--signal); border-style:solid}
+
+.frag{display:inline-flex; touch-action:none; align-self:flex-start;
+  user-select:none; -webkit-user-select:none; align-items:center; text-align:start; max-width:100%;
+  cursor:grab; font:inherit; font-size:15.5px; font-weight:500; line-height:1.5;
+  background:var(--surface-2); color:var(--ink-2);
+  border:1px solid var(--line); border-radius:var(--r); padding:11px 15px;
+  transition:border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease)}
+.frag:hover{border-color:var(--brand-lift); color:var(--ink)}
+.frag:focus-visible{outline:3px solid var(--accent); outline-offset:2px}
+.frag.is-held{cursor:grabbing; border-color:var(--accent); background:var(--surface);
+  color:var(--ink); box-shadow:0 0 0 3px oklch(0.623 0.219 31 / .22)}
+.frag.is-dragging{opacity:.3}
+.frag-ghost{position:fixed; z-index:90; pointer-events:none; cursor:grabbing;
+  border-color:var(--accent); background:var(--surface); color:var(--ink);
+  box-shadow:var(--shadow-lift); transform:rotate(-1.2deg)}
+.frag.is-wrong{animation:frag-shake 440ms var(--ease)}
+/* A line that has landed is inert, so a later click passes through to the box behind it */
+.frag.is-set{cursor:default; opacity:1; width:100%; pointer-events:none;
+  border-color:var(--signal); background:var(--surface); color:var(--ink)}
+@keyframes frag-shake{
+  0%,100%{transform:translateX(0)}
+  18%{transform:translateX(-7px)} 38%{transform:translateX(6px)}
+  58%{transform:translateX(-4px)} 78%{transform:translateX(3px)}
+}
+
+.game-zones{display:grid; gap:12px; margin-top:14px;
+  grid-template-columns:repeat(auto-fit,minmax(238px,1fr))}
+.zone{display:flex; flex-direction:column; gap:12px; min-height:172px; padding:14px;
+  background:var(--surface); border:1.5px dashed var(--line);
+  border-radius:var(--r-md); cursor:pointer;
+  transition:border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease)}
+.zone:hover{border-color:var(--brand-lift)}
+.zone:focus-visible{outline:3px solid var(--accent); outline-offset:2px}
+.zone.is-over{border-color:var(--accent); background:var(--surface-2)}
+.zone.is-full{border-style:solid; border-color:var(--signal)}
+.zone-head{display:flex; align-items:center; gap:12px}
+.zone-k{font-family:var(--display); font-size:32px; line-height:1; color:var(--accent-text)}
+.zone-t{font-family:var(--mono); font-size:12.5px; font-weight:500; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--muted)}
+html[dir="rtl"] .zone-t{font-family:var(--ar); letter-spacing:0; text-transform:none;
+  font-size:15.5px; font-weight:700}
+.zone-in{display:flex; flex-direction:column; gap:8px}
+
+.game-msg{margin:16px 0 0; min-height:3.2em; font-size:16.5px; font-weight:600;
+  line-height:1.6; color:var(--muted)}
+.game-msg.is-good{color:var(--signal)}
+.game-msg.is-bad{color:var(--accent-text)}
+.game-msg.is-done{color:var(--lamp)}
+
+@media (prefers-reduced-motion:reduce){
+  .frag.is-wrong{animation:none; outline:2px solid var(--accent); outline-offset:2px}
+}
+
+/* ---- Session 2 · the checklist of what a lesson plan needs ---- */
+.needs{list-style:none; margin:20px 0 4px; padding:0; counter-reset:n;
+  display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(266px,1fr))}
+.needs li{counter-increment:n; position:relative; margin:0; background:var(--bg-2);
+  border:1px solid var(--line-soft); border-radius:var(--r-md);
+  padding:16px 18px 16px 54px; font-size:16.5px; font-weight:700; color:var(--ink);
+  line-height:1.5; transition:border-color var(--t-fast) var(--ease),
+    transform var(--t-fast) var(--out)}
+html[dir="rtl"] .needs li{padding:16px 54px 16px 18px}
+.needs li:hover{border-color:var(--brand-lift); transform:translateY(-2px)}
+.needs li:before{content:counter(n,decimal-leading-zero); position:absolute;
+  inset-inline-start:16px; top:16px; font-family:var(--mono); font-size:13px;
+  font-weight:500; color:var(--accent-text)}
+.needs li small{display:block; margin-top:6px; font-size:15px; font-weight:500;
+  color:var(--ink-2); line-height:1.6}
+.needs li.is-key{border-color:var(--accent-dim); background:var(--surface)}
+.needs li.is-key:before{color:var(--accent)}

@@ -1,0 +1,1351 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-en="Session 2 · AI-powered lesson planning — Level 1 · Edulixa 360" data-ar="المحاضرة 2 · تخطيط الدروس بالذكاء الاصطناعي — المستوى الأول · Edulixa 360">Session 2 · AI-powered lesson planning — Level 1 · Edulixa 360</title>
+<link rel="stylesheet" href="assets/edulixa.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <img src="assets/logo-reversed.png" alt="Edulixa 360">
+      <span class="brand-tag" data-en="AI Masterclass · Level 1" data-ar="الماستر كلاس · المستوى الأول">AI Masterclass · Level 1</span>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn btn-ghost" href="index.html"><svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All sessions" data-ar="كل المحاضرات">All sessions</span></a>
+      <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="Back to all sessions" data-ar="العودة إلى كل المحاضرات">Back to all sessions</span></a>
+    <p class="eyebrow" data-en="Session 2 of 5 · Main tools: ChatGPT and Gemini" data-ar="المحاضرة 2 من 5 · الأدوات الرئيسية: ChatGPT وGemini">Session 2 of 5 · Main tools: ChatGPT and Gemini</p>
+    <h1 class="display" data-en="A lesson plan is only as complete as the request behind it." data-ar="خطة الدرس لا تكتمل أكثر مما اكتمل الطلب الذي أنتجها.">A lesson plan is only as complete as the request behind it.</h1>
+    <p class="lede" data-en="Start with a game that puts the four letters of RCTF back together. Then list everything a perfect lesson plan needs, attach your school's own template and the pages of the book, and run one master prompt that writes the plan — as a Word file, or as a web page that exports its own PDF." data-ar="ابدأ بلعبة تعيد تركيب حروف إطار RCTF الأربعة. ثم اسرد كل ما تحتاجه خطة الدرس المثالية، وأرفق نموذج مدرستك وصفحات الكتاب، وشغِّل أمرًا رئيسيًا واحدًا يكتب الخطة — ملف Word، أو صفحة ويب تصدِّر ملف PDF بنفسها.">Start with a game that puts the four letters of RCTF back together. Then list everything a perfect lesson plan needs, attach your school's own template and the pages of the book, and run one master prompt that writes the plan — as a Word file, or as a web page that exports its own PDF.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#game" data-en="Play the warm-up game" data-ar="ابدأ بلعبة التهيئة">Play the warm-up game</a>
+      <a class="btn btn-outline" href="#master"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg><span data-en="Go straight to the master prompt" data-ar="اذهب مباشرة إلى الأمر الرئيسي">Go straight to the master prompt</span></a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="sec">
+  <div class="wrap">
+    <div class="split">
+
+      <!-- ---------- STICKY RAIL ---------- -->
+      <aside class="rail">
+        <h2 data-en="Session at a glance" data-ar="المحاضرة في لمحة">Session at a glance</h2>
+        <p data-en="Five moves, in order." data-ar="خمس خطوات بالترتيب.">Five moves, in order.</p>
+        <ol>
+          <li data-go="game" data-en="Play: match each line to its letter" data-ar="العب: طابق كل سطر بحرفه">Play: match each line to its letter</li>
+          <li data-go="needs" data-en="List what a perfect lesson plan needs" data-ar="اسرد ما تحتاجه خطة الدرس المثالية">List what a perfect lesson plan needs</li>
+          <li data-go="master" data-en="Attach two files and run the master prompt" data-ar="أرفق ملفين وشغِّل الأمر الرئيسي">Attach two files and run the master prompt</li>
+          <li data-go="webpage" data-en="Rebuild it as an interactive page" data-ar="أعد بناءها صفحة تفاعلية">Rebuild it as an interactive page</li>
+          <li data-go="audit" data-en="Audit the plan that comes back" data-ar="دقِّق الخطة التي تعود إليك">Audit the plan that comes back</li>
+        </ol>
+        <p class="rail-hint" data-en="Select a step to jump to it and switch its light on. Your lights are remembered." data-ar="اختر خطوة للانتقال إليها وإضاءة نورها. تُحفظ الأضواء التي أشعلتها.">Select a step to jump to it and switch its light on. Your lights are remembered.</p>
+        <a class="btn btn-accent" href="#apps" data-en="Open the tools" data-ar="افتح الأدوات">Open the tools</a>
+      </aside>
+
+      <!-- ---------- CONTENT ---------- -->
+      <div>
+
+        <!-- ============ SUMMARY ============ -->
+        <div class="block">
+          <h2 class="display" data-en="Summary of the session" data-ar="ملخص المحاضرة">Summary of the session</h2>
+          <p class="sub" data-en="From the four letters you learned in Session 1 to a lesson plan you can hand to a colleague." data-ar="من الحروف الأربعة التي تعلمتها في المحاضرة الأولى إلى خطة درس تسلِّمها لزميل.">From the four letters you learned in Session 1 to a lesson plan you can hand to a colleague.</p>
+
+          <p data-en="Session 1 gave you RCTF. Session 2 puts it to work on the task that takes the largest share of a teacher's week. Nothing new is added to the frame — the same four questions are simply asked about a lesson instead of a picture, and asked with far more detail, because a lesson plan has far more parts than a photograph." data-ar="أعطتك المحاضرة الأولى إطار RCTF. وتضعه المحاضرة الثانية موضع التنفيذ في المهمة التي تستهلك أكبر جزء من أسبوع المعلم. لا شيء جديد يُضاف إلى الإطار — الأسئلة الأربعة نفسها تُطرح على درس بدلًا من صورة، وتُطرح بتفصيل أكبر بكثير، لأن خطة الدرس أكثر أجزاءً من الصورة.">Session 1 gave you RCTF. Session 2 puts it to work on the task that takes the largest share of a teacher's week. Nothing new is added to the frame — the same four questions are simply asked about a lesson instead of a picture, and asked with far more detail, because a lesson plan has far more parts than a photograph.</p>
+
+          <p data-en="We begin with a game, because a frame you can take apart is a frame you own. Twelve lines from one real, working prompt are shuffled into a pile; your job is to send each line home to R, C, T or F. Then we do the same thing in the opposite direction: we list what a lesson plan needs, and build the prompt out of that list." data-ar="نبدأ بلعبة، لأن الإطار الذي تستطيع تفكيكه هو إطار تملكه. اثنا عشر سطرًا من أمر حقيقي واحد مبعثرة في كومة، ومهمتك أن تعيد كل سطر إلى بيته: R أو C أو T أو F. ثم نفعل الشيء نفسه في الاتجاه المعاكس: نسرد ما تحتاجه خطة الدرس، ونبني الأمر من هذه القائمة.">We begin with a game, because a frame you can take apart is a frame you own. Twelve lines from one real, working prompt are shuffled into a pile; your job is to send each line home to R, C, T or F. Then we do the same thing in the opposite direction: we list what a lesson plan needs, and build the prompt out of that list.</p>
+
+          <h3 data-en="What you will be able to do by the end" data-ar="ما ستكون قادرًا عليه في النهاية">What you will be able to do by the end</h3>
+          <ol class="outputs">
+            <li data-en-html="Read any prompt by its letters<small>Take a finished prompt apart and name which part is R, C, T and F.</small>" data-ar-html="قراءة أي أمر بحروفه<small>فكِّك أمرًا جاهزًا وحدِّد أي جزء منه هو R وC وT وF.</small>">Read any prompt by its letters<small>Take a finished prompt apart and name which part is R, C, T and F.</small></li>
+            <li data-en-html="Name what a plan needs<small>Sixteen ingredients, from the curriculum code to the page border.</small>" data-ar-html="تسمية ما تحتاجه الخطة<small>ستة عشر مكوِّنًا، من الكود المنهجي إلى إطار الصفحة.</small>">Name what a plan needs<small>Sixteen ingredients, from the curriculum code to the page border.</small></li>
+            <li data-en-html="Run one master prompt<small>One editable RCTF prompt — ten fields, source-control rules and a twelve-point quality check.</small>" data-ar-html="تشغيل أمر رئيسي واحد<small>أمر واحد قابل للتعديل بإطار RCTF — عشرة حقول، وقواعد ضبط للمصادر، وقائمة ضبط جودة من اثني عشر بندًا.</small>">Run one master prompt<small>One editable RCTF prompt — ten fields, source-control rules and a twelve-point quality check.</small></li>
+            <li class="is-new" data-en-html="Feed the AI your own documents<small>Attach your school's lesson-plan template and the pages of the student book.</small>" data-ar-html="تغذية الذكاء الاصطناعي بمستنداتك<small>أرفق نموذج إعداد الدرس في مدرستك وصفحات كتاب الطالب.</small>">Feed the AI your own documents<small>Attach your school's lesson-plan template and the pages of the student book.</small></li>
+            <li data-en-html="Ship it two ways<small>A Word file for the archive, and an editable web page that exports its own PDF.</small>" data-ar-html="تسليمها بصورتين<small>ملف Word للأرشيف، وصفحة ويب قابلة للتحرير تصدِّر ملف PDF بنفسها.</small>">Ship it two ways<small>A Word file for the archive, and an editable web page that exports its own PDF.</small></li>
+            <li data-en-html="Audit what comes back<small>Check the plan against your own request before it reaches a class.</small>" data-ar-html="تدقيق ما يعود إليك<small>قارن الخطة بطلبك أنت قبل أن تصل إلى الفصل.</small>">Audit what comes back<small>Check the plan against your own request before it reaches a class.</small></li>
+          </ol>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="The rule carried over from Session 1: " data-ar="القاعدة المنقولة من المحاضرة الأولى: ">The rule carried over from Session 1: </b><span data-en="the AI writes the draft, you approve it. A lesson plan produced here is a draft until a qualified teacher has read every line of it." data-ar="الذكاء الاصطناعي يكتب المسودة، وأنت من يعتمدها. وخطة الدرس المنتَجة هنا تبقى مسودة حتى يقرأ معلم مؤهل كل سطر فيها.">the AI writes the draft, you approve it. A lesson plan produced here is a draft until a qualified teacher has read every line of it.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 1 · THE GAME ============ -->
+        <div class="block" id="game">
+          <h2 class="display" data-en="Part 1 · Send each line home" data-ar="الجزء الأول · أعِد كل سطر إلى بيته">Part 1 · Send each line home</h2>
+          <p class="sub" data-en="Twelve lines from one real prompt. Four letters. Five minutes." data-ar="اثنا عشر سطرًا من أمر حقيقي واحد. أربعة حروف. خمس دقائق.">Twelve lines from one real prompt. Four letters. Five minutes.</p>
+
+          <p data-en="The lines below all come from a single working prompt — the one that produced the course poster further down this page. They have been shuffled. Send each line to the letter whose question it answers: who the AI should be, what it must know, what it must do, or how the result must be delivered." data-ar="الأسطر التالية كلها مأخوذة من أمر واحد عملي — وهو الأمر الذي أنتج ملصق الدورة أسفل هذه الصفحة. وقد جرى خلطها. أرسل كل سطر إلى الحرف الذي يجيب عن سؤاله: من يكون الذكاء الاصطناعي، وما الذي يجب أن يعرفه، وماذا يجب أن يفعل، وكيف تُسلَّم النتيجة.">The lines below all come from a single working prompt — the one that produced the course poster further down this page. They have been shuffled. Send each line to the letter whose question it answers: who the AI should be, what it must know, what it must do, or how the result must be delivered.</p>
+
+          <p class="game-hint" data-en="With a mouse: drag a line into a box. With a keyboard or a touch screen: select the line, then select the box. A line that lands in the wrong box will refuse and shake. The four boxes do not hold equal numbers — a real prompt never divides evenly." data-ar="بالفأرة: اسحب السطر إلى الصندوق. بلوحة المفاتيح أو شاشة اللمس: اختر السطر ثم اختر الصندوق. والسطر الذي يقع في الصندوق الخطأ يرفض ويهتز. والصناديق الأربعة لا تحمل أعدادًا متساوية — فالأمر الحقيقي لا ينقسم بالتساوي أبدًا.">With a mouse: drag a line into a box. With a keyboard or a touch screen: select the line, then select the box. A line that lands in the wrong box will refuse and shake. The four boxes do not hold equal numbers — a real prompt never divides evenly.</p>
+
+          <div class="game" id="rctf-game"
+               data-score-en="Placed {n} of {t}" data-score-ar="وضعت {n} من {t}"
+               data-ok-en="Correct." data-ok-ar="إجابة صحيحة."
+               data-no-en="Not that letter. Read the line again and ask which of the four questions it answers." data-no-ar="ليس هذا الحرف. أعد قراءة السطر واسأل نفسك: عن أي الأسئلة الأربعة يجيب؟"
+               data-held-en="Selected. Now choose the box it belongs in." data-held-ar="تم اختيار السطر. اختر الآن الصندوق الذي ينتمي إليه."
+               data-done-en="All twelve are home. What you are looking at is one complete RCTF prompt — and you have just read it from the inside." data-done-ar="وصلت الأسطر الاثنا عشر كلها إلى بيوتها. ما تنظر إليه الآن أمر RCTF كامل — وقد قرأته للتو من الداخل.">
+
+            <div class="game-head">
+              <p class="game-score" aria-live="polite">Placed 0 of 12</p>
+              <button class="btn btn-ghost" type="button" data-game-reset data-en="Shuffle and start again" data-ar="اخلط وابدأ من جديد">Shuffle and start again</button>
+            </div>
+
+            <div class="game-board">
+            <div class="game-pool">
+
+              <span class="frag" role="button" tabindex="0" id="fr-r1" data-slot="R"
+                data-en="Act as an expert professional portrait photographer and cinematic 3D character designer."
+                data-ar="تصرَّف بصفتك مصوِّر بورتريه محترفًا خبيرًا ومصمِّم شخصيات ثلاثية الأبعاد سينمائية."
+                data-why-en="Role tells the AI whose skill to borrow before it does anything at all."
+                data-why-ar="الدور يخبر الذكاء الاصطناعي بخبرة مَن يستعير قبل أن يبدأ العمل أصلًا.">Act as an expert professional portrait photographer and cinematic 3D character designer.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-c1" data-slot="C"
+                data-en="A seamless cyan-blue studio background with a matching cyan-blue floor."
+                data-ar="خلفية استوديو زرقاء سماوية متصلة بلا فواصل، مع أرضية بالدرجة نفسها."
+                data-why-en="Context is the world the picture lives in — background, floor, light."
+                data-why-ar="السياق هو العالم الذي تعيش فيه الصورة — الخلفية والأرضية والضوء.">A seamless cyan-blue studio background with a matching cyan-blue floor.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-f1" data-slot="F"
+                data-en="Vertical portrait, aspect ratio 2:3, full-body framing, high resolution."
+                data-ar="صورة عمودية، بنسبة أبعاد 2:3، بإطار يشمل الجسم كاملًا، وبدقة عالية."
+                data-why-en="Format is the shape of the delivered file — the part you can measure."
+                data-why-ar="التنسيق هو شكل الملف المسلَّم — وهو الجزء الذي يمكنك قياسه.">Vertical portrait, aspect ratio 2:3, full-body framing, high resolution.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-t1" data-slot="T"
+                data-en="Position the bird at the lower left and the woman on the right, standing slightly behind it."
+                data-ar="ضع الطائر في أسفل اليسار والمرأة على اليمين، واقفة خلفه قليلًا."
+                data-why-en="Task is what actually happens inside the frame — placement, action, relationship."
+                data-why-ar="المهمة هي ما يحدث فعلًا داخل الإطار — الموضع والحركة والعلاقة.">Position the bird at the lower left and the woman on the right, standing slightly behind it.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-c2" data-slot="C"
+                data-en="Exactly two subjects: an elegant middle-aged woman in a beige hijab and a navy blazer."
+                data-ar="شخصان اثنان بالضبط: امرأة أنيقة في منتصف العمر بحجاب بيج وجاكيت كحلي."
+                data-why-en="Say how many subjects there are, or the AI will quietly add one you did not ask for."
+                data-why-ar="حدِّد عدد الأشخاص، وإلا أضاف الذكاء الاصطناعي في صمت شخصًا لم تطلبه.">Exactly two subjects: an elegant middle-aged woman in a beige hijab and a navy blazer.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-r2" data-slot="R"
+                data-en="Act as a photorealistic human artist and an advanced image-compositing specialist."
+                data-ar="تصرَّف بصفتك فنانًا متخصصًا في الواقعية الفوتوغرافية للبشر وخبيرًا متقدمًا في دمج الصور."
+                data-why-en="Two subjects drawn in two different styles need two different specialists — so name both."
+                data-why-ar="موضوعان مرسومان بأسلوبين مختلفين يحتاجان إلى خبيرين مختلفين — فسمِّ الاثنين.">Act as a photorealistic human artist and an advanced image-compositing specialist.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-t2" data-slot="T"
+                data-en="Rest her left forearm across the top of the bird's head, with five relaxed fingers."
+                data-ar="ضع ساعدها الأيسر فوق رأس الطائر، بخمسة أصابع مسترخية."
+                data-why-en="A task written as a physical action is a task you can check in the result."
+                data-why-ar="المهمة المكتوبة كحركة مادية مهمة يمكنك التحقق منها في النتيجة.">Rest her left forearm across the top of the bird's head, with five relaxed fingers.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-f2" data-slot="F"
+                data-en="A straight-on camera angle with a natural 50–70 mm portrait-lens appearance."
+                data-ar="زاوية كاميرا مواجهة مباشرة، بمظهر عدسة بورتريه طبيعية من 50 إلى 70 مم."
+                data-why-en="Camera height and lens are format decisions, not artistic ones."
+                data-why-ar="ارتفاع الكاميرا والعدسة قرارات تنسيق لا قرارات فنية.">A straight-on camera angle with a natural 50–70 mm portrait-lens appearance.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-c3" data-slot="C"
+                data-en="A giant, friendly blue cartoon bird with two long crest feathers and a small orange beak."
+                data-ar="طائر كرتوني أزرق عملاق وودود، بريشتَي عُرف طويلتين ومنقار برتقالي صغير."
+                data-why-en="Every detail you do not describe is a detail the AI invents on your behalf."
+                data-why-ar="كل تفصيلة لا تصفها هي تفصيلة يخترعها الذكاء الاصطناعي نيابة عنك.">A giant, friendly blue cartoon bird with two long crest feathers and a small orange beak.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-f4" data-slot="F"
+                data-en="Render believable anatomy, high-quality materials, accurate lighting and flawless visual integration."
+                data-ar="نفِّذ تشريحًا مقنعًا، وخامات عالية الجودة، وإضاءة دقيقة، ودمجًا بصريًا لا تشوبه شائبة."
+                data-why-en="A quality standard describes the finished file, so it belongs with size, resolution and lens — not with who the AI should be."
+                data-why-ar="معيار الجودة يصف الملف النهائي، فمكانه مع المقاس والدقة والعدسة — لا مع تحديد من يكون الذكاء الاصطناعي.">Render believable anatomy, high-quality materials, accurate lighting and flawless visual integration.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-f3" data-slot="F"
+                data-en="No text, no logos, no watermark, no border, and no extra fingers or toes."
+                data-ar="بلا نصوص، وبلا شعارات، وبلا علامة مائية، وبلا حدود، وبلا أصابع أو أصابع قدم زائدة."
+                data-why-en="What must NOT appear is part of the format. Name it, or it appears."
+                data-why-ar="ما يجب ألا يظهر جزء من التنسيق. سمِّه، وإلا ظهر.">No text, no logos, no watermark, no border, and no extra fingers or toes.</span>
+
+              <span class="frag" role="button" tabindex="0" id="fr-t3" data-slot="T"
+                data-en="Cross her legs casually at the ankles and let her smile confidently at the camera."
+                data-ar="اجعلها تعقد ساقيها بتلقائية عند الكاحلين، وتبتسم بثقة نحو الكاميرا."
+                data-why-en="Pose and expression belong to the task; leave them out and you get a stiff photograph."
+                data-why-ar="الوقفة وتعبير الوجه جزء من المهمة، وإهمالهما يعطيك صورة جامدة.">Cross her legs casually at the ankles and let her smile confidently at the camera.</span>
+
+            </div>
+
+            <div class="game-zones">
+              <div class="zone" data-drop="R" tabindex="0" role="button" data-en-label="Role box — drop the lines that say who the AI should be" data-ar-label="صندوق الدور — أفلت فيه الأسطر التي تحدد من يكون الذكاء الاصطناعي">
+                <div class="zone-head">
+                  <span class="zone-k" aria-hidden="true">R</span>
+                  <span class="zone-t" data-en="Role · who it should be" data-ar="الدور · من يكون">Role · who it should be</span>
+                </div>
+                <div class="zone-in"></div>
+              </div>
+              <div class="zone" data-drop="C" tabindex="0" role="button" data-en-label="Context box — drop the lines that say what the AI must know" data-ar-label="صندوق السياق — أفلت فيه الأسطر التي تحدد ما يجب أن يعرفه">
+                <div class="zone-head">
+                  <span class="zone-k" aria-hidden="true">C</span>
+                  <span class="zone-t" data-en="Context · what it must know" data-ar="السياق · ما يجب أن يعرفه">Context · what it must know</span>
+                </div>
+                <div class="zone-in"></div>
+              </div>
+              <div class="zone" data-drop="T" tabindex="0" role="button" data-en-label="Task box — drop the lines that say what the AI must do" data-ar-label="صندوق المهمة — أفلت فيه الأسطر التي تحدد ما يجب أن يفعله">
+                <div class="zone-head">
+                  <span class="zone-k" aria-hidden="true">T</span>
+                  <span class="zone-t" data-en="Task · what it must do" data-ar="المهمة · ماذا يفعل">Task · what it must do</span>
+                </div>
+                <div class="zone-in"></div>
+              </div>
+              <div class="zone" data-drop="F" tabindex="0" role="button" data-en-label="Format box — drop the lines that say how the result must be delivered" data-ar-label="صندوق التنسيق — أفلت فيه الأسطر التي تحدد كيف تُسلَّم النتيجة">
+                <div class="zone-head">
+                  <span class="zone-k" aria-hidden="true">F</span>
+                  <span class="zone-t" data-en="Format · how it arrives" data-ar="التنسيق · كيف تصل النتيجة">Format · how it arrives</span>
+                </div>
+                <div class="zone-in"></div>
+              </div>
+            </div>
+
+            </div>
+
+            <p class="game-msg" aria-live="polite"></p>
+          </div>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>Why a poster and not a lesson?</b> Because a picture shows you instantly whether the AI obeyed. A lesson plan hides its mistakes inside paragraphs; a picture puts them on the surface. Learn to read the frame here, then take the same eye to your lesson plans." data-ar-html="<b>لماذا ملصق لا درس؟</b> لأن الصورة تُظهر لك فورًا هل نفَّذ الذكاء الاصطناعي أمرك أم لا. خطة الدرس تخفي أخطاءها داخل الفقرات، أما الصورة فتضعها على السطح. تعلَّم قراءة الإطار هنا، ثم انقل العين نفسها إلى خطط دروسك."><b>Why a poster and not a lesson?</b> Because a picture shows you instantly whether the AI obeyed. A lesson plan hides its mistakes inside paragraphs; a picture puts them on the surface. Learn to read the frame here, then take the same eye to your lesson plans.</p>
+          </div>
+
+          <h3 data-en="The whole prompt the twelve lines came from" data-ar="الأمر الكامل الذي جاءت منه الأسطر الاثنا عشر">The whole prompt the twelve lines came from</h3>
+          <p data-en="This is a standalone prompt: it describes every visual detail in words and never refers to a reference photograph. It can rebuild the composition closely, but it cannot reproduce a real person's face without that person's photograph — a limit worth stating plainly to your teachers." data-ar="هذا أمر قائم بذاته: يصف كل تفصيلة بصرية بالكلمات ولا يشير إلى صورة مرجعية إطلاقًا. ويستطيع إعادة بناء التكوين بدقة قريبة، لكنه لا يستطيع إعادة إنتاج ملامح شخص حقيقي دون صورته — وهو قيد يستحق أن تذكره بوضوح لمعلميك.">This is a standalone prompt: it describes every visual detail in words and never refers to a reference photograph. It can rebuild the composition closely, but it cannot reproduce a real person's face without that person's photograph — a limit worth stating plainly to your teachers.</p>
+
+          <p class="prompt-label" data-en="The course-poster prompt — English" data-ar="أمر ملصق الدورة — بالإنجليزية">The course-poster prompt — English</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p-poster-en" data-en="Copy" data-ar="نسخ">Copy</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <textarea class="prompt-box is-tall" id="p-poster-en" spellcheck="false">R — ROLE
+Act as an expert professional portrait photographer, cinematic 3D character designer, photorealistic human artist and advanced image-compositing specialist.
+Create a polished studio portrait that seamlessly combines a naturally photographed professional woman with a premium 3D animated bird.
+
+C — CONTEXT
+Create a full-body vertical studio portrait against a completely seamless cyan-blue background and a matching cyan-blue floor. The scene contains exactly two subjects.
+
+THE WOMAN — on the right of the frame, confident, elegant, middle-aged:
+- A softly oval, naturally proportioned face and light-to-medium warm skin.
+- Visible natural pores, fine expression lines and subtle facial asymmetry.
+- Large but realistically proportioned almond-shaped hazel-green eyes, dark pupils, natural white sclera and small photographic catchlights.
+- Defined upper eyelids with elegant black eyeliner, soft brown eyeshadow, natural lashes and dark, gently arched eyebrows.
+- A straight, naturally proportioned nose, defined cheekbones, softly rounded cheeks and natural rose-coloured lips.
+- A warm, genuinely happy and confident smile, slightly raised cheeks, smiling eyes and a small, tasteful amount of natural white teeth visible.
+- Black wispy fringe visible across her forehead.
+- A beige hijab with delicate lace edging, wrapped neatly around her head, neck and shoulders, and large textured gold hoop earrings.
+- A professionally tailored dark-navy blazer with small gold buttons on the sleeves, a crisp white blouse with a high, simple neckline, matching high-waisted navy tailored trousers and clean white low-top lace-up trainers.
+
+THE BIRD — on the left of the frame, giant, friendly, almost shoulder-height beside her:
+- A large, plump, rounded egg-shaped body in thick, extremely soft sky-blue feathers, with a lighter powder-blue fluffy chest and belly.
+- Two long blue crest feathers rising diagonally from its head.
+- Exactly two enormous oval eyes: bright white sclera, vivid turquoise-blue irises, large centred black pupils, small glossy white catchlights and thin warm-brown rims around both eyes.
+- A small orange-yellow triangular beak and short blue feathered wings resting against its sides.
+- Exactly three short black tail feathers, two short orange legs and two large orange feet with three rounded forward-facing toes each.
+- A sweet, innocent and slightly curious expression.
+
+T — TASK
+Create a warm, professional full-body portrait of the woman posing casually with the giant blue bird.
+- Position the bird in the lower left and centre of the composition, with its complete crest, body, wings, tail, legs and feet visible.
+- Position the woman on the right, standing slightly behind the bird and slightly taller than it.
+- Face her body and head directly toward the camera.
+- Bend her left arm comfortably at the elbow and rest her left forearm naturally across the top-right side of the bird's head, letting her left hand hang gently over its feathers with five anatomically correct, relaxed fingers.
+- Let her right arm hang naturally beside her body.
+- Cross her legs casually at the ankles: left trainer planted on the floor, right foot angled outward and resting lightly on its toes with the heel raised.
+- Give her an upright but relaxed posture and a happy, confident smile toward the camera.
+- Render the woman as genuinely photorealistic: realistic adult facial proportions, natural pores, fine skin texture, subtle expression lines, authentic eyelids, tear lines, iris texture and facial asymmetry, realistic hands, joints, fingernails and fabric folds, and a natural middle-aged appearance. Avoid plastic skin, exaggerated eyes, excessive symmetry and beauty-filter effects.
+- Render the bird in a polished cinematic 3D animation style: dense, individually visible soft feathers, glossy dimensional eyes and rounded, friendly proportions, charming and suitable for an educational brand.
+- Illuminate both subjects with the same soft studio lighting, with believable contact shadows beneath their feet and consistent shadows where her arm touches the bird.
+- Create a cheerful, trustworthy, imaginative and professional atmosphere.
+
+F — FORMAT
+- Vertical portrait image, aspect ratio 2:3, full-body framing, high resolution.
+- Straight-on camera angle, camera positioned at approximately waist-to-chest height, natural 50–70 mm portrait-lens appearance.
+- Sharp focus on both subjects. Soft frontal studio key light, gentle fill light and subtle dimensional rim lighting.
+- Smooth cyan-blue seamless background and floor, with generous clean negative space above the subjects.
+- Photorealistic woman, premium cinematic 3D animated bird, natural colour balance, and highly detailed skin, eyes, hijab lace, fabric, feathers and footwear.
+- No text, logos, watermark or border. No furniture or decorations. No additional characters. No cropped body parts.
+- No extra crest feathers, wings, legs, fingers or toes. No distorted hands or anatomy. No plastic skin. No doll-like human face. No excessive retouching. No blurred faces. No floating objects.
+- Render believable human anatomy, realistic facial detail, high-quality materials, accurate lighting and flawless visual integration, so the photographed woman and the animated bird read as one seamless studio portrait.</textarea>
+
+          <p class="prompt-label" data-en="The course-poster prompt — Arabic" data-ar="أمر ملصق الدورة — بالعربية">The course-poster prompt — Arabic</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p-poster-ar" data-en="Copy" data-ar="نسخ">Copy</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <textarea class="prompt-box is-tall is-ar" id="p-poster-ar" spellcheck="false">R — الدور
+تصرَّف بصفتك مصوِّر بورتريه محترفًا خبيرًا، ومصمِّم شخصيات ثلاثية الأبعاد سينمائية، وفنانًا متخصصًا في الواقعية الفوتوغرافية للبشر، وخبيرًا متقدمًا في دمج الصور.
+أنشئ بورتريه استوديو متقنًا يجمع بسلاسة بين امرأة محترفة مصوَّرة تصويرًا طبيعيًا وطائر ثلاثي الأبعاد فاخر بأسلوب الرسوم المتحركة.
+
+C — السياق
+أنشئ بورتريه استوديو عموديًا يشمل الجسم كاملًا، على خلفية زرقاء سماوية متصلة تمامًا بلا فواصل، مع أرضية بالدرجة نفسها. ويحتوي المشهد على شخصين اثنين بالضبط.
+
+المرأة — على يمين الإطار، واثقة وأنيقة وفي منتصف العمر:
+- وجه بيضاوي ناعم بنسب طبيعية، وبشرة دافئة بين الفاتحة والمتوسطة.
+- مسام طبيعية ظاهرة، وخطوط تعبير دقيقة، وعدم تماثل بسيط في ملامح الوجه.
+- عينان لوزيتان كبيرتان بنسب واقعية بلون عسلي مخضر، وبؤبؤان داكنان، وبياض عين طبيعي، وانعكاسات ضوئية صغيرة.
+- جفنان علويان محددان بكحل أسود أنيق، وظلال عيون بنية ناعمة، ورموش طبيعية، وحاجبان داكنان بانحناءة رقيقة.
+- أنف مستقيم بنسب طبيعية، وعظام وجنتين بارزة، ووجنتان مستديرتان بنعومة، وشفتان بلون وردي طبيعي.
+- ابتسامة دافئة سعيدة وواثقة حقًا، مع ارتفاع بسيط في الوجنتين، وعينين مبتسمتين، وقدر صغير لائق من الأسنان البيضاء الطبيعية.
+- خصلات شعر أسود رفيعة ظاهرة على الجبهة.
+- حجاب بيج بحافة دانتيل رقيقة، ملفوف بعناية حول الرأس والرقبة والكتفين، وقرطان ذهبيان كبيران بملمس بارز.
+- جاكيت كحلي داكن مفصَّل باحتراف بأزرار ذهبية صغيرة على الأكمام، وبلوزة بيضاء أنيقة برقبة عالية بسيطة، وبنطلون كحلي مفصَّل بخصر عالٍ، وحذاء رياضي أبيض نظيف برباط ورقبة منخفضة.
+
+الطائر — على يسار الإطار، عملاق وودود، يكاد يبلغ ارتفاع كتفها:
+- جسم كبير ممتلئ بيضاوي مستدير، بريش أزرق سماوي كثيف وفائق النعومة، وصدر وبطن بلون أزرق باهت أفتح ووبري.
+- ريشتا عُرف زرقاوان طويلتان ترتفعان قطريًا من رأسه.
+- عينان بيضاويتان ضخمتان اثنتان بالضبط: بياض ناصع، وقزحيتان بلون فيروزي زاهٍ، وبؤبؤان أسودان كبيران في المنتصف، وانعكاسات بيضاء لامعة صغيرة، وحافتان رفيعتان بلون بني دافئ حول العينين.
+- منقار مثلثي صغير بلون برتقالي مائل إلى الأصفر، وجناحان قصيران مكسوان بالريش الأزرق ملتصقان بجانبيه.
+- ثلاث ريشات ذيل سوداء قصيرة بالضبط، وساقان برتقاليتان قصيرتان، وقدمان برتقاليتان كبيرتان لكل منهما ثلاثة أصابع مستديرة متجهة إلى الأمام.
+- تعبير لطيف بريء يشوبه فضول خفيف.
+
+T — المهمة
+أنشئ بورتريه دافئًا واحترافيًا يشمل الجسم كاملًا، تقف فيه المرأة بتلقائية إلى جوار الطائر الأزرق العملاق.
+- ضع الطائر في أسفل يسار التكوين وفي وسطه، مع بقاء عُرفه وجسمه وجناحيه وذيله وساقيه وقدميه ظاهرة كاملة.
+- ضع المرأة على اليمين، واقفة خلف الطائر قليلًا وأطول منه قليلًا.
+- اجعل جسدها ورأسها متجهين مباشرة نحو الكاميرا.
+- اثنِ ذراعها الأيسر براحة عند المرفق، وضع ساعدها الأيسر بطبيعية على الجانب العلوي الأيمن من رأس الطائر، مع ترك يدها اليسرى تنسدل برفق فوق ريشه بخمسة أصابع مسترخية وصحيحة تشريحيًا.
+- اترك ذراعها الأيمن منسدلًا بطبيعية إلى جانب جسدها.
+- اجعلها تعقد ساقيها بتلقائية عند الكاحلين: الحذاء الأيسر ثابت على الأرض، والقدم اليمنى مائلة إلى الخارج مستندة برفق على أطراف أصابعها مع رفع الكعب.
+- امنحها وقفة معتدلة لكن مسترخية، وابتسامة سعيدة واثقة نحو الكاميرا.
+- اجعل المرأة واقعية فوتوغرافيًا بحق: نسب وجه بالغة واقعية، ومسام طبيعية، وملمس بشرة دقيق، وخطوط تعبير خفيفة، وجفون وخطوط دمع وملمس قزحية وعدم تماثل حقيقي، ويدان ومفاصل وأظافر وثنيات قماش واقعية، ومظهر طبيعي لسيدة في منتصف العمر. وتجنَّب البشرة البلاستيكية، والعيون المبالغ فيها، والتماثل المفرط، وتأثيرات فلاتر التجميل.
+- اجعل الطائر بأسلوب رسوم متحركة ثلاثية الأبعاد سينمائي متقن: ريش ناعم كثيف تُرى شعيراته فرادى، وعينان لامعتان ذواتا بُعد، ونسب مستديرة ودودة، بمظهر محبب يليق بعلامة تعليمية.
+- أضئ الشخصيتين بالإضاءة الاستوديو الناعمة نفسها، مع ظلال تلامس مقنعة تحت الأقدام، وظلال متسقة حيث تلامس ذراعها الطائر.
+- اصنع أجواء مبهجة وجديرة بالثقة ومفعمة بالخيال والاحتراف.
+
+F — التنسيق
+- صورة بورتريه عمودية، بنسبة أبعاد 2:3، بإطار يشمل الجسم كاملًا، وبدقة عالية.
+- زاوية كاميرا مواجهة مباشرة، والكاميرا على ارتفاع يقارب ما بين الخصر والصدر، بمظهر عدسة بورتريه طبيعية من 50 إلى 70 مم.
+- تركيز حاد على الشخصيتين. وإضاءة مفتاحية أمامية ناعمة، وإضاءة ملء لطيفة، وإضاءة حواف خفيفة تمنح بُعدًا.
+- خلفية وأرضية زرقاء سماوية ناعمة متصلة، مع مساحة فارغة نظيفة وافرة فوق الشخصيتين.
+- امرأة واقعية فوتوغرافيًا، وطائر ثلاثي الأبعاد سينمائي فاخر، وتوازن ألوان طبيعي، وتفاصيل عالية في البشرة والعينين ودانتيل الحجاب والقماش والريش والحذاء.
+- بلا نصوص أو شعارات أو علامة مائية أو حدود. وبلا أثاث أو زينة. وبلا شخصيات إضافية. وبلا أجزاء جسم مقطوعة.
+- بلا ريش عُرف أو أجنحة أو أرجل أو أصابع يد أو أصابع قدم زائدة. وبلا يدين أو تشريح مشوَّه. وبلا بشرة بلاستيكية. وبلا وجه شبيه بالدمية. وبلا تنقيح مفرط. وبلا وجوه ضبابية. وبلا أجسام معلَّقة في الهواء.
+- نفِّذ تشريحًا بشريًا مقنعًا، وتفاصيل وجه واقعية، وخامات عالية الجودة، وإضاءة دقيقة، ودمجًا بصريًا لا تشوبه شائبة، حتى تُقرأ المرأة المصوَّرة والطائر المتحرك كبورتريه استوديو واحد متجانس.</textarea>
+
+          <h3 data-en="What the prompt actually produced" data-ar="ما الذي أنتجه الأمر فعلًا">What the prompt actually produced</h3>
+
+          <div class="pairfig">
+            <figure>
+              <img src="assets/poster-result.png" alt="" data-optional
+                   data-en-label="The poster produced by the course-poster prompt" data-ar-label="الملصق الذي أنتجه أمر ملصق الدورة">
+              <figcaption data-en-html="<b>The result</b>Generated from the written prompt alone, with no photograph attached. The cyan-blue studio, the beige lace hijab, the navy blazer with gold buttons, the white trainers, the crossed ankles and the forearm resting on the bird's head all came from named lines in the prompt." data-ar-html="<b>النتيجة</b>مولَّدة من الأمر المكتوب وحده، دون إرفاق أي صورة. فالاستوديو الأزرق السماوي، والحجاب البيج بحافة الدانتيل، والجاكيت الكحلي بأزراره الذهبية، والحذاء الأبيض، وتعقيد الكاحلين، والساعد المستقر على رأس الطائر — كلها جاءت من أسطر مسمّاة في الأمر."><b>The result</b>Generated from the written prompt alone, with no photograph attached. The cyan-blue studio, the beige lace hijab, the navy blazer with gold buttons, the white trainers, the crossed ankles and the forearm resting on the bird's head all came from named lines in the prompt.</figcaption>
+            </figure>
+          </div>
+
+          <h3 data-en="Now audit it — four instructions were not obeyed" data-ar="والآن دقِّقها — أربع تعليمات لم تُنفَّذ">Now audit it — four instructions were not obeyed</h3>
+          <p data-en="This is the habit worth teaching. Read the picture against your own prompt, line by line, and write down what was ignored. Four things were ignored here, and none of them is the tool being broken — they are the ordinary behaviour of a system that weighs your words rather than executing them." data-ar="هذه هي العادة التي تستحق التعليم. اقرأ الصورة مقابل أمرك أنت، سطرًا بسطر، ودوِّن ما جرى تجاهله. تُجوهلت هنا أربعة أمور، وليس فيها ما يدل على عطل في الأداة — بل هي السلوك الطبيعي لنظام يرجّح كلماتك ولا ينفذها تنفيذًا حرفيًا.">This is the habit worth teaching. Read the picture against your own prompt, line by line, and write down what was ignored. Four things were ignored here, and none of them is the tool being broken — they are the ordinary behaviour of a system that weighs your words rather than executing them.</p>
+          <ul class="ticks is-do">
+            <li data-en="The aspect ratio came back square, not the 2:3 vertical the Format section asked for twice." data-ar="عادت نسبة الأبعاد مربعة، لا 2:3 العمودية التي طلبها قسم التنسيق مرتين.">The aspect ratio came back square, not the 2:3 vertical the Format section asked for twice.</li>
+            <li data-en="The woman is not photorealistic. The bird's 3D animation style spread across the whole picture and took her with it — the commonest failure when one prompt asks for two different styles at once." data-ar="المرأة ليست واقعية فوتوغرافيًا. فقد امتد أسلوب الرسوم ثلاثية الأبعاد الخاص بالطائر إلى الصورة كلها وأخذها معه — وهذا أشيع إخفاق حين يطلب أمر واحد أسلوبين مختلفين في وقت واحد.">The woman is not photorealistic. The bird's 3D animation style spread across the whole picture and took her with it — the commonest failure when one prompt asks for two different styles at once.</li>
+            <li data-en="The bird has more than the two crest feathers it was given, and its tail feathers are not the three plain black ones described." data-ar="للطائر ريش عُرف أكثر من الريشتين المحددتين له، وريش ذيله ليس الريشات السوداء الثلاث الموصوفة.">The bird has more than the two crest feathers it was given, and its tail feathers are not the three plain black ones described.</li>
+            <li data-en="The bird is waist-height, not the shoulder-height the Context section specified." data-ar="ارتفاع الطائر عند الخصر، لا عند الكتف كما حدد قسم السياق.">The bird is waist-height, not the shoulder-height the Context section specified.</li>
+          </ul>
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>What to do about it.</b> Move the ignored instruction to the very first line of the prompt and state it more forcefully; set the aspect ratio in the tool's own settings rather than only in words; and when you need two styles in one frame, generate them separately and combine them. Then run it again — a prompt is a draft too." data-ar-html="<b>وماذا تفعل حيال ذلك.</b> انقل التعليمة المتجاهَلة إلى السطر الأول من الأمر وصُغها بصورة أكثر حزمًا؛ واضبط نسبة الأبعاد من إعدادات الأداة نفسها لا بالكلمات وحدها؛ وإذا احتجت أسلوبين في إطار واحد فولِّدهما منفصلين ثم ادمجهما. ثم أعد التشغيل — فالأمر مسودة هو الآخر."><b>What to do about it.</b> Move the ignored instruction to the very first line of the prompt and state it more forcefully; set the aspect ratio in the tool's own settings rather than only in words; and when you need two styles in one frame, generate them separately and combine them. Then run it again — a prompt is a draft too.</p>
+          </div>
+        </div>
+
+        <!-- ============ PART 2 · WHAT A LESSON PLAN NEEDS ============ -->
+        <div class="block" id="needs">
+          <h2 class="display" data-en="Part 2 · What does a perfect lesson plan need?" data-ar="الجزء الثاني · ما الذي تحتاجه خطة الدرس المثالية؟">Part 2 · What does a perfect lesson plan need?</h2>
+          <p class="sub" data-en="Before you write a single word of the prompt, answer this. Sixteen ingredients — and the AI can supply none of them." data-ar="قبل أن تكتب كلمة واحدة من الأمر، أجب عن هذا السؤال. ستة عشر مكوِّنًا — ولا يستطيع الذكاء الاصطناعي أن يوفر أيًا منها.">Before you write a single word of the prompt, answer this. Sixteen ingredients — and the AI can supply none of them.</p>
+
+          <p data-en="This is the point of the whole session. A weak lesson-planning prompt is not weak because the teacher wrote it badly; it is weak because the teacher had not yet decided what a good plan contains. Decide first. The prompt is only the list, written down in order." data-ar="هذه هي فكرة المحاضرة كلها. الأمر الضعيف لتخطيط الدرس ليس ضعيفًا لأن المعلم كتبه كتابة رديئة، بل لأنه لم يكن قد حسم بعد ما الذي تتضمنه الخطة الجيدة. احسم أولًا. فالأمر ليس إلا القائمة نفسها مكتوبة بالترتيب.">This is the point of the whole session. A weak lesson-planning prompt is not weak because the teacher wrote it badly; it is weak because the teacher had not yet decided what a good plan contains. Decide first. The prompt is only the list, written down in order.</p>
+
+          <ul class="needs">
+            <li data-en-html="Grade, subject and standard<small>Grade 6 · Arabic language, reading · IGCSE. Everything downstream depends on this line.</small>" data-ar-html="الصف والمادة والمعيار<small>الصف السادس · اللغة العربية، قراءة · IGCSE. وكل ما يليه يتوقف على هذا السطر.</small>">Grade, subject and standard<small>Grade 6 · Arabic language, reading · IGCSE. Everything downstream depends on this line.</small></li>
+            <li data-en-html="Lesson title and topic<small>&quot;An Adventure with Flashback&quot; — adventure narrative and the treatment of time.</small>" data-ar-html="عنوان الدرس وموضوعه<small>«مغامرة مع الفلاش باك» — السرد المغامر ومعالجة الزمن.</small>">Lesson title and topic<small>"An Adventure with Flashback" — adventure narrative and the treatment of time.</small></li>
+            <li data-en-html="Duration and lesson type<small>Ninety minutes, one period, student-centred rather than teacher-led.</small>" data-ar-html="المدة ونوع الدرس<small>تسعون دقيقة، حصة واحدة، متمركز حول الطالب لا حول المعلم.</small>">Duration and lesson type<small>Ninety minutes, one period, student-centred rather than teacher-led.</small></li>
+            <li class="is-key" data-en-html="Delivery mode and platform<small>Face-to-face, online or blended — and if online, which platform. It changes every cooperative activity in the plan.</small>" data-ar-html="نمط التقديم والمنصة<small>حضوري أو عن بُعد أو مدمج — وإن كان عن بُعد فأي منصة. فهو يغيّر كل نشاط تعاوني في الخطة.</small>">Delivery mode and platform<small>Face-to-face, online or blended — and if online, which platform. It changes every cooperative activity in the plan.</small></li>
+            <li data-en-html="The teaching framework, stage by stage<small>Warm-up · vocabulary · prediction · gist · specific information · detailed analysis · production · closure.</small>" data-ar-html="الإطار التدريسي مرحلة مرحلة<small>التهيئة · المفردات · التنبؤ · الفكرة العامة · معلومات محددة · التحليل التفصيلي · الإنتاج · الإغلاق.</small>">The teaching framework, stage by stage<small>Warm-up · vocabulary · prediction · gist · specific information · detailed analysis · production · closure.</small></li>
+            <li data-en-html="Objectives model and curriculum codes<small>SMART objectives across all six Bloom levels, each tied to 6Rs.01 or 6Rs.02.</small>" data-ar-html="نموذج الأهداف والأكواد المنهجية<small>أهداف SMART تغطي مستويات بلوم الستة، وكل هدف مرتبط بالكود 6Rs.01 أو 6Rs.02.</small>">Objectives model and curriculum codes<small>SMART objectives across all six Bloom levels, each tied to 6Rs.01 or 6Rs.02.</small></li>
+            <li class="is-key" data-en-html="The DOK level of every activity<small>Recall → Apply → Analyse → Create. Name the level in the procedures table and make the lesson climb the ladder, not sit on one rung.</small>" data-ar-html="درجة عمق المعرفة لكل نشاط<small>التذكر ← التطبيق ← التحليل ← الإبداع. سمِّ الدرجة في جدول الإجراءات، واجعل الدرس يصعد السلم لا يجلس على درجة واحدة.</small>">The DOK level of every activity<small>Recall → Apply → Analyse → Create. Name the level in the procedures table and make the lesson climb the ladder, not sit on one rung.</small></li>
+            <li data-en-html="The columns of the procedures table<small>Stage · student actions · cooperative learning · differentiated activity · time in minutes.</small>" data-ar-html="أعمدة جدول الإجراءات<small>المرحلة · إجراءات الطلاب · التعلم التعاوني · النشاط التفريقي · الزمن بالدقائق.</small>">The columns of the procedures table<small>Stage · student actions · cooperative learning · differentiated activity · time in minutes.</small></li>
+            <li data-en-html="How the comprehension questions map to the stages<small>Q1 gist · Q2a–c specific information · Q3–5 analysis and inference.</small>" data-ar-html="ربط أسئلة الفهم بالمراحل<small>السؤال 1 للفكرة العامة · الأسئلة 2أ–ج للمعلومات المحددة · الأسئلة 3–5 للتحليل والاستنتاج.</small>">How the comprehension questions map to the stages<small>Q1 gist · Q2a–c specific information · Q3–5 analysis and inference.</small></li>
+            <li data-en-html="Formative assessment<small>Padlet, peer correction and instant polling — evidence gathered while the lesson runs.</small>" data-ar-html="التقويم البنائي<small>بادليت، وتصحيح الأقران، والتصويت الفوري — شواهد تُجمع أثناء سير الدرس.</small>">Formative assessment<small>Padlet, peer correction and instant polling — evidence gathered while the lesson runs.</small></li>
+            <li data-en-html="Summative assessment and its criteria<small>A flashback paragraph judged on idea, inference, vocabulary and organisation.</small>" data-ar-html="التقويم الختامي ومعاييره<small>فقرة بالفلاش باك تُقوَّم على الفكرة والاستدلال والمفردات والتنظيم.</small>">Summative assessment and its criteria<small>A flashback paragraph judged on idea, inference, vocabulary and organisation.</small></li>
+            <li data-en-html="Digital tools, matched to stages<small>Padlet · Mentimeter · Kahoot · Quizizz · Wordwall · Nearpod · Canva · Google Forms — each only where it serves the stage.</small>" data-ar-html="الأدوات الرقمية موزَّعة على المراحل<small>Padlet · Mentimeter · Kahoot · Quizizz · Wordwall · Nearpod · Canva · Google Forms — كل أداة حيث تخدم مرحلتها فقط.</small>">Digital tools, matched to stages<small>Padlet · Mentimeter · Kahoot · Quizizz · Wordwall · Nearpod · Canva · Google Forms — each only where it serves the stage.</small></li>
+            <li class="is-key" data-en-html="The AI tools, and the rules for them<small>MagicSchool AI · Diffit for Teachers · Google Gemini · Claude. Say what each one is for, link it, and keep the safeguard: AI supports preparation and differentiation only — the book stays authoritative.</small>" data-ar-html="أدوات الذكاء الاصطناعي وضوابطها<small>MagicSchool AI · Diffit for Teachers · Google Gemini · Claude. حدِّد وظيفة كل أداة، واربطها برابط، والتزم بالضابط: الذكاء الاصطناعي يدعم التحضير والتمايز فقط — ويبقى الكتاب هو المرجع.</small>">The AI tools, and the rules for them<small>MagicSchool AI · Diffit for Teachers · Google Gemini · Claude. Say what each one is for, link it, and keep the safeguard: AI supports preparation and differentiation only — the book stays authoritative.</small></li>
+            <li data-en-html="A closing Socratic exit ticket<small>One deep reflective question, built on the DOK ladder, linking the text to real life.</small>" data-ar-html="بطاقة خروج سقراطية للإغلاق<small>سؤال تأملي عميق واحد، مبني على سلم عمق المعرفة، يربط النص بالحياة الواقعية.</small>">A closing Socratic exit ticket<small>One deep reflective question, built on the DOK ladder, linking the text to real life.</small></li>
+            <li data-en-html="Language and typography rules<small>Arabic, right-to-left, UTF-8, Arial, and every numeral in Arabic-Indic form.</small>" data-ar-html="قواعد اللغة والإخراج الطباعي<small>العربية، من اليمين إلى اليسار، ترميز UTF-8، وخط Arial، وكل رقم بالصورة العربية.</small>">Language and typography rules<small>Arabic, right-to-left, UTF-8, Arial, and every numeral in Arabic-Indic form.</small></li>
+            <li class="is-key" data-en-html="Your school's own documents<small>The official lesson-plan template and the pages of the student book. Without these the AI invents a text, invents questions, and hands you a plan that belongs to no school.</small>" data-ar-html="مستندات مدرستك أنت<small>نموذج إعداد الدرس الرسمي وصفحات كتاب الطالب. وبدونهما يخترع الذكاء الاصطناعي نصًا، ويخترع أسئلة، ويسلِّمك خطة لا تنتمي إلى أي مدرسة.</small>">Your school's own documents<small>The official lesson-plan template and the pages of the student book. Without these the AI invents a text, invents questions, and hands you a plan that belongs to no school.</small></li>
+          </ul>
+
+          <h3 data-en="Where each ingredient sits in the frame" data-ar="أين يقع كل مكوِّن داخل الإطار">Where each ingredient sits in the frame</h3>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th data-en="RCTF" data-ar="الإطار">RCTF</th>
+                  <th data-en="English" data-ar="بالإنجليزية">English</th>
+                  <th data-en="العربية" data-ar="بالعربية">العربية</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="k">R</td>
+                  <td class="en"><b>Role</b> — a certified Arabic teacher and instructional designer working to IGCSE standards.</td>
+                  <td class="ar"><b>الدور</b> — معلم لغة عربية معتمد ومصمم تعليمي يعمل وفق معايير IGCSE.</td>
+                </tr>
+                <tr>
+                  <td class="k">C</td>
+                  <td class="en"><b>Context</b> — grade, subject, title, topic, duration, delivery mode and platform, the frameworks, the codes, the AI tools you own, and the two attached files.</td>
+                  <td class="ar"><b>السياق</b> — الصف والمادة والعنوان والموضوع والمدة ونمط التقديم والمنصة والأطر المرجعية والأكواد وأدوات الذكاء الاصطناعي المتاحة والملفان المرفقان.</td>
+                </tr>
+                <tr>
+                  <td class="k">T</td>
+                  <td class="en"><b>Task</b> — the stages, the objectives, the DOK climb, the tables, the questions, the assessment, the AI ground rules and the closure.</td>
+                  <td class="ar"><b>المهمة</b> — المراحل والأهداف وتدرُّج عمق المعرفة والجداول والأسئلة والتقويم وضوابط الذكاء الاصطناعي والإغلاق.</td>
+                </tr>
+                <tr>
+                  <td class="k">F</td>
+                  <td class="en"><b>Format</b> — the file type, the language and direction, the fonts, the colours, the shading and the page frame.</td>
+                  <td class="ar"><b>التنسيق</b> — نوع الملف واللغة والاتجاه والخطوط والألوان والتظليل وإطار الصفحة.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ============ PART 3 · THE MASTER PROMPT ============ -->
+        <div class="block" id="master">
+          <h2 class="display" data-en="Part 3 · Attach two files, then paste one prompt" data-ar="الجزء الثالث · أرفق ملفين، ثم الصق أمرًا واحدًا">Part 3 · Attach two files, then paste one prompt</h2>
+          <p class="sub" data-en="Five instructions, then the master prompt. Fill in the highlighted fields and copy the whole thing into ChatGPT." data-ar="خمس تعليمات، ثم الأمر الرئيسي. املأ الحقول المميزة وانسخه كاملًا إلى ChatGPT.">Five instructions, then the master prompt. Fill in the highlighted fields and copy the whole thing into ChatGPT.</p>
+
+          <p data-en="An AI that has not seen your school's template invents a template. One that has not seen the book invents the text and the questions to go with it. Attach both files first." data-ar="الذكاء الاصطناعي الذي لم يرَ نموذج مدرستك يخترع نموذجًا. والذي لم يرَ الكتاب يخترع النص والأسئلة معه. فأرفق الملفين أولًا.">An AI that has not seen your school's template invents a template. One that has not seen the book invents the text and the questions to go with it. Attach both files first.</p>
+
+          <ul class="ticks is-do">
+            <li data-en="Open a new chat in ChatGPT and select the plus button beside the message box." data-ar="افتح محادثة جديدة في ChatGPT واختر زر الإضافة بجوار صندوق الرسالة.">Open a new chat in ChatGPT and select the plus button beside the message box.</li>
+            <li data-en="Attach your school's official lesson-plan template." data-ar="أرفق نموذج إعداد الدرس الرسمي في مدرستك.">Attach your school's official lesson-plan template.</li>
+            <li data-en="Attach the pages of the student book for this lesson. If the book is not a file, photograph each page straight on, in good light, with the whole page inside the frame." data-ar="أرفق صفحات كتاب الطالب الخاصة بهذا الدرس. وإذا لم يكن الكتاب ملفًا، فصوِّر كل صفحة من زاوية مستقيمة وبإضاءة جيدة مع دخول الصفحة كاملة في الإطار.">Attach the pages of the student book for this lesson. If the book is not a file, photograph each page straight on, in good light, with the whole page inside the frame.</li>
+            <li data-en="Fill in the eleven highlighted fields below — select a field and type over it." data-ar="املأ الحقول الأحد عشر المميزة أدناه — اختر الحقل واكتب فوقه.">Fill in the eleven highlighted fields below — select a field and type over it.</li>
+            <li data-en="Copy the whole prompt and send it in the same message as the two attachments." data-ar="انسخ الأمر كاملًا وأرسله في الرسالة نفسها مع المرفقين.">Copy the whole prompt and send it in the same message as the two attachments.</li>
+          </ul>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>What makes this prompt strict.</b> It has a set of source-control rules — copy the textbook questions exactly, never renumber them, never invent a &quot;5d&quot;, stop and ask if an attachment is missing — and it ends with a twelve-point quality-control checklist the AI must run before it hands you the file. Those two blocks are what stop a convincing but invented lesson plan." data-ar-html="<b>ما الذي يجعل هذا الأمر صارمًا.</b> فيه مجموعة قواعد لضبط المصادر — انسخ أسئلة الكتاب حرفيًا، ولا تعِد ترقيمها، ولا تخترع سؤالًا مثل «5د»، وتوقّف واطلب المرفق إن كان ناقصًا — وينتهي بقائمة ضبط جودة من اثني عشر بندًا يجب أن ينفذها الذكاء الاصطناعي قبل تسليم الملف. وهذان الجزءان هما ما يمنع خطة درس مقنعة لكنها مخترعة."><b>What makes this prompt strict.</b> It has a set of source-control rules — copy the textbook questions exactly, never renumber them, never invent a "5d", stop and ask if an attachment is missing — and it ends with a twelve-point quality-control checklist the AI must run before it hands you the file. Those two blocks are what stop a convincing but invented lesson plan.</p>
+          </div>
+
+          <p class="prompt-label" data-en="The master prompt — English" data-ar="الأمر الرئيسي — بالإنجليزية">The master prompt — English</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p-plan-en" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p-plan-en" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall" id="p-plan-en" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable master lesson-plan prompt in English" data-ar-label="الأمر الرئيسي لخطة الدرس بالإنجليزية، قابل للتعديل"># RCTF MASTER PROMPT — INTEGRATED STUDENT-CENTRED LESSON PLAN
+
+## R — ROLE
+Act as:
+* A certified <span class="ph">English-language</span> teacher working to Cambridge Primary/Lower Secondary and IGCSE standards.
+* A professional instructional designer.
+* An expert in student-centred reading instruction.
+* A specialist in Bloom's Revised Taxonomy and Depth of Knowledge (DOK).
+* An expert in mixed-ability differentiation, cooperative learning and assessment.
+* A professional Microsoft Word document designer.
+Produce a practical, academically rigorous lesson plan that can be used directly in the classroom.
+Read every attachment completely before writing or designing anything.
+
+## C — CONTEXT
+The teacher will provide:
+1. The school's official lesson-plan template.
+2. The relevant student-book pages.
+3. The following lesson information:
+* Grade/Stage: <span class="ph">Grade 6</span>
+* Subject: <span class="ph">English — Reading</span>
+* Lesson title: <span class="ph">An Adventure with Flashback</span>
+* Topic: <span class="ph">adventure narrative and the treatment of time through flashback</span>
+* Duration: <span class="ph">90 minutes</span>
+* Class profile: <span class="ph">mixed ability</span>
+* Curriculum codes: <span class="ph">6Rs.01 · 6Rs.02</span>
+* Previous learning: <span class="ph">adventure stories, simple and compound sentences</span>
+* Required language: <span class="ph">English</span>
+* Delivery mode: <span class="ph">face-to-face (alternatives: online · blended)</span>
+
+### Source-control rules
+* Read the school template and all student-book pages before writing.
+* Reproduce the school template's essential headings, labels and required fields.
+* Use only the supplied student-book text, vocabulary, examples and comprehension questions.
+* Copy textbook questions exactly, preserving their numbering and wording.
+* Do not invent, rewrite, simplify, paraphrase, split or renumber textbook questions.
+* Do not create an additional question such as "5d" if it does not appear as a separate question in the book.
+* Do not invent textual evidence, page content, quotations or answers.
+* If an essential attachment is missing or unreadable, stop and request it.
+* If the school template conflicts with these instructions, preserve the template's required administrative fields while following the integrated instructional structure below.
+* Do not pre-complete the teacher's post-lesson reflection as if the lesson has already been delivered.
+* Adapt every cooperative structure to the delivery mode named above: breakout rooms and a shared board if the lesson is online, seating and grouping if it is face-to-face.
+
+## T — TASK
+Create one complete, student-centred lesson plan using the following exact order and structure.
+
+### 1. Document opening
+Include:
+* The school template title.
+* Lesson title.
+* A centred subtitle containing the grade, subject/topic and total duration.
+* An introductory information table containing only:
+  * Class
+  * Date
+  * Lesson
+  * Previous learning
+Do not place the learning objectives inside this introductory table.
+
+### 2. Learning objectives
+Place the complete learning-objectives section only once, immediately before the Plan.
+Do not repeat the objectives anywhere else.
+Create a three-column table:
+| Bloom level | Learning objective | Code |
+Write six SMART objectives covering:
+1. Remember
+2. Understand
+3. Apply
+4. Analyse
+5. Evaluate
+6. Create
+Requirements:
+* Begin each objective with a measurable outcome.
+* Make every objective achievable within the lesson duration.
+* Connect every objective to one of the supplied curriculum codes.
+* Include measurable evidence such as accuracy, number of responses, textual evidence, word count or rubric score.
+* Ensure that the objectives progress from lower-order to higher-order thinking.
+
+### 3. Integrated Plan
+Create one integrated Plan table. This must be the main instructional core of the document.
+Use exactly five columns:
+| Stage | Student actions / Planned activities | Cooperative learning | Differentiated activity | Time in minutes |
+Include exactly eight stages:
+1. Warm-up
+2. Vocabulary teaching
+3. Prediction
+4. Gist reading
+5. Specific information
+6. Detailed reading analysis
+7. Application and production
+8. End/Close/Reflection/Summary
+The time allocations must equal the total lesson duration exactly.
+Write procedures from the students' perspective. Describe what students do, say, read, discuss, analyse, perform, write or reflect on — not a list of teacher actions.
+
+Stage 1: Warm-up
+Students should:
+* Activate prior knowledge.
+* Respond to a short hook or instant poll.
+* Connect the lesson title, topic or image to previous learning.
+Use a suitable strategy such as Think–Pair–Share.
+
+Stage 2: Vocabulary teaching
+Students should:
+* Learn only vocabulary found in the supplied pages.
+* Infer meanings from context before checking them.
+* Match words to meanings.
+* Use the words orally or in short contextual sentences.
+Use mixed-attainment vocabulary groups or triads.
+
+Stage 3: Prediction
+Students should:
+* Examine the supplied title, illustrations, cover or visible textual clues.
+* Make evidence-based predictions.
+* Explain each prediction using a visible clue.
+Use Gallery Walk, Walk-and-Talk or Prediction–Evidence Pairs.
+
+Stage 4: Gist reading
+Students should:
+* Read the supplied extract.
+* Identify the main situation, main idea or narrative viewpoint.
+* Complete the textbook's main-idea/gist question.
+Insert the exact wording and number of the relevant textbook question directly inside this stage's "Student actions / Planned activities" cell.
+Do not place it in a separate comprehension-question section.
+Use paired reading, alternating reading, echo reading or another appropriate cooperative structure.
+
+Stage 5: Specific information
+Students should:
+* Scan and reread the text.
+* Answer the textbook's specific-information questions.
+* Highlight or identify the exact evidence supporting each answer.
+Insert the exact wording and numbering of all relevant specific-information questions directly inside this stage's "Student actions / Planned activities" cell.
+Do not paraphrase or list these questions elsewhere.
+Use Numbered Heads Together, reciprocal roles or another suitable cooperative strategy.
+
+Stage 6: Detailed reading analysis
+Students should:
+* Answer the supplied analysis and inference questions.
+* Analyse relevant structural or linguistic features.
+* Find textual evidence.
+* Explain the effect created by the writer.
+* Evaluate the writer's success when required by the textbook.
+Insert the exact wording and numbering of all relevant analysis and inference questions directly inside this stage's "Student actions / Planned activities" cell.
+Use Jigsaw Expert Groups:
+* Assign different questions or features to expert groups.
+* Let experts analyse their assigned focus.
+* Return experts to their home groups to teach their findings.
+
+Stage 7: Application and production
+Students should:
+* Complete the textbook's application or production questions.
+* Participate in an appropriate speaking or performance task.
+* Produce the required oral or written response.
+* Apply the lesson's vocabulary, structure, viewpoint or language features.
+Insert the exact wording and numbering of all relevant application and production questions directly inside this stage's "Student actions / Planned activities" cell.
+Use Hot-Seating, role-play, oral summary, peer rehearsal or another appropriate production strategy.
+Include peer feedback using a structure such as "Two Stars and a Wish".
+
+Stage 8: End/Close/Reflection/Summary
+Integrate the entire closure into this final Plan row.
+Do not create a separate Closure section after the Plan.
+Include four DOK-aligned exit-ticket prompts inside the "Student actions / Planned activities" cell:
+* DOK 1 — Recall
+* DOK 2 — Skill/Concept
+* DOK 3 — Strategic Thinking
+* DOK 4 — Extended Thinking
+End the cell with one deep Socratic reflective question that connects:
+* The text's central idea.
+* The lesson's treatment of time, structure or perspective.
+* The learner's real life, experiences, decisions or judgement of others.
+Students must first commit to an individual response and may then discuss it through a Socratic Pair-Share or Reflective Circle.
+Do not repeat the DOK prompts or Socratic question in a separate section.
+
+### 4. Differentiation inside the Plan
+Every Plan row must contain a different differentiated activity.
+Use the following three-tier structure explicitly:
+* Support: scaffolds such as visual cues, audio support, highlighted text, sentence stems, vocabulary cards, evidence banks or guided charts.
+* Core: the expected grade-level task.
+* Extension: deeper inference, evaluation, comparison, alternative writing, structural analysis or independent creation.
+Do not use the same differentiation in every stage.
+Differentiation must respond to the actual demands of that stage.
+
+### 5. Student success criteria
+After the integrated Plan, add a concise two-column table:
+| Success criterion | Evidence of success |
+Begin the criterion with: I can…
+Include evidence that learners can:
+* Identify the main idea or viewpoint.
+* Support answers with exact textual evidence.
+* Explain the effect of structural or language choices.
+* Understand the treatment of time.
+* Participate in the lesson's cooperative production task.
+* Create the required written or oral response.
+
+### 6. Assessment
+Create an Assessment section with two subsections.
+
+Formative assessment
+Include only assessment methods that genuinely support the Plan, such as:
+* Padlet evidence posts.
+* Peer correction.
+* Instant polling.
+* Cooperative questioning.
+* Teacher observation.
+* Immediate digital feedback.
+Explain where each method occurs and what evidence it collects.
+
+Summative assessment
+Create a short written task aligned with the lesson's highest-level objective and the supplied textbook task.
+State:
+* Required perspective or text type.
+* Expected length.
+* Required lesson features.
+* Required vocabulary or sentence structures.
+* Expected organisation.
+Create a 16-mark analytic rubric with exactly five columns:
+| Criterion | 4 — Exceeding | 3 — Meeting | 2 — Developing | 1 — Needs support |
+Use four criteria:
+1. Idea and task integration
+2. Inference and perspective
+3. Vocabulary and sentence structure
+4. Organisation and flow
+Write specific performance descriptors for every level.
+Add these performance bands:
+* 13–16: Exceeding/Secure
+* 9–12: Meeting/Developing securely
+* 5–8: Emerging
+* 0–4: Substantial support needed
+
+### 7. AI and interactive digital tools
+Create a four-column table:
+| Stage | Tool (active link) | Type of activity | Purpose |
+Choose tools only where they genuinely improve the stage.
+Select from:
+* Mentimeter
+* Wordwall
+* Nearpod
+* Padlet
+* Quizizz
+* Kahoot
+* Canva
+* Google Forms
+Requirements:
+* Use the official website for every tool.
+* Make the tool name a real clickable hyperlink in the Word document.
+* State the specific classroom activity.
+* State the instructional or assessment purpose.
+* Do not include a tool merely to increase the number of technologies.
+* Ensure that digital tools support rather than replace reading, discussion and textual analysis.
+* Include the Stage 8 digital exit-ticket tool in this table only; do not recreate the closure questions outside the Plan.
+
+### 8. Recommended teacher AI tools
+Create a two-column table:
+| AI tool (active link) | Best use in this lesson |
+Include suitable teacher-support tools such as:
+* MagicSchool AI
+* Diffit for Teachers
+* Google Gemini
+* Claude
+Make every tool name a clickable link to its official website.
+Explain how each tool could support:
+* Differentiation.
+* Vocabulary scaffolding.
+* Model responses.
+* DOK-aligned prompts.
+* Rubric-supported feedback.
+* Sentence-building support.
+Add this safeguard beneath the table:
+Teacher safeguard: AI tools support preparation and differentiation only. The supplied textbook extract and questions remain authoritative and must not be rewritten or replaced.
+
+### 9. Reflection
+Preserve the school template's Reflection section.
+Include the template's original reflective questions.
+Do not supply model answers or claim that particular activities succeeded.
+The reflection must remain available for the teacher to complete after delivering the lesson.
+
+### 10. Next steps
+Preserve the school template's Next Steps heading and its original guiding question.
+Leave the response open for the teacher to complete after reviewing learner performance.
+Do not create a separate closure or comprehension-question section before this point.
+
+## F — FORMAT
+Deliver one editable Microsoft Word document in .docx format.
+
+Page and typography
+* Page size: A4 portrait.
+* Encoding: UTF-8.
+* Body font: Arial.
+* Body colour: charcoal #111111.
+* Main body size: 14 pt.
+* Plan-table text may be reduced slightly, when necessary, to fit exact textbook questions legibly.
+* Title: 22 pt, bold, centred, dark navy #0A2A66.
+* Subtitle: 16 pt, centred.
+* Section headings: 18 pt, bold, dark navy #0A2A66.
+* Subsection headings: 15–16 pt, bold, dark navy.
+* Place a dark navy divider beneath major section headings.
+* Add a dark navy page frame around every page.
+* Include a centred page-number footer.
+
+Tables
+* Every table must have a visible named header row.
+* Header-row fill: light grey #DDDDDD.
+* Header text: bold dark navy #0A2A66.
+* Table borders: dark navy #0A2A66, approximately 1.5 pt.
+* Do not use extremely thick borders.
+* Use consistent cell padding and vertical alignment.
+* Allow rows to expand naturally.
+* Do not clip, overlap or truncate text.
+* Repeat table headers across pages when a table continues.
+* Keep each instructional stage together whenever possible.
+* Use alternating row fills: light grey #F2F2F2 and slightly darker grey #E6E6E6.
+* Use alternating light-blue shades where appropriate for digital-tool tables.
+
+Structural prohibitions
+The document must not contain:
+* A repeated learning-objectives section.
+* Learning objectives inside both the opening table and a second table.
+* A standalone "Comprehension Questions" section.
+* A standalone question-mapping table.
+* A standalone "Closure" section.
+* A separate DOK table after the Plan.
+* Reworded or invented textbook questions.
+* Pre-completed post-lesson reflections.
+* Decorative borders so thick that they dominate the page.
+* Unlinked tool names when official hyperlinks are requested.
+
+Quality-control checklist
+Before delivering the document:
+1. Confirm that the objectives appear only once and immediately before the Plan.
+2. Confirm that the eight Plan stages total exactly the stated lesson duration.
+3. Confirm that every textbook question appears exactly once inside its relevant Plan row.
+4. Confirm that all DOK and Socratic closure prompts appear only inside Stage 8.
+5. Confirm that the Plan is written from the students' perspective.
+6. Confirm that every stage has a distinct cooperative strategy or participation structure.
+7. Confirm that every stage contains Support, Core and Extension differentiation.
+8. Confirm that every interactive and AI tool name is a working clickable hyperlink.
+9. Confirm that the Reflection and Next Steps sections follow the school template.
+10. Render the Word document and visually inspect every page.
+11. Correct all clipping, row splitting, overlap, orphaned text, inconsistent borders and unnecessary blank pages.
+12. Deliver only the final verified .docx.</div>
+
+          <p class="prompt-label" data-en="The master prompt — Arabic" data-ar="الأمر الرئيسي — بالعربية">The master prompt — Arabic</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p-plan-ar" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p-plan-ar" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall is-ar" id="p-plan-ar" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable master lesson-plan prompt in Arabic" data-ar-label="الأمر الرئيسي لخطة الدرس بالعربية، قابل للتعديل"># أمر RCTF الرئيسي — خطة درس متكاملة متمركزة حول الطالب
+
+## R — الدور
+تصرَّف بصفتك:
+* معلِّم <span class="ph">اللغة الإنجليزية</span> معتمدًا يعمل وفق معايير كامبريدج للمرحلتين الابتدائية والمتوسطة الدنيا ومعايير IGCSE.
+* مصمِّمًا تعليميًا محترفًا.
+* خبيرًا في التدريس القرائي المتمركز حول الطالب.
+* متخصصًا في تصنيف بلوم المعدَّل ومستويات عمق المعرفة DOK.
+* خبيرًا في تمايز الفصول متعددة المستويات، والتعلم التعاوني، والتقويم.
+* مصمِّم مستندات Microsoft Word محترفًا.
+أنتج خطة درس عملية ورصينة أكاديميًا يمكن استخدامها مباشرة داخل الفصل.
+واقرأ كل مرفق قراءة كاملة قبل أن تكتب أو تصمِّم أي شيء.
+
+## C — السياق
+سيوفِّر المعلم:
+1. نموذج إعداد الدرس الرسمي في المدرسة.
+2. صفحات كتاب الطالب ذات الصلة.
+3. معلومات الدرس التالية:
+* الصف / المرحلة: <span class="ph">الصف السادس</span>
+* المادة: <span class="ph">اللغة الإنجليزية — قراءة</span>
+* عنوان الدرس: <span class="ph">مغامرة مع الفلاش باك</span>
+* الموضوع: <span class="ph">السرد المغامر ومعالجة الزمن عبر الاسترجاع الزمني</span>
+* المدة: <span class="ph">٩٠ دقيقة</span>
+* وصف الفصل: <span class="ph">فصل متعدد المستويات</span>
+* الأكواد المنهجية: <span class="ph">6Rs.01 · 6Rs.02</span>
+* التعلم السابق: <span class="ph">قصص المغامرة، والجمل البسيطة والمركبة</span>
+* لغة الكتابة المطلوبة: <span class="ph">الإنجليزية</span>
+* نمط التقديم: <span class="ph">حضوري (البدائل: عن بُعد · مدمج)</span>
+
+### قواعد ضبط المصادر
+* اقرأ نموذج المدرسة وكل صفحات كتاب الطالب قبل الكتابة.
+* أعِد إنتاج عناوين النموذج الأساسية ومسمياته وحقوله المطلوبة.
+* لا تستخدم إلا نص كتاب الطالب المرفق ومفرداته وأمثلته وأسئلة الفهم الواردة فيه.
+* انسخ أسئلة الكتاب حرفيًا مع الحفاظ على ترقيمها وصياغتها.
+* لا تخترع أسئلة الكتاب ولا تعيد كتابتها ولا تبسِّطها ولا تعيد صياغتها ولا تجزّئها ولا تعيد ترقيمها.
+* لا تنشئ سؤالًا إضافيًا مثل «5د» إن لم يرد سؤالًا مستقلًا في الكتاب.
+* لا تخترع شواهد نصية ولا محتوى صفحات ولا اقتباسات ولا إجابات.
+* إذا كان مرفق أساسي مفقودًا أو غير مقروء، فتوقّف واطلبه.
+* إذا تعارض نموذج المدرسة مع هذه التعليمات، فاحتفظ بالحقول الإدارية المطلوبة في النموذج مع الالتزام بالهيكل التدريسي المتكامل أدناه.
+* لا تملأ خانة التأمل البَعدي للمعلم مسبقًا كأن الدرس قد نُفِّذ بالفعل.
+* كيِّف كل بنية تعاونية بحسب نمط التقديم المذكور أعلاه: غرف فرعية ولوح مشترك إن كان الدرس عن بُعد، وشكل جلوس وتوزيع مجموعات إن كان حضوريًا.
+
+## T — المهمة
+أنشئ خطة درس واحدة كاملة متمركزة حول الطالب، بالترتيب والهيكل التاليين بالضبط.
+
+### ١. مطلع المستند
+تضمَّن:
+* عنوان نموذج المدرسة.
+* عنوان الدرس.
+* عنوانًا فرعيًا في الوسط يحوي الصف والمادة أو الموضوع والمدة الكلية.
+* جدول معلومات تمهيديًا يحتوي فقط على:
+  * الفصل
+  * التاريخ
+  * الدرس
+  * التعلم السابق
+ولا تضع الأهداف التعليمية داخل هذا الجدول التمهيدي.
+
+### ٢. الأهداف التعليمية
+ضع قسم الأهداف التعليمية كاملًا مرة واحدة فقط، مباشرة قبل جدول الخطة.
+ولا تكرر الأهداف في أي موضع آخر.
+أنشئ جدولًا من ثلاثة أعمدة:
+| مستوى بلوم | الهدف التعليمي | الكود |
+واكتب ستة أهداف وفق معايير SMART تغطي:
+١. التذكر
+٢. الفهم
+٣. التطبيق
+٤. التحليل
+٥. التقويم
+٦. الإبداع
+المتطلبات:
+* ابدأ كل هدف بنتيجة قابلة للقياس.
+* اجعل كل هدف قابلًا للتحقق داخل مدة الدرس.
+* اربط كل هدف بأحد الأكواد المنهجية المعطاة.
+* ضمِّن شاهدًا قابلًا للقياس مثل نسبة الدقة أو عدد الاستجابات أو الشاهد النصي أو عدد الكلمات أو درجة السلم التقديري.
+* تأكد من تدرج الأهداف من مهارات التفكير الدنيا إلى العليا.
+
+### ٣. جدول الخطة المتكامل
+أنشئ جدول خطة واحدًا متكاملًا يكون هو القلب التدريسي للمستند.
+واستخدم خمسة أعمدة بالضبط:
+| المرحلة | إجراءات الطلاب / الأنشطة المخططة | التعلم التعاوني | النشاط التفريقي | الزمن بالدقائق |
+وتضمَّن ثماني مراحل بالضبط:
+١. التهيئة
+٢. تدريس المفردات
+٣. التنبؤ
+٤. القراءة للفكرة العامة
+٥. المعلومات المحددة
+٦. التحليل القرائي التفصيلي
+٧. التطبيق والإنتاج
+٨. الإنهاء / الإغلاق / التأمل / التلخيص
+ويجب أن يساوي مجموع الأزمنة مدة الدرس الكلية بالضبط.
+واكتب الإجراءات من منظور الطالب: صِف ما يفعله الطلاب ويقولونه ويقرأونه ويناقشونه ويحللونه ويؤدونه ويكتبونه ويتأملون فيه — لا قائمة بأفعال المعلم.
+
+المرحلة ١: التهيئة
+على الطلاب أن:
+* ينشّطوا معرفتهم السابقة.
+* يستجيبوا لمثير قصير أو تصويت فوري.
+* يربطوا عنوان الدرس أو موضوعه أو صورته بالتعلم السابق.
+واستخدم استراتيجية مناسبة مثل فكِّر – زاوج – شارك.
+
+المرحلة ٢: تدريس المفردات
+على الطلاب أن:
+* يتعلموا المفردات الواردة في الصفحات المرفقة فقط.
+* يستنتجوا المعاني من السياق قبل التحقق منها.
+* يطابقوا الكلمات بمعانيها.
+* يستخدموا الكلمات شفهيًا أو في جمل سياقية قصيرة.
+واستخدم مجموعات مفردات متعددة المستويات أو ثلاثيات.
+
+المرحلة ٣: التنبؤ
+على الطلاب أن:
+* يفحصوا العنوان والرسوم والغلاف أو القرائن النصية الظاهرة في المرفقات.
+* يضعوا تنبؤات مبنية على شواهد.
+* يعللوا كل تنبؤ بقرينة ظاهرة.
+واستخدم جولة المعرض، أو المشي والحديث، أو أزواج التنبؤ والشاهد.
+
+المرحلة ٤: القراءة للفكرة العامة
+على الطلاب أن:
+* يقرأوا المقتطف المرفق.
+* يحددوا الموقف الرئيسي أو الفكرة العامة أو وجهة نظر السرد.
+* يجيبوا عن سؤال الفكرة العامة الوارد في الكتاب.
+وأدرج نص السؤال المعني ورقمه كما وردا في الكتاب حرفيًا داخل خلية «إجراءات الطلاب / الأنشطة المخططة» لهذه المرحلة.
+ولا تضعه في قسم مستقل لأسئلة الفهم.
+واستخدم القراءة الثنائية أو المتناوبة أو الترديدية أو بنية تعاونية مناسبة أخرى.
+
+المرحلة ٥: المعلومات المحددة
+على الطلاب أن:
+* يمسحوا النص بصريًا ويعيدوا قراءته.
+* يجيبوا عن أسئلة المعلومات المحددة الواردة في الكتاب.
+* يظللوا أو يحددوا الشاهد الدقيق الداعم لكل إجابة.
+وأدرج نصوص جميع أسئلة المعلومات المحددة وأرقامها حرفيًا داخل خلية «إجراءات الطلاب / الأنشطة المخططة» لهذه المرحلة.
+ولا تعِد صياغة هذه الأسئلة ولا تسردها في موضع آخر.
+واستخدم الرؤوس المرقمة معًا، أو الأدوار التبادلية، أو استراتيجية تعاونية مناسبة أخرى.
+
+المرحلة ٦: التحليل القرائي التفصيلي
+على الطلاب أن:
+* يجيبوا عن أسئلة التحليل والاستنتاج المرفقة.
+* يحللوا الخصائص البنائية أو اللغوية ذات الصلة.
+* يجدوا الشواهد النصية.
+* يفسروا الأثر الذي أحدثه الكاتب.
+* يقيّموا نجاح الكاتب حين يطلب الكتاب ذلك.
+وأدرج نصوص جميع أسئلة التحليل والاستنتاج وأرقامها حرفيًا داخل خلية «إجراءات الطلاب / الأنشطة المخططة» لهذه المرحلة.
+واستخدم مجموعات الخبراء (Jigsaw):
+* أسنِد أسئلة أو خصائص مختلفة إلى مجموعات الخبراء.
+* دع كل مجموعة تحلل محورها المسند إليها.
+* أعِد الخبراء إلى مجموعاتهم الأصلية ليعلّموا زملاءهم ما توصلوا إليه.
+
+المرحلة ٧: التطبيق والإنتاج
+على الطلاب أن:
+* يجيبوا عن أسئلة التطبيق والإنتاج الواردة في الكتاب.
+* يشاركوا في مهمة تحدث أو أداء مناسبة.
+* ينتجوا الاستجابة الشفهية أو الكتابية المطلوبة.
+* يوظفوا مفردات الدرس أو بنيته أو وجهة نظره أو خصائصه اللغوية.
+وأدرج نصوص جميع أسئلة التطبيق والإنتاج وأرقامها حرفيًا داخل خلية «إجراءات الطلاب / الأنشطة المخططة» لهذه المرحلة.
+واستخدم الكرسي الساخن، أو لعب الأدوار، أو التلخيص الشفهي، أو التدريب مع الأقران، أو استراتيجية إنتاج مناسبة أخرى.
+وتضمَّن تغذية راجعة من الأقران ببنية مثل «نجمتان وأمنية».
+
+المرحلة ٨: الإنهاء / الإغلاق / التأمل / التلخيص
+ادمج الإغلاق كله داخل صف الخطة الأخير هذا.
+ولا تنشئ قسم إغلاق مستقلًا بعد الجدول.
+وتضمَّن أربعة مثيرات لبطاقة الخروج متوائمة مع مستويات DOK داخل خلية «إجراءات الطلاب / الأنشطة المخططة»:
+* DOK 1 — التذكر
+* DOK 2 — المهارة والمفهوم
+* DOK 3 — التفكير الاستراتيجي
+* DOK 4 — التفكير الممتد
+واختم الخلية بسؤال تأملي سقراطي عميق واحد يربط بين:
+* الفكرة المحورية للنص.
+* معالجة الدرس للزمن أو البنية أو وجهة النظر.
+* حياة المتعلم الواقعية وخبراته وقراراته وأحكامه على الآخرين.
+وعلى الطلاب أن يلتزموا أولًا باستجابة فردية، ثم لهم أن يناقشوها في مزاوجة سقراطية أو حلقة تأملية.
+ولا تكرر مثيرات DOK ولا السؤال السقراطي في قسم منفصل.
+
+### ٤. التمايز داخل جدول الخطة
+يجب أن يحتوي كل صف من صفوف الخطة على نشاط تفريقي مختلف.
+واستخدم البنية الثلاثية التالية صراحةً:
+* الدعم: سقالات مثل القرائن البصرية، والدعم الصوتي، والنص المظلَّل، وبدايات الجمل، وبطاقات المفردات، وبنوك الشواهد، والمخططات الموجَّهة.
+* الأساسي: المهمة المتوقعة في مستوى الصف.
+* الإثراء: استنتاج أعمق، أو تقويم، أو مقارنة، أو كتابة بديلة، أو تحليل بنائي، أو إنتاج مستقل.
+ولا تستخدم التمايز نفسه في كل مرحلة.
+ويجب أن يستجيب التمايز لمتطلبات تلك المرحلة تحديدًا.
+
+### ٥. معايير نجاح الطالب
+بعد جدول الخطة المتكامل، أضف جدولًا موجزًا من عمودين:
+| معيار النجاح | شاهد تحقق النجاح |
+وابدأ كل معيار بصيغة: أستطيع أن…
+وتضمَّن شواهد على أن المتعلم يستطيع:
+* تحديد الفكرة العامة أو وجهة النظر.
+* دعم إجاباته بشاهد نصي دقيق.
+* تفسير أثر الاختيارات البنائية أو اللغوية.
+* فهم معالجة الزمن.
+* المشاركة في مهمة الإنتاج التعاونية في الدرس.
+* إنتاج الاستجابة الكتابية أو الشفهية المطلوبة.
+
+### ٦. التقويم
+أنشئ قسم تقويم من قسمين فرعيين.
+
+التقويم البنائي
+لا تدرج إلا أساليب تخدم الخطة فعلًا، مثل:
+* منشورات الشواهد على بادليت.
+* تصحيح الأقران.
+* التصويت الفوري.
+* التساؤل التعاوني.
+* ملاحظة المعلم.
+* التغذية الراجعة الرقمية الفورية.
+واشرح أين يقع كل أسلوب وما الشاهد الذي يجمعه.
+
+التقويم الختامي
+أنشئ مهمة كتابية قصيرة متوائمة مع أعلى أهداف الدرس ومع مهمة الكتاب المرفقة.
+وحدِّد:
+* وجهة النظر أو نوع النص المطلوب.
+* الطول المتوقع.
+* خصائص الدرس المطلوب توظيفها.
+* المفردات أو التراكيب المطلوبة.
+* التنظيم المتوقع.
+وأنشئ سلمًا تقديريًا تحليليًا من ١٦ درجة بخمسة أعمدة بالضبط:
+| المعيار | ٤ — يفوق التوقعات | ٣ — يحقق التوقعات | ٢ — في طور النمو | ١ — يحتاج دعمًا |
+واستخدم أربعة معايير:
+١. الفكرة وتكامل المهمة
+٢. الاستنتاج ووجهة النظر
+٣. المفردات وبنية الجملة
+٤. التنظيم والانسياب
+واكتب واصفات أداء محددة لكل مستوى.
+وأضف نطاقات الأداء التالية:
+* ١٣–١٦: يفوق التوقعات / متمكن
+* ٩–١٢: يحقق التوقعات / ينمو بثبات
+* ٥–٨: ناشئ
+* ٠–٤: يحتاج دعمًا كبيرًا
+
+### ٧. الأدوات الرقمية التفاعلية وأدوات الذكاء الاصطناعي
+أنشئ جدولًا من أربعة أعمدة:
+| المرحلة | الأداة (برابط فعّال) | نوع النشاط | الهدف |
+ولا تختر أداة إلا حيث تحسّن المرحلة فعلًا.
+واختر من:
+* Mentimeter
+* Wordwall
+* Nearpod
+* Padlet
+* Quizizz
+* Kahoot
+* Canva
+* Google Forms
+المتطلبات:
+* استخدم الموقع الرسمي لكل أداة.
+* اجعل اسم الأداة رابطًا تشعبيًا فعّالًا قابلًا للنقر داخل مستند Word.
+* حدِّد النشاط الصفي بدقة.
+* حدِّد الهدف التدريسي أو التقويمي.
+* لا تدرج أداة لمجرد زيادة عدد التقنيات.
+* تأكد من أن الأدوات الرقمية تدعم القراءة والنقاش والتحليل النصي ولا تحل محلها.
+* أدرج أداة بطاقة الخروج الرقمية الخاصة بالمرحلة الثامنة في هذا الجدول فقط، ولا تعِد إنشاء أسئلة الإغلاق خارج جدول الخطة.
+
+### ٨. أدوات الذكاء الاصطناعي الموصى بها للمعلم
+أنشئ جدولًا من عمودين:
+| أداة الذكاء الاصطناعي (برابط فعّال) | أفضل استخدام لها في هذا الدرس |
+وتضمَّن أدوات دعم المعلم المناسبة مثل:
+* MagicSchool AI
+* Diffit for Teachers
+* Google Gemini
+* Claude
+واجعل اسم كل أداة رابطًا قابلًا للنقر إلى موقعها الرسمي.
+واشرح كيف تدعم كل أداة:
+* التمايز.
+* سقالات المفردات.
+* الاستجابات النموذجية.
+* المثيرات المتوائمة مع مستويات DOK.
+* التغذية الراجعة المستندة إلى السلم التقديري.
+* دعم بناء الجملة.
+وأضف هذا الضابط أسفل الجدول:
+ضابط المعلم: أدوات الذكاء الاصطناعي تدعم التحضير والتمايز فقط. ويبقى مقتطف الكتاب المرفق وأسئلته هما المرجع، ولا يجوز إعادة كتابتهما أو استبدالهما.
+
+### ٩. التأمل
+احتفظ بقسم التأمل الوارد في نموذج المدرسة.
+وتضمَّن أسئلة التأمل الأصلية في النموذج.
+ولا تقدم إجابات نموذجية ولا تدّعِ أن أنشطة بعينها قد نجحت.
+ويجب أن يبقى قسم التأمل متاحًا ليملأه المعلم بعد تنفيذ الدرس.
+
+### ١٠. الخطوات التالية
+احتفظ بعنوان «الخطوات التالية» في نموذج المدرسة وبسؤاله الموجِّه الأصلي.
+واترك الإجابة مفتوحة ليكملها المعلم بعد مراجعة أداء المتعلمين.
+ولا تنشئ قسم إغلاق مستقلًا ولا قسم أسئلة فهم مستقلًا قبل هذه النقطة.
+
+## F — التنسيق
+سلِّم مستند Microsoft Word واحدًا قابلًا للتعديل بصيغة ‎.docx‎.
+
+الصفحة والإخراج الطباعي
+* مقاس الصفحة: A4 عمودي.
+* الترميز: UTF-8.
+* خط المتن: Arial.
+* لون المتن: فحمي #111111.
+* مقاس المتن الأساسي: ١٤.
+* يجوز تصغير نص جدول الخطة قليلًا عند الضرورة لتظهر أسئلة الكتاب كاملة وواضحة.
+* العنوان الرئيسي: ٢٢ عريض في الوسط بالأزرق الداكن #0A2A66.
+* العنوان الفرعي: ١٦ في الوسط.
+* عناوين الأقسام: ١٨ عريض بالأزرق الداكن #0A2A66.
+* عناوين الأقسام الفرعية: ١٥–١٦ عريض بالأزرق الداكن.
+* ضع فاصلًا بالأزرق الداكن أسفل عناوين الأقسام الرئيسية.
+* أضف إطار صفحة بالأزرق الداكن حول كل صفحة.
+* أضف تذييلًا في الوسط يحمل رقم الصفحة.
+
+الجداول
+* لكل جدول صف عناوين ظاهر ومسمّى.
+* تعبئة صف العناوين: رمادي فاتح #DDDDDD.
+* نص العناوين: عريض بالأزرق الداكن #0A2A66.
+* حدود الجداول: أزرق داكن #0A2A66 بسمك ١٫٥ نقطة تقريبًا.
+* لا تستخدم حدودًا شديدة السماكة.
+* استخدم حشوًا داخليًا ومحاذاة رأسية متسقة.
+* اسمح للصفوف بالتمدد طبيعيًا.
+* لا تقتطع النص ولا تجعله متداخلًا أو مبتورًا.
+* كرِّر صف العناوين عبر الصفحات حين يمتد الجدول.
+* أبقِ كل مرحلة تدريسية في صفحة واحدة كلما أمكن.
+* استخدم تعبئة صفوف متناوبة: رمادي فاتح #F2F2F2 ورمادي أغمق قليلًا #E6E6E6.
+* استخدم درجات زرقاء فاتحة متناوبة حيث يناسب ذلك جداول الأدوات الرقمية.
+
+محظورات هيكلية
+يجب ألا يحتوي المستند على:
+* قسم أهداف تعليمية مكرر.
+* أهداف تعليمية داخل الجدول التمهيدي وجدول ثانٍ معًا.
+* قسم مستقل باسم «أسئلة الفهم».
+* جدول مستقل لربط الأسئلة بالمراحل.
+* قسم مستقل باسم «الإغلاق».
+* جدول DOK منفصل بعد جدول الخطة.
+* أسئلة كتاب معادة الصياغة أو مخترعة.
+* تأملات بَعدية مملوءة مسبقًا.
+* حدودًا زخرفية سميكة تطغى على الصفحة.
+* أسماء أدوات بلا روابط حين تُطلب الروابط الرسمية.
+
+قائمة ضبط الجودة
+قبل تسليم المستند:
+١. تأكد من ظهور الأهداف مرة واحدة فقط ومباشرة قبل جدول الخطة.
+٢. تأكد من أن مجموع أزمنة المراحل الثماني يساوي مدة الدرس المعلنة بالضبط.
+٣. تأكد من ظهور كل سؤال من أسئلة الكتاب مرة واحدة بالضبط داخل صف الخطة المعني به.
+٤. تأكد من ظهور جميع مثيرات DOK والسؤال السقراطي داخل المرحلة الثامنة فقط.
+٥. تأكد من أن جدول الخطة مكتوب من منظور الطالب.
+٦. تأكد من أن لكل مرحلة استراتيجية تعاونية أو بنية مشاركة مميزة.
+٧. تأكد من احتواء كل مرحلة على تمايز بمستويات الدعم والأساسي والإثراء.
+٨. تأكد من أن كل اسم أداة تفاعلية أو أداة ذكاء اصطناعي رابط فعّال قابل للنقر.
+٩. تأكد من أن قسمي التأمل والخطوات التالية يتبعان نموذج المدرسة.
+١٠. اعرض مستند Word وافحص كل صفحة بصريًا.
+١١. صحِّح كل اقتطاع أو انقسام صفوف أو تداخل أو نص يتيم أو حدود غير متسقة أو صفحات فارغة زائدة.
+١٢. سلِّم الملف النهائي ‎.docx‎ بعد التحقق فقط.</div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Only the highlighted fields change. " data-ar="الحقول المميزة وحدها هي التي تتغير. ">Only the highlighted fields change. </b><span data-en="The eight stages, the six Bloom objectives, the three-tier differentiation, the sixteen-mark rubric, the colours and the page frame stay the same for every lesson you ever plan. Hand this prompt to your teachers as it is." data-ar="أما المراحل الثماني، وأهداف بلوم الستة، والتمايز الثلاثي، والسلم التقديري من ١٦ درجة، والألوان، وإطار الصفحة، فتبقى كما هي في كل درس تخطط له. سلِّم هذا الأمر لمعلميك كما هو.">The eight stages, the six Bloom objectives, the three-tier differentiation, the sixteen-mark rubric, the colours and the page frame stay the same for every lesson you ever plan. Hand this prompt to your teachers as it is.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 4 · THE INTERACTIVE PAGE ============ -->
+        <div class="block" id="webpage">
+          <h2 class="display" data-en="Part 4 · Turn the same plan into an interactive page" data-ar="الجزء الرابع · حوِّل الخطة نفسها إلى صفحة تفاعلية">Part 4 · Turn the same plan into an interactive page</h2>
+          <p class="sub" data-en="One more prompt, for Gemini. It returns a single web page a teacher can edit in the browser and export as a clean PDF." data-ar="أمر واحد إضافي، لـ Gemini. يعيد صفحة ويب واحدة يستطيع المعلم تحريرها في المتصفح وتصديرها ملف PDF نظيفًا.">One more prompt, for Gemini. It returns a single web page a teacher can edit in the browser and export as a clean PDF.</p>
+
+          <p data-en="A Word file is right for the school archive. A web page is better in the room: a teacher can click any cell, correct it live, and export a PDF without opening Word at all. The prompt below asks Gemini for one self-contained HTML file — the same eight stages, the same rubric, the same navy-and-grey house style — with an edit toggle, a download button and print rules that stop the tables being cut in half." data-ar="ملف Word مناسب لأرشيف المدرسة. أما صفحة الويب فأفضل داخل الغرفة: يستطيع المعلم النقر على أي خلية وتصحيحها مباشرة، وتصدير ملف PDF دون فتح Word أصلًا. والأمر التالي يطلب من Gemini ملف HTML واحدًا مكتفيًا بذاته — المراحل الثماني نفسها، والسلم التقديري نفسه، وهوية الأزرق الداكن والرمادي نفسها — مع مفتاح للتحرير، وزر للتنزيل، وقواعد طباعة تمنع انقسام الجداول.">A Word file is right for the school archive. A web page is better in the room: a teacher can click any cell, correct it live, and export a PDF without opening Word at all. The prompt below asks Gemini for one self-contained HTML file — the same eight stages, the same rubric, the same navy-and-grey house style — with an edit toggle, a download button and print rules that stop the tables being cut in half.</p>
+
+          <ul class="ticks is-do">
+            <li data-en="Run the master prompt in Part 3 first and read the plan it returns. This prompt builds the page, not the pedagogy." data-ar="شغِّل الأمر الرئيسي في الجزء الثالث أولًا واقرأ الخطة التي يعيدها. فهذا الأمر يبني الصفحة لا المحتوى التربوي.">Run the master prompt in Part 3 first and read the plan it returns. This prompt builds the page, not the pedagogy.</li>
+            <li data-en="Paste this into Gemini and attach the finished plan, so the page carries your real questions and timings rather than the example ones." data-ar="الصق هذا في Gemini وأرفق الخطة النهائية، حتى تحمل الصفحة أسئلتك وأزمنتك الحقيقية لا أسئلة المثال.">Paste this into Gemini and attach the finished plan, so the page carries your real questions and timings rather than the example ones.</li>
+            <li data-en="This one stays in English: it is a build specification full of colour codes, class names and JavaScript. Translating it would break the file it produces — but the page it builds can hold Arabic content." data-ar="هذا الأمر يبقى بالإنجليزية: فهو مواصفة برمجية مليئة بأكواد الألوان وأسماء الفئات وشيفرة JavaScript، وترجمته تُفسد الملف الناتج — لكن الصفحة التي يبنيها يمكن أن تحمل محتوى عربيًا.">This one stays in English: it is a build specification full of colour codes, class names and JavaScript. Translating it would break the file it produces — but the page it builds can hold Arabic content.</li>
+            <li data-en="Save the file Gemini gives you and open it in any browser. Nothing needs installing." data-ar="احفظ الملف الذي يعطيك إياه Gemini وافتحه في أي متصفح. لا شيء يحتاج إلى تثبيت.">Save the file Gemini gives you and open it in any browser. Nothing needs installing.</li>
+          </ul>
+
+          <p class="prompt-label" data-en="The interactive-page prompt — for Gemini" data-ar="أمر الصفحة التفاعلية — لـ Gemini">The interactive-page prompt — for Gemini</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p-web" data-en="Copy" data-ar="نسخ">Copy</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <textarea class="prompt-box is-tall" id="p-web" spellcheck="false">Act as an expert Instructional Designer and Certified Cambridge IGCSE English Teacher. Build a single-file, production-ready, interactive HTML page for a Grade 6 English Lesson Plan ("An Adventure with Flashback" based on Daniel Pennac's "The Eye of the Wolf", Unit 1).
+The webpage must serve as both a live editable web document and a clean, perfectly formatted PDF document upon export, with zero text clipping or page-wrapping issues.
+
+### 1. TECHNICAL &amp; LIBRARIES INHERITANCE
+- Single-file HTML (include all CSS and JS within the same file).
+- Include `html2pdf.js` via CDN: `https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js`.
+- Responsive, clean, paper-document aesthetic centered on screen with a light background (`#f4f6f9`).
+
+### 2. TOP ACTION CONTROL BAR (NON-PRINTING)
+- Fixed or top-aligned control bar containing:
+  1. Title banner: "Primary Daily Lesson Plan — Grade 6 English" with an "✏️ Click text to edit" badge.
+  2. "Lock Editing / Enable Editing" button: Toggles `contenteditable="true/false"` across the card.
+  3. "Download PDF File" button: Executes direct client-side `html2pdf.js` generation.
+  4. "Print Dialog" button: Calls `window.print()`.
+  5. Live toast notification system (`#toast-msg`) to inform the user when PDF generation starts or finishes.
+- Must be hidden during printing using `@media print { .no-print-bar { display: none !important; } }`.
+
+### 3. EXACT DOCUMENT SECTIONS &amp; STRUCTURE
+The central document card (`#lessonPlanCard`) must contain the following sections in this exact order:
+1. **Header Metadata Table:**
+   - CLASS: Grade 6 (mixed ability)
+   - DATE: Blank underline for teacher entry
+   - Lesson: Reading: Fiction—Stories with flashbacks, "The Eye of the Wolf" (Unit 1)
+   - Previous learning: Recognition of adventure stories, simple and compound sentences.
+2. **Learning Objectives Table (Mapped to Bloom's Taxonomy &amp; IGCSE Codes 6Rs.01 &amp; 6Rs.02):**
+   - 3 columns: `Bloom Level` | `Learning Objective` | `Code`
+   - Covers all 6 levels: Remember (6Rs.01), Understand (6Rs.02), Apply (6Rs.02), Analyse (6Rs.02), Evaluate (6Rs.01), Create (6Rs.01).
+3. **Plan (8 Student-Centred Stages, 90 Minutes Total):**
+   - 5 columns: `Stage` (13%) | `Student Actions / Planned Activities` (32%) | `Cooperative Learning` (22%) | `Differentiated Activity` (25%) | `Time` (8%).
+   - Stages:
+     1. Warm-up (8 min) — Think–Pair–Share &amp; instant word cloud.
+     2. Vocabulary teaching (10 min) — Flashback, enclosure, shift; Vocabulary Triads.
+     3. Prediction (8 min) — One-eyed wolf &amp; Africa cover analysis; Gallery Walk.
+     4. Gist reading (10 min) — Exact Question 1; Paired Aloud Reading.
+     5. Specific information (15 min) — Exact Questions 2a–2c; Numbered Heads Together.
+     6. Detailed reading analysis (20 min) — Exact Questions 3a–3b &amp; 4a–4c; Jigsaw Expert Groups.
+     7. Application and production (12 min) — Exact Questions 5a–5c (Hot-seating &amp; viewpoint writing).
+     8. End/Close/Reflection/Summary (7 min) — Socratic exit ticket across DOK 1–4 and deep life reflection.
+   - Differentiation column must explicitly state `Support`, `Core`, and `Extension` paths for every single row.
+4. **Student Success Criteria Table:**
+   - 2 columns: `Success Criterion` ("I can...") | `Evidence of Success`.
+5. **Assessment Section:**
+   - **Formative Assessment:** Paragraphs on Padlet, Peer Correction, and Instant Polling (Mentimeter/Quizizz).
+   - **Summative Assessment Task:** 80–100 word flashback paragraph (16 Marks total).
+   - **Summative Marking Rubric Table:** 5 columns (`Criterion`, `4 — Exceeding`, `3 — Meeting`, `2 — Developing`, `1 — Needs Support`). Criteria: Idea &amp; flashback integration, Inference &amp; perspective, Vocabulary &amp; sentence structure, Organisation &amp; flow. Includes performance bands breakdown.
+6. **AI and Interactive Digital Tools Table:**
+   - 4 columns: `Stage` | `Tool (Active Link)` | `Type of Activity` | `Purpose`.
+   - Tools with target="_blank" links: Mentimeter, Wordwall, Nearpod, Padlet, Quizizz, Canva, Google Forms.
+7. **Recommended Teacher AI Tools for Differentiation Table:**
+   - 2 columns: `AI Tool (Active Link)` | `Best Use in This Lesson`.
+   - Tools: MagicSchool AI, Diffit for Teachers, Google Gemini, Claude. Includes a bold Teacher Safeguard note.
+8. **Reflection &amp; Next Steps Sections:**
+   - Formatted box notes with official reflection prompts and future lesson planning space.
+
+### 4. STYLING &amp; DESIGN SYSTEM
+- **Palette:** Navy `#0A2A66` (headings &amp; borders), Charcoal `#111111` (body text), Gray `#DDDDDD` (table headers), `#F2F2F2` / `#E6E6E6` (alternating row fills), `#EBF3FA` / `#D6E4F0` (blue tool highlights).
+- **Typography:** Arial, Helvetica, sans-serif. Body font size `10pt`, line-height `1.35`. Table headers `9pt` bold dark navy.
+- **Strict Layout Constraints (To Prevent PDF/Print Cut-Offs):**
+  - Card max-width: `800px`.
+  - NO outer heavy page border around the container card (border: none).
+  - All tables: `width: 100%`, `table-layout: fixed`, `word-break: break-word`, `border-collapse: collapse`.
+  - All `td` and `th` cells: `padding: 5px 6px`, `border: 1pt solid #0A2A66`.
+  - Page break safety: `tr { page-break-inside: avoid !important; break-inside: avoid !important; }`, `h2, h3 { page-break-after: avoid !important; break-after: avoid !important; }`, `thead { display: table-header-group; }`.
+
+### 5. JAVASCRIPT &amp; PDF EXPORT LOGIC
+- Implement `toggleEditMode()` to switch `contenteditable` state dynamically.
+- Implement `generateDirectPDF()` using `html2pdf.js` with the following safeguards against offset/clipping:
+
+  // Temporarily reset margins and box shadow before capture to avoid canvas offset clipping
+  element.style.margin = '0';
+  element.style.boxShadow = 'none';
+  element.style.border = 'none';
+  element.style.width = '100%';
+  const opt = {
+    margin: [8, 8, 8, 8], // 8mm clean margins
+    filename: 'IGCSE_Grade6_Lesson_Plan_Flashback.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true, logging: false, scrollX: 0, scrollY: 0 },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+  };</textarea>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>Change the lesson, not the specification.</b> Sections 1, 2, 4 and 5 of that prompt are build rules — the library, the control bar, the palette, the PDF settings. Only section 3 describes this particular lesson. Replace section 3 with your own stages, questions and timings and the same machinery rebuilds around them." data-ar-html="<b>غيِّر الدرس لا المواصفة.</b> الأقسام ١ و٢ و٤ و٥ في ذلك الأمر قواعد بناء — المكتبة، وشريط التحكم، ولوحة الألوان، وإعدادات PDF. والقسم الثالث وحده هو الذي يصف هذا الدرس بعينه. استبدل القسم الثالث بمراحلك وأسئلتك وأزمنتك، فتُعيد الآلية نفسها البناء حولها."><b>Change the lesson, not the specification.</b> Sections 1, 2, 4 and 5 of that prompt are build rules — the library, the control bar, the palette, the PDF settings. Only section 3 describes this particular lesson. Replace section 3 with your own stages, questions and timings and the same machinery rebuilds around them.</p>
+          </div>
+        </div>
+
+        <!-- ============ PART 5 · AUDIT ============ -->
+        <div class="block" id="audit">
+          <h2 class="display" data-en="Part 5 · Audit the plan before it reaches a class" data-ar="الجزء الخامس · دقِّق الخطة قبل أن تصل إلى الفصل">Part 5 · Audit the plan before it reaches a class</h2>
+          <p class="sub" data-en="The prompt asks the AI to run its own checklist. Run yours too — these are the ones that catch a plan you cannot submit." data-ar="يطلب الأمر من الذكاء الاصطناعي تنفيذ قائمة ضبطه. ونفِّذ أنت قائمتك كذلك — فهذه هي التي تكشف الخطة التي لا تصلح للتسليم.">The prompt asks the AI to run its own checklist. Run yours too — these are the ones that catch a plan you cannot submit.</p>
+
+          <ul class="ticks is-do">
+            <li data-en="Do the eight stage timings add up to exactly the duration you asked for?" data-ar="هل مجموع أزمنة المراحل الثماني يساوي بالضبط المدة التي طلبتها؟">Do the eight stage timings add up to exactly the duration you asked for?</li>
+            <li data-en="Do the objectives appear once only, immediately before the Plan, with all six Bloom levels and a code each?" data-ar="هل ظهرت الأهداف مرة واحدة فقط، مباشرة قبل جدول الخطة، بمستويات بلوم الستة وبكود لكل هدف؟">Do the objectives appear once only, immediately before the Plan, with all six Bloom levels and a code each?</li>
+            <li data-en="Is every textbook question word-for-word from your pages, with its original number, sitting inside the right Plan row — and no invented extra question?" data-ar="هل كل سؤال من الكتاب منقول حرفيًا من صفحاتك، برقمه الأصلي، وداخل صف الخطة الصحيح — وبلا سؤال إضافي مخترع؟">Is every textbook question word-for-word from your pages, with its original number, sitting inside the right Plan row — and no invented extra question?</li>
+            <li data-en="Are the DOK 1–4 prompts and the Socratic question inside Stage 8 only, with no separate closure or DOK table after the Plan?" data-ar="هل مثيرات DOK من ١ إلى ٤ والسؤال السقراطي داخل المرحلة الثامنة وحدها، بلا قسم إغلاق أو جدول DOK منفصل بعد الخطة؟">Are the DOK 1–4 prompts and the Socratic question inside Stage 8 only, with no separate closure or DOK table after the Plan?</li>
+            <li data-en="Is the Plan written from the student's side? &quot;The teacher explains&quot; is not a student action." data-ar="هل جدول الخطة مكتوب من جانب الطالب؟ فـ«يشرح المعلم» ليست إجراءً للطالب.">Is the Plan written from the student's side? "The teacher explains" is not a student action.</li>
+            <li data-en="Does every row carry a different Support / Core / Extension set, and a different cooperative structure?" data-ar="هل يحمل كل صف مجموعة دعم وأساسي وإثراء مختلفة، وبنية تعاونية مختلفة؟">Does every row carry a different Support / Core / Extension set, and a different cooperative structure?</li>
+            <li data-en="Is every tool name a working link, and is each tool genuinely doing something in its stage?" data-ar="هل كل اسم أداة رابط يعمل، وهل تؤدي كل أداة عملًا حقيقيًا في مرحلتها؟">Is every tool name a working link, and is each tool genuinely doing something in its stage?</li>
+            <li data-en="Are the Reflection and Next Steps sections left empty for you to complete after teaching — not pre-filled as if the lesson had already happened?" data-ar="هل تُرك قسما التأمل والخطوات التالية فارغين لتملأهما بعد التدريس — لا مملوءين مسبقًا كأن الدرس قد نُفِّذ؟">Are the Reflection and Next Steps sections left empty for you to complete after teaching — not pre-filled as if the lesson had already happened?</li>
+          </ul>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Take this into Session 3: " data-ar="خذ هذا إلى المحاضرة الثالثة: ">Take this into Session 3: </b><span data-en="the exam you build next week must match the plan you built today. Keep the finished lesson plan — you will attach it to the exam prompt." data-ar="الاختبار الذي تبنيه الأسبوع القادم يجب أن يطابق الخطة التي بنيتها اليوم. احتفظ بخطة الدرس النهائية — فستُرفقها بأمر الاختبار.">the exam you build next week must match the plan you built today. Keep the finished lesson plan — you will attach it to the exam prompt.</span></p>
+          </div>
+        </div>
+
+        <!-- ---------- APPS USED ---------- -->
+        <div class="block" id="apps">
+          <h2 class="display" data-en="Apps used in this session" data-ar="الأدوات المستخدمة في هذه المحاضرة">Apps used in this session</h2>
+          <p class="sub" data-en="Two AI assistants that read attached files, the AI tools you name in the prompt, and the classroom tools the plan assigns to stages." data-ar="مساعدان للذكاء الاصطناعي يقرآن الملفات المرفقة، وأدوات الذكاء الاصطناعي التي تسميها في الأمر، والأدوات الصفية التي تسندها الخطة إلى المراحل.">Two AI assistants that read attached files, the AI tools you name in the prompt, and the classroom tools the plan assigns to stages.</p>
+
+          <div class="apps">
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>ChatGPT</h3>
+              <p data-en="Use it to run the master prompt with your two files attached. It reads Word documents, PDFs and photographs of book pages, and returns the plan as a document you can download." data-ar="استخدمه لتشغيل الأمر الرئيسي مع إرفاق ملفيك. فهو يقرأ مستندات Word وملفات PDF وصور صفحات الكتاب، ويعيد الخطة مستندًا يمكنك تنزيله.">Use it to run the master prompt with your two files attached. It reads Word documents, PDFs and photographs of book pages, and returns the plan as a document you can download.</p>
+              <p class="app-url">https://chatgpt.com</p>
+              <a class="btn btn-primary" href="https://chatgpt.com" target="_blank" rel="noopener">
+                <span data-en="Open ChatGPT" data-ar="افتح ChatGPT">Open ChatGPT</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>Google Gemini</h3>
+              <p data-en="Run the same prompt with the same two files in a second system and compare the two plans. Gemini often handles long Arabic documents and photographed pages differently — the differences are worth showing your teachers." data-ar="شغِّل الأمر نفسه بالملفين نفسيهما في نظام ثانٍ وقارن الخطتين. فكثيرًا ما يتعامل Gemini مع المستندات العربية الطويلة والصفحات المصوَّرة تعاملًا مختلفًا — وهذه الفروق تستحق أن تعرضها على معلميك.">Run the same prompt with the same two files in a second system and compare the two plans. Gemini often handles long Arabic documents and photographed pages differently — the differences are worth showing your teachers.</p>
+              <p class="app-url">https://gemini.google.com</p>
+              <a class="btn btn-primary" href="https://gemini.google.com" target="_blank" rel="noopener">
+                <span data-en="Open Gemini" data-ar="افتح Gemini">Open Gemini</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="AI tools" data-ar="أدوات ذكاء اصطناعي">AI tools</span>
+              <h3 data-en="The AI tools the plan can name" data-ar="أدوات الذكاء الاصطناعي التي يمكن للخطة تسميتها">The AI tools the plan can name</h3>
+              <p data-en="MagicSchool AI · Diffit for Teachers · Google Gemini · Claude — the four the master prompt asks for by name. These are teacher-facing: they differentiate a text, scaffold vocabulary, draft model responses and build DOK-aligned prompts. The prompt requires every one of them to appear as a working link with the safeguard beneath the table." data-ar="MagicSchool AI · Diffit for Teachers · Google Gemini · Claude — الأدوات الأربع التي يسميها الأمر الرئيسي. وهذه أدوات موجَّهة للمعلم: تُبسِّط نصًا، وتبني سقالات للمفردات، وتكتب استجابات نموذجية، وتصوغ مثيرات متوائمة مع مستويات DOK. ويشترط الأمر ظهور كل واحدة منها برابط فعّال مع الضابط أسفل الجدول.">MagicSchool AI · Diffit for Teachers · Google Gemini · Claude — the four the master prompt asks for by name. These are teacher-facing: they differentiate a text, scaffold vocabulary, draft model responses and build DOK-aligned prompts. The prompt requires every one of them to appear as a working link with the safeguard beneath the table.</p>
+              <p class="app-url">https://www.magicschool.ai</p>
+              <a class="btn btn-primary" href="https://www.magicschool.ai" target="_blank" rel="noopener">
+                <span data-en="Open MagicSchool AI" data-ar="افتح MagicSchool AI">Open MagicSchool AI</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="Classroom tools" data-ar="أدوات صفية">Classroom tools</span>
+              <h3 data-en="The eight tools the plan will name" data-ar="الأدوات الثماني التي ستسميها الخطة">The eight tools the plan will name</h3>
+              <p data-en="Padlet · Mentimeter · Kahoot · Quizizz · Wordwall · Nearpod · Canva · Google Forms. The plan assigns each one to a stage; open the ones you do not already use and check the activity actually exists before the lesson." data-ar="Padlet · Mentimeter · Kahoot · Quizizz · Wordwall · Nearpod · Canva · Google Forms. تسند الخطة كل أداة إلى مرحلة؛ افتح ما لا تستخدمه منها وتأكد من وجود النشاط فعلًا قبل الحصة.">Padlet · Mentimeter · Kahoot · Quizizz · Wordwall · Nearpod · Canva · Google Forms. The plan assigns each one to a stage; open the ones you do not already use and check the activity actually exists before the lesson.</p>
+              <p class="app-url">https://padlet.com</p>
+              <a class="btn btn-primary" href="https://padlet.com" target="_blank" rel="noopener">
+                <span data-en="Open Padlet" data-ar="افتح Padlet">Open Padlet</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Order of use: " data-ar="ترتيب الاستخدام: ">Order of use: </b><span data-en="play the game in Part 1, read the sixteen ingredients in Part 2, then attach your two files and run the master prompt from Part 3. Rebuild the plan as a web page with Part 4 if you want one, and finish with the eight checks in Part 5 before it reaches a class." data-ar="العب اللعبة في الجزء الأول، واقرأ المكوِّنات الستة عشر في الجزء الثاني، ثم أرفق ملفيك وشغِّل الأمر الرئيسي من الجزء الثالث. وأعد بناء الخطة صفحة ويب بالجزء الرابع إن أردت، واختم بالفحوص الثمانية في الجزء الخامس قبل أن تصل إلى الفصل.">play the game in Part 1, read the sixteen ingredients in Part 2, then attach your two files and run the master prompt from Part 3. Rebuild the plan as a web page with Part 4 if you want one, and finish with the eight checks in Part 5 before it reaches a class.</span></p>
+          </div>
+        </div>
+
+        <!-- Pager -->
+        <nav class="pager">
+          <a class="btn btn-outline" href="session1.html">
+            <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            <span data-en="Back: Session 1 · Prompt engineering" data-ar="السابق: المحاضرة 1 · هندسة الأوامر">Back: Session 1 · Prompt engineering</span>
+          </a>
+          <a class="btn btn-primary" href="index.html#sessions">
+            <span data-en="Next: Session 3 · Exam creation" data-ar="التالي: المحاضرة 3 · إنشاء الاختبارات">Next: Session 3 · Exam creation</span>
+            <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <img src="assets/logo-reversed.png" alt="Edulixa 360">
+    <p data-en="Session 2 · AI-powered lesson planning — AI Masterclass for Teachers, Level 1." data-ar="المحاضرة 2 · تخطيط الدروس بالذكاء الاصطناعي — الماستر كلاس للمعلمين بالذكاء الاصطناعي، المستوى الأول.">Session 2 · AI-powered lesson planning — AI Masterclass for Teachers, Level 1.</p>
+    <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+  </div>
+</footer>
+
+<div class="backdock"><a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All sessions" data-ar="كل المحاضرات">All sessions</span></a></div>
+
+<script src="assets/edulixa.js"></script>
+</body>
+</html>
