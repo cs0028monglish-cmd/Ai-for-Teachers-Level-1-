@@ -452,6 +452,16 @@
       paintZones();
     }
 
+    /* ---------- Criteria cards ---------- */
+    /* Each pastel card in a .crits grid opens on select to show its explanation.
+       The card is a <button>, so Enter and Space work with no extra code. */
+    document.querySelectorAll('.crit').forEach(function (card) {
+      card.addEventListener('click', function () {
+        var open = card.classList.toggle('is-open');
+        card.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    });
+
     document.querySelectorAll('img[data-optional]').forEach(function (img) {
       var hide = function () {
         var f = img.closest('figure');

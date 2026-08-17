@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-en="Session 3 · AI-powered exam creation — Level 1 · Edulixa 360" data-ar="المحاضرة 3 · إنشاء الاختبارات بالذكاء الاصطناعي — المستوى الأول · Edulixa 360">Session 3 · AI-powered exam creation — Level 1 · Edulixa 360</title>
+<link rel="stylesheet" href="assets/edulixa.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <img src="assets/logo-reversed.png" alt="Edulixa 360">
+      <span class="brand-tag" data-en="AI Masterclass · Level 1" data-ar="الماستر كلاس · المستوى الأول">AI Masterclass · Level 1</span>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn btn-ghost" href="index.html"><svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All sessions" data-ar="كل المحاضرات">All sessions</span></a>
+      <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="Back to all sessions" data-ar="العودة إلى كل المحاضرات">Back to all sessions</span></a>
+    <p class="eyebrow" data-en="Session 3 of 5 · Main tools: ChatGPT and the Smart Assessment Creator" data-ar="المحاضرة 3 من 5 · الأدوات الرئيسية: ChatGPT ومنشئ التقييم الذكي">Session 3 of 5 · Main tools: ChatGPT and the Smart Assessment Creator</p>
+    <h1 class="display" data-en="A fair exam is designed twice: once in the blueprint, once in the questions." data-ar="الاختبار العادل يُصمَّم مرتين: مرة في المخطط، ومرة في الأسئلة.">A fair exam is designed twice: once in the blueprint, once in the questions.</h1>
+    <p class="lede" data-en="This session follows the exact path a professional assessment designer takes. First you answer the eleven questions of the exam brief. Then the blueprint takes charge of the content and the marks, a sample exam takes charge of the style, and sixteen criteria tell you what a strong exam actually is. Finally you attach your files and run one master prompt that returns the paper, the answer key, the mark scheme and a compliance report." data-ar="تسير هذه المحاضرة على الطريق نفسه الذي يسلكه مصمم التقييم المحترف. تجيب أولًا عن الأسئلة الأحد عشر لموجز الاختبار. ثم يتولى المخطط المحتوى والدرجات، ويتولى نموذج الامتحان الأسلوب، وتخبرك ستة عشر معيارًا بما يكون عليه الاختبار القوي حقًّا. وفي النهاية ترفق ملفاتك وتشغِّل أمرًا رئيسيًا واحدًا يعيد إليك ورقة الاختبار ومفتاح الإجابة ومخطط الدرجات وتقرير المطابقة.">This session follows the exact path a professional assessment designer takes. First you answer the eleven questions of the exam brief. Then the blueprint takes charge of the content and the marks, a sample exam takes charge of the style, and sixteen criteria tell you what a strong exam actually is. Finally you attach your files and run one master prompt that returns the paper, the answer key, the mark scheme and a compliance report.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#brief" data-en="Start with the exam brief" data-ar="ابدأ بموجز الاختبار">Start with the exam brief</a>
+      <a class="btn btn-outline" href="#master"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg><span data-en="Go straight to the master prompt" data-ar="اذهب مباشرة إلى الأمر الرئيسي">Go straight to the master prompt</span></a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="sec">
+  <div class="wrap">
+    <div class="split">
+
+      <!-- ---------- STICKY RAIL ---------- -->
+      <aside class="rail">
+        <h2 data-en="Session at a glance" data-ar="المحاضرة في لمحة">Session at a glance</h2>
+        <p data-en="Five moves, in order." data-ar="خمس خطوات بالترتيب.">Five moves, in order.</p>
+        <ol>
+          <li data-go="brief" data-en="Answer the eleven questions of the brief" data-ar="أجب عن الأسئلة الأحد عشر للموجز">Answer the eleven questions of the brief</li>
+          <li data-go="blueprint" data-en="Let the blueprint rule the content" data-ar="دَع المخطط يحكم المحتوى">Let the blueprint rule the content</li>
+          <li data-go="sample" data-en="Learn the sixteen criteria of a strong exam" data-ar="تعلَّم المعايير الستة عشر للاختبار القوي">Learn the sixteen criteria of a strong exam</li>
+          <li data-go="master" data-en="Attach the files and run the master prompt" data-ar="أرفق الملفات وشغِّل الأمر الرئيسي">Attach the files and run the master prompt</li>
+          <li data-go="audit" data-en="Audit the exam before students see it" data-ar="دقِّق الاختبار قبل أن يراه الطلاب">Audit the exam before students see it</li>
+        </ol>
+        <p class="rail-hint" data-en="Select a step to jump to it and switch its light on. Your lights are remembered." data-ar="اختر خطوة للانتقال إليها وإضاءة نورها. تُحفظ الأضواء التي أشعلتها.">Select a step to jump to it and switch its light on. Your lights are remembered.</p>
+        <a class="btn btn-accent" href="#apps" data-en="Open the tools" data-ar="افتح الأدوات">Open the tools</a>
+      </aside>
+
+      <!-- ---------- CONTENT ---------- -->
+      <div>
+
+        <!-- ============ SUMMARY ============ -->
+        <div class="block">
+          <h2 class="display" data-en="Summary of the session" data-ar="ملخص المحاضرة">Summary of the session</h2>
+          <p class="sub" data-en="From what you taught to an exam you can defend." data-ar="مما درَّسته إلى اختبار تستطيع الدفاع عنه.">From what you taught to an exam you can defend.</p>
+
+          <p data-en="Session 2 built the lesson. Session 3 builds the exam that measures it. An exam is the highest-stakes document a teacher produces — students, parents and school leaders will all hold it up to the light — so this session does not start with questions. It starts the way an examinations office starts: with a brief, a blueprint, and a sample of the house style." data-ar="بنت المحاضرة الثانية الدرس، وتبني المحاضرة الثالثة الاختبار الذي يقيسه. والاختبار هو أعلى وثيقة ينتجها المعلم مخاطرةً — فالطلاب وأولياء الأمور وقيادة المدرسة سيرفعونه جميعًا إلى الضوء — ولذلك لا تبدأ هذه المحاضرة بالأسئلة. بل تبدأ كما يبدأ مكتب الامتحانات: بموجز، ومخطط، ونموذج من أسلوب المدرسة.">Session 2 built the lesson. Session 3 builds the exam that measures it. An exam is the highest-stakes document a teacher produces — students, parents and school leaders will all hold it up to the light — so this session does not start with questions. It starts the way an examinations office starts: with a brief, a blueprint, and a sample of the house style.</p>
+
+          <p data-en="The whole session runs on one smart rule, and everything else follows from it: the blueprint controls the content and the weighting, and the sample exam controls the style and the structure. Keep those two authorities separate and the AI cannot drift; mix them up and it will happily copy old questions or invent new weightings." data-ar="تقوم المحاضرة كلها على قاعدة ذكية واحدة، وكل ما عداها يتفرع منها: المخطط يحدد المحتوى والأوزان، ونموذج الامتحان يحدد الأسلوب والبنية. أبقِ هاتين المرجعيتين منفصلتين فلن يستطيع الذكاء الاصطناعي أن ينحرف؛ واخلطهما فسينسخ أسئلة قديمة أو يخترع أوزانًا جديدة بكل سرور.">The whole session runs on one smart rule, and everything else follows from it: the blueprint controls the content and the weighting, and the sample exam controls the style and the structure. Keep those two authorities separate and the AI cannot drift; mix them up and it will happily copy old questions or invent new weightings.</p>
+
+          <h3 data-en="What you will be able to do by the end" data-ar="ما ستكون قادرًا عليه في النهاية">What you will be able to do by the end</h3>
+          <ol class="outputs">
+            <li data-en-html="Brief an exam like an examiner<small>Name the eleven decisions — from subject and board to the difficulty split — before writing anything.</small>" data-ar-html="كتابة موجز اختبار كما يكتبه الممتحِن<small>سمِّ القرارات الأحد عشر — من المادة وجهة الاعتماد إلى توزيع الصعوبة — قبل كتابة أي شيء.</small>">Brief an exam like an examiner<small>Name the eleven decisions — from subject and board to the difficulty split — before writing anything.</small></li>
+            <li data-en-html="Read and build a blueprint<small>A Table of Specifications that distributes every mark across skills, levels and question types.</small>" data-ar-html="قراءة المخطط وبناؤه<small>جدول مواصفات يوزع كل درجة على المهارات والمستويات وأنواع الأسئلة.</small>">Read and build a blueprint<small>A Table of Specifications that distributes every mark across skills, levels and question types.</small></li>
+            <li data-en-html="Separate content from style<small>The blueprint rules what is tested; the sample exam rules how it looks and sounds.</small>" data-ar-html="فصل المحتوى عن الأسلوب<small>المخطط يحكم ما يُختبر؛ ونموذج الامتحان يحكم شكله وصياغته.</small>">Separate content from style<small>The blueprint rules what is tested; the sample exam rules how it looks and sounds.</small></li>
+            <li class="is-new" data-en-html="Feed the AI your own documents<small>The blueprint, an example exam, and the model answers that go with it.</small>" data-ar-html="تغذية الذكاء الاصطناعي بمستنداتك<small>المخطط، ونموذج امتحان، والإجابات النموذجية المرافقة له.</small>">Feed the AI your own documents<small>The blueprint, an example exam, and the model answers that go with it.</small></li>
+            <li data-en-html="Run one master prompt<small>One editable RCTF prompt that returns the paper, the answer key, the mark scheme and a compliance report.</small>" data-ar-html="تشغيل أمر رئيسي واحد<small>أمر RCTF واحد قابل للتعديل يعيد الورقة ومفتاح الإجابة ومخطط الدرجات وتقرير المطابقة.</small>">Run one master prompt<small>One editable RCTF prompt that returns the paper, the answer key, the mark scheme and a compliance report.</small></li>
+            <li data-en-html="Audit what comes back<small>Ten checks that catch an exam you cannot defend — before it is printed.</small>" data-ar-html="تدقيق ما يعود إليك<small>عشرة فحوص تكشف الاختبار الذي لا تستطيع الدفاع عنه — قبل طباعته.</small>">Audit what comes back<small>Ten checks that catch an exam you cannot defend — before it is printed.</small></li>
+          </ol>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="The rule, carried over again: " data-ar="القاعدة المنقولة مرة أخرى: ">The rule, carried over again: </b><span data-en="the AI writes the draft, you approve it. With an exam the stakes are higher than anywhere else in this course — no paper reaches a student before a qualified teacher has solved every question in it." data-ar="الذكاء الاصطناعي يكتب المسودة، وأنت من يعتمدها. ومع الاختبار تكون المخاطر أعلى منها في أي موضع آخر من هذه الدورة — فلا ورقة تصل إلى طالب قبل أن يحل معلم مؤهل كل سؤال فيها.">the AI writes the draft, you approve it. With an exam the stakes are higher than anywhere else in this course — no paper reaches a student before a qualified teacher has solved every question in it.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 1 · THE BRIEF ============ -->
+        <div class="block" id="brief">
+          <h2 class="display" data-en="Part 1 · The teacher interview: eleven decisions" data-ar="الجزء الأول · مقابلة المعلم: أحد عشر قرارًا">Part 1 · The teacher interview: eleven decisions</h2>
+          <p class="sub" data-en="Before it writes a single question, a professional assessment tool interviews you. Answer these eleven questions and the rest of the session builds itself." data-ar="قبل أن تكتب أداة تقييم محترفة سؤالًا واحدًا، فإنها تُجري معك مقابلة. أجب عن هذه الأسئلة الأحد عشر وسيبني بقية المحاضرة نفسه.">Before it writes a single question, a professional assessment tool interviews you. Answer these eleven questions and the rest of the session builds itself.</p>
+
+          <p data-en="A vague brief produces a generic exam. The Smart Assessment Creator — the tool built for this session — refuses to move forward until the first three answers exist, because without them nothing else means anything. Write your own answers down now; in Part 4 they become the highlighted fields of the master prompt." data-ar="الموجز الغامض ينتج اختبارًا عامًّا بلا هوية. ومنشئ التقييم الذكي — الأداة المبنية لهذه المحاضرة — يرفض التقدم قبل وجود الإجابات الثلاث الأولى، لأن لا شيء بعدها يعني شيئًا من دونها. اكتب إجاباتك الآن؛ ففي الجزء الرابع ستصبح هي الحقول المميزة في الأمر الرئيسي.">A vague brief produces a generic exam. The Smart Assessment Creator — the tool built for this session — refuses to move forward until the first three answers exist, because without them nothing else means anything. Write your own answers down now; in Part 4 they become the highlighted fields of the master prompt.</p>
+
+          <ol class="needs">
+            <li class="is-key" data-en-html="Subject *<small>The subject exactly as your school names it — English, Mathematics, Science, Arabic…</small>" data-ar-html="المادة *<small>المادة كما تسميها مدرستك بالضبط — الإنجليزية، الرياضيات، العلوم، العربية…</small>">Subject *<small>The subject exactly as your school names it — English, Mathematics, Science, Arabic…</small></li>
+            <li class="is-key" data-en-html="Grade / stage *<small>The grade, year or Cambridge stage the paper is written for.</small>" data-ar-html="الصف / المرحلة *<small>الصف أو السنة أو مرحلة كامبريدج التي تُكتب لها الورقة.</small>">Grade / stage *<small>The grade, year or Cambridge stage the paper is written for.</small></li>
+            <li class="is-key" data-en-html="Curriculum / board *<small>Cambridge, IB, a national curriculum, or your school's own — the standard the exam answers to.</small>" data-ar-html="المنهج / جهة الاعتماد *<small>كامبريدج، أو البكالوريا الدولية، أو منهج وطني، أو منهج مدرستك — المعيار الذي يخضع له الاختبار.</small>">Curriculum / board *<small>Cambridge, IB, a national curriculum, or your school's own — the standard the exam answers to.</small></li>
+            <li data-en-html="Unit / topic<small>The unit the paper covers — for example, flashback in narrative.</small>" data-ar-html="الوحدة / الموضوع<small>الوحدة التي تغطيها الورقة — مثلًا: الاسترجاع الزمني في السرد.</small>">Unit / topic<small>The unit the paper covers — for example, flashback in narrative.</small></li>
+            <li data-en-html="Assessment type<small>Quiz, unit test, formative, summative, midterm, final, mock, placement or revision.</small>" data-ar-html="نوع التقييم<small>اختبار قصير، أو اختبار وحدة، أو تكويني، أو ختامي، أو منتصف الفصل، أو نهائي، أو تجريبي، أو تحديد مستوى، أو مراجعة.</small>">Assessment type<small>Quiz, unit test, formative, summative, midterm, final, mock, placement or revision.</small></li>
+            <li data-en-html="Exam language<small>English, Arabic, or bilingual.</small>" data-ar-html="لغة الاختبار<small>الإنجليزية، أو العربية، أو ثنائي اللغة.</small>">Exam language<small>English, Arabic, or bilingual.</small></li>
+            <li data-en-html="Total marks<small>Every mark must land somewhere — the totals are checked twice before delivery.</small>" data-ar-html="الدرجة الكلية<small>كل درجة يجب أن تستقر في موضعها — فالمجاميع تُفحص مرتين قبل التسليم.</small>">Total marks<small>Every mark must land somewhere — the totals are checked twice before delivery.</small></li>
+            <li data-en-html="Duration<small>In minutes. A paper must be sittable in the time — length is a design decision, not an accident.</small>" data-ar-html="المدة<small>بالدقائق. يجب أن تكون الورقة قابلة للحل في وقتها — فالطول قرار تصميمي لا مصادفة.</small>">Duration<small>In minutes. A paper must be sittable in the time — length is a design decision, not an accident.</small></li>
+            <li data-en-html="Number of questions<small>An approximate count that fits the marks and the minutes.</small>" data-ar-html="عدد الأسئلة<small>عدد تقريبي يناسب الدرجات والدقائق.</small>">Number of questions<small>An approximate count that fits the marks and the minutes.</small></li>
+            <li data-en-html="Question types<small>Multiple choice, short answer, true / false, matching, fill in the blanks, structured response, reading comprehension, essay, scenario, problem solving.</small>" data-ar-html="أنواع الأسئلة<small>اختيار من متعدد، إجابة قصيرة، صواب / خطأ، مزاوجة، أكمل الفراغات، استجابة منظمة، فهم مقروء، مقال، موقف ودراسة حالة، حل مشكلات.</small>">Question types<small>Multiple choice, short answer, true / false, matching, fill in the blanks, structured response, reading comprehension, essay, scenario, problem solving.</small></li>
+            <li data-en-html="Difficulty balance<small>Easy, moderate and challenging percentages that must total exactly 100 — for example 30 · 50 · 20.</small>" data-ar-html="توازن الصعوبة<small>نسب السهل والمتوسط والمتقدم التي يجب أن يبلغ مجموعها 100 بالضبط — مثلًا 30 · 50 · 20.</small>">Difficulty balance<small>Easy, moderate and challenging percentages that must total exactly 100 — for example 30 · 50 · 20.</small></li>
+          </ol>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>Why the first three carry a star.</b> Subject, grade and curriculum are the three answers every other decision depends on. A 20-mark quiz means one thing in Grade 2 and another in IGCSE; &quot;challenging&quot; is defined by the board, not by the teacher's mood. Professional tools mark these required — and so does the master prompt in Part 4." data-ar-html="<b>لماذا تحمل الإجابات الثلاث الأولى نجمة.</b> المادة والصف والمنهج هي الإجابات الثلاث التي يعتمد عليها كل قرار آخر. فاختبار من 20 درجة يعني شيئًا في الصف الثاني وشيئًا آخر في IGCSE؛ و«المتقدم» تعرِّفه جهة الاعتماد لا مزاج المعلم. الأدوات المحترفة تجعل هذه الحقول إلزامية — وكذلك يفعل الأمر الرئيسي في الجزء الرابع."><b>Why the first three carry a star.</b> Subject, grade and curriculum are the three answers every other decision depends on. A 20-mark quiz means one thing in Grade 2 and another in IGCSE; "challenging" is defined by the board, not by the teacher's mood. Professional tools mark these required — and so does the master prompt in Part 4.</p>
+          </div>
+        </div>
+
+        <!-- ============ PART 2 · THE BLUEPRINT ============ -->
+        <div class="block" id="blueprint">
+          <h2 class="display" data-en="Part 2 · The blueprint rules the content" data-ar="الجزء الثاني · المخطط يحكم المحتوى">Part 2 · The blueprint rules the content</h2>
+          <p class="sub" data-en="What a valid assessment needs, what a blueprint is, and what one looks like." data-ar="ما الذي يحتاجه التقييم الصحيح، وما هو المخطط، وكيف يبدو.">What a valid assessment needs, what a blueprint is, and what one looks like.</p>
+
+          <p data-en="A valid assessment measures the intended learning outcomes accurately, fairly and consistently — it reflects what was actually taught and gives every student a fair chance to show their learning. Before any paper is written, six things must exist:" data-ar="التقييم الصحيح والفعّال يقيس نواتج التعلّم المستهدفة بدقة وعدل واتساق — فهو يعكس ما تم تدريسه فعليًا، ويمنح كل طالب فرصة عادلة لإظهار تعلمه. وقبل كتابة أي ورقة، يجب أن تتوفر ستة أشياء:">A valid assessment measures the intended learning outcomes accurately, fairly and consistently — it reflects what was actually taught and gives every student a fair chance to show their learning. Before any paper is written, six things must exist:</p>
+
+          <ol class="needs">
+            <li data-en-html="Clear learning objectives<small>Know exactly what students should know, understand or be able to do.</small>" data-ar-html="أهداف تعلّم واضحة ومحددة<small>حدِّد بدقة ما الذي يجب أن يعرفه الطالب، أو يفهمه، أو يكون قادرًا على تطبيقه.</small>">Clear learning objectives<small>Know exactly what students should know, understand or be able to do.</small></li>
+            <li data-en-html="Defined content and skills<small>The units, strands, standards, vocabulary and skills that may be assessed.</small>" data-ar-html="محتوى ومهارات محددة بوضوح<small>الوحدات والمحاور والمعايير والمفردات والمهارات التي سيدور حولها التقييم.</small>">Defined content and skills<small>The units, strands, standards, vocabulary and skills that may be assessed.</small></li>
+            <li class="is-key" data-en-html="A blueprint / Table of Specifications<small>Marks distributed fairly across content, skills, cognitive levels and question types.</small>" data-ar-html="مخطط تقييم / جدول مواصفات<small>درجات موزعة بعدل على المحتوى والمهارات ومستويات التفكير وأنواع الأسئلة.</small>">A blueprint / Table of Specifications<small>Marks distributed fairly across content, skills, cognitive levels and question types.</small></li>
+            <li data-en-html="Appropriate cognitive demand<small>A balance of remembering, understanding, applying, analysing, evaluating and creating.</small>" data-ar-html="تدرّج مناسب في مستويات التفكير<small>توازن بين التذكّر والفهم والتطبيق والتحليل والتقييم والإبداع.</small>">Appropriate cognitive demand<small>A balance of remembering, understanding, applying, analysing, evaluating and creating.</small></li>
+            <li data-en-html="A suitable difficulty balance<small>An intentional mix of accessible, moderate and challenging items.</small>" data-ar-html="توزيع مناسب لمستويات الصعوبة<small>مزيج مقصود من الأسئلة السهلة والمتوسطة والمتقدمة.</small>">A suitable difficulty balance<small>An intentional mix of accessible, moderate and challenging items.</small></li>
+            <li data-en-html="Reliable scoring<small>An answer key, marking criteria and mark schemes prepared before the exam is finalised.</small>" data-ar-html="نظام تصحيح واضح وموثوق<small>مفتاح إجابة ومعايير تصحيح ومخططات درجات تُجهَّز قبل اعتماد الاختبار.</small>">Reliable scoring<small>An answer key, marking criteria and mark schemes prepared before the exam is finalised.</small></li>
+          </ol>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Smart check: " data-ar="فكرة مهمة: ">Smart check: </b><span data-en="a beautiful test is not automatically a valid test. Validity comes from alignment between objectives, content, questions and marks — never from the layout." data-ar="المظهر الجميل لا يصنع اختبارًا صحيحًا تلقائيًا. الصحة تأتي من التوافق بين الأهداف والمحتوى والأسئلة والدرجات — لا من التنسيق أبدًا.">a beautiful test is not automatically a valid test. Validity comes from alignment between objectives, content, questions and marks — never from the layout.</span></p>
+          </div>
+
+          <h3 data-en="What is an assessment blueprint?" data-ar="ما هو مخطط التقييم؟">What is an assessment blueprint?</h3>
+          <p data-en="An assessment blueprint — also called a Table of Specifications — is the planning map of an exam. It shows how the total marks are distributed across learning strands, content areas, skills and cognitive demands, before a single question exists. It is the document that makes an exam defensible:" data-ar="مخطط التقييم — ويسمى أيضًا جدول المواصفات — هو الخريطة التخطيطية للاختبار. يوضح كيف تتوزع الدرجة الكلية على محاور التعلم ومجالات المحتوى والمهارات ومستويات التفكير، قبل أن يوجد سؤال واحد. وهو الوثيقة التي تجعل الاختبار قابلًا للدفاع عنه:">An assessment blueprint — also called a Table of Specifications — is the planning map of an exam. It shows how the total marks are distributed across learning strands, content areas, skills and cognitive demands, before a single question exists. It is the document that makes an exam defensible:</p>
+
+          <ul class="ticks">
+            <li data-en="It prevents over-testing one topic while another is barely touched." data-ar="يمنع الإفراط في اختبار موضوع واحد بينما لا يكاد يُمس موضوع آخر.">It prevents over-testing one topic while another is barely touched.</li>
+            <li data-en="It protects the intended weighting of skills — reading does not quietly swallow writing's marks." data-ar="يحمي الأوزان المقصودة للمهارات — فلا تبتلع القراءة درجات الكتابة في صمت.">It protects the intended weighting of skills — reading does not quietly swallow writing's marks.</li>
+            <li data-en="It guides whoever writes the questions — a human colleague or an AI." data-ar="يوجه من يكتب الأسئلة — زميلًا بشريًا كان أو ذكاءً اصطناعيًا.">It guides whoever writes the questions — a human colleague or an AI.</li>
+            <li data-en="It makes moderation and quality assurance possible: every question can be traced to a row." data-ar="يجعل المراجعة وضمان الجودة ممكنَين: فكل سؤال يمكن تتبعه إلى صف في الجدول.">It makes moderation and quality assurance possible: every question can be traced to a row.</li>
+          </ul>
+
+          <h3 data-en="An example blueprint — 25 marks, reading and writing" data-ar="مثال على مخطط — 25 درجة، قراءة وكتابة">An example blueprint — 25 marks, reading and writing</h3>
+          <p data-en="This is the shape to look for in your school's assessment files. Every mark has an address: a strand, a skill, a question type, a cognitive level." data-ar="هذا هو الشكل الذي تبحث عنه في ملفات التقييم بمدرستك. كل درجة لها عنوان: محور، ومهارة، ونوع سؤال، ومستوى تفكير.">This is the shape to look for in your school's assessment files. Every mark has an address: a strand, a skill, a question type, a cognitive level.</p>
+
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th data-en="Strand" data-ar="المحور">Strand</th>
+                  <th data-en="Skill assessed" data-ar="المهارة المقيسة">Skill assessed</th>
+                  <th data-en="Question type" data-ar="نوع السؤال">Question type</th>
+                  <th data-en="Bloom / DOK" data-ar="بلوم / عمق المعرفة">Bloom / DOK</th>
+                  <th data-en="Marks" data-ar="الدرجات">Marks</th>
+                  <th data-en="Weight" data-ar="الوزن">Weight</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-en="Reading" data-ar="القراءة">Reading</td>
+                  <td data-en="Retrieve explicit information" data-ar="استخراج المعلومات الصريحة">Retrieve explicit information</td>
+                  <td data-en="Multiple choice" data-ar="اختيار من متعدد">Multiple choice</td>
+                  <td data-en="Remember · DOK 1" data-ar="تذكّر · عمق المعرفة 1">Remember · DOK 1</td>
+                  <td>5</td><td>20%</td>
+                </tr>
+                <tr>
+                  <td data-en="Reading" data-ar="القراءة">Reading</td>
+                  <td data-en="Infer meaning and viewpoint" data-ar="استنتاج المعنى ووجهة النظر">Infer meaning and viewpoint</td>
+                  <td data-en="Short answer" data-ar="إجابة قصيرة">Short answer</td>
+                  <td data-en="Analyse · DOK 2–3" data-ar="تحليل · عمق المعرفة 2–3">Analyse · DOK 2–3</td>
+                  <td>5</td><td>20%</td>
+                </tr>
+                <tr>
+                  <td data-en="Reading" data-ar="القراءة">Reading</td>
+                  <td data-en="Vocabulary in context" data-ar="المفردات في سياقها">Vocabulary in context</td>
+                  <td data-en="Matching" data-ar="مزاوجة">Matching</td>
+                  <td data-en="Understand · DOK 1" data-ar="فهم · عمق المعرفة 1">Understand · DOK 1</td>
+                  <td>3</td><td>12%</td>
+                </tr>
+                <tr>
+                  <td data-en="Writing" data-ar="الكتابة">Writing</td>
+                  <td data-en="Sentence accuracy and grammar" data-ar="سلامة الجملة والقواعد">Sentence accuracy and grammar</td>
+                  <td data-en="Fill in the blanks" data-ar="أكمل الفراغات">Fill in the blanks</td>
+                  <td data-en="Apply · DOK 1–2" data-ar="تطبيق · عمق المعرفة 1–2">Apply · DOK 1–2</td>
+                  <td>4</td><td>16%</td>
+                </tr>
+                <tr>
+                  <td data-en="Writing" data-ar="الكتابة">Writing</td>
+                  <td data-en="Compose a structured paragraph" data-ar="كتابة فقرة منظمة">Compose a structured paragraph</td>
+                  <td data-en="Extended response" data-ar="استجابة موسعة">Extended response</td>
+                  <td data-en="Create · DOK 3–4" data-ar="إبداع · عمق المعرفة 3–4">Create · DOK 3–4</td>
+                  <td>8</td><td>32%</td>
+                </tr>
+                <tr>
+                  <td><b data-en="Total" data-ar="المجموع">Total</b></td>
+                  <td></td><td></td><td></td>
+                  <td><b>25</b></td><td><b>100%</b></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>The blueprint is the authority.</b> When you attach one like this in Part 4, it becomes the single authority for <b>what</b> the exam tests and <b>how many marks</b> each skill carries. The AI is not allowed to move a single mark away from it — and if you have no blueprint, the master prompt makes the AI build one from your brief and show it to you for approval first." data-ar="<b>المخطط هو المرجع.</b> عندما ترفق مخططًا كهذا في الجزء الرابع، يصبح هو المرجع الوحيد لـ<b>ما</b> يختبره الامتحان و<b>عدد الدرجات</b> التي تحملها كل مهارة. لا يُسمح للذكاء الاصطناعي بتحريك درجة واحدة عنه — وإن لم يكن لديك مخطط، فإن الأمر الرئيسي يُلزم الذكاء الاصطناعي ببناء واحد من موجزك وعرضه عليك للموافقة أولًا."><b>The blueprint is the authority.</b> When you attach one like this in Part 4, it becomes the single authority for <b>what</b> the exam tests and <b>how many marks</b> each skill carries. The AI is not allowed to move a single mark away from it — and if you have no blueprint, the master prompt makes the AI build one from your brief and show it to you for approval first.</p>
+          </div>
+        </div>
+
+        <!-- ============ PART 3 · WHAT MAKES AN ASSESSMENT STRONG ============ -->
+        <div class="block" id="sample">
+          <h2 class="display" data-en="Part 3 · What makes an assessment strong" data-ar="الجزء الثالث · ما الذي يجعل التقييم قويًا">Part 3 · What makes an assessment strong</h2>
+          <h3 data-en="The eight core criteria" data-ar="المعايير الثمانية الأساسية">The eight core criteria</h3>
+          <p data-en="Valid · Reliable · Fair · Aligned · Balanced · Clear · Accessible · Practical. If one of these fails, the exam measures something other than the learning you taught." data-ar="الصدق · الثبات · العدالة · المواءمة · التوازن · الوضوح · الإتاحة · قابلية التنفيذ. فإن سقط واحد منها، قاس الاختبار شيئًا آخر غير التعلم الذي درَّسته.">Valid · Reliable · Fair · Aligned · Balanced · Clear · Accessible · Practical. If one of these fails, the exam measures something other than the learning you taught.</p>
+
+          <div class="crits">
+            <button class="crit c1" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">V</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Core criterion" data-ar="معيار أساسي">Core criterion</span>
+              <span class="crit-h" data-en="Valid" data-ar="الصدق">Valid</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Measures what it is intended to measure. Every task and question should provide evidence about the target knowledge, skill or learning outcome — not an unrelated ability." data-ar="يقيس ما يفترض أن يقيسه بالفعل. يجب أن يقدم كل سؤال أو مهمة دليلاً على المعرفة أو المهارة أو ناتج التعلم المستهدف، لا على قدرة أخرى غير مقصودة.">Measures what it is intended to measure. Every task and question should provide evidence about the target knowledge, skill or learning outcome — not an unrelated ability.</span></span>
+            </button>
+            <button class="crit c2" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">R</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Core criterion" data-ar="معيار أساسي">Core criterion</span>
+              <span class="crit-h" data-en="Reliable" data-ar="الثبات">Reliable</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Produces reasonably consistent results across students, markers, versions or occasions. Clear items, sufficient evidence and dependable scoring procedures strengthen reliability." data-ar="يعطي نتائج متسقة بدرجة معقولة عبر الطلاب أو المصححين أو النماذج أو مرات التطبيق. وضوح البنود وكفاية الأدلة وثبات إجراءات التصحيح تعزز الثبات.">Produces reasonably consistent results across students, markers, versions or occasions. Clear items, sufficient evidence and dependable scoring procedures strengthen reliability.</span></span>
+            </button>
+            <button class="crit c3" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">F</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Core criterion" data-ar="معيار أساسي">Core criterion</span>
+              <span class="crit-h" data-en="Fair" data-ar="العدالة">Fair</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="No learner should be unfairly disadvantaged by culture, gender, language, disability, background or irrelevant prior knowledge. The assessment should offer an equitable opportunity to demonstrate learning." data-ar="لا ينبغي أن يتعرض أي متعلم لضرر غير عادل بسبب الثقافة أو النوع أو اللغة أو الإعاقة أو الخلفية أو معرفة سابقة غير مرتبطة بالهدف. يجب أن يمنح التقويم فرصة منصفة لإظهار التعلم.">No learner should be unfairly disadvantaged by culture, gender, language, disability, background or irrelevant prior knowledge. The assessment should offer an equitable opportunity to demonstrate learning.</span></span>
+            </button>
+            <button class="crit c4" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">A</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Core criterion" data-ar="معيار أساسي">Core criterion</span>
+              <span class="crit-h" data-en="Aligned" data-ar="المواءمة">Aligned</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Questions match the learning objectives, curriculum standards, taught content and intended cognitive level. What is assessed should reflect what learners were expected and prepared to learn." data-ar="تتوافق الأسئلة مع أهداف التعلم ومعايير المنهج والمحتوى الذي تم تدريسه والمستوى المعرفي المستهدف. ما يتم تقويمه يجب أن يعكس ما كان متوقعاً من المتعلمين تعلمه.">Questions match the learning objectives, curriculum standards, taught content and intended cognitive level. What is assessed should reflect what learners were expected and prepared to learn.</span></span>
+            </button>
+            <button class="crit c5" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">B</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Core criterion" data-ar="معيار أساسي">Core criterion</span>
+              <span class="crit-h" data-en="Representative / Balanced" data-ar="التمثيل والتوازن">Representative / Balanced</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Covers important content and skills in appropriate proportions instead of over-testing one small area. Use an assessment blueprint / Table of Specifications to balance content coverage, Bloom / DOK levels, difficulty distribution and question types." data-ar="يغطي المحتوى والمهارات المهمة بنسب مناسبة بدلاً من الإفراط في قياس جزء صغير. استخدم مخطط التقويم أو جدول المواصفات لموازنة تغطية المحتوى ومستويات بلوم/DOK وتوزيع الصعوبة وأنواع الأسئلة.">Covers important content and skills in appropriate proportions instead of over-testing one small area. Use an assessment blueprint / Table of Specifications to balance content coverage, Bloom / DOK levels, difficulty distribution and question types.</span></span>
+            </button>
+            <button class="crit c6" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">C</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Core criterion" data-ar="معيار أساسي">Core criterion</span>
+              <span class="crit-h" data-en="Clear and unambiguous" data-ar="الوضوح وعدم اللبس">Clear and unambiguous</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Instructions, stems, options and tasks use precise, age-appropriate language. Students should not lose marks because of confusing wording, hidden expectations or unnecessary linguistic complexity." data-ar="تستخدم التعليمات وصياغة الأسئلة والاختيارات والمهام لغة دقيقة ومناسبة للعمر. لا ينبغي أن يفقد الطالب درجات بسبب صياغة مربكة أو توقعات خفية أو تعقيد لغوي غير ضروري.">Instructions, stems, options and tasks use precise, age-appropriate language. Students should not lose marks because of confusing wording, hidden expectations or unnecessary linguistic complexity.</span></span>
+            </button>
+            <button class="crit c7" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">A</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Core criterion" data-ar="معيار أساسي">Core criterion</span>
+              <span class="crit-h" data-en="Accessible" data-ar="الإتاحة">Accessible</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Layout, font size, spacing, language, visuals and appropriate accommodations allow students to demonstrate their actual learning. Access needs should not change the construct being measured." data-ar="يساعد التخطيط وحجم الخط والمسافات واللغة والمرئيات والتسهيلات المناسبة الطلاب على إظهار تعلمهم الفعلي، من دون أن تغيّر التسهيلات المهارة أو البنية التي يقيسها التقويم.">Layout, font size, spacing, language, visuals and appropriate accommodations allow students to demonstrate their actual learning. Access needs should not change the construct being measured.</span></span>
+            </button>
+            <button class="crit c8" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">P</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Core criterion" data-ar="معيار أساسي">Core criterion</span>
+              <span class="crit-h" data-en="Practical / Feasible" data-ar="العملية وقابلية التنفيذ">Practical / Feasible</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Can realistically be completed, administered, marked and reviewed within the available time, staffing, technology and resources. Quality matters, but the assessment must also be workable." data-ar="يمكن تنفيذ التقويم وإدارته وتصحيحه ومراجعته واقعياً ضمن الوقت والكوادر والتقنية والموارد المتاحة. الجودة مهمة، لكن يجب أيضاً أن يكون التقويم قابلاً للتطبيق.">Can realistically be completed, administered, marked and reviewed within the available time, staffing, technology and resources. Quality matters, but the assessment must also be workable.</span></span>
+            </button>
+          </div>
+
+          <h3 data-en="Eight quality safeguards" data-ar="ثمانية ضمانات للجودة">Eight quality safeguards</h3>
+          <p data-en="These do not replace the eight above; they protect them. They are the checks that catch a paper which looks correct and still produces the wrong result." data-ar="هذه لا تحل محل الثمانية السابقة، بل تحميها. وهي الفحوص التي تكشف الورقة التي تبدو سليمة ومع ذلك تنتج نتيجة خاطئة.">These do not replace the eight above; they protect them. They are the checks that catch a paper which looks correct and still produces the wrong result.</p>
+
+          <div class="crits">
+            <button class="crit c1" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">🎯</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Quality safeguard" data-ar="ضمان جودة">Quality safeguard</span>
+              <span class="crit-h" data-en="Appropriately challenging" data-ar="مستوى تحدٍ مناسب">Appropriately challenging</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Includes a sensible range of difficulty — easy, moderate and challenging items — rather than being entirely easy or excessively difficult. Difficulty should fit the learners and the intended outcomes." data-ar="يتضمن نطاقاً منطقياً من الصعوبة، مثل أسئلة سهلة ومتوسطة ومتحدية، بدلاً من أن يكون سهلاً بالكامل أو شديد الصعوبة. يجب أن تتناسب الصعوبة مع المتعلمين ونواتج التعلم.">Includes a sensible range of difficulty — easy, moderate and challenging items — rather than being entirely easy or excessively difficult. Difficulty should fit the learners and the intended outcomes.</span></span>
+            </button>
+            <button class="crit c2" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">📊</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Quality safeguard" data-ar="ضمان جودة">Quality safeguard</span>
+              <span class="crit-h" data-en="Discriminating" data-ar="القدرة على التمييز">Discriminating</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Good items distinguish between learners who have mastered the intended learning and those who have not. Questions should generate useful evidence rather than allowing everyone to score the same for the wrong reasons." data-ar="تميّز البنود الجيدة بين من أتقنوا التعلم المستهدف ومن لم يتقنوه. ينبغي أن تنتج الأسئلة أدلة مفيدة بدلاً من حصول الجميع على نتائج متشابهة لأسباب لا تتعلق بالإتقان.">Good items distinguish between learners who have mastered the intended learning and those who have not. Questions should generate useful evidence rather than allowing everyone to score the same for the wrong reasons.</span></span>
+            </button>
+            <button class="crit c3" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">✅</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Quality safeguard" data-ar="ضمان جودة">Quality safeguard</span>
+              <span class="crit-h" data-en="Objective in scoring" data-ar="موضوعية التصحيح">Objective in scoring</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Answers, mark schemes, rubrics and scoring criteria are explicit enough to reduce marker subjectivity. Different competent markers should interpret performance in broadly the same way." data-ar="تكون الإجابات ونماذج التصحيح وسلالم التقدير ومعايير الدرجات واضحة بما يكفي لتقليل ذاتية المصحح، بحيث يفسر المصححون الأكفاء الأداء بطريقة متقاربة.">Answers, mark schemes, rubrics and scoring criteria are explicit enough to reduce marker subjectivity. Different competent markers should interpret performance in broadly the same way.</span></span>
+            </button>
+            <button class="crit c4" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">🌍</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Quality safeguard" data-ar="ضمان جودة">Quality safeguard</span>
+              <span class="crit-h" data-en="Authentic" data-ar="الأصالة والواقعية">Authentic</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Where appropriate, tasks resemble meaningful real-life or subject-specific applications rather than testing memorisation alone. Authenticity should support — not replace — the intended learning outcome." data-ar="عندما يكون ذلك مناسباً، تشبه المهام تطبيقات واقعية أو مرتبطة بالمادة بدلاً من قياس الحفظ فقط. ويجب أن تخدم الواقعية ناتج التعلم المستهدف لا أن تستبدله.">Where appropriate, tasks resemble meaningful real-life or subject-specific applications rather than testing memorisation alone. Authenticity should support — not replace — the intended learning outcome.</span></span>
+            </button>
+            <button class="crit c5" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">🔍</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Quality safeguard" data-ar="ضمان جودة">Quality safeguard</span>
+              <span class="crit-h" data-en="Transparent" data-ar="الشفافية">Transparent</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Students understand what is expected, how marks are allocated and what quality performance looks like. Instructions, criteria and scoring expectations should not depend on guessing the teacher’s intention." data-ar="يفهم الطلاب ما هو متوقع منهم وكيف توزع الدرجات وما شكل الأداء الجيد. لا ينبغي أن تعتمد التعليمات والمعايير وتوقعات التصحيح على تخمين نية المعلم.">Students understand what is expected, how marks are allocated and what quality performance looks like. Instructions, criteria and scoring expectations should not depend on guessing the teacher’s intention.</span></span>
+            </button>
+            <button class="crit c6" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">🔐</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Quality safeguard" data-ar="ضمان جودة">Quality safeguard</span>
+              <span class="crit-h" data-en="Secure" data-ar="الأمان">Secure</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Questions, answer keys, student responses and results are appropriately protected. Assessment security helps preserve fairness, integrity and confidence in the results." data-ar="تتم حماية الأسئلة ومفاتيح الإجابة واستجابات الطلاب والنتائج بصورة مناسبة. يساعد أمن التقويم على الحفاظ على العدالة والنزاهة والثقة في النتائج.">Questions, answer keys, student responses and results are appropriately protected. Assessment security helps preserve fairness, integrity and confidence in the results.</span></span>
+            </button>
+            <button class="crit c7" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">⚖️</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Quality safeguard" data-ar="ضمان جودة">Quality safeguard</span>
+              <span class="crit-h" data-en="Bias-free" data-ar="خالٍ من التحيز">Bias-free</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Avoids unnecessary cultural references, stereotypes, unfamiliar contexts or language complexity that interferes with the intended construct. Context should support comprehension, not create irrelevant barriers." data-ar="يتجنب الإشارات الثقافية غير الضرورية والصور النمطية والسياقات غير المألوفة أو التعقيد اللغوي الذي يتداخل مع المهارة المستهدفة. ينبغي أن يدعم السياق الفهم لا أن يصنع عوائق غير مرتبطة بالهدف.">Avoids unnecessary cultural references, stereotypes, unfamiliar contexts or language complexity that interferes with the intended construct. Context should support comprehension, not create irrelevant barriers.</span></span>
+            </button>
+            <button class="crit c8" type="button" aria-expanded="false">
+              <span class="crit-top"><span class="crit-icon" aria-hidden="true">🧾</span><span class="crit-plus" aria-hidden="true">+</span></span>
+              <span class="crit-tag" data-en="Quality safeguard" data-ar="ضمان جودة">Quality safeguard</span>
+              <span class="crit-h" data-en="Sufficient" data-ar="الكفاية">Sufficient</span>
+              <span class="crit-hint" data-en="Select to reveal" data-ar="اضغط للكشف">Select to reveal</span>
+              <span class="crit-body"><span data-en="Contains enough questions or pieces of evidence to support a sound judgment about achievement. A conclusion based on too little evidence can be unstable even when the individual questions are good." data-ar="يتضمن عدداً كافياً من الأسئلة أو الأدلة لإصدار حكم سليم على مستوى التحصيل. قد يكون الحكم المبني على أدلة قليلة غير مستقر حتى لو كانت الأسئلة الفردية جيدة.">Contains enough questions or pieces of evidence to support a sound judgment about achievement. A conclusion based on too little evidence can be unstable even when the individual questions are good.</span></span>
+            </button>
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="The golden rule: " data-ar="القاعدة الذهبية: ">The golden rule: </b><span data-en="a good exam does not simply contain good questions. It contains the right questions, in the right proportions, at the right difficulty and cognitive levels, with clear and fair scoring." data-ar="الاختبار الجيد لا يحتوي فقط على أسئلة جيدة؛ بل يحتوي على الأسئلة الصحيحة، بالنسب الصحيحة، وبمستويات مناسبة من الصعوبة والعمق المعرفي، مع تصحيح واضح وعادل.">a good exam does not simply contain good questions. It contains the right questions, in the right proportions, at the right difficulty and cognitive levels, with clear and fair scoring.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 4 · THE MASTER PROMPT ============ -->
+        <div class="block" id="master">
+          <h2 class="display" data-en="Part 4 · Attach the files, then paste one prompt" data-ar="الجزء الرابع · أرفق الملفات، ثم الصق أمرًا واحدًا">Part 4 · Attach the files, then paste one prompt</h2>
+          <p class="sub" data-en="Six instructions, then the master prompt. Fill in the fourteen highlighted fields and copy the whole thing into ChatGPT." data-ar="ست تعليمات، ثم الأمر الرئيسي. املأ الحقول الأربعة عشر المميزة وانسخه كاملًا إلى ChatGPT.">Six instructions, then the master prompt. Fill in the fourteen highlighted fields and copy the whole thing into ChatGPT.</p>
+
+          <p data-en="An AI that has not seen your blueprint invents its own weighting. One that has not seen a past paper invents a foreign format. One that has not seen the model answers guesses how strict your marking is. Attach the files first — the prompt is written to use every one of them." data-ar="الذكاء الاصطناعي الذي لم يرَ مخططك يخترع أوزانه الخاصة. والذي لم يرَ ورقة سابقة يخترع صيغة غريبة. والذي لم يرَ الإجابات النموذجية يخمِّن مدى صرامة تصحيحك. أرفق الملفات أولًا — فالأمر مكتوب ليستعمل كل واحد منها.">An AI that has not seen your blueprint invents its own weighting. One that has not seen a past paper invents a foreign format. One that has not seen the model answers guesses how strict your marking is. Attach the files first — the prompt is written to use every one of them.</p>
+
+          <ul class="ticks is-do">
+            <li data-en="Open a new chat in ChatGPT and select the plus button beside the message box." data-ar="افتح محادثة جديدة في ChatGPT واختر زر الإضافة بجوار صندوق الرسالة.">Open a new chat in ChatGPT and select the plus button beside the message box.</li>
+            <li data-en="Attach the assessment blueprint — the Table of Specifications — if one exists for this exam." data-ar="أرفق مخطط التقييم — جدول المواصفات — إن وُجد لهذا الاختبار.">Attach the assessment blueprint — the Table of Specifications — if one exists for this exam.</li>
+            <li data-en="Attach an example exam: a real past paper in the format your school actually uses." data-ar="أرفق نموذج امتحان: ورقة سابقة حقيقية بالصيغة التي تستخدمها مدرستك فعلًا.">Attach an example exam: a real past paper in the format your school actually uses.</li>
+            <li data-en="Attach that paper's model answers or answer key, if you have them." data-ar="أرفق الإجابات النموذجية أو مفتاح الإجابة لتلك الورقة، إن كانا لديك.">Attach that paper's model answers or answer key, if you have them.</li>
+            <li data-en="Attach the student-book pages, or a short list of the topics the exam must cover, so the AI tests only what was taught." data-ar="أرفق صفحات كتاب الطالب، أو قائمة قصيرة بالموضوعات التي يجب أن يغطيها الاختبار، حتى يختبر الذكاء الاصطناعي ما دُرِّس فقط.">Attach the student-book pages, or a short list of the topics the exam must cover, so the AI tests only what was taught.</li>
+            <li data-en="Fill in the fourteen highlighted fields below, copy the whole prompt, and send it in the same message as the attachments." data-ar="املأ الحقول الأربعة عشر المميزة أدناه، وانسخ الأمر كاملًا، وأرسله في الرسالة نفسها مع المرفقات.">Fill in the fourteen highlighted fields below, copy the whole prompt, and send it in the same message as the attachments.</li>
+          </ul>
+
+          <div class="hint is-lamp">
+            <p style="margin:0" data-en-html="<b>Before you press send — three attachments change everything.</b> ① An <b>example exam</b> — a past paper in your school's real format. ② The <b>model exam answers</b> — the model answers or answer key that went with it, so the AI learns how marks are truly awarded. ③ The <b>blueprint</b>, if one was issued with the exam — it is the only document that can protect your weighting. The more of these three the AI sees, the closer its paper is to one of yours." data-ar="<b>قبل أن تضغط إرسال — ثلاثة مرفقات تغيِّر كل شيء.</b> ① <b>نموذج امتحان</b> — ورقة سابقة بصيغة مدرستك الحقيقية. ② <b>الإجابات النموذجية للامتحان</b> — الإجابات النموذجية أو مفتاح الإجابة المرافق لها، ليتعلم الذكاء الاصطناعي كيف تُمنح الدرجات فعلًا. ③ <b>المخطط</b>، إن كان قد صدر مع الامتحان — فهو الوثيقة الوحيدة القادرة على حماية أوزانك. وكلما رأى الذكاء الاصطناعي أكثر من هذه الثلاثة، اقتربت ورقته من أن تكون واحدة من أوراقك."><b>Before you press send — three attachments change everything.</b> ① An <b>example exam</b> — a past paper in your school's real format. ② The <b>model exam answers</b> — the model answers or answer key that went with it, so the AI learns how marks are truly awarded. ③ The <b>blueprint</b>, if one was issued with the exam — it is the only document that can protect your weighting. The more of these three the AI sees, the closer its paper is to one of yours.</p>
+          </div>
+
+          <p class="prompt-label" data-en="The master prompt — English" data-ar="الأمر الرئيسي — بالإنجليزية">The master prompt — English</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p-exam-en" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p-exam-en" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall" id="p-exam-en" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable master exam prompt in English" data-ar-label="الأمر الرئيسي للاختبار بالإنجليزية، قابل للتعديل"># RCTF MASTER PROMPT — BLUEPRINT-ALIGNED EXAM
+
+## R — ROLE
+Act as:
+* An expert assessment designer and examination writer.
+* A certified <span class="ph">English-language</span> teacher working to the standards named below.
+* A specialist in Bloom's Revised Taxonomy and Depth of Knowledge (DOK).
+* An expert in fair marking: answer keys, mark schemes and rubrics.
+Read every attachment completely before writing anything.
+
+## C — CONTEXT
+Attached to this message you will find:
+1. The assessment blueprint / Table of Specifications (if one exists).
+2. An example exam — a past paper in our school's own format.
+3. The model answers / answer key of that example exam (if available).
+4. The student-book pages, or a list of the topics this exam must cover.
+
+The exam brief:
+* Subject: <span class="ph">English — Reading</span>
+* Grade/Stage: <span class="ph">Grade 6</span>
+* Curriculum / board: <span class="ph">Cambridge Lower Secondary</span>
+* Unit / topic: <span class="ph">adventure narrative and flashback (Unit 1)</span>
+* Assessment type: <span class="ph">unit test</span>
+* Exam language: <span class="ph">English</span>
+* Total marks: <span class="ph">20</span>
+* Duration: <span class="ph">30 minutes</span>
+* Approximate number of questions: <span class="ph">10</span>
+* Question types: <span class="ph">multiple choice · short answer · structured response</span>
+* Difficulty balance: <span class="ph">30% easy · 50% moderate · 20% challenging</span>
+
+### Source-control rules
+* The blueprint is the single authority for content, skills, weighting and marks. Do not move a single mark away from it. If the blueprint and this brief disagree, stop and ask me which to follow.
+* If no blueprint is attached, first build one from this brief — a table of skill × question type × Bloom × DOK × marks — show it to me, and wait for my approval before writing any questions.
+* The example exam is an authority for style only: section structure, command verbs, wording, difficulty progression and layout. Never copy, translate or lightly reword any of its questions, passages or data.
+* Use the model answers only to learn how marks are awarded and how much detail a full-mark answer contains.
+* Test only what the attached book pages or topic list cover. Do not test content students have not been taught.
+* Write every reading passage, data set and example yourself, original and at the level of the attached pages. Never present invented material as if it came from the book.
+* If an attachment named above is missing or unreadable, stop and request it before writing.
+
+## T — TASK
+1. Analyse the blueprint first: extract the objectives, skills, question allocation, marks, weighting, Bloom levels and DOK levels.
+2. Analyse the example exam for structure, command verbs, difficulty progression and layout only.
+3. Build the alignment map before writing: Objective → Content → Question type → Marks → Bloom → DOK → Difficulty.
+4. Write original, age-appropriate questions to that map, in the style of the example exam.
+5. For multiple choice: one defensibly correct answer per question, plausible distractors of similar length, and no accidental clues.
+6. Avoid ambiguity, double negatives, trick wording, testing the same point twice, and any content outside the sources.
+7. Check the arithmetic: question marks add up to section totals, and section totals add up to the total marks in the brief.
+8. Produce the student paper, completely free of answers.
+9. Produce a separate teacher answer key.
+10. Produce a detailed mark scheme for every constructed-response question, showing how each mark is earned.
+11. Produce a blueprint compliance report: one row per question — objective, content, question type, Bloom, DOK, difficulty, marks.
+12. Version B (delete this line if you do not need it): produce a second paper with the same blueprint, marks, structure and difficulty, but genuinely different questions.
+
+## F — FORMAT
+* Match the example exam's layout: the header block, the name/class/date line, numbered sections, marks in brackets beside every question, and realistic answer space.
+* Professional, clean and print-ready; use tables wherever the example exam uses tables.
+* Write the paper in <span class="ph">English</span>.
+* Deliver everything as <span class="ph">a Microsoft Word document I can download</span>, with the student paper first and the teacher documents after a page break.
+
+### Quality-control checklist — run every check before you deliver
+1. Every question's marks are shown, question marks add up to section totals, and section totals add up to the brief's total.
+2. Every blueprint row is represented with exactly its share of marks — no row missing, no row inflated.
+3. The Bloom and DOK spread matches the blueprint, or the approved map if you built one.
+4. The difficulty split matches the brief to within one question.
+5. Every question is answerable from the taught content, at the grade's reading level.
+6. No question reveals or contains the answer to another.
+7. Multiple-choice items have exactly one correct answer each — solve each one twice to confirm.
+8. Command verbs and instruction wording match the example exam's style.
+9. The student paper contains no answers, hints or marking notes anywhere.
+10. The compliance report covers every question with no gaps.
+Confirm, at the end of your reply, that all ten checks passed — and name any that could not.</div>
+
+          <p class="prompt-label" data-en="The master prompt — Arabic" data-ar="الأمر الرئيسي — بالعربية">The master prompt — Arabic</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p-exam-ar" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p-exam-ar" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall is-ar" id="p-exam-ar" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable master exam prompt in Arabic" data-ar-label="الأمر الرئيسي للاختبار بالعربية، قابل للتعديل"># أمر RCTF الرئيسي — اختبار متوافق مع المخطط
+
+## R — الدور
+تصرَّف بوصفك:
+* مصمم تقييم وكاتب امتحانات خبيرًا.
+* معلِّم <span class="ph">اللغة الإنجليزية</span> معتمدًا يعمل وفق المعايير المذكورة أدناه.
+* متخصصًا في تصنيف بلوم المعدَّل وعمق المعرفة (DOK).
+* خبيرًا في التصحيح العادل: مفاتيح الإجابة ومخططات الدرجات ومعايير التقييم.
+اقرأ كل مرفق قراءة كاملة قبل كتابة أي شيء.
+
+## C — السياق
+سترى مرفقًا بهذه الرسالة:
+1. مخطط التقييم / جدول المواصفات (إن وُجد).
+2. نموذج امتحان — ورقة سابقة بصيغة مدرستنا الخاصة.
+3. الإجابات النموذجية / مفتاح الإجابة لذلك النموذج (إن توفر).
+4. صفحات كتاب الطالب، أو قائمة بالموضوعات التي يجب أن يغطيها هذا الاختبار.
+
+موجز الاختبار:
+* المادة: <span class="ph">اللغة الإنجليزية — قراءة</span>
+* الصف / المرحلة: <span class="ph">الصف السادس</span>
+* المنهج / جهة الاعتماد: <span class="ph">كامبريدج للمرحلة المتوسطة الدنيا</span>
+* الوحدة / الموضوع: <span class="ph">السرد المغامر والاسترجاع الزمني (الوحدة 1)</span>
+* نوع التقييم: <span class="ph">اختبار وحدة</span>
+* لغة الاختبار: <span class="ph">الإنجليزية</span>
+* الدرجة الكلية: <span class="ph">20</span>
+* المدة: <span class="ph">30 دقيقة</span>
+* عدد الأسئلة التقريبي: <span class="ph">10</span>
+* أنواع الأسئلة: <span class="ph">اختيار من متعدد · إجابة قصيرة · استجابة منظمة</span>
+* توازن الصعوبة: <span class="ph">30% سهل · 50% متوسط · 20% متقدم</span>
+
+### قواعد ضبط المصادر
+* المخطط هو المرجع الوحيد للمحتوى والمهارات والأوزان والدرجات. لا تحرِّك درجة واحدة عنه. وإذا تعارض المخطط مع هذا الموجز، فتوقَّف واسألني أيهما أتَّبع.
+* إن لم يكن مخطط مرفقًا، فابنِ أولًا مخططًا من هذا الموجز — جدول: المهارة × نوع السؤال × بلوم × عمق المعرفة × الدرجات — واعرضه عليَّ، وانتظر موافقتي قبل كتابة أي سؤال.
+* نموذج الامتحان مرجع للأسلوب فقط: بنية الأقسام، والأفعال الأمرية، والصياغة، وتدرج الصعوبة، والتنسيق. لا تنسخ أيًّا من أسئلته أو نصوصه أو بياناته، ولا تترجمها، ولا تعِد صياغتها صياغة خفيفة.
+* استخدم الإجابات النموذجية فقط لتتعلم كيف تُمنح الدرجات وكم من التفصيل تحتاجه إجابة الدرجة الكاملة.
+* اختبر فقط ما تغطيه صفحات الكتاب أو قائمة الموضوعات المرفقة. لا تختبر محتوى لم يدرسه الطلاب.
+* اكتب كل نص قراءة ومجموعة بيانات ومثال بنفسك، أصيلًا وبمستوى الصفحات المرفقة. ولا تقدِّم أبدًا مادة مخترعة على أنها من الكتاب.
+* إذا كان أحد المرفقات المذكورة أعلاه ناقصًا أو غير مقروء، فتوقَّف واطلبه قبل الكتابة.
+
+## T — المهمة
+1. حلِّل المخطط أولًا: استخرج الأهداف والمهارات وتوزيع الأسئلة والدرجات والأوزان ومستويات بلوم وعمق المعرفة.
+2. حلِّل نموذج الامتحان من أجل البنية والأفعال الأمرية وتدرج الصعوبة والتنسيق فقط.
+3. ابنِ خريطة المواءمة قبل الكتابة: الهدف ← المحتوى ← نوع السؤال ← الدرجات ← بلوم ← عمق المعرفة ← الصعوبة.
+4. اكتب أسئلة أصيلة مناسبة للعمر وفق تلك الخريطة، وبأسلوب نموذج الامتحان.
+5. في الاختيار من متعدد: إجابة واحدة صحيحة يمكن الدفاع عنها لكل سؤال، ومشتتات معقولة متقاربة الطول، وبلا تلميحات غير مقصودة.
+6. تجنَّب الغموض، والنفي المزدوج، والصياغة الخادعة، واختبار النقطة نفسها مرتين، وأي محتوى خارج المصادر.
+7. راجع الحساب: درجات الأسئلة تساوي مجاميع الأقسام، ومجاميع الأقسام تساوي الدرجة الكلية في الموجز.
+8. أنتج ورقة الطالب خالية تمامًا من الإجابات.
+9. أنتج مفتاح إجابة منفصلًا للمعلم.
+10. أنتج مخطط درجات تفصيليًا لكل سؤال ذي استجابة إنشائية، يبيِّن كيف تُكتسب كل درجة.
+11. أنتج تقرير مطابقة للمخطط: صف لكل سؤال — الهدف، المحتوى، نوع السؤال، بلوم، عمق المعرفة، الصعوبة، الدرجات.
+12. النسخة B (احذف هذا السطر إن لم تحتجها): أنتج ورقة ثانية بالمخطط نفسه والدرجات نفسها والبنية نفسها والصعوبة نفسها، لكن بأسئلة مختلفة حقًّا.
+
+## F — التنسيق
+* طابق تنسيق نموذج الامتحان: كتلة الترويسة، وسطر الاسم / الفصل / التاريخ، والأقسام المرقمة، والدرجات بين قوسين بجوار كل سؤال، ومساحات إجابة واقعية.
+* احترافي ونظيف وجاهز للطباعة؛ واستخدم الجداول حيثما استخدمها نموذج الامتحان.
+* اكتب الورقة بـ<span class="ph">الإنجليزية</span>.
+* سلِّم كل شيء في <span class="ph">مستند Microsoft Word أستطيع تنزيله</span>، بحيث تأتي ورقة الطالب أولًا ثم مستندات المعلم بعد فاصل صفحات.
+
+### قائمة ضبط الجودة — نفِّذ كل فحص قبل التسليم
+1. درجات كل سؤال ظاهرة، ودرجات الأسئلة تساوي مجاميع الأقسام، ومجاميع الأقسام تساوي الدرجة الكلية في الموجز.
+2. كل صف في المخطط ممثَّل بنصيبه من الدرجات بالضبط — لا صف ناقص ولا صف متضخم.
+3. توزيع بلوم وعمق المعرفة يطابق المخطط، أو الخريطة المعتمدة إن كنت أنت من بناها.
+4. توزيع الصعوبة يطابق الموجز بفارق سؤال واحد على الأكثر.
+5. كل سؤال يمكن إجابته من المحتوى المدروس، وبمستوى قراءة الصف.
+6. لا سؤال يكشف إجابة سؤال آخر أو يحتويها.
+7. لكل سؤال اختيار من متعدد إجابة صحيحة واحدة بالضبط — حُلَّ كل سؤال مرتين للتأكد.
+8. الأفعال الأمرية وصياغة التعليمات تطابقان أسلوب نموذج الامتحان.
+9. ورقة الطالب لا تحتوي في أي موضع على إجابات أو تلميحات أو ملاحظات تصحيح.
+10. تقرير المطابقة يغطي كل سؤال بلا فجوات.
+أكِّد في نهاية ردك أن الفحوص العشرة كلها اجتازت — وسمِّ ما تعذَّر منها إن وُجد.</div>
+        </div>
+
+        <!-- ============ PART 5 · AUDIT ============ -->
+        <div class="block" id="audit">
+          <h2 class="display" data-en="Part 5 · Audit the exam before students see it" data-ar="الجزء الخامس · دقِّق الاختبار قبل أن يراه الطلاب">Part 5 · Audit the exam before students see it</h2>
+          <p class="sub" data-en="The prompt makes the AI run its ten checks. Run your own too — these are the ones that catch a paper you cannot defend." data-ar="الأمر يُلزم الذكاء الاصطناعي بفحوصه العشرة. نفِّذ أنت فحوصك أيضًا — فهذه هي التي تكشف الورقة التي لا تستطيع الدفاع عنها.">The prompt makes the AI run its ten checks. Run your own too — these are the ones that catch a paper you cannot defend.</p>
+
+          <ul class="ticks is-do">
+            <li data-en="Solve the whole paper yourself, against the clock. If you need more than half the duration, students need more than all of it." data-ar="حُلَّ الورقة كاملة بنفسك، وبالساعة. فإن احتجت أكثر من نصف المدة، فسيحتاج الطلاب أكثر من المدة كلها.">Solve the whole paper yourself, against the clock. If you need more than half the duration, students need more than all of it.</li>
+            <li data-en="Add the marks by hand — question by question, section by section. Do the totals match the cover?" data-ar="اجمع الدرجات يدويًا — سؤالًا سؤالًا وقسمًا قسمًا. هل تطابق المجاميع ما على الغلاف؟">Add the marks by hand — question by question, section by section. Do the totals match the cover?</li>
+            <li data-en="Take the compliance report and tick each row against the blueprint. Is any skill missing its marks — or carrying marks it was never given?" data-ar="خذ تقرير المطابقة وأشِّر على كل صف مقابل المخطط. هل من مهارة فقدت درجاتها — أو تحمل درجات لم تُمنح لها قط؟">Take the compliance report and tick each row against the blueprint. Is any skill missing its marks — or carrying marks it was never given?</li>
+            <li data-en="Read every question against the taught content: could your students answer it from what actually happened in class?" data-ar="اقرأ كل سؤال مقابل المحتوى المدروس: هل يستطيع طلابك إجابته مما حدث فعلًا في الفصل؟">Read every question against the taught content: could your students answer it from what actually happened in class?</li>
+            <li data-en="Check every multiple-choice item: exactly one defensible answer? Distractors a hard-working student might actually choose?" data-ar="افحص كل سؤال اختيار من متعدد: هل له إجابة واحدة يمكن الدفاع عنها؟ وهل المشتتات مما قد يختاره فعلًا طالب مجتهد؟">Check every multiple-choice item: exactly one defensible answer? Distractors a hard-working student might actually choose?</li>
+            <li data-en="Hunt for leaks: does any question, option or passage give away the answer to another?" data-ar="طارد التسريبات: هل يكشف أي سؤال أو خيار أو نص إجابة سؤال آخر؟">Hunt for leaks: does any question, option or passage give away the answer to another?</li>
+            <li data-en="Put the new paper beside the sample exam. Would a student recognise the format — and fail to recognise a single question?" data-ar="ضع الورقة الجديدة بجوار نموذج الامتحان. هل سيتعرف الطالب على الصيغة — ولا يتعرف على سؤال واحد؟">Put the new paper beside the sample exam. Would a student recognise the format — and fail to recognise a single question?</li>
+            <li data-en="Check the mark scheme against the model answers' style: same strictness, same level of detail per mark?" data-ar="قارن مخطط الدرجات بأسلوب الإجابات النموذجية: الصرامة نفسها، والتفصيل نفسه لكل درجة؟">Check the mark scheme against the model answers' style: same strictness, same level of detail per mark?</li>
+            <li data-en="Confirm the student paper is clean: no answers, no hints, no marking notes anywhere on it." data-ar="تأكد أن ورقة الطالب نظيفة: لا إجابات ولا تلميحات ولا ملاحظات تصحيح في أي موضع منها.">Confirm the student paper is clean: no answers, no hints, no marking notes anywhere on it.</li>
+            <li data-en="If you asked for a Version B: sit both papers. Are they genuinely equivalent — and genuinely different?" data-ar="إن طلبت النسخة B: حُلَّ الورقتين. هل هما متكافئتان حقًّا — ومختلفتان حقًّا؟">If you asked for a Version B: sit both papers. Are they genuinely equivalent — and genuinely different?</li>
+          </ul>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Take this into Session 4: " data-ar="خذ هذا إلى المحاضرة الرابعة: ">Take this into Session 4: </b><span data-en="keep the exam, its answer key and its mark scheme together. Next session the AI marks real student work against them — and writes the feedback and the remedial plan." data-ar="احتفظ بالاختبار ومفتاح إجابته ومخطط درجاته معًا. ففي المحاضرة القادمة يصحح الذكاء الاصطناعي أعمال طلاب حقيقية وفقها — ويكتب التغذية الراجعة والخطة العلاجية.">keep the exam, its answer key and its mark scheme together. Next session the AI marks real student work against them — and writes the feedback and the remedial plan.</span></p>
+          </div>
+        </div>
+
+        <!-- ---------- APPS USED ---------- -->
+        <div class="block" id="apps">
+          <h2 class="display" data-en="Apps used in this session" data-ar="الأدوات المستخدمة في هذه المحاضرة">Apps used in this session</h2>
+          <p class="sub" data-en="A rehearsal tool built for this session, and the two AI assistants that read your attached files." data-ar="أداة تدريب مبنية لهذه المحاضرة، والمساعدان الذكيان اللذان يقرآن ملفاتك المرفقة.">A rehearsal tool built for this session, and the two AI assistants that read your attached files.</p>
+
+          <div class="apps">
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="Shared tool" data-ar="أداة مشتركة">Shared tool</span>
+              <h3 data-en="Smart Assessment Creator" data-ar="منشئ التقييم الذكي">Smart Assessment Creator</h3>
+              <p data-en="The four steps of this session as a working tool: it interviews you for the brief, takes the blueprint, takes the sample exam, and assembles the same master prompt from your answers — ready to copy. Use it to rehearse the workflow before you open ChatGPT." data-ar="خطوات هذه المحاضرة الأربع في أداة عاملة: تُجري معك مقابلة الموجز، وتستلم المخطط، وتستلم نموذج الامتحان، وتركِّب الأمر الرئيسي نفسه من إجاباتك — جاهزًا للنسخ. استخدمها للتدرب على مسار العمل قبل أن تفتح ChatGPT.">The four steps of this session as a working tool: it interviews you for the brief, takes the blueprint, takes the sample exam, and assembles the same master prompt from your answers — ready to copy. Use it to rehearse the workflow before you open ChatGPT.</p>
+              <p class="app-url">https://share.gemini.google/br4GRWKTf1QR</p>
+              <a class="btn btn-primary" href="https://share.gemini.google/br4GRWKTf1QR" target="_blank" rel="noopener">
+                <span data-en="Open the creator" data-ar="افتح المنشئ">Open the creator</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>ChatGPT</h3>
+              <p data-en="Use it to run the master prompt with your files attached. It reads the blueprint, the past paper and the model answers, and returns the full package as a document you can download." data-ar="استخدمه لتشغيل الأمر الرئيسي مع إرفاق ملفاتك. فهو يقرأ المخطط والورقة السابقة والإجابات النموذجية، ويعيد الحزمة كاملة مستندًا يمكنك تنزيله.">Use it to run the master prompt with your files attached. It reads the blueprint, the past paper and the model answers, and returns the full package as a document you can download.</p>
+              <p class="app-url">https://chatgpt.com</p>
+              <a class="btn btn-primary" href="https://chatgpt.com" target="_blank" rel="noopener">
+                <span data-en="Open ChatGPT" data-ar="افتح ChatGPT">Open ChatGPT</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>Google Gemini</h3>
+              <p data-en="Run the same prompt with the same attachments in a second system and compare the two papers question by question. Where they disagree about difficulty or coverage, the blueprint decides who is right." data-ar="شغِّل الأمر نفسه بالمرفقات نفسها في نظام ثانٍ وقارن الورقتين سؤالًا سؤالًا. وحيث يختلفان في الصعوبة أو التغطية، يكون المخطط هو من يحكم أيهما على صواب.">Run the same prompt with the same attachments in a second system and compare the two papers question by question. Where they disagree about difficulty or coverage, the blueprint decides who is right.</p>
+              <p class="app-url">https://gemini.google.com</p>
+              <a class="btn btn-primary" href="https://gemini.google.com" target="_blank" rel="noopener">
+                <span data-en="Open Gemini" data-ar="افتح Gemini">Open Gemini</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Order of use: " data-ar="ترتيب الاستخدام: ">Order of use: </b><span data-en="answer the eleven questions of Part 1, find or build the blueprint in Part 2, meet the sixteen criteria of a strong exam in Part 3, then attach the files and run the master prompt from Part 4 — rehearsing in the Smart Assessment Creator first if you want the practice. Finish with the ten audit checks in Part 5 before anything is printed." data-ar="أجب عن الأسئلة الأحد عشر في الجزء الأول، وجِد المخطط أو ابنِه في الجزء الثاني، وتعرَّف على المعايير الستة عشر للاختبار القوي في الجزء الثالث، ثم أرفق الملفات وشغِّل الأمر الرئيسي من الجزء الرابع — متدربًا في منشئ التقييم الذكي أولًا إن أردت. واختم بفحوص التدقيق العشرة في الجزء الخامس قبل طباعة أي شيء.">answer the eleven questions of Part 1, find or build the blueprint in Part 2, meet the sixteen criteria of a strong exam in Part 3, then attach the files and run the master prompt from Part 4 — rehearsing in the Smart Assessment Creator first if you want the practice. Finish with the ten audit checks in Part 5 before anything is printed.</span></p>
+          </div>
+        </div>
+
+        <!-- Pager -->
+        <nav class="pager">
+          <a class="btn btn-outline" href="session2.html">
+            <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            <span data-en="Back: Session 2 · Lesson planning" data-ar="السابق: المحاضرة 2 · تخطيط الدروس">Back: Session 2 · Lesson planning</span>
+          </a>
+          <a class="btn btn-primary" href="index.html#sessions">
+            <span data-en="Next: Session 4 · Assessment and feedback" data-ar="التالي: المحاضرة 4 · التقييم والتغذية الراجعة">Next: Session 4 · Assessment and feedback</span>
+            <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <img src="assets/logo-reversed.png" alt="Edulixa 360">
+    <p data-en="Session 3 · AI-powered exam creation — AI Masterclass for Teachers, Level 1." data-ar="المحاضرة 3 · إنشاء الاختبارات بالذكاء الاصطناعي — الماستر كلاس للمعلمين بالذكاء الاصطناعي، المستوى الأول.">Session 3 · AI-powered exam creation — AI Masterclass for Teachers, Level 1.</p>
+    <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+  </div>
+</footer>
+
+<div class="backdock"><a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All sessions" data-ar="كل المحاضرات">All sessions</span></a></div>
+
+<script src="assets/edulixa.js"></script>
+</body>
+</html>
