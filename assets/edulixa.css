@@ -786,3 +786,39 @@ html[dir="rtl"] .crit-body>span{font-family:var(--ar); line-height:1.85}
   .crit,.crit-body,.crit-plus{transition:none}
   .crit:hover{transform:none}
 }
+
+/* ============================================================
+   LEVEL 1 · SESSION 4 — document pages, download rows, the gift card
+   ============================================================ */
+
+/* A generated document is a full A4 page, not a cropped interface shot, so it
+   needs more height or the 13 pt body text becomes unreadable in the column. */
+.shots.is-page figure img{max-height:940px}
+@media (max-width:720px){.shots.is-page figure img{max-height:560px}}
+
+/* A row of download buttons under a worked example */
+.dlrow{display:flex; flex-wrap:wrap; gap:14px; margin:22px 0 6px}
+.dlnote{margin:14px 0 4px; font-size:16px; color:var(--muted); font-weight:500}
+
+/* Today's gift — lit like the rail lamps, so it reads as a reward not a link */
+.giftcard{margin:26px 0 4px; padding:34px; border-radius:var(--r-lg);
+  background:var(--bg-2); border:1px solid var(--lamp-line);
+  box-shadow:inset 0 0 0 1px var(--lamp-soft), 0 0 40px -14px var(--lamp);
+  display:flex; flex-direction:column; gap:16px; align-items:flex-start}
+.giftcard .app-badge{color:var(--lamp); border-color:var(--lamp-line);
+  background:var(--lamp-soft)}
+.giftcard h3{margin:0; font-family:var(--display); font-weight:400; font-size:33px;
+  line-height:1.08; color:var(--ink)}
+html[dir="rtl"] .giftcard h3{font-family:var(--ar); font-weight:700; line-height:1.4}
+.giftcard p{margin:0; color:var(--ink-2); font-size:17.5px; font-weight:500; line-height:1.62}
+
+/* ---- The translate button: one press switches the page, the prompts, the
+        download targets and the document pictures. It carries its own wording,
+        so edulixa.js leaves its label alone (data-lang-keep). ---- */
+.btn-lang{background:var(--lamp-soft); color:var(--lamp); border:1px solid var(--lamp-line);
+  box-shadow:inset 0 0 0 1px var(--lamp-soft)}
+.btn-lang:hover{background:var(--lamp-soft); color:var(--lamp); border-color:var(--lamp);
+  box-shadow:0 0 26px -8px var(--lamp)}
+.btn-lang .ic{color:var(--lamp)}
+.langnote{margin:20px 0 0; max-width:62ch; font-size:16px; line-height:1.6; color:var(--muted)}
+html[dir="rtl"] .langnote{font-size:17px}

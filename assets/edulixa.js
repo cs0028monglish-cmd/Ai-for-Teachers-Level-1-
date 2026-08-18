@@ -3,6 +3,9 @@
    1. EN/AR language toggle (full page, RTL mirroring, persisted)
    2. Copy-to-clipboard for editable prompt boxes
    3. Optional images — hide a figure whose file is not present yet
+      3b. Language-aware files — a download link or a document picture that has
+          an Arabic counterpart swaps with the language, so one button really
+          does translate everything the page hands over
    4. Rail steps that light up when selected (state remembered)
    5. The clickable screen replica and its explanation popup
    ============================================================ */
@@ -33,6 +36,17 @@
       var v = isAr ? el.getAttribute('data-ar-ph') : el.getAttribute('data-en-ph');
       if (v !== null) el.setAttribute('placeholder', v);
     });
+    // Files that follow the language: a download link, or the picture of a
+    // generated document. Set data-en-href/data-ar-href on the <a>, or
+    // data-en-src/data-ar-src on the <img>, and the file switches with the page.
+    document.querySelectorAll('[data-en-href]').forEach(function (el) {
+      var v = isAr ? el.getAttribute('data-ar-href') : el.getAttribute('data-en-href');
+      if (v !== null) el.setAttribute('href', v);
+    });
+    document.querySelectorAll('[data-en-src]').forEach(function (el) {
+      var v = isAr ? el.getAttribute('data-ar-src') : el.getAttribute('data-en-src');
+      if (v !== null && el.getAttribute('src') !== v) el.setAttribute('src', v);
+    });
     // Accessible labels
     document.querySelectorAll('[data-en-label]').forEach(function (el) {
       var v = isAr ? el.getAttribute('data-ar-label') : el.getAttribute('data-en-label');
@@ -43,8 +57,11 @@
     if (t && t.getAttribute('data-ar')) {
       document.title = isAr ? t.getAttribute('data-ar') : t.getAttribute('data-en');
     }
-    // Toggle buttons show the language you can switch TO
+    // Toggle buttons show the language you can switch TO. A button carrying
+    // data-lang-keep writes its own wording instead (see the big translate
+    // button in Session 4), so leave that one alone.
     document.querySelectorAll('[data-lang-toggle]').forEach(function (b) {
+      if (b.hasAttribute('data-lang-keep')) return;
       b.textContent = isAr ? 'English' : 'العربية';
       b.setAttribute('aria-label', isAr ? 'Switch to English' : 'التبديل إلى العربية');
       b.setAttribute('lang', isAr ? 'en' : 'ar');

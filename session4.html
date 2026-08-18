@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-en="Session 4 · AI-powered student assessment and feedback — Level 1 · Edulixa 360" data-ar="المحاضرة ٤ · تقييم أعمال الطلاب والتغذية الراجعة — المستوى الأول · Edulixa 360">Session 4 · AI-powered student assessment and feedback — Level 1 · Edulixa 360</title>
+<link rel="stylesheet" href="assets/edulixa.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <img src="assets/logo-reversed.png" alt="Edulixa 360">
+      <span class="brand-tag" data-en="AI Masterclass · Level 1" data-ar="الماستر كلاس · المستوى الأول">AI Masterclass · Level 1</span>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn btn-ghost" href="index.html"><svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All sessions" data-ar="كل المحاضرات">All sessions</span></a>
+      <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="Back to all sessions" data-ar="العودة إلى كل المحاضرات">Back to all sessions</span></a>
+    <p class="eyebrow" data-en="Session 4 of 5 · Main tools: ChatGPT and Google Gemini" data-ar="المحاضرة ٤ من ٥ · الأدوات الرئيسية: ChatGPT وGoogle Gemini">Session 4 of 5 · Main tools: ChatGPT and Google Gemini</p>
+    <h1 class="display" data-en="Correct the answers. Analyse them. Then write the feedback, the action plan and the parents report." data-ar="صحِّح الإجابات، وحلِّلها، ثم اكتب التغذية الراجعة والخطة العلاجية وتقرير أولياء الأمور.">Correct the answers. Analyse them. Then write the feedback, the action plan and the parents report.</h1>
+    <p class="lede" data-en="You create one worksheet from a master prompt and the pages of your own lesson. A student answers it. Then you correct every answer against your answer key, analyse which skills the student has and which are missing, prepare the feedback, prepare a two-week action plan, and prepare the report to the parents. Four documents from one worksheet, and every one of them uses only what is written on the student’s paper." data-ar="تُنشئ ورقة عمل واحدة من أمر رئيسي ومن صفحات درسك أنت. ثم يجيب عنها طالب، فتصحّح كل إجابة وفق مفتاح إجابتك، وتحلّل ما يتقنه الطالب وما ينقصه، وتُعِدّ التغذية الراجعة، وتُعِدّ خطة علاجية لأسبوعين، وتُعِدّ التقرير إلى أولياء الأمور. أربعة مستندات من ورقة عمل واحدة، ولا يستخدم أي منها إلا ما هو مكتوب على ورقة الطالب.">You create one worksheet from a master prompt and the pages of your own lesson. A student answers it. Then you correct every answer against your answer key, analyse which skills the student has and which are missing, prepare the feedback, prepare a two-week action plan, and prepare the report to the parents. Four documents from one worksheet, and every one of them uses only what is written on the student’s paper.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#today" data-en="Start with today’s plan" data-ar="ابدأ بخطة اليوم">Start with today’s plan</a>
+      <a class="btn btn-outline" href="#prompt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg><span data-en="Go straight to the master prompt" data-ar="اذهب مباشرة إلى الأمر الرئيسي">Go straight to the master prompt</span></a>
+      <button class="btn btn-lang" type="button" data-lang-toggle data-lang-keep data-en-label="Translate the whole session, and its documents, into Arabic" data-ar-label="ترجم المحاضرة كلها ومستنداتها إلى الإنجليزية"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11M9 3v2c0 5-2.2 8.5-5.5 10M6 12.5c0 2.5 2.6 4.7 6 5.5M13.5 21l4-9 4 9M15.2 17.5h4.6"/></svg><span data-en="Translate everything to Arabic" data-ar="حوِّل كل شيء إلى الإنجليزية">Translate everything to Arabic</span></button>
+      <p class="langnote" data-en="One button. The page, the prompts, the download buttons and the pictures of the documents all switch — and the Arabic documents are true right-to-left files with Arabic-Indic numerals." data-ar="زر واحد. تتحول الصفحة والأوامر وأزرار التنزيل وصور المستندات كلها — والمستندات العربية ملفات عربية حقيقية من اليمين إلى اليسار وبالأرقام العربية الشرقية.">One button. The page, the prompts, the download buttons and the pictures of the documents all switch — and the Arabic documents are true right-to-left files with Arabic-Indic numerals.</p>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="sec">
+  <div class="wrap">
+    <div class="split">
+
+      <!-- ---------- STICKY RAIL ---------- -->
+      <aside class="rail">
+        <h2 data-en="Session at a glance" data-ar="المحاضرة في لمحة">Session at a glance</h2>
+        <p data-en="Five moves, in order." data-ar="خمس خطوات بالترتيب.">Five moves, in order.</p>
+        <ol>
+          <li data-go="prompt" data-en="Save the master prompt as a file" data-ar="احفظ الأمر الرئيسي في ملف">Save the master prompt as a file</li>
+          <li data-go="create" data-en="Create the worksheet and the answer key" data-ar="أنشئ ورقة العمل ومفتاح الإجابة">Create the worksheet and the answer key</li>
+          <li data-go="mark" data-en="Correct the answers, analyse them, write the feedback" data-ar="صحِّح الإجابات، وحلِّلها، واكتب التغذية الراجعة">Correct the answers, analyse them, write the feedback</li>
+          <li data-go="plan" data-en="Prepare the two-week action plan" data-ar="أعِدَّ الخطة العلاجية لأسبوعين">Prepare the two-week action plan</li>
+          <li data-go="parents" data-en="Prepare the parents report" data-ar="أعِدَّ تقرير أولياء الأمور">Prepare the parents report</li>
+        </ol>
+        <p class="rail-hint" data-en="Select a step to jump to it and switch its light on. Your lights are remembered." data-ar="اختر خطوة للانتقال إليها وإضاءة نورها. تُحفظ الأضواء التي أشعلتها.">Select a step to jump to it and switch its light on. Your lights are remembered.</p>
+        <a class="btn btn-accent" href="#gift" data-en="Open today’s gift" data-ar="افتح هدية اليوم">Open today’s gift</a>
+      </aside>
+
+      <!-- ---------- CONTENT ---------- -->
+      <div>
+
+        <!-- ============ SUMMARY ============ -->
+        <div class="block" id="today">
+          <h2 class="display" data-en="What we do in this session" data-ar="ماذا نفعل في هذه المحاضرة">What we do in this session</h2>
+          <p class="sub" data-en="Create the worksheet, correct the answers, analyse them, then prepare the feedback, the action plan and the parents report." data-ar="أنشئ ورقة العمل، وصحِّح الإجابات، وحلِّلها، ثم أعِدَّ التغذية الراجعة والخطة العلاجية وتقرير أولياء الأمور.">Create the worksheet, correct the answers, analyse them, then prepare the feedback, the action plan and the parents report.</p>
+
+          <p data-en="Session 3 created an exam. This session does the work that comes after a student has written on it. There are four jobs, and this page walks through all four with a real Grade 6 paper: correct the answers, analyse them, prepare the feedback, prepare the action plan, and prepare the parents report. Each one is a master prompt you fill in and run." data-ar="أنشأت المحاضرة الثالثة اختبارًا، وتؤدي هذه المحاضرة العمل الذي يأتي بعد أن يكتب الطالب فيه. والأعمال أربعة، وتمرّ هذه الصفحة عليها كلها بورقة حقيقية من الصف السادس: تصحيح الإجابات، وتحليلها، وإعداد التغذية الراجعة، وإعداد الخطة العلاجية، وإعداد تقرير أولياء الأمور. وكل واحد منها أمر رئيسي تملؤه وتشغّله.">Session 3 created an exam. This session does the work that comes after a student has written on it. There are four jobs, and this page walks through all four with a real Grade 6 paper: correct the answers, analyse them, prepare the feedback, prepare the action plan, and prepare the parents report. Each one is a master prompt you fill in and run.</p>
+
+          <p data-en="One rule runs through all four jobs: each one may use only what the job before it produced. The marks come from your answer key. The analysis comes from the marks. The feedback, the action plan and the parents report come from the analysis. Nothing may be added that the student’s paper does not show — including anything about the student’s ability, home or attitude." data-ar="قاعدة واحدة تسري على الأعمال الأربعة: لا يستخدم أي عمل إلا ما أنتجه العمل الذي قبله. فالدرجات تأتي من مفتاح إجابتك، والتحليل يأتي من الدرجات، والتغذية الراجعة والخطة العلاجية وتقرير أولياء الأمور تأتي من التحليل. ولا يجوز إضافة شيء لا تُظهره ورقة الطالب — بما في ذلك أي كلام عن قدرته أو بيته أو سلوكه.">One rule runs through all four jobs: each one may use only what the job before it produced. The marks come from your answer key. The analysis comes from the marks. The feedback, the action plan and the parents report come from the analysis. Nothing may be added that the student’s paper does not show — including anything about the student’s ability, home or attitude.</p>
+
+          <h3 data-en="The eight things you will do today" data-ar="الأمور الثمانية التي ستفعلها اليوم">The eight things you will do today</h3>
+          <ol class="outputs">
+            <li data-en-html="Save the master prompt as a file<small>One file you attach to every worksheet, instead of pasting six thousand words into a chat box.</small>" data-ar-html="احفظ الأمر الرئيسي في ملف<small>ملف واحد ترفقه بكل ورقة عمل، بدلًا من لصق ستة آلاف كلمة في صندوق محادثة.</small>">Save the master prompt as a file<small>One file you attach to every worksheet, instead of pasting six thousand words into a chat box.</small></li>
+            <li data-en-html="Personalise the red fields<small>Twenty-two fields decide what the worksheet becomes. Every one of them is highlighted and editable on this page.</small>" data-ar-html="خصِّص الحقول الحمراء<small>اثنان وعشرون حقلًا تحدد ما ستصير إليه ورقة العمل. وكل واحد منها مميَّز وقابل للتعديل في هذه الصفحة.</small>">Personalise the red fields<small>Twenty-two fields decide what the worksheet becomes. Every one of them is highlighted and editable on this page.</small></li>
+            <li class="is-new" data-en-html="Create the worksheet and the answer key<small>Twenty questions, thirty marks, three sections from easy to challenging, and the mark scheme every job after it needs.</small>" data-ar-html="أنشئ ورقة العمل ومفتاح الإجابة<small>عشرون سؤالًا، وثلاثون درجة، وثلاثة أقسام من السهل إلى المتقدم، ومخطط الدرجات الذي يحتاجه كل عمل بعده.</small>">Create the worksheet and the answer key<small>Twenty questions, thirty marks, three sections from easy to challenging, and the mark scheme every job after it needs.</small></li>
+            <li class="is-new" data-en-html="Correct the student’s answers<small>Every question marked against your answer key, the total, the percentage, and the student’s words quoted exactly as written.</small>" data-ar-html="صحِّح إجابات الطالب<small>كل سؤال مُصحَّح وفق مفتاح إجابتك، مع المجموع والنسبة المئوية، وكلام الطالب منقولًا حرفيًا كما كتبه.</small>">Correct the student’s answers<small>Every question marked against your answer key, the total, the percentage, and the student’s words quoted exactly as written.</small></li>
+            <li class="is-new" data-en-html="Analyse the answers<small>Which skills the student has, which are missing, and the question numbers that prove each one.</small>" data-ar-html="حلِّل الإجابات<small>ما المهارات التي يتقنها الطالب، وما المهارات الناقصة، وأرقام الأسئلة التي تدل على كل واحدة.</small>">Analyse the answers<small>Which skills the student has, which are missing, and the question numbers that prove each one.</small></li>
+            <li class="is-new" data-en-html="Prepare the feedback<small>Three sentences to read to the student: one strength, one correction, one instruction for next time.</small>" data-ar-html="أعِدَّ التغذية الراجعة<small>ثلاث جمل تُقرأ للطالب: نقطة قوة، وتصحيح، وتعليمة للمرة القادمة.</small>">Prepare the feedback<small>Three sentences to read to the student: one strength, one correction, one instruction for next time.</small></li>
+            <li class="is-new" data-en-html="Prepare the action plan<small>Two weeks, ten minutes a day, one target for each missing skill, and a review date with a pass mark set in advance.</small>" data-ar-html="أعِدَّ الخطة العلاجية<small>أسبوعان، وعشر دقائق يوميًا، وهدف لكل مهارة ناقصة، وتاريخ مراجعة بدرجة نجاح محددة مقدَّمًا.</small>">Prepare the action plan<small>Two weeks, ten minutes a day, one target for each missing skill, and a review date with a pass mark set in advance.</small></li>
+            <li class="is-new" data-en-html="Prepare the parents report<small>One page for the family in plain words, with the student’s own examples and three things to do at home.</small>" data-ar-html="أعِدَّ تقرير أولياء الأمور<small>صفحة واحدة للأسرة بكلمات واضحة، مع أمثلة من كتابة الطالب نفسه وثلاثة أمور تُفعل في المنزل.</small>">Prepare the parents report<small>One page for the family in plain words, with the student’s own examples and three things to do at home.</small></li>
+          </ol>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="The order, in one line: " data-ar="الترتيب في سطر واحد: ">The order, in one line: </b><span data-en="worksheet → answer key → the student’s answers → correction → analysis → feedback → action plan → parents report. Keep each document attached to the one before it and every sentence you send home can be traced back to a question number." data-ar="ورقة العمل ← مفتاح الإجابة ← إجابات الطالب ← التصحيح ← التحليل ← التغذية الراجعة ← الخطة العلاجية ← تقرير أولياء الأمور. أبقِ كل مستند موصولًا بما قبله، فتستطيع أن تُرجع كل جملة ترسلها إلى البيت إلى رقم سؤال.">worksheet → answer key → the student’s answers → correction → analysis → feedback → action plan → parents report. Keep each document attached to the one before it and every sentence you send home can be traced back to a question number.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 1 · THE PROMPT BECOMES A FILE ============ -->
+        <div class="block" id="prompt">
+          <h2 class="display" data-en="Part 1 · Turn the master prompt into a file" data-ar="الجزء الأول · حوِّل الأمر الرئيسي إلى ملف">Part 1 · Turn the master prompt into a file</h2>
+          <p class="sub" data-en="Two files, twenty-two red fields, and one upload instead of a wall of text." data-ar="ملفان، واثنان وعشرون حقلًا أحمر، ورفع ملف واحد بدلًا من جدار من النص.">Two files, twenty-two red fields, and one upload instead of a wall of text.</p>
+
+          <p data-en="A master prompt this long does not belong in a chat box. Pasted text arrives as a message and competes with everything else in the conversation; a file arrives as a document the model can go back and re-read while it works. Save the prompt once as an .md file and you can attach it to every worksheet you ever build, beside the pages of the lesson." data-ar="الأمر الرئيسي بهذا الطول لا مكان له في صندوق محادثة. فالنص الملصوق يصل رسالةً تتنافس مع كل ما في المحادثة، أما الملف فيصل مستندًا يستطيع النموذج أن يعود إليه ويقرأه من جديد وهو يعمل. احفظ الأمر مرة واحدة بصيغة md. وستستطيع إرفاقه بكل ورقة عمل تبنيها، إلى جانب صفحات الدرس.">A master prompt this long does not belong in a chat box. Pasted text arrives as a message and competes with everything else in the conversation; a file arrives as a document the model can go back and re-read while it works. Save the prompt once as an .md file and you can attach it to every worksheet you ever build, beside the pages of the lesson.</p>
+
+          <ul class="ticks is-do">
+            <li data-en="Download the master prompt below — English, Arabic, or both." data-ar="نزِّل الأمر الرئيسي أدناه — بالإنجليزية أو بالعربية أو بكلتيهما.">Download the master prompt below — English, Arabic, or both.</li>
+            <li data-en="Open it in any text editor. Notepad, TextEdit and Google Docs are all fine — it is a plain text file." data-ar="افتحه في أي محرر نصوص. Notepad وTextEdit وGoogle Docs كلها تعمل — فهو ملف نص عادي.">Open it in any text editor. Notepad, TextEdit and Google Docs are all fine — it is a plain text file.</li>
+            <li data-en="Fill in the fields marked [[EDIT: … ]]. Everything else stays exactly as it is." data-ar="املأ الحقول المكتوب فيها [[تعديل: … ]]. وكل ما عداها يبقى كما هو تمامًا.">Fill in the fields marked [[EDIT: … ]]. Everything else stays exactly as it is.</li>
+            <li data-en="Save it, and keep the .md ending — it tells the AI this is a structured document, not a picture of one." data-ar="احفظه، وأبقِ الامتداد md. — فهو يخبر الذكاء الاصطناعي أن هذا مستند منظَّم، لا صورة عن مستند.">Save it, and keep the .md ending — it tells the AI this is a structured document, not a picture of one.</li>
+            <li data-en="Attach the file and the lesson pages together in one message, and send it with one line: “Follow the attached prompt.”" data-ar="أرفق الملف وصفحات الدرس معًا في رسالة واحدة، وأرسلها بسطر واحد: «اتبع الأمر المرفق».">Attach the file and the lesson pages together in one message, and send it with one line: “Follow the attached prompt.”</li>
+          </ul>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>The red fields are the whole job.</b> Every field you must personalise is shown in red on this page, like this: <span class=&quot;ph&quot;>[[EDIT: Grade / Stage = Grade 6]]</span>. Select a red field and it highlights whole, so whatever you type replaces it. <b>Copy</b> takes the entire prompt with your edits inside it; <b>Start over</b> puts the original text back. Nothing outside the red fields needs to change." data-ar-html="<b>الحقول الحمراء هي العمل كله.</b> كل حقل عليك تخصيصه يظهر بالأحمر في هذه الصفحة، هكذا: <span class=&quot;ph&quot;>[[تعديل: الصف / المرحلة = الصف السادس]]</span>. اختر حقلًا أحمر فيُظلَّل كاملًا، فيحلّ ما تكتبه مكانه. و<b>نسخ</b> يأخذ الأمر كاملًا مع تعديلاتك داخله، و<b>إعادة الضبط</b> يعيد النص الأصلي. ولا شيء خارج الحقول الحمراء يحتاج إلى تغيير."><b>The red fields are the whole job.</b> Every field you must personalise is shown in red on this page, like this: <span class="ph">[[EDIT: Grade / Stage = Grade 6]]</span>. Select a red field and it highlights whole, so whatever you type replaces it. <b>Copy</b> takes the entire prompt with your edits inside it; <b>Start over</b> puts the original text back. Nothing outside the red fields needs to change.</p>
+          </div>
+
+          <h3 data-en="Download the two files" data-ar="نزِّل الملفين">Download the two files</h3>
+          <div class="dlrow">
+            <a class="btn btn-primary" href="assets/prompts/Edulixa_Worksheet_Master_Prompt_EN.md" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Master prompt · English (.md)" data-ar="الأمر الرئيسي · بالإنجليزية (md.)">Master prompt · English (.md)</span>
+            </a>
+            <a class="btn btn-primary" href="assets/prompts/Edulixa_Worksheet_Master_Prompt_AR.md" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Master prompt · Arabic (.md)" data-ar="الأمر الرئيسي · بالعربية (md.)">Master prompt · Arabic (.md)</span>
+            </a>
+          </div>
+
+          <p class="dlnote" data-en="The text in each box below is exactly what is inside the matching file — edit it here if you prefer, then copy." data-ar="النص في كل صندوق أدناه هو نفسه ما داخل الملف المقابل — عدِّله هنا إن شئت، ثم انسخه.">The text in each box below is exactly what is inside the matching file — edit it here if you prefer, then copy.</p>
+
+          <p class="prompt-label" data-en="The worksheet master prompt — English" data-ar="الأمر الرئيسي لورقة العمل — بالإنجليزية">The worksheet master prompt — English</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p4-ws-en" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p4-ws-en" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall" id="p4-ws-en" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable worksheet master prompt in English" data-ar-label="الأمر الرئيسي لورقة العمل بالإنجليزية، قابل للتعديل"># EDULIXA MASTER RCTF PROMPT
+## Professional Worksheet Creator — English Version
+
+&gt; **Teacher note:** Every `[[EDIT: ...]]` field is intentionally editable and should be customized before use.
+
+---
+
+## R — ROLE
+
+Act as an expert educational worksheet designer, certified teacher, assessment designer, and instructional designer experienced in creating age-appropriate, curriculum-aligned printable learning materials.
+
+- Bloom's Revised Taxonomy
+- Depth of Knowledge (DOK)
+- Differentiation
+- Formative assessment
+- Accessibility
+- Age-appropriate instructional design
+- Professional DOCX/PDF worksheet formatting
+- Bilingual and RTL document production when required
+
+Design the worksheet according to the Edulixa visual identity. Use the uploaded Edulixa logo prominently but elegantly. Use deep emerald green as the primary colour, vivid orange-red as an accent, white as the main background, and near-black/dark green for body text. The page should feel modern, educational, premium, clean, friendly, and highly readable.
+
+---
+
+## C — CONTEXT
+
+Create a professional worksheet using the following teacher specifications.
+
+- <span class="ph">[[EDIT: Subject = English]]</span>
+- <span class="ph">[[EDIT: Grade / Stage = Grade 6]]</span>
+- <span class="ph">[[EDIT: Curriculum / Board = Cambridge Lower Secondary]]</span>
+- <span class="ph">[[EDIT: Unit / Topic = Present Simple vs. Present Continuous]]</span>
+- <span class="ph">[[EDIT: Lesson / Skill = Grammar]]</span>
+- <span class="ph">[[EDIT: Learning Objective(s) = Students distinguish between the present simple and present continuous and use each accurately in context.]]</span>
+- <span class="ph">[[EDIT: Student age = 11–12]]</span>
+- <span class="ph">[[EDIT: Language = English]]</span>
+- <span class="ph">[[EDIT: Difficulty = Easy → Moderate → Challenging]]</span>
+- <span class="ph">[[EDIT: Number of sections = 3]]</span>
+- <span class="ph">[[EDIT: Approximate number of questions = 20]]</span>
+- <span class="ph">[[EDIT: Worksheet duration = 30 minutes]]</span>
+- <span class="ph">[[EDIT: Question types = Multiple choice, error correction, short answer]]</span>
+- <span class="ph">[[EDIT: Special instructions / source material = Insert textbook pages, vocabulary, passage, lesson content, or teacher instructions here.]]</span>
+
+**Content Alignment**
+
+Use only content appropriate for the stated grade, curriculum, topic, learning objectives, student age, and requested difficulty. Every activity must serve a clear instructional purpose.
+
+**Create a logical progression: Recall → Understand → Apply → Analyse / Challenge.**
+
+When appropriate, progress from DOK 1 → DOK 2 → DOK 3. Include DOK 4 only if the worksheet genuinely requires extended thinking.
+
+---
+
+## T — TASK
+
+### 1. Page Setup
+
+- A4 portrait
+- Approximately 2 cm margins
+- White background
+- Balanced white space
+- Strong visual hierarchy
+- Clear section separation
+- Print-friendly formatting
+
+### READABILITY &amp; PAGE UTILISATION — NON-NEGOTIABLE
+
+Do not compress a worksheet into the upper half of a page. Use the available A4 canvas deliberately so the page feels balanced, spacious, and easy to read. Readability takes priority over minimizing page count.
+
+- Student-facing body text and questions: normally 13–14 pt; never below 12.5 pt unless a teacher explicitly requests smaller text.
+- Multiple-choice options, instructions, and labels: normally 12–13 pt.
+- Teacher answer-key explanations: normally 12.5–13.5 pt.
+- Use comfortable line spacing (about 1.08–1.20), generous table-cell padding, and visible spacing between questions.
+- Aim to use roughly 75–90% of the printable vertical page area when content permits; avoid leaving a large unused lower half while text remains small.
+- If content cannot fit comfortably at readable sizes, continue onto an additional page. Never shrink text merely to preserve a low page count.
+- Visually inspect the rendered page at 100% zoom. If a normal reader must zoom in to read comfortably, enlarge the text and rebalance the layout.
+
+### 2. Edulixa Header
+
+Create a professional header using the uploaded Edulixa identity. Place the Edulixa logo, followed by:
+
+- <span class="ph">[[EDIT: WORKSHEET TITLE = Insert title]]</span>
+- <span class="ph">[[EDIT: Worksheet subtitle / skill = Insert subtitle or skill]]</span>
+
+Use Edulixa emerald green as the dominant colour and orange-red only as an accent. Avoid large areas of orange.
+
+### 3. Student Information Area
+
+Include clearly designed fields for Name, Date, Class, and optionally Score. Use lightly tinted boxes or thin Edulixa-green borders.
+
+### 4. Learning Objective
+
+- <span class="ph">[[EDIT: Student-friendly learning objective = Insert objective]]</span>
+
+### 5. Instructions
+
+Provide short, clear, age-appropriate instructions. Use action verbs such as Choose, Match, Complete, Identify, Correct, Explain, Compare, and Create.
+
+### 6. Worksheet Sections
+
+**Section A**
+
+- <span class="ph">[[EDIT: Section name / question type / number / purpose / difficulty = Recall / comprehension]]</span>
+
+**Section B**
+
+- <span class="ph">[[EDIT: Section name / question type / number / purpose / difficulty = Application / guided practice]]</span>
+
+**Section C — Challenge**
+
+- <span class="ph">[[EDIT: Section name / question type / number / purpose / difficulty = Higher-order thinking]]</span>
+
+### 7. Answer Spaces
+
+Use professionally aligned answer areas made with paragraph borders, table-cell borders, or vector rules. Do not create answer lines using repeated underscore characters. Match the writing space to the expected response length.
+
+### 8. Question Quality
+
+- Clear
+- Unambiguous
+- Age appropriate
+- Directly linked to taught content
+- Free from unnecessary linguistic difficulty
+- Culturally fair
+- Answerable from the material or stated learning
+- Appropriately challenging
+
+For multiple-choice questions, provide one clearly correct answer, plausible distractors, no accidental clues, no absurd distractors, and vary the location of correct answers.
+
+### 9. Differentiation
+
+When appropriate, include optional Support and Stretch sections. Support may use a word bank, sentence starter, example, visual clue, or vocabulary support. Stretch should provide an extension for early finishers. Support must not reveal answers.
+
+### 10. Answer Key
+
+After the student worksheet, create a separate TEACHER ANSWER KEY with correct answers, acceptable alternatives, marking guidance, marks per question, and total score. For subjective questions, add a short rubric or expected-answer criteria.
+
+---
+
+## F — FORMAT
+
+**Typography**
+
+Recommended English fonts: Aptos, Calibri, or Arial. Body approximately 11–12 pt; section headings 14–16 pt; main title 22–26 pt. Use bold strategically.
+
+**Edulixa Colour System**
+
+Primary emerald green for title banners, major headings, borders, and dividers. Orange-red only for important icons, section markers, highlights, challenge indicators, and small decorative accents. Keep the background white with optional very pale green or warm grey blocks.
+
+**Layout Rules**
+
+- Consistent margins
+- Consistent spacing
+- Aligned question numbering
+- Balanced composition
+- No overlapping text
+- No clipped text
+- No floating objects covering content
+- No unnecessary decoration
+- No watermarks
+- Number every task
+
+**Named Document Styles**
+
+Where DOCX generation is supported, create reusable named styles such as Edulixa-Title, Edulixa-Subtitle, Edulixa-Section, Edulixa-Instructions, Edulixa-Question, Edulixa-AnswerLine, Edulixa-Challenge, and Edulixa-Footer.
+
+**Footer**
+
+**EDULIXA | Immersive Learning for Lifelong Success**
+
+- <span class="ph">[[EDIT: Optional footer context = Subject / Grade / Unit]]</span>
+
+Add Page X of Y.
+
+**Language Control**
+
+- <span class="ph">[[EDIT: Language = English / Arabic / Bilingual]]</span>
+
+If English: use LTR, Latin numerals, and appropriate English fonts.
+
+If Arabic: use true RTL document direction, right-aligned Arabic paragraphs, proper Arabic shaping, an Arabic-compatible font, correct punctuation orientation, and Arabic-Indic digits ٠١٢٣٤٥٦٧٨٩.
+
+If bilingual: create properly separated LTR and RTL text blocks. Never force English and Arabic into one incorrectly directed paragraph.
+
+---
+
+## OUTPUT
+
+- Student Worksheet
+- Teacher Answer Key
+- DOCX
+- Print-ready PDF
+
+Maintain identical layout between DOCX and PDF where possible.
+
+---
+
+## FINAL CHECK
+
+- ✓ Edulixa branding is consistent
+- ✓ Logo is clear
+- ✓ Objectives match questions
+- ✓ Questions progress logically
+- ✓ Answer spaces are correctly sized
+- ✓ No duplicated questions
+- ✓ No answer is accidentally shown
+- ✓ Spelling and grammar are correct
+- ✓ Page breaks are intentional
+- ✓ Arabic RTL rendering is correct when used
+- ✓ Answer key matches every question
+- ✓ Total marks are mathematically correct
+
+---
+
+**FINAL INSTRUCTION:** Do not begin generating the worksheet until all required `[[EDIT: ...]]` information has been supplied. If essential information is missing, ask only for the missing information. Once enough information is available, generate the complete worksheet without unnecessary additional questions.</div>
+          <p class="prompt-label" data-en="The worksheet master prompt — Arabic" data-ar="الأمر الرئيسي لورقة العمل — بالعربية">The worksheet master prompt — Arabic</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p4-ws-ar" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p4-ws-ar" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall is-ar" id="p4-ws-ar" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable worksheet master prompt in Arabic" data-ar-label="الأمر الرئيسي لورقة العمل بالعربية، قابل للتعديل"># برومبت إيدوليكسا الرئيسي وفق إطار RCTF
+## نسخة عربية — لإنشاء أوراق عمل احترافية
+
+&gt; **ملاحظة للمعلم:** كل جزء يحتوي على `[[تعديل: ...]]` مخصص للتعديل قبل الاستخدام.
+
+---
+
+## R — ROLE | الدور
+
+تصرّف بصفتك خبيرًا محترفًا في تصميم أوراق العمل التعليمية، ومعلمًا متخصصًا، ومصممًا تعليميًا، وخبيرًا في بناء الأنشطة والتقويمات الصفية.
+
+- تصنيف بلوم المعدل
+- مستويات عمق المعرفة DOK
+- التعليم المتمايز
+- التقويم التكويني
+- إمكانية الوصول
+- تصميم الأنشطة المناسبة للفئة العمرية
+- تصميم ملفات DOCX وPDF الاحترافية
+- دعم اللغة العربية واتجاه RTL
+- تصميم أوراق العمل ثنائية اللغة
+
+صمّم الورقة وفق الهوية البصرية لشعار Edulixa المرفق. استخدم الأخضر الزمردي الداكن كلون رئيسي، والبرتقالي المائل للأحمر كلون مساعد، وخلفية بيضاء، ونصًا أسود داكنًا أو أخضر شديد الداكن. يجب أن يبدو التصميم حديثًا، تعليميًا، احترافيًا، نظيفًا، جذابًا وسهل القراءة.
+
+---
+
+## C — CONTEXT | السياق
+
+أنشئ ورقة العمل باستخدام بيانات المعلم التالية:
+
+- <span class="ph">[[تعديل: المادة = اللغة الإنجليزية]]</span>
+- <span class="ph">[[تعديل: الصف / المرحلة = الصف السادس]]</span>
+- <span class="ph">[[تعديل: المنهج = Cambridge Lower Secondary]]</span>
+- <span class="ph">[[تعديل: الوحدة / الموضوع = المضارع البسيط والمضارع المستمر]]</span>
+- <span class="ph">[[تعديل: المهارة = القواعد]]</span>
+- <span class="ph">[[تعديل: أهداف التعلم = يميز المتعلم بين المضارع البسيط والمضارع المستمر ويستخدمهما بصورة صحيحة.]]</span>
+- <span class="ph">[[تعديل: عمر الطلاب = ١١–١٢ سنة]]</span>
+- <span class="ph">[[تعديل: لغة ورقة العمل = العربية / الإنجليزية / ثنائية اللغة]]</span>
+- <span class="ph">[[تعديل: مستوى الصعوبة = سهل ← متوسط ← متقدم]]</span>
+- <span class="ph">[[تعديل: عدد الأقسام = ٣]]</span>
+- <span class="ph">[[تعديل: العدد التقريبي للأسئلة = ٢٠]]</span>
+- <span class="ph">[[تعديل: زمن ورقة العمل = ٣٠ دقيقة]]</span>
+- <span class="ph">[[تعديل: أنواع الأسئلة = اختيار من متعدد، تصحيح الخطأ، إجابات قصيرة]]</span>
+- <span class="ph">[[تعديل: المحتوى أو صفحات الكتاب أو النص أو المفردات = ألصق المحتوى هنا.]]</span>
+
+**محاذاة المحتوى**
+
+اجعل جميع الأنشطة متوافقة مع الصف، المنهج، الموضوع، أهداف التعلم، عمر الطلاب، ومستوى الصعوبة المحدد. لا تضف نشاطًا لا يخدم هدفًا تعليميًا واضحًا.
+
+رتب الأسئلة تدريجيًا: تذكر ← فهم ← تطبيق ← تحليل / تحدي.
+
+وعند ملاءمة المحتوى، تدرج من DOK 1 ← DOK 2 ← DOK 3، ولا تستخدم DOK 4 إلا عندما يتطلب النشاط تفكيرًا ممتدًا حقيقيًا.
+
+---
+
+## T — TASK | المهمة
+
+### ١. إعداد الصفحة
+
+- حجم A4
+- اتجاه طولي
+- هوامش تقارب ٢ سم
+- خلفية بيضاء
+- مساحات بيضاء مريحة
+- تسلسل بصري واضح
+- تقسيم احترافي للأقسام
+- تصميم مناسب للطباعة
+
+### ٢. ترويسة Edulixa
+
+ضع شعار Edulixa بصورة واضحة وأنيقة، ثم أضف:
+
+- <span class="ph">[[تعديل: عنوان ورقة العمل = اكتب العنوان]]</span>
+- <span class="ph">[[تعديل: العنوان الفرعي / المهارة = اكتب العنوان الفرعي أو المهارة]]</span>
+
+استخدم الأخضر الخاص بـ Edulixa كلون رئيسي، والبرتقالي المائل للأحمر كلون مساعد فقط. لا تستخدم مساحات برتقالية كبيرة.
+
+### ٣. بيانات الطالب
+
+ضع أسفل الترويسة حقولًا أنيقة للاسم، التاريخ، الصف، والدرجة اختياريًا، مع حدود خضراء رفيعة أو خلفية خضراء فاتحة جدًا.
+
+### ٤. هدف التعلم
+
+- <span class="ph">[[تعديل: هدف التعلم بلغة مناسبة للطالب = اكتب الهدف هنا]]</span>
+
+### ٥. التعليمات
+
+اكتب تعليمات قصيرة، واضحة، مباشرة، ومناسبة للعمر. استخدم أفعالًا مثل: اختر، صِل، أكمل، حدد، صحح، اشرح، قارن، أنشئ.
+
+### ٦. أقسام ورقة العمل
+
+**القسم الأول**
+
+- <span class="ph">[[تعديل: اسم القسم / نوع السؤال / العدد / الهدف / الصعوبة = تذكر / فهم]]</span>
+
+**القسم الثاني**
+
+- <span class="ph">[[تعديل: اسم القسم / نوع السؤال / العدد / الهدف / الصعوبة = تطبيق / تدريب موجه]]</span>
+
+**القسم الثالث — التحدي**
+
+- <span class="ph">[[تعديل: اسم القسم / نوع السؤال / العدد / الهدف / الصعوبة = تفكير أعلى]]</span>
+
+### ٧. مساحات الإجابة
+
+أنشئ مساحات كتابة احترافية ومحاذاة بدقة باستخدام حدود الفقرات، حدود خلايا الجداول، أو خطوط Vector. لا تستخدم تكرار الشرطات أو علامات underscore لإنشاء خطوط الإجابة. اجعل مساحة الإجابة مناسبة لطول الإجابة المتوقعة.
+
+### ٨. جودة الأسئلة
+
+- واضحة
+- غير قابلة للتأويل
+- مناسبة للعمر
+- مرتبطة مباشرة بالمحتوى
+- خالية من الصعوبة اللغوية غير الضرورية
+- عادلة ثقافيًا
+- قابلة للإجابة اعتمادًا على المحتوى
+- مناسبة لمستوى التحدي المطلوب
+
+في أسئلة الاختيار من متعدد: اجعل هناك إجابة صحيحة واحدة بوضوح، ومشتتات منطقية، وتجنب التلميحات غير المقصودة والخيارات الساذجة، وغيّر موضع الإجابة الصحيحة بين الأسئلة.
+
+### ٩. التعليم المتمايز
+
+عندما يكون مناسبًا، أضف قسم دعم اختياري باستخدام بنك كلمات أو بداية جملة أو مثال أو تلميح بصري أو دعم للمفردات، وقسم تحدٍ إضافي للطلاب الذين ينتهون مبكرًا. يجب ألا يكشف الدعم الإجابات.
+
+### ١٠. نموذج الإجابة
+
+بعد ورقة الطالب، أنشئ صفحة منفصلة بعنوان «نموذج الإجابة للمعلم» تتضمن الإجابات الصحيحة، البدائل المقبولة، إرشادات التصحيح، درجة كل سؤال، والدرجة الكلية. بالنسبة للأسئلة المفتوحة، أضف معيارًا مختصرًا للتصحيح أو Rubric.
+
+---
+
+## F — FORMAT | التنسيق
+
+**الخطوط**
+
+استخدم خطًا عربيًا يدعم العربية بصورة سليمة مثل Noto Naskh Arabic أو Arial أو Amiri. حجم النص ١١–١٢ نقطة تقريبًا، العناوين الفرعية ١٤–١٦ نقطة، والعنوان الرئيسي ٢٢–٢٦ نقطة. استخدم الخط العريض بذكاء.
+
+**نظام ألوان Edulixa**
+
+استخدم الأخضر الزمردي في العنوان الرئيسي، عناوين الأقسام، الحدود، والخطوط الفاصلة. استخدم البرتقالي المائل للأحمر باعتدال في الأيقونات، علامات الأقسام، العناصر المهمة، والتحدي. اجعل الخلفية بيضاء مع إمكانية استخدام أخضر فاتح جدًا أو رمادي دافئ فاتح جدًا.
+
+**قواعد التخطيط**
+
+- هوامش متناسقة
+- مسافات ثابتة
+- محاذاة دقيقة للأرقام
+- توزيع متوازن للمحتوى
+- عدم تداخل النصوص
+- عدم قص النص
+- عدم وضع عناصر عائمة فوق المحتوى
+- عدم استخدام زخارف غير ضرورية
+- عدم استخدام Watermark
+- ترقيم جميع الأنشطة
+
+**الأنماط Styles**
+
+عند إنشاء ملف DOCX، أنشئ أنماطًا مسماة قابلة لإعادة الاستخدام مثل: Edulixa-Title، Edulixa-Subtitle، Edulixa-Section، Edulixa-Instructions، Edulixa-Question، Edulixa-AnswerLine، Edulixa-Challenge، Edulixa-Footer.
+
+**التذييل**
+
+**EDULIXA | Immersive Learning for Lifelong Success**
+
+- <span class="ph">[[تعديل: بيانات التذييل الاختيارية = المادة / الصف / الوحدة]]</span>
+
+أضف الصفحة X من Y.
+
+**التحكم في اللغة**
+
+- <span class="ph">[[تعديل: اللغة = العربية / الإنجليزية / ثنائية اللغة]]</span>
+
+إذا كانت الورقة باللغة العربية: استخدم اتجاه RTL الحقيقي للمستند والفقرات، ومحاذاة النص العربي إلى اليمين، وربط الحروف العربية بشكل صحيح، وخطًا يدعم العربية، وعلامات ترقيم صحيحة، والأرقام العربية الشرقية ٠١٢٣٤٥٦٧٨٩.
+
+إذا كانت باللغة الإنجليزية: استخدم LTR والأرقام الإنجليزية 0–9 وخطًا إنجليزيًا واضحًا.
+
+إذا كانت ثنائية اللغة: أنشئ كتلًا منفصلة صحيحة الاتجاه؛ English = LTR والعربية = RTL. لا تضع اللغتين داخل فقرة واحدة إذا تسبب ذلك في اضطراب اتجاه النص.
+
+---
+
+## المخرجات المطلوبة
+
+- ورقة الطالب
+- نموذج الإجابة للمعلم
+- ملف DOCX
+- ملف PDF جاهز للطباعة
+
+اجعل تنسيق DOCX وPDF متطابقًا قدر الإمكان.
+
+---
+
+## المراجعة النهائية
+
+- ✓ تطبيق هوية Edulixa
+- ✓ ظهور الشعار بصورة واضحة
+- ✓ تطابق الأسئلة مع أهداف التعلم
+- ✓ التدرج المنطقي في الصعوبة
+- ✓ مناسبة مساحة الإجابة لكل سؤال
+- ✓ عدم تكرار الأسئلة
+- ✓ عدم ظهور الإجابة بالخطأ داخل ورقة الطالب
+- ✓ صحة اللغة والإملاء
+- ✓ صحة فواصل الصفحات
+- ✓ سلامة اتجاه RTL
+- ✓ اتصال الحروف العربية
+- ✓ مطابقة نموذج الإجابة لجميع الأسئلة
+- ✓ صحة مجموع الدرجات حسابيًا
+
+---
+
+**التعليمات النهائية:** لا تبدأ في إنشاء ورقة العمل إذا كانت البيانات الأساسية الموجودة داخل `[[تعديل: ...]]` غير مكتملة. إذا كانت هناك معلومة أساسية ناقصة، اطلب من المعلم المعلومة الناقصة فقط. وبمجرد توفر البيانات الأساسية، أنشئ ورقة العمل كاملة دون طرح أسئلة إضافية غير ضرورية.
+
+---
+
+## قابلية القراءة واستغلال مساحة الصفحة — شرط أساسي غير قابل للتنازل
+
+لا تضغط محتوى ورقة العمل في النصف العلوي من الصفحة مع ترك مساحة كبيرة فارغة. استغل مساحة صفحة A4 بشكل متوازن ومقصود، واجعل سهولة القراءة أهم من تقليل عدد الصفحات.
+
+- حجم نص المتعلم والأسئلة: عادة ١٣–١٤ نقطة، ولا يقل عن ١٢٫٥ نقطة إلا إذا طلب المعلم ذلك صراحة.
+- خيارات الاختيار من متعدد والتعليمات والعناوين الصغيرة: عادة ١٢–١٣ نقطة.
+- شرح مفتاح الإجابة للمعلم: عادة ١٢٫٥–١٣٫٥ نقطة.
+- استخدم تباعد أسطر مريحًا (نحو ١٫٠٨–١٫٢٠)، وحشوات داخلية واضحة في خلايا الجداول، ومسافات مناسبة بين الأسئلة.
+- استهدف استخدام نحو ٧٥–٩٠٪ من الارتفاع القابل للطباعة عندما يسمح المحتوى؛ لا تترك النصف السفلي من الصفحة فارغًا بينما النص صغير.
+- إذا لم يتسع المحتوى بالحجم المقروء، انتقل إلى صفحة إضافية. لا تُصغّر الخط لمجرد الحفاظ على عدد صفحات أقل.
+- افحص النسخة المرسومة عند تكبير ١٠٠٪. إذا احتاج القارئ العادي إلى التكبير لقراءة النص براحة، كبّر الخط وأعد موازنة التخطيط.</div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="One prompt per language, never a mixture. " data-ar="أمر واحد لكل لغة، ولا خلط بينهما أبدًا. ">One prompt per language, never a mixture. </b><span data-en="If you want a bilingual worksheet, say so inside the language field of one prompt. Writing half the instruction in English and half in Arabic is the fastest way to get a worksheet that is wrong in both." data-ar="إن أردت ورقة عمل ثنائية اللغة فاذكر ذلك داخل حقل اللغة في أحد الأمرين. أما كتابة نصف التعليمة بالإنجليزية ونصفها بالعربية فهي أسرع طريق إلى ورقة عمل خاطئة باللغتين.">If you want a bilingual worksheet, say so inside the language field of one prompt. Writing half the instruction in English and half in Arabic is the fastest way to get a worksheet that is wrong in both.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 2 · CREATE THE WORKSHEET ============ -->
+        <div class="block" id="create">
+          <h2 class="display" data-en="Part 2 · Create the worksheet from your own lesson" data-ar="الجزء الثاني · أنشئ ورقة العمل من درسك أنت">Part 2 · Create the worksheet from your own lesson</h2>
+          <p class="sub" data-en="The pages you taught from are the only source the questions may come from." data-ar="الصفحات التي درَّست منها هي المصدر الوحيد الذي يجوز أن تأتي منه الأسئلة.">The pages you taught from are the only source the questions may come from.</p>
+
+          <p data-en="The prompt describes the shape of a worksheet. It does not know what you taught this week — that comes from the pictures. Photograph or screenshot the pages of the student book you actually used, attach them beside the prompt file, and the questions come out of your lesson instead of out of the model’s general knowledge of Grade 6 grammar." data-ar="الأمر الرئيسي يصف شكل ورقة العمل، لكنه لا يعرف ما درَّسته هذا الأسبوع — وهذا يأتي من الصور. صوِّر صفحات كتاب الطالب التي استخدمتها فعلًا أو خُذ لها لقطة شاشة، وأرفقها إلى جانب ملف الأمر، فتخرج الأسئلة من درسك أنت لا من معرفة النموذج العامة بقواعد الصف السادس.">The prompt describes the shape of a worksheet. It does not know what you taught this week — that comes from the pictures. Photograph or screenshot the pages of the student book you actually used, attach them beside the prompt file, and the questions come out of your lesson instead of out of the model’s general knowledge of Grade 6 grammar.</p>
+
+          <h3 data-en="The pages of our lesson" data-ar="صفحات درسنا">The pages of our lesson</h3>
+          <div class="shots is-page">
+            <figure>
+              <img src="assets/lesson-page-01.jpg" alt="Student book page: present simple and present continuous" loading="lazy">
+              <figcaption data-en="Page 42 — the reading text and the grammar box. This is where the two tenses, the signal words and the state-verb warning come from." data-ar="صفحة ٤٢ — نص القراءة وصندوق القاعدة. من هنا تأتي الأزمنة والكلمات الدالة والتنبيه على الأفعال التي تصف حالة.">Page 42 — the reading text and the grammar box. This is where the two tenses, the signal words and the state-verb warning come from.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/lesson-page-02.jpg" alt="Student book page: practice exercises" loading="lazy">
+              <figcaption data-en="Page 43 — the practice the class already did. The worksheet must go beyond these tasks, not repeat them, which is why the AI needs to see them." data-ar="صفحة ٤٣ — التدريب الذي أدّاه الفصل بالفعل. على ورقة العمل أن تتجاوز هذه المهام لا أن تكررها، ولهذا يحتاج الذكاء الاصطناعي إلى رؤيتها.">Page 43 — the practice the class already did. The worksheet must go beyond these tasks, not repeat them, which is why the AI needs to see them.</figcaption>
+            </figure>
+          </div>
+
+          <ul class="ticks is-do">
+            <li data-en="Open a new chat in ChatGPT or Gemini and select the plus button beside the message box." data-ar="افتح محادثة جديدة في ChatGPT أو Gemini واختر زر الإضافة بجوار صندوق الرسالة.">Open a new chat in ChatGPT or Gemini and select the plus button beside the message box.</li>
+            <li data-en="Attach the master prompt file you saved in Part 1." data-ar="أرفق ملف الأمر الرئيسي الذي حفظته في الجزء الأول.">Attach the master prompt file you saved in Part 1.</li>
+            <li data-en="Attach the lesson pages, in order. Two or three clear pictures are worth more than ten blurred ones." data-ar="أرفق صفحات الدرس بالترتيب. فصورتان أو ثلاث واضحة أنفع من عشر صور مشوَّشة.">Attach the lesson pages, in order. Two or three clear pictures are worth more than ten blurred ones.</li>
+            <li data-en="Send one line with them: “Follow the attached prompt. Use only the attached lesson pages as the source of content.”" data-ar="أرسل معها سطرًا واحدًا: «اتبع الأمر المرفق. واستخدم صفحات الدرس المرفقة وحدها مصدرًا للمحتوى».">Send one line with them: “Follow the attached prompt. Use only the attached lesson pages as the source of content.”</li>
+            <li data-en="Read what comes back against the fields you set — the grade, the number of questions, the total marks — before you print anything." data-ar="اقرأ ما يعود إليك في مقابل الحقول التي ضبطتها — الصف، وعدد الأسئلة، ومجموع الدرجات — قبل أن تطبع أي شيء.">Read what comes back against the fields you set — the grade, the number of questions, the total marks — before you print anything.</li>
+          </ul>
+
+          <div class="hint is-lamp">
+            <p style="margin:0" data-en-html="<b>Three attachments change the result.</b> ① The <b>master prompt as a file</b>, not as pasted text. ② The <b>pages of the lesson</b>, in the order you taught them. ③ If you have one, <b>an old worksheet in your school’s format</b> — the layout comes back looking like yours instead of looking like a website." data-ar-html="<b>ثلاثة مرفقات تغيِّر النتيجة.</b> ① <b>الأمر الرئيسي ملفًّا</b>، لا نصًّا ملصوقًا. ② <b>صفحات الدرس</b> بالترتيب الذي درَّستها به. ③ إن كان لديك <b>ورقة عمل قديمة بصيغة مدرستك</b> — فيعود التنسيق شبيهًا بتنسيقك أنت لا شبيهًا بموقع إلكتروني."><b>Three attachments change the result.</b> ① The <b>master prompt as a file</b>, not as pasted text. ② The <b>pages of the lesson</b>, in the order you taught them. ③ If you have one, <b>an old worksheet in your school’s format</b> — the layout comes back looking like yours instead of looking like a website.</p>
+          </div>
+
+          <h3 data-en="What came back" data-ar="ما عاد إلينا">What came back</h3>
+          <p data-en="Twenty questions, thirty marks, three sections on a DOK 1 → 2 → 3 ladder, a word bank as the support layer, a stretch task for early finishers, and a separate teacher answer key with the marks, the cognitive level and the marking guidance for every question. CEFR A2." data-ar="عشرون سؤالًا، وثلاثون درجة، وثلاثة أقسام على سلّم DOK من 1 إلى 2 إلى 3، وبنك كلمات طبقةً للدعم، ومهمة إثراء لمن ينتهي مبكرًا، ومفتاح إجابة منفصل للمعلم فيه الدرجات والمستوى المعرفي وإرشادات التصحيح لكل سؤال. المستوى A2 وفق الإطار الأوروبي المرجعي.">Twenty questions, thirty marks, three sections on a DOK 1 → 2 → 3 ladder, a word bank as the support layer, a stretch task for early finishers, and a separate teacher answer key with the marks, the cognitive level and the marking guidance for every question. CEFR A2.</p>
+
+          <div class="shots is-page">
+            <figure>
+              <img src="assets/doc-worksheet.jpg" data-en-src="assets/doc-worksheet.jpg" data-ar-src="assets/doc-worksheet-ar.jpg" alt="The generated student worksheet, page one" loading="lazy">
+              <figcaption data-en="The student worksheet, page one. Notice the answer spaces: ruled lines, never rows of underscores — the prompt forbids them." data-ar="ورقة الطالب، الصفحة الأولى. لاحظ مساحات الإجابة: خطوط مرسومة لا صفوفًا من الشرطات السفلية — فالأمر الرئيسي يمنعها.">The student worksheet, page one. Notice the answer spaces: ruled lines, never rows of underscores — the prompt forbids them.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/doc-answerkey.jpg" data-en-src="assets/doc-answerkey.jpg" data-ar-src="assets/doc-answerkey-ar.jpg" alt="The teacher answer key" loading="lazy">
+              <figcaption data-en="The teacher answer key. Every question carries its mark, its DOK level and its marking guidance — and the mark distribution adds up to thirty in front of you." data-ar="مفتاح إجابة المعلم. كل سؤال يحمل درجته ومستوى DOK وإرشاد تصحيحه — وتوزيع الدرجات يجمع إلى ثلاثين أمام عينيك.">The teacher answer key. Every question carries its mark, its DOK level and its marking guidance — and the mark distribution adds up to thirty in front of you.</figcaption>
+            </figure>
+          </div>
+
+          <div class="dlrow">
+            <a class="btn btn-outline" href="assets/docs/Edulixa_Worksheet_G6_Present_Tenses.docx" data-en-href="assets/docs/Edulixa_Worksheet_G6_Present_Tenses.docx" data-ar-href="assets/docs/Edulixa_Worksheet_G6_Present_Tenses_AR.docx" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Worksheet + answer key (.docx)" data-ar="ورقة العمل + مفتاح الإجابة (docx.)">Worksheet + answer key (.docx)</span>
+            </a>
+            <a class="btn btn-outline" href="assets/docs/Edulixa_Worksheet_G6_Present_Tenses.pdf" data-en-href="assets/docs/Edulixa_Worksheet_G6_Present_Tenses.pdf" data-ar-href="assets/docs/Edulixa_Worksheet_G6_Present_Tenses_AR.pdf" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Print-ready (.pdf)" data-ar="جاهز للطباعة (pdf.)">Print-ready (.pdf)</span>
+            </a>
+          </div>
+
+          <p class="dlnote" data-en="The buttons above hand over the English pair. Switch the session to Arabic and the same two buttons hand over the Arabic worksheet and answer key — a true right-to-left file with Arabic-Indic numerals." data-ar="الزران أعلاه يسلّمانك النسخة العربية. وحوِّل المحاضرة إلى الإنجليزية فيسلّمانك ورقة العمل ومفتاح الإجابة بالإنجليزية.">The buttons above hand over the English pair. Switch the session to Arabic and the same two buttons hand over the Arabic worksheet and answer key — a true right-to-left file with Arabic-Indic numerals.</p>
+          <div class="dlrow">
+            <button class="btn btn-lang" type="button" data-lang-toggle data-lang-keep data-en-label="Translate the whole session, and its documents, into Arabic" data-ar-label="ترجم المحاضرة كلها ومستنداتها إلى الإنجليزية"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11M9 3v2c0 5-2.2 8.5-5.5 10M6 12.5c0 2.5 2.6 4.7 6 5.5M13.5 21l4-9 4 9M15.2 17.5h4.6"/></svg><span data-en="Translate everything to Arabic" data-ar="حوِّل كل شيء إلى الإنجليزية">Translate everything to Arabic</span></button>
+          </div>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>What the first attempt got wrong.</b> It produced twenty questions but only twenty-four marks, and it placed the challenge section at DOK 2 while labelling it DOK 3. Neither error was visible from reading the worksheet — both were caught by the ten-point check at the end of the prompt. <b>Run that check every time.</b> The AI is confident about arithmetic it has not done." data-ar-html="<b>ما أخطأت فيه المحاولة الأولى.</b> أنتجت عشرين سؤالًا لكن أربعًا وعشرين درجة فقط، ووضعت قسم التحدي في مستوى DOK 2 وهي تسمّيه DOK 3. ولم يكن أي من الخطأين ظاهرًا من قراءة ورقة العمل — بل التقطهما فحص النقاط العشر في نهاية الأمر الرئيسي. <b>شغِّل ذلك الفحص في كل مرة.</b> فالذكاء الاصطناعي واثق من حساب لم يُجرِه."><b>What the first attempt got wrong.</b> It produced twenty questions but only twenty-four marks, and it placed the challenge section at DOK 2 while labelling it DOK 3. Neither error was visible from reading the worksheet — both were caught by the ten-point check at the end of the prompt. <b>Run that check every time.</b> The AI is confident about arithmetic it has not done.</p>
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Keep the answer key. " data-ar="احتفظ بمفتاح الإجابة. ">Keep the answer key. </b><span data-en="Part 3 cannot mark anything without it — and an AI asked to mark without a key does not refuse. It invents a standard of its own and marks confidently against that." data-ar="فالجزء الثالث لا يستطيع تصحيح شيء بدونه — والذكاء الاصطناعي الذي يُطلب منه التصحيح بلا مفتاح لا يرفض، بل يخترع معيارًا خاصًّا به ويصحّح وفقه بثقة.">Part 3 cannot mark anything without it — and an AI asked to mark without a key does not refuse. It invents a standard of its own and marks confidently against that.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 3 · MARK THE ANSWER ============ -->
+        <div class="block" id="mark">
+          <h2 class="display" data-en="Part 3 · Correct the answers, analyse them, write the feedback" data-ar="الجزء الثالث · صحِّح الإجابات، وحلِّلها، واكتب التغذية الراجعة">Part 3 · Correct the answers, analyse them, write the feedback</h2>
+          <p class="sub" data-en="Every question marked against your answer key, then the missing skills named with the question numbers that prove them." data-ar="كل سؤال مُصحَّح وفق مفتاح إجابتك، ثم تسمية المهارات الناقصة مع أرقام الأسئلة التي تدل عليها.">Every question marked against your answer key, then the missing skills named with the question numbers that prove them.</p>
+
+          <p data-en="Correcting is the job AI does fastest and gets wrong most easily. Without your answer key it invents a standard of its own. And unless you forbid it, it tidies the student’s answers while quoting them — which removes the only evidence you have of what the student actually wrote." data-ar="التصحيح هو العمل الذي يؤديه الذكاء الاصطناعي بأسرع ما يمكن، وهو أسهل عمل يخطئ فيه. فبدون مفتاح إجابتك يخترع معيارًا خاصًّا به. وما لم تمنعه فسيُنقّي إجابات الطالب وهو ينقلها — وذلك يمحو الدليل الوحيد على ما كتبه الطالب فعلًا.">Correcting is the job AI does fastest and gets wrong most easily. Without your answer key it invents a standard of its own. And unless you forbid it, it tidies the student’s answers while quoting them — which removes the only evidence you have of what the student actually wrote.</p>
+
+          <p data-en="So the prompt below settles three things before it corrects anything: your answer key is the only authority on what is right, the quoted answers may not be tidied, and no mark may be given for an answer the student did not write. It then analyses what the marks show and writes the three sentences of feedback." data-ar="ولذلك يحسم الأمر أدناه ثلاثة أمور قبل أن يصحّح شيئًا: مفتاح إجابتك هو المرجع الوحيد لما هو صحيح، ولا يجوز تنقيح الإجابات المنقولة، ولا تُمنح درجة لإجابة لم يكتبها الطالب. ثم يحلّل ما تدل عليه الدرجات ويكتب جمل التغذية الراجعة الثلاث.">So the prompt below settles three things before it corrects anything: your answer key is the only authority on what is right, the quoted answers may not be tidied, and no mark may be given for an answer the student did not write. It then analyses what the marks show and writes the three sentences of feedback.</p>
+
+          <ul class="ticks is-do">
+            <li data-en="Attach the worksheet the student answered." data-ar="أرفق ورقة العمل التي أجابت عنها الطالبة.">Attach the worksheet the student answered.</li>
+            <li data-en="Attach the teacher answer key and the mark scheme. Without these, stop — do not run the prompt." data-ar="أرفق مفتاح إجابة المعلم ومخطط الدرجات. وبدونهما توقّف — ولا تشغِّل الأمر.">Attach the teacher answer key and the mark scheme. Without these, stop — do not run the prompt.</li>
+            <li data-en="Attach the student’s completed paper — a clear photograph is enough, or type the answers out." data-ar="أرفق ورقة الطالبة المكتملة — تكفي صورة واضحة، أو اكتب الإجابات نصًّا.">Attach the student’s completed paper — a clear photograph is enough, or type the answers out.</li>
+            <li data-en="Use the student’s first name only. Nothing in this chain needs a full name, a photograph of a face, or a class list." data-ar="استخدم الاسم الأول للطالبة فقط. فلا شيء في هذه السلسلة يحتاج إلى اسم كامل أو صورة وجه أو كشف أسماء الفصل.">Use the student’s first name only. Nothing in this chain needs a full name, a photograph of a face, or a class list.</li>
+            <li data-en="Fill in the red fields below, copy the whole prompt, and send it in the same message as the attachments." data-ar="املأ الحقول الحمراء أدناه، وانسخ الأمر كاملًا، وأرسله في الرسالة نفسها مع المرفقات.">Fill in the red fields below, copy the whole prompt, and send it in the same message as the attachments.</li>
+          </ul>
+
+          <p class="prompt-label" data-en="The correcting and analysis prompt — English" data-ar="أمر التصحيح والتحليل — بالإنجليزية">The correcting and analysis prompt — English</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p4-mark-en" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p4-mark-en" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall" id="p4-mark-en" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable correcting and analysis prompt in English" data-ar-label="أمر التصحيح والتحليل بالإنجليزية، قابل للتعديل"># RCTF MASTER PROMPT — CORRECT ONE STUDENT'S ANSWERS AND ANALYSE THEM
+
+## R — ROLE
+
+Act as an experienced <span class="ph">[SUBJECT]</span> teacher and assessment moderator who marks to a published mark scheme, writes feedback a child can act on, and never invents evidence that is not on the page.
+
+## C — CONTEXT
+
+You are marking one piece of work, not a class set.
+
+- Student first name: <span class="ph">[STUDENT FIRST NAME]</span>
+- Class / grade: <span class="ph">[GRADE AND CLASS]</span>
+- Subject and unit: <span class="ph">[SUBJECT · UNIT OR TOPIC]</span>
+- The objective the work was set against: <span class="ph">[LEARNING OBJECTIVE]</span>
+- Total marks available: <span class="ph">[TOTAL MARKS]</span>
+- Language of the feedback: <span class="ph">[English / Arabic / bilingual]</span>
+
+Attached to this message:
+1. the worksheet the student answered,
+2. the teacher answer key and mark scheme for that worksheet,
+3. the student's completed paper — <span class="ph">[typed below / photographed / scanned]</span>.
+
+### Source-control rules
+
+- The answer key is the only authority on what is correct. Where the key and your own judgement disagree, follow the key and say so in one line at the end.
+- Mark only what is written on the student's paper. Never award or deduct a mark for something you assume the student meant.
+- Where a question is open-ended, mark against the rubric band, not against your own preferred wording.
+- Quote the student's answers exactly, mistakes included. Do not tidy, correct or complete them.
+- If part of the paper is unreadable, list the question numbers you could not mark and mark the rest.
+
+## T — TASK
+
+1. Mark every question. Give the mark awarded out of the mark available.
+2. Produce a marking table with five columns: question number · what the student wrote, verbatim · correct, partly correct or incorrect · mark awarded · one sentence of comment addressed to the student.
+3. Total the marks and give the percentage. Show the arithmetic.
+4. Break the total down by cognitive demand: report the score and percentage for DOK 1, DOK 2 and DOK 3 separately, using the DOK level recorded in the answer key.
+5. Analyse what the marks show. Group every lost mark into no more than three missing skills. For each one give a name a teacher would recognise, the question numbers that evidence it, and one sentence saying whether the skill is missing knowledge (reteach) or weak fluency (practise).
+6. Say what the student already does well, with at least three specific pieces of evidence from this paper.
+7. Write the feedback to read aloud to the student: exactly three sentences — one strength, one correction, one instruction for next time. No jargon, no sentence longer than fifteen words.
+
+## F — FORMAT
+
+- The marking table first, then the three missing skills, then the strengths, then the three-sentence feedback.
+- Address the student as "you" in every comment.
+- Never write "good effort", "well done" or "needs improvement" on its own — every judgement carries the evidence that earned it.
+- Report the cognitive breakdown as a small table: level · marks · percentage · one word (secure / developing / needs support).
+- State the Bloom level and the DOK level for every missing skill.
+- Bold the mark awarded wherever it is lower than the mark available.
+- No emoji, and no praise the paper does not support.
+
+**Quality control — check all ten before you answer**
+
+① every question on the worksheet appears in the table ② the marks add up to the total reported ③ no answer is quoted in cleaned-up form ④ no mark is awarded for an answer that is not written ⑤ every missing skill carries at least one question number as evidence ⑥ there are no more than three of them ⑦ the strengths section names at least three specifics ⑧ the three-sentence feedback contains no jargon ⑨ the cognitive percentages are calculated from the key, not estimated ⑩ nothing in the output identifies the student beyond the first name supplied.
+
+## OUTPUT
+
+A corrected paper that can be printed and handed back, followed by the analysis the teacher keeps. If the answer key is missing, ask for it — do not begin marking without it.</div>
+          <p class="prompt-label" data-en="The correcting and analysis prompt — Arabic" data-ar="أمر التصحيح والتحليل — بالعربية">The correcting and analysis prompt — Arabic</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p4-mark-ar" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p4-mark-ar" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall is-ar" id="p4-mark-ar" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable correcting and analysis prompt in Arabic" data-ar-label="أمر التصحيح والتحليل بالعربية، قابل للتعديل"># برومبت RCTF الرئيسي — تصحيح إجابات طالب واحد وتحليلها
+
+## R — ROLE | الدور
+
+تصرّف بصفتك معلم <span class="ph">[المادة]</span> ذا خبرة ومراجعًا للتقويم، يصحّح وفق مخطط درجات معلن، ويكتب تغذية راجعة يستطيع الطالب أن يعمل بها، ولا يخترع دليلًا غير موجود على الورقة.
+
+## C — CONTEXT | السياق
+
+أنت تصحّح ورقة طالب واحد، لا مجموعة فصل.
+
+- الاسم الأول للطالب: <span class="ph">[الاسم الأول للطالب]</span>
+- الصف / الفصل: <span class="ph">[الصف والفصل]</span>
+- المادة والوحدة: <span class="ph">[المادة · الوحدة أو الموضوع]</span>
+- الهدف الذي بُنِي عليه العمل: <span class="ph">[هدف التعلم]</span>
+- مجموع الدرجات المتاحة: <span class="ph">[مجموع الدرجات]</span>
+- لغة التغذية الراجعة: <span class="ph">[العربية / الإنجليزية / ثنائية اللغة]</span>
+
+المرفق مع هذه الرسالة:
+١. ورقة العمل التي أجاب عنها الطالب،
+٢. نموذج الإجابة ومخطط الدرجات لتلك الورقة،
+٣. ورقة الطالب المكتملة — <span class="ph">[مكتوبة أدناه / مصوَّرة / ممسوحة ضوئيًا]</span>.
+
+### قواعد التحكم في المصادر
+
+- نموذج الإجابة هو المرجع الوحيد لما هو صحيح. وإذا اختلف النموذج مع حكمك الخاص، فاتبع النموذج واذكر ذلك في سطر واحد في النهاية.
+- صحّح ما هو مكتوب على ورقة الطالب فقط. لا تمنح درجة ولا تخصم درجة بناءً على ما تفترض أن الطالب قصده.
+- في الأسئلة المفتوحة، صحّح وفق مستوى الـ Rubric لا وفق الصياغة التي تفضّلها أنت.
+- انقل إجابات الطالب حرفيًا بأخطائها. لا تُصلحها ولا تُرتّبها ولا تُكملها.
+- إذا كان جزء من الورقة غير مقروء، فاذكر أرقام الأسئلة التي لم تستطع تصحيحها وصحّح الباقي.
+
+## T — TASK | المهمة
+
+١. صحّح كل سؤال، وأعطِ الدرجة الممنوحة من الدرجة المتاحة.
+٢. أنشئ جدول تصحيح بخمسة أعمدة: رقم السؤال · ما كتبه الطالب حرفيًا · صحيحة أو صحيحة جزئيًا أو خاطئة · الدرجة الممنوحة · جملة تعليق واحدة موجَّهة إلى الطالب.
+٣. اجمع الدرجات وأعطِ النسبة المئوية، وأظهر العملية الحسابية.
+٤. وزّع المجموع على مستويات الطلب المعرفي: أعطِ الدرجة والنسبة لكل من DOK 1 وDOK 2 وDOK 3 على حدة، بحسب مستوى DOK المسجَّل في نموذج الإجابة.
+٥. حلِّل ما تدل عليه الدرجات. اجمع كل درجة مفقودة في ثلاث مهارات ناقصة على الأكثر. ولكل مهارة اذكر اسمًا يعرفه المعلم، وأرقام الأسئلة التي تدل عليها، وجملة واحدة تحدّد إن كان النقص في المعرفة (تُعاد تدريسًا) أو في الطلاقة (تُعالج بالتدريب).
+٦. اذكر ما يُتقنه الطالب فعلًا، مع ثلاثة أدلة محددة على الأقل من هذه الورقة.
+٧. اكتب التغذية الراجعة التي تُقرأ بصوت مسموع للطالب: ثلاث جمل بالضبط — نقطة قوة، وتصحيح، وتعليمة للمرة القادمة. بلا مصطلحات، ولا تزيد الجملة على خمس عشرة كلمة.
+
+## F — FORMAT | التنسيق
+
+- جدول التصحيح أولًا، ثم المهارات الناقصة الثلاث، ثم نقاط القوة، ثم الجمل الثلاث.
+- خاطب الطالب بصيغة المخاطب في كل تعليق.
+- لا تكتب «مجهود جيد» أو «أحسنت» أو «يحتاج إلى تحسين» وحدها — كل حكم يحمل الدليل الذي استحقّه.
+- اعرض التوزيع المعرفي في جدول صغير: المستوى · الدرجة · النسبة · كلمة واحدة (متمكّن / في طريق النمو / يحتاج دعمًا).
+- اذكر مستوى بلوم ومستوى DOK لكل مهارة ناقصة.
+- اجعل الدرجة الممنوحة بالخط العريض حيث تكون أقل من الدرجة المتاحة.
+- بلا رموز تعبيرية، وبلا ثناء لا تدعمه الورقة.
+
+**ضبط الجودة — راجع العشرة كلها قبل أن تجيب**
+
+① كل سؤال في ورقة العمل موجود في الجدول ② مجموع الدرجات يساوي المجموع المذكور ③ لا إجابة منقولة في صورة مُنقّاة ④ لا درجة مُمنوحة لإجابة غير مكتوبة ⑤ كل مهارة ناقصة تحمل رقم سؤال واحدًا على الأقل كدليل ⑥ المهارات الناقصة ثلاث على الأكثر ⑦ قسم نقاط القوة يذكر ثلاثة أمور محددة على الأقل ⑧ الجمل الثلاث خالية من المصطلحات ⑨ النسب المعرفية محسوبة من النموذج لا مقدَّرة ⑩ لا شيء في المخرجات يعرّف الطالب أكثر من الاسم الأول المذكور.
+
+## OUTPUT | المخرجات
+
+ورقة مصحَّحة قابلة للطباعة وإعادتها إلى الطالب، يتبعها التحليل الذي يحتفظ به المعلم. وإذا كان نموذج الإجابة غير مرفق فاطلبه — ولا تبدأ التصحيح بدونه.</div>
+
+          <h3 data-en="What came back" data-ar="ما عاد إلينا">What came back</h3>
+          <div class="shots is-page">
+            <figure>
+              <img src="assets/doc-marked.jpg" data-en-src="assets/doc-marked.jpg" data-ar-src="assets/doc-marked-ar.jpg" alt="The marked paper with feedback" loading="lazy">
+              <figcaption data-en="Twenty-one out of thirty. Every answer is quoted exactly as Salma wrote it — “I am know the answer” is not corrected in the quotation, because the mistake is the evidence." data-ar="واحد وعشرون من ثلاثين. كل إجابة منقولة حرفيًا كما كتبتها سلمى — فجملة «I am know the answer» لم تُصحَّح في النقل، لأن الخطأ هو الدليل.">Twenty-one out of thirty. Every answer is quoted exactly as Salma wrote it — “I am know the answer” is not corrected in the quotation, because the mistake is the evidence.</figcaption>
+            </figure>
+          </div>
+
+          <div class="dlrow">
+            <a class="btn btn-outline" href="assets/docs/Edulixa_Marked_Paper_Salma_G6.docx" data-en-href="assets/docs/Edulixa_Marked_Paper_Salma_G6.docx" data-ar-href="assets/docs/Edulixa_Marked_Paper_Salma_G6_AR.docx" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Marked paper + diagnosis (.docx)" data-ar="الورقة المصحَّحة + التشخيص (docx.)">Marked paper + diagnosis (.docx)</span>
+            </a>
+            <a class="btn btn-outline" href="assets/docs/Edulixa_Marked_Paper_Salma_G6.pdf" data-en-href="assets/docs/Edulixa_Marked_Paper_Salma_G6.pdf" data-ar-href="assets/docs/Edulixa_Marked_Paper_Salma_G6_AR.pdf" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Print-ready (.pdf)" data-ar="جاهز للطباعة (pdf.)">Print-ready (.pdf)</span>
+            </a>
+          </div>
+
+          <h3 data-en="What the analysis found" data-ar="ما وجده التحليل">What the analysis found</h3>
+          <div class="tbl-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th data-en="The missing skill" data-ar="المهارة الناقصة">The missing skill</th>
+                  <th data-en="Evidence" data-ar="الدليل">Evidence</th>
+                  <th data-en="Reteach or practise" data-ar="إعادة تدريس أم تدريب">Reteach or practise</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-en="The third-person -s is not attached to a trigger. She knows the rule and used it correctly once, but she applies it by feel instead of checking who is doing the action — and she over-applied it where the continuous was needed." data-ar="حرف الـ s للغائب المفرد غير مرتبط بمحفِّزه. تعرف القاعدة واستخدمتها صحيحة مرة، لكنها تطبّقها بالحس لا بالتحقق من الفاعل — وقد بالغت في تطبيقها حيث كان المطلوب الزمن المستمر.">The third-person -s is not attached to a trigger. She knows the rule and used it correctly once, but she applies it by feel instead of checking who is doing the action — and she over-applied it where the continuous was needed.</td>
+                  <td data-en="Q9 · Q12 · Q18" data-ar="س٩ · س١٢ · س١٨">Q9 · Q12 · Q18</td>
+                  <td data-en="Reteach · Bloom Apply · DOK 2" data-ar="إعادة تدريس · بلوم: تطبيق · DOK 2">Reteach · Bloom Apply · DOK 2</td>
+                </tr>
+                <tr>
+                  <td data-en="State verbs are being treated as action verbs. She met “know” twice and chose the -ing form both times. This is the only rule on the paper she has not begun to acquire." data-ar="الأفعال التي تصف حالة تُعامَل معاملة أفعال الحركة. قابلت الفعل know مرتين واختارت صيغة ing- في المرتين. وهذه القاعدة الوحيدة في الورقة التي لم تبدأ في اكتسابها.">State verbs are being treated as action verbs. She met “know” twice and chose the -ing form both times. This is the only rule on the paper she has not begun to acquire.</td>
+                  <td data-en="Q7 · Q17" data-ar="س٧ · س١٧">Q7 · Q17</td>
+                  <td data-en="Reteach from scratch · Bloom Understand → Apply · DOK 1 → 2" data-ar="إعادة تدريس من البداية · بلوم: فهم ← تطبيق · DOK 1 ← 2">Reteach from scratch · Bloom Understand → Apply · DOK 1 → 2</td>
+                </tr>
+                <tr>
+                  <td data-en="The signal word guides her reading but not her writing. She found the signal word in all eight questions of Section A. In her own sentence she chose “Right now” and then wrote the present simple after it." data-ar="الكلمة الدالة توجّه قراءتها لا كتابتها. وجدت الكلمة الدالة في الأسئلة الثمانية كلها في القسم الأول. وفي جملتها هي اختارت «Right now» ثم كتبت بعدها المضارع البسيط.">The signal word guides her reading but not her writing. She found the signal word in all eight questions of Section A. In her own sentence she chose “Right now” and then wrote the present simple after it.</td>
+                  <td data-en="Q19 · Q20" data-ar="س١٩ · س٢٠">Q19 · Q20</td>
+                  <td data-en="Practise · Bloom Analyse · DOK 3" data-ar="تدريب · بلوم: تحليل · DOK 3">Practise · Bloom Analyse · DOK 3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Why the analysis matters more than the score. " data-ar="لماذا يهم التحليل أكثر من الدرجة. ">Why the analysis matters more than the score. </b><span data-en="A list of four wrong answers tells you nothing to teach on Monday. Three named missing skills give you three lessons, three success criteria and three paragraphs for the parents report. Parts 4 and 5 use these three and nothing else." data-ar="قائمة بأربع إجابات خاطئة لا تخبرك بشيء تدرّسه يوم الاثنين. أما ثلاث مهارات ناقصة مسمّاة فتمنحك ثلاثة دروس، وثلاثة معايير نجاح، وثلاث فقرات لتقرير أولياء الأمور. والجزآن الرابع والخامس لا يستخدمان إلا هذه الثلاثة.">A list of four wrong answers tells you nothing to teach on Monday. Three named missing skills give you three lessons, three success criteria and three paragraphs for the parents report. Parts 4 and 5 use these three and nothing else.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 4 · THE ACTION PLAN ============ -->
+        <div class="block" id="plan">
+          <h2 class="display" data-en="Part 4 · Prepare the two-week action plan" data-ar="الجزء الرابع · أعِدَّ الخطة العلاجية لأسبوعين">Part 4 · Prepare the two-week action plan</h2>
+          <p class="sub" data-en="One target for each missing skill, ten minutes a day, and a review date with its pass mark set in advance." data-ar="هدف واحد لكل مهارة ناقصة، وعشر دقائق يوميًا، وتاريخ مراجعة بدرجة نجاح محددة مقدَّمًا.">One target for each missing skill, ten minutes a day, and a review date with its pass mark set in advance.</p>
+
+          <p data-en="A remedial plan fails for one of two reasons: it asks for more time than the student has, or it never says how anyone will know it worked. The prompt closes both. It caps the daily minutes at the number you give it, it makes every success criterion countable, and it writes the review decision — the pass mark, the date, what happens next — before the two weeks start." data-ar="تفشل الخطة العلاجية لسبب من اثنين: إما أنها تطلب وقتًا أكثر مما يملكه الطالب، وإما أنها لا تقول كيف سيعرف أحد أنها نجحت. والأمر أدناه يُغلق البابين: يحدّد دقائق اليوم بالرقم الذي تعطيه إياه، ويجعل كل معيار نجاح قابلًا للعد، ويكتب قرار المراجعة — درجة النجاح والتاريخ وما سيحدث بعده — قبل أن يبدأ الأسبوعان.">A remedial plan fails for one of two reasons: it asks for more time than the student has, or it never says how anyone will know it worked. The prompt closes both. It caps the daily minutes at the number you give it, it makes every success criterion countable, and it writes the review decision — the pass mark, the date, what happens next — before the two weeks start.</p>
+
+          <p data-en="It also keeps reteaching and practice apart. A skill the analysis called missing knowledge is retaught. A skill it called weak fluency is practised. Setting practice on something that was never taught is how two weeks quietly becomes a term." data-ar="وهو يفصل كذلك بين إعادة التدريس والتدريب. فالمهارة التي سمّاها التحليل نقصًا في المعرفة تُعاد تدريسًا، والمهارة التي سمّاها ضعفًا في الطلاقة تُعالج بالتدريب. أما التدريب على شيء لم يُدرَّس أصلًا فهو الطريق الذي يصير به الأسبوعان فصلًا دراسيًا كاملًا في هدوء.">It also keeps reteaching and practice apart. A skill the analysis called missing knowledge is retaught. A skill it called weak fluency is practised. Setting practice on something that was never taught is how two weeks quietly becomes a term.</p>
+
+          <p class="prompt-label" data-en="The action-plan prompt — English" data-ar="أمر خطة العمل — بالإنجليزية">The action-plan prompt — English</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p4-plan-en" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p4-plan-en" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall" id="p4-plan-en" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable action plan prompt in English" data-ar-label="أمر خطة العمل بالإنجليزية، قابل للتعديل"># RCTF MASTER PROMPT — A TWO-WEEK ACTION PLAN FROM ONE MARKED PAPER
+
+## R — ROLE
+
+Act as a <span class="ph">[SUBJECT]</span> specialist and intervention lead who writes plans a busy teacher actually finishes — short, dated, and measurable.
+
+## C — CONTEXT
+
+- Student first name: <span class="ph">[STUDENT FIRST NAME]</span>
+- Class / grade: <span class="ph">[GRADE AND CLASS]</span>
+- Subject and unit: <span class="ph">[SUBJECT · UNIT OR TOPIC]</span>
+- Score on the marked paper: <span class="ph">[SCORE]</span> out of <span class="ph">[TOTAL MARKS]</span>
+- The three missing skills from the analysis: <span class="ph">[PASTE THE THREE MISSING SKILLS HERE]</span>
+- Time the student can give: <span class="ph">[MINUTES]</span> minutes a day, <span class="ph">[DAYS PER WEEK]</span> days a week
+- The plan runs from <span class="ph">[START DATE]</span> to <span class="ph">[REVIEW DATE]</span>
+- Language of the plan: <span class="ph">[English / Arabic / bilingual]</span>
+
+Attached: the corrected paper and the analysis produced in the previous step.
+
+### Source-control rules
+
+- Every target must trace back to one of the missing skills. A target with no missing skill behind it is deleted.
+- Do not invent skills that are not in the analysis, and do not merge two of them to make the plan look shorter.
+- A skill the analysis calls missing knowledge is retaught. A skill it calls weak fluency is practised. Never swap these.
+- Do not plan more than three targets, and never more than <span class="ph">[MINUTES]</span> minutes a day.
+- Do not ask the family to teach. The family asks one question; the teacher teaches.
+
+## T — TASK
+
+1. Write one target per missing skill — three at most.
+2. For each target give: what the teacher does, what the student does inside <span class="ph">[MINUTES]</span> minutes, a success criterion the student can check without a teacher, and the Bloom level and DOK level the target sits at.
+3. Lay the days out as a calendar from <span class="ph">[START DATE]</span> to <span class="ph">[REVIEW DATE]</span>, showing which target is worked on each day, with at least two rest days in every week.
+4. Write a "who does what" table with four rows — class teacher, student, family at home, subject leader — each with what they are responsible for and the evidence they leave behind.
+5. Write the review decision in advance: how many questions on <span class="ph">[REVIEW DATE]</span>, drawn from which missing skills, what score closes the plan, and what score reopens which target.
+6. Write the student's own card: the three targets in the student's own words at a <span class="ph">[READING AGE]</span> reading age, a tick box for every day, and the one question a family member should ask.
+
+## F — FORMAT
+
+- Targets as a table; the calendar as a table; who-does-what as a table; everything else as short prose.
+- State the Bloom level and the DOK level on every target.
+- Write every date in full. No "next week", no "soon", no "by the end of term".
+- Success criteria must be countable. "Understands the rule" is not a success criterion; "ten in a row with the correct ending" is.
+- Nothing longer than one page per section, and the whole plan no longer than two pages plus the card.
+
+**Quality control — check all ten before you answer**
+
+① one target per missing skill, and no orphan targets ② no more than three targets ③ reteaching and practice are not swapped ④ the daily minutes never exceed the number supplied ⑤ every week carries at least two rest days ⑥ every success criterion is countable ⑦ every date is written in full ⑧ the review decision names its pass mark before the review happens ⑨ the student card contains no jargon ⑩ the plan fits on two pages.
+
+## OUTPUT
+
+The plan for the teacher's file, and the student's card as a separate block that can be cut out and taped into an exercise book.</div>
+          <p class="prompt-label" data-en="The action-plan prompt — Arabic" data-ar="أمر خطة العمل — بالعربية">The action-plan prompt — Arabic</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p4-plan-ar" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p4-plan-ar" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall is-ar" id="p4-plan-ar" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable action plan prompt in Arabic" data-ar-label="أمر خطة العمل بالعربية، قابل للتعديل"># برومبت RCTF الرئيسي — خطة عمل لأسبوعين من ورقة مصحَّحة واحدة
+
+## R — ROLE | الدور
+
+تصرّف بصفتك أخصائي <span class="ph">[المادة]</span> وقائد تدخّل تعليمي يكتب خططًا يُنجزها المعلم المشغول فعلًا — قصيرة، مؤرَّخة، وقابلة للقياس.
+
+## C — CONTEXT | السياق
+
+- الاسم الأول للطالب: <span class="ph">[الاسم الأول للطالب]</span>
+- الصف / الفصل: <span class="ph">[الصف والفصل]</span>
+- المادة والوحدة: <span class="ph">[المادة · الوحدة أو الموضوع]</span>
+- الدرجة في الورقة المصحَّحة: <span class="ph">[الدرجة]</span> من <span class="ph">[مجموع الدرجات]</span>
+- المهارات الناقصة الثلاث من التحليل: <span class="ph">[الصق المهارات الناقصة الثلاث هنا]</span>
+- الوقت الذي يستطيع الطالب تقديمه: <span class="ph">[عدد الدقائق]</span> دقيقة يوميًا، <span class="ph">[عدد الأيام]</span> أيام في الأسبوع
+- تسري الخطة من <span class="ph">[تاريخ البداية]</span> إلى <span class="ph">[تاريخ المراجعة]</span>
+- لغة الخطة: <span class="ph">[العربية / الإنجليزية / ثنائية اللغة]</span>
+
+المرفق: الورقة المصحَّحة والتحليل الناتج عن الخطوة السابقة.
+
+### قواعد التحكم في المصادر
+
+- كل هدف يجب أن يعود إلى مهارة ناقصة. والهدف الذي لا مهارة ناقصة خلفه يُحذف.
+- لا تخترع مهارات غير موجودة في التحليل، ولا تدمج مهارتين لتبدو الخطة أقصر.
+- المهارة التي يسمّيها التحليل نقصًا في المعرفة تُعاد تدريسًا. والمهارة التي يسمّيها ضعفًا في الطلاقة تُعالج بالتدريب. ولا تبدّل بينهما أبدًا.
+- لا تخطّط لأكثر من ثلاثة أهداف، ولا لأكثر من <span class="ph">[عدد الدقائق]</span> دقيقة في اليوم.
+- لا تطلب من الأسرة أن تُدرّس. الأسرة تسأل سؤالًا واحدًا، والمعلم هو من يُدرّس.
+
+## T — TASK | المهمة
+
+١. اكتب هدفًا واحدًا لكل مهارة ناقصة — ثلاثة أهداف على الأكثر.
+٢. لكل هدف اذكر: ما يفعله المعلم، وما يفعله الطالب في <span class="ph">[عدد الدقائق]</span> دقيقة، ومعيار نجاح يستطيع الطالب التحقق منه بنفسه دون معلم، ومستوى بلوم ومستوى DOK الذي يقع فيه الهدف.
+٣. وزّع الأيام في جدول تقويمي من <span class="ph">[تاريخ البداية]</span> إلى <span class="ph">[تاريخ المراجعة]</span>، مبيّنًا الهدف الذي يُعمل عليه كل يوم، مع يومَي راحة على الأقل في كل أسبوع.
+٤. اكتب جدول «من يفعل ماذا» بأربعة صفوف — معلم الصف، والطالب، والأسرة في المنزل، ومنسّق المادة — ولكل صف ما هو مسؤول عنه والدليل الذي يتركه خلفه.
+٥. اكتب قرار المراجعة مقدَّمًا: كم سؤالًا في <span class="ph">[تاريخ المراجعة]</span>، ومن أي المهارات الناقصة، وما الدرجة التي تُغلق الخطة، وما الدرجة التي تعيد فتح أي هدف.
+٦. اكتب بطاقة الطالب الخاصة: الأهداف الثلاثة بكلماته هو بمستوى قراءة <span class="ph">[العمر القرائي]</span>، ومربع تأشير لكل يوم، والسؤال الواحد الذي يسأله أحد أفراد الأسرة.
+
+## F — FORMAT | التنسيق
+
+- الأهداف في جدول، والتقويم في جدول، و«من يفعل ماذا» في جدول، وما عدا ذلك نص قصير.
+- اذكر مستوى بلوم ومستوى DOK على كل هدف.
+- اكتب كل تاريخ كاملًا. بلا «الأسبوع القادم» وبلا «قريبًا» وبلا «قبل نهاية الفصل».
+- معايير النجاح يجب أن تكون قابلة للعد. «يفهم القاعدة» ليس معيار نجاح، أما «عشر جمل متتابعة بالنهاية الصحيحة» فهو معيار.
+- لا يزيد أي قسم على صفحة واحدة، ولا تزيد الخطة كلها على صفحتين إضافة إلى البطاقة.
+
+**ضبط الجودة — راجع العشرة كلها قبل أن تجيب**
+
+① هدف واحد لكل مهارة ناقصة، وبلا أهداف بلا مهارات ② الأهداف ثلاثة على الأكثر ③ إعادة التدريس والتدريب غير مُبدَّلين ④ دقائق اليوم لا تتجاوز الرقم المعطى ⑤ كل أسبوع فيه يومَا راحة على الأقل ⑥ كل معيار نجاح قابل للعد ⑦ كل تاريخ مكتوب كاملًا ⑧ قرار المراجعة يذكر درجة النجاح قبل حدوث المراجعة ⑨ بطاقة الطالب خالية من المصطلحات ⑩ الخطة تتسع في صفحتين.
+
+## OUTPUT | المخرجات
+
+الخطة لملف المعلم، وبطاقة الطالب في كتلة منفصلة يمكن قصّها ولصقها داخل الكراس.</div>
+
+          <h3 data-en="What came back" data-ar="ما عاد إلينا">What came back</h3>
+          <div class="shots is-page">
+            <figure>
+              <img src="assets/doc-plan.jpg" data-en-src="assets/doc-plan.jpg" data-ar-src="assets/doc-plan-ar.jpg" alt="The two-week action plan" loading="lazy">
+              <figcaption data-en="Three targets, one for each missing skill, each with a countable success criterion — “ten sentences in a row with the correct ending”, not “understands the rule”." data-ar="ثلاثة أهداف، هدف لكل مهارة ناقصة، ولكل هدف معيار نجاح قابل للعد — «عشر جمل متتابعة بالنهاية الصحيحة»، لا «يفهم القاعدة».">Three targets, one for each missing skill, each with a countable success criterion — “ten sentences in a row with the correct ending”, not “understands the rule”.</figcaption>
+            </figure>
+          </div>
+
+          <div class="dlrow">
+            <a class="btn btn-outline" href="assets/docs/Edulixa_Action_Plan_Salma_G6.docx" data-en-href="assets/docs/Edulixa_Action_Plan_Salma_G6.docx" data-ar-href="assets/docs/Edulixa_Action_Plan_Salma_G6_AR.docx" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Action plan + student card (.docx)" data-ar="خطة العمل + بطاقة الطالبة (docx.)">Action plan + student card (.docx)</span>
+            </a>
+            <a class="btn btn-outline" href="assets/docs/Edulixa_Action_Plan_Salma_G6.pdf" data-en-href="assets/docs/Edulixa_Action_Plan_Salma_G6.pdf" data-ar-href="assets/docs/Edulixa_Action_Plan_Salma_G6_AR.pdf" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Print-ready (.pdf)" data-ar="جاهز للطباعة (pdf.)">Print-ready (.pdf)</span>
+            </a>
+          </div>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>Two rest days a week, on purpose.</b> A fourteen-day plan with fourteen working days is abandoned by day five, and then the teacher concludes that intervention does not work. The prompt requires the rest days, and it requires the student’s own card — three jobs in her words, fourteen tick boxes, and one question for the family. Nothing else goes on that card." data-ar-html="<b>يومَا راحة في الأسبوع، عن قصد.</b> خطة من أربعة عشر يومًا كلها أيام عمل تُهجَر في اليوم الخامس، ثم يستنتج المعلم أن التدخّل لا يفيد. والأمر الرئيسي يشترط يومَي الراحة، ويشترط بطاقة الطالبة نفسها — ثلاث مهام بكلماتها، وأربعة عشر مربع تأشير، وسؤال واحد للأسرة. ولا شيء غير ذلك على تلك البطاقة."><b>Two rest days a week, on purpose.</b> A fourteen-day plan with fourteen working days is abandoned by day five, and then the teacher concludes that intervention does not work. The prompt requires the rest days, and it requires the student’s own card — three jobs in her words, fourteen tick boxes, and one question for the family. Nothing else goes on that card.</p>
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Write the decision before the fortnight, not after it. " data-ar="اكتب القرار قبل الأسبوعين لا بعدهما. ">Write the decision before the fortnight, not after it. </b><span data-en="Six questions on 1 September — two on each gap. Five or six correct closes the plan. Four or fewer reopens only the failing target, because repeating what is already secure is exactly how a two-week plan turns into a term of revision." data-ar="ستة أسئلة في ١ سبتمبر — سؤالان لكل فجوة. خمسة أو ستة صحيحة تُغلق الخطة. وأربعة أو أقل تعيد فتح الهدف الراسب وحده، لأن تكرار ما هو متمكَّن منه أصلًا هو بالضبط ما يحوّل خطة أسبوعين إلى فصل من المراجعة.">Six questions on 1 September — two on each gap. Five or six correct closes the plan. Four or fewer reopens only the failing target, because repeating what is already secure is exactly how a two-week plan turns into a term of revision.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 5 · THE LETTER HOME ============ -->
+        <div class="block" id="parents">
+          <h2 class="display" data-en="Part 5 · Prepare the parents report" data-ar="الجزء الخامس · أعِدَّ تقرير أولياء الأمور">Part 5 · Prepare the parents report</h2>
+          <p class="sub" data-en="The same three missing skills, written in words a parent does not have to decode." data-ar="المهارات الناقصة الثلاث نفسها، مكتوبة بكلمات لا يحتاج ولي الأمر إلى فكّ شفرتها.">The same three missing skills, written in words a parent does not have to decode.</p>
+
+          <p data-en="The parents report is the only one of these four documents that a non-teacher reads, and it is the one most often written in staffroom language. DOK, rubric, formative, criterion, differentiation, objective — each one is a wall. The prompt lists them by name and rewrites any sentence that contains one." data-ar="تقرير أولياء الأمور هو المستند الوحيد من هذه المستندات الأربعة الذي يقرؤه غير معلم، وهو أكثرها كتابةً بلغة غرفة المعلمين. فـ DOK وRubric والتقويم التكويني والمعيار والتمايز والهدف السلوكي — كل واحد منها جدار. والأمر الرئيسي يسردها بأسمائها ويعيد كتابة أي جملة تحتوي واحدًا منها.">The parents report is the only one of these four documents that a non-teacher reads, and it is the one most often written in staffroom language. DOK, rubric, formative, criterion, differentiation, objective — each one is a wall. The prompt lists them by name and rewrites any sentence that contains one.</p>
+
+          <p data-en="It also forbids the three things that get schools into trouble: comparing the child to anyone else, implying a reason for the result that the paper does not show, and asking the family to teach. The family asks one question. The teacher teaches." data-ar="وهو يمنع كذلك ثلاثة أمور توقع المدارس في المشكلات: مقارنة الطفل بأي أحد آخر، والتلميح إلى سبب للنتيجة لا تُظهره الورقة، ومطالبة الأسرة بأن تُدرّس. الأسرة تسأل سؤالًا واحدًا، والمعلم هو من يُدرّس.">It also forbids the three things that get schools into trouble: comparing the child to anyone else, implying a reason for the result that the paper does not show, and asking the family to teach. The family asks one question. The teacher teaches.</p>
+
+          <p class="prompt-label" data-en="The parents’ report prompt — English" data-ar="أمر تقرير أولياء الأمور — بالإنجليزية">The parents’ report prompt — English</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p4-par-en" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p4-par-en" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall" id="p4-par-en" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable parents report prompt in English" data-ar-label="أمر تقرير أولياء الأمور بالإنجليزية، قابل للتعديل"># RCTF MASTER PROMPT — A REPORT TO PARENTS THEY WILL ACTUALLY READ
+
+## R — ROLE
+
+Act as a class teacher writing to a family, and as a plain-language editor who removes every word a parent would have to look up.
+
+## C — CONTEXT
+
+- Student first name: <span class="ph">[STUDENT FIRST NAME]</span>
+- Class / grade: <span class="ph">[GRADE AND CLASS]</span>
+- Subject and unit: <span class="ph">[SUBJECT · UNIT OR TOPIC]</span>
+- Score: <span class="ph">[SCORE]</span> out of <span class="ph">[TOTAL MARKS]</span>
+- The three missing skills, in teacher language: <span class="ph">[PASTE THE THREE MISSING SKILLS HERE]</span>
+- What the family can realistically give: <span class="ph">[MINUTES]</span> minutes an evening
+- Review date: <span class="ph">[REVIEW DATE]</span>
+- Language of the report: <span class="ph">[English / Arabic / bilingual — English first, then Arabic]</span>
+- Sign it for: <span class="ph">[SCHOOL OR ACADEMY NAME]</span>
+
+Attached: the corrected paper, the analysis and the action plan.
+
+### Source-control rules
+
+- Translate every missing skill out of teacher language. If a sentence contains DOK, Bloom, rubric, formative, differentiation, criterion or objective, rewrite it.
+- Use the student's own words from the paper as the example for each missing skill, quoted exactly as written, with the corrected version beside it.
+- Never compare this student to the class, to a sibling, or to a percentile.
+- Never state or imply a diagnosis, a home circumstance, or any reason for the result that the paper does not show.
+- Do not ask the family for more than <span class="ph">[MINUTES]</span> minutes an evening, and do not ask them to teach.
+
+## T — TASK
+
+1. Open with two sentences: what the work was, and that there is nothing here to worry about — if that is true. If the score does not support that sentence, say plainly what the concern is instead.
+2. Give the score once, and say what it means in ordinary words.
+3. List three things the student already does well, each with evidence from this paper.
+4. Turn each missing skill into one short paragraph in plain words, each with the student's own sentence as the example and the correction beside it.
+5. Give the family exactly three things to do at home, each doable inside <span class="ph">[MINUTES]</span> minutes. One of the three must be a single question to ask.
+6. Say what happens next, and name the review date in full.
+7. Close with how to reach the teacher, and an invitation to ask if anything is unclear.
+8. If the language is bilingual, write the whole report in English first and then the whole report in Arabic — never a sentence of each. In the Arabic version use right-to-left direction and Arabic-Indic digits ٠١٢٣٤٥٦٧٨٩.
+
+## F — FORMAT
+
+- A letter, not a form. No grade table, no bar chart, no traffic lights.
+- Reading age of twelve or below. Sentences under twenty-five words.
+- Warm and specific. No filler praise and no veiled threat.
+- One page per language, plus a signature line carrying the teacher's role, the date and the review date.
+
+**Quality control — check all ten before you answer**
+
+① no teacher jargon anywhere ② the score appears exactly once ③ three strengths, each with evidence ④ three missing skills, each with the student's own words and the correction ⑤ exactly three things to do at home ⑥ one of the three is a single question ⑦ no comparison to any other child ⑧ no diagnosis and no guess about home ⑨ the review date written in full ⑩ if bilingual, the two languages sit in separate blocks with the correct direction.
+
+## OUTPUT
+
+One letter per language, ready to print or paste into an email.</div>
+          <p class="prompt-label" data-en="The parents’ report prompt — Arabic" data-ar="أمر تقرير أولياء الأمور — بالعربية">The parents’ report prompt — Arabic</p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p4-par-ar" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p4-par-ar" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall is-ar" id="p4-par-ar" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable parents report prompt in Arabic" data-ar-label="أمر تقرير أولياء الأمور بالعربية، قابل للتعديل"># برومبت RCTF الرئيسي — تقرير إلى أولياء الأمور يقرؤونه فعلًا
+
+## R — ROLE | الدور
+
+تصرّف بصفتك معلم الصف يكتب إلى أسرة، وبصفتك محرّرًا للغة الواضحة يحذف كل كلمة يحتاج ولي الأمر إلى البحث عن معناها.
+
+## C — CONTEXT | السياق
+
+- الاسم الأول للطالب: <span class="ph">[الاسم الأول للطالب]</span>
+- الصف / الفصل: <span class="ph">[الصف والفصل]</span>
+- المادة والوحدة: <span class="ph">[المادة · الوحدة أو الموضوع]</span>
+- الدرجة: <span class="ph">[الدرجة]</span> من <span class="ph">[مجموع الدرجات]</span>
+- المهارات الناقصة الثلاث بلغة المعلم: <span class="ph">[الصق المهارات الناقصة الثلاث هنا]</span>
+- ما تستطيع الأسرة تقديمه فعلًا: <span class="ph">[عدد الدقائق]</span> دقيقة كل مساء
+- تاريخ المراجعة: <span class="ph">[تاريخ المراجعة]</span>
+- لغة التقرير: <span class="ph">[العربية / الإنجليزية / ثنائية اللغة — الإنجليزية أولًا ثم العربية]</span>
+- وقّعه باسم: <span class="ph">[اسم المدرسة أو الأكاديمية]</span>
+
+المرفق: الورقة المصحَّحة والتحليل وخطة العمل.
+
+### قواعد التحكم في المصادر
+
+- ترجم كل مهارة ناقصة خارج لغة المعلم. وإذا احتوت جملة على DOK أو بلوم أو Rubric أو التقويم التكويني أو التمايز أو المعيار أو الهدف السلوكي، فأعد كتابتها.
+- استخدم كلمات الطالب نفسها من الورقة مثالًا لكل مهارة ناقصة، منقولة حرفيًا كما كتبها، ومعها النسخة الصحيحة بجانبها.
+- لا تقارن هذا الطالب بالفصل، ولا بأخ أو أخت، ولا بنسبة مئوية معيارية.
+- لا تذكر ولا تُلمّح إلى تشخيص أو ظرف منزلي أو أي سبب للنتيجة لا تُظهره الورقة.
+- لا تطلب من الأسرة أكثر من <span class="ph">[عدد الدقائق]</span> دقيقة كل مساء، ولا تطلب منها أن تُدرّس.
+
+## T — TASK | المهمة
+
+١. ابدأ بجملتين: ما كان هذا العمل، وأنه لا يوجد ما يدعو للقلق — إن كان ذلك صحيحًا. وإن لم تدعم الدرجة هذه الجملة، فاذكر بوضوح ما هو مصدر القلق بدلًا منها.
+٢. اذكر الدرجة مرة واحدة، وبيّن معناها بكلمات عادية.
+٣. اذكر ثلاثة أمور يُتقنها الطالب فعلًا، ولكل واحد دليل من هذه الورقة.
+٤. حوّل كل مهارة ناقصة إلى فقرة قصيرة بكلمات واضحة، ومع كل فقرة جملة الطالب نفسها مثالًا والتصحيح بجانبها.
+٥. أعطِ الأسرة ثلاثة أمور بالضبط تفعلها في المنزل، كل واحد ممكن داخل <span class="ph">[عدد الدقائق]</span> دقيقة. وواحد من الثلاثة يجب أن يكون سؤالًا واحدًا تسأله.
+٦. اذكر ما سيحدث بعد ذلك، وسمِّ تاريخ المراجعة كاملًا.
+٧. اختم بكيفية التواصل مع المعلم، ودعوة إلى السؤال إن كان أي شيء غير واضح.
+٨. إذا كانت اللغة ثنائية، فاكتب التقرير كاملًا بالإنجليزية أولًا ثم التقرير كاملًا بالعربية — ولا تكتب جملة من كل لغة. واستخدم في النسخة العربية اتجاه RTL والأرقام العربية الشرقية ٠١٢٣٤٥٦٧٨٩.
+
+## F — FORMAT | التنسيق
+
+- رسالة، لا نموذج. بلا جدول درجات، وبلا رسم بياني، وبلا إشارات مرور ملوّنة.
+- مستوى قراءة اثنتي عشرة سنة أو أقل. وجمل أقل من خمس وعشرين كلمة.
+- نبرة دافئة ومحددة. بلا ثناء حشو، وبلا تهديد مُبطَّن.
+- صفحة واحدة لكل لغة، مع سطر توقيع يحمل صفة المعلم والتاريخ وتاريخ المراجعة.
+
+**ضبط الجودة — راجع العشرة كلها قبل أن تجيب**
+
+① لا مصطلحات معلمين في أي موضع ② الدرجة تظهر مرة واحدة بالضبط ③ ثلاث نقاط قوة، ولكل واحدة دليل ④ ثلاث مهارات ناقصة، ولكل واحدة كلمات الطالب نفسها والتصحيح ⑤ ثلاثة أمور بالضبط تُفعل في المنزل ⑥ واحد من الثلاثة سؤال واحد ⑦ لا مقارنة بأي طفل آخر ⑧ لا تشخيص ولا تخمين عن المنزل ⑨ تاريخ المراجعة مكتوب كاملًا ⑩ إن كان ثنائي اللغة، فاللغتان في كتلتين منفصلتين بالاتجاه الصحيح.
+
+## OUTPUT | المخرجات
+
+رسالة واحدة لكل لغة، جاهزة للطباعة أو للّصق في بريد إلكتروني.</div>
+
+          <h3 data-en="What came back" data-ar="ما عاد إلينا">What came back</h3>
+          <div class="shots is-page">
+            <figure>
+              <img src="assets/doc-parents-en.jpg" data-en-src="assets/doc-parents-en.jpg" data-ar-src="assets/doc-parents-arfull.jpg" alt="The report to parents, English page" loading="lazy">
+              <figcaption data-en="The English letter. The score appears once, and each missing skill carries Salma’s own sentence with the correction beside it — “The lesson start at eight o’clock” becomes “starts”." data-ar="التقرير العربي الكامل — ملف مستقل من صفحتين، من اليمين إلى اليسار، وبالأرقام العربية الشرقية: ٢١ / ٣٠. وكل مهارة ناقصة تحمل جملة سلمى نفسها والتصحيح بجانبها.">The English letter. The score appears once, and each missing skill carries Salma’s own sentence with the correction beside it — “The lesson start at eight o’clock” becomes “starts”.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/doc-parents-ar.jpg" alt="The report to parents, Arabic page" loading="lazy">
+              <figcaption data-en="The Arabic half of the bilingual file — the whole letter again, right to left, with Arabic-Indic digits: ٢١ / ٣٠. Not a translation dropped into an English layout." data-ar="النصف العربي من الملف ثنائي اللغة — الرسالة كاملة من جديد، من اليمين إلى اليسار، وبالأرقام العربية الشرقية: ٢١ / ٣٠. لا ترجمة مُدرجة في تنسيق إنجليزي.">The Arabic half of the bilingual file — the whole letter again, right to left, with Arabic-Indic digits: ٢١ / ٣٠. Not a translation dropped into an English layout.</figcaption>
+            </figure>
+          </div>
+
+          <div class="dlrow">
+            <a class="btn btn-outline" href="assets/docs/Edulixa_Parents_Report_Salma_G6_EN_AR.docx" data-en-href="assets/docs/Edulixa_Parents_Report_Salma_G6_EN_AR.docx" data-ar-href="assets/docs/Edulixa_Parents_Report_Salma_G6_AR.docx" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Report to parents · EN + AR (.docx)" data-ar="التقرير إلى أولياء الأمور · إنجليزي + عربي (docx.)">Report to parents · EN + AR (.docx)</span>
+            </a>
+            <a class="btn btn-outline" href="assets/docs/Edulixa_Parents_Report_Salma_G6_EN_AR.pdf" data-en-href="assets/docs/Edulixa_Parents_Report_Salma_G6_EN_AR.pdf" data-ar-href="assets/docs/Edulixa_Parents_Report_Salma_G6_AR.pdf" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Print-ready (.pdf)" data-ar="جاهز للطباعة (pdf.)">Print-ready (.pdf)</span>
+            </a>
+          </div>
+          <p class="dlnote" data-en="These two buttons hand over the bilingual file — the whole letter in English, then the whole letter in Arabic. Switch the page to Arabic and they hand over the Arabic-only file instead." data-ar="هذان الزران يسلّمانك الملف العربي وحده — تقرير من صفحتين بالعربية فقط. وحوِّل الصفحة إلى الإنجليزية فيسلّمانك الملف ثنائي اللغة: الرسالة كاملة بالإنجليزية ثم كاملة بالعربية.">These two buttons hand over the bilingual file — the whole letter in English, then the whole letter in Arabic. Switch the page to Arabic and they hand over the Arabic-only file instead.</p>
+
+          <div class="hint is-lamp">
+            <p style="margin:0" data-en-html="<b>Read your own letter with one test.</b> Would a parent who left school at sixteen understand every sentence on first reading? If a single sentence needs a second pass, it goes back into the prompt as a rewrite instruction. A report that has to be decoded is not doing its job — and the family will simply sign it and file it." data-ar-html="<b>اقرأ رسالتك أنت باختبار واحد.</b> هل يفهم ولي أمر ترك المدرسة في السادسة عشرة كل جملة من القراءة الأولى؟ فإن احتاجت جملة واحدة إلى قراءة ثانية، فأعِدها إلى الأمر الرئيسي تعليمةَ إعادة صياغة. فالتقرير الذي يحتاج إلى فكّ شفرته لا يؤدي وظيفته — وستوقّعه الأسرة وتضعه في الملف وحسب."><b>Read your own letter with one test.</b> Would a parent who left school at sixteen understand every sentence on first reading? If a single sentence needs a second pass, it goes back into the prompt as a rewrite instruction. A report that has to be decoded is not doing its job — and the family will simply sign it and file it.</p>
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="What you can hand in from this session: " data-ar="ما تستطيع تسليمه من هذه المحاضرة: ">What you can hand in from this session: </b><span data-en="the worksheet, the answer key, the corrected paper with its analysis and feedback, the two-week action plan and the parents report — five documents traceable to the same lesson pages and the same three missing skills. Together they are the evidence file for one child." data-ar="ورقة العمل، ومفتاح الإجابة، والورقة المصحَّحة مع تحليلها وتغذيتها الراجعة، والخطة العلاجية لأسبوعين، وتقرير أولياء الأمور — خمسة مستندات تعود إلى صفحات الدرس نفسها والمهارات الناقصة الثلاث نفسها. وهي مجتمعةً ملف الأدلة لطفل واحد.">the worksheet, the answer key, the corrected paper with its analysis and feedback, the two-week action plan and the parents report — five documents traceable to the same lesson pages and the same three missing skills. Together they are the evidence file for one child.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ TODAY'S GIFT ============ -->
+        <div class="block" id="gift">
+          <h2 class="display" data-en="Today’s gift · The Twelve" data-ar="هدية اليوم · الاثنا عشر">Today’s gift · The Twelve</h2>
+          <p class="sub" data-en="Twelve prompts, nine characters, one file, no internet." data-ar="اثنا عشر برومبتًا، وتسع شخصيات، وملف واحد، وبلا إنترنت.">Twelve prompts, nine characters, one file, no internet.</p>
+
+          <p data-en="Everything in this session builds one document at a time. The gift does the opposite: it is a library you browse. Twelve prompts that already worked — three worksheets, three infographics, three posters and three stickers — each one rewritten so that whoever appears in it is one of your nine characters, described in enough detail that the model draws the same face every time." data-ar="كل ما في هذه المحاضرة يبني مستندًا واحدًا في المرة. أما الهدية فتفعل العكس: فهي مكتبة تتنقّل فيها. اثنا عشر برومبتًا جرَّبناها ونجحت — ثلاث أوراق عمل، وثلاثة إنفوجرافيك، وثلاثة ملصقات، وثلاث ستيكرات — أُعيدت كتابة كل واحد منها ليكون من يظهر فيه واحدًا من شخصياتك التسع، موصوفًا بتفصيل يكفي ليرسم النموذج الوجه نفسه في كل مرة.">Everything in this session builds one document at a time. The gift does the opposite: it is a library you browse. Twelve prompts that already worked — three worksheets, three infographics, three posters and three stickers — each one rewritten so that whoever appears in it is one of your nine characters, described in enough detail that the model draws the same face every time.</p>
+
+          <p data-en="Pick a family, fill the blanks, copy, and paste it straight into your Gemini Gem. It runs from this one file with no connection, it remembers your favourites, and it prints. Nothing in it needs installing." data-ar="اختر مجموعة، واملأ الفراغات، وانسخ، والصق مباشرة في الـ Gem الخاص بك في Gemini. يعمل من هذا الملف الواحد بلا اتصال، ويتذكّر مفضّلاتك، ويطبع. ولا شيء فيه يحتاج إلى تثبيت.">Pick a family, fill the blanks, copy, and paste it straight into your Gemini Gem. It runs from this one file with no connection, it remembers your favourites, and it prints. Nothing in it needs installing.</p>
+
+          <ol class="outputs is-quiet">
+            <li data-en-html="Three worksheet prompts<small>Fill the topic and the level, and the worksheet arrives with one of your characters already in it.</small>" data-ar-html="ثلاثة برومبتات لأوراق العمل<small>املأ الموضوع والمستوى، فتصل ورقة العمل وفيها إحدى شخصياتك بالفعل.</small>">Three worksheet prompts<small>Fill the topic and the level, and the worksheet arrives with one of your characters already in it.</small></li>
+            <li data-en-html="Three infographic prompts<small>For the wall, the newsletter, or the slide you always end up making by hand.</small>" data-ar-html="ثلاثة برومبتات للإنفوجرافيك<small>للحائط، أو الرسالة الإخبارية، أو الشريحة التي تنتهي دائمًا إلى صنعها بيدك.</small>">Three infographic prompts<small>For the wall, the newsletter, or the slide you always end up making by hand.</small></li>
+            <li data-en-html="Three poster prompts<small>Classroom display at a size that survives being printed on ordinary paper.</small>" data-ar-html="ثلاثة برومبتات للملصقات<small>عرض صفّي بمقاس يصمد أمام الطباعة على ورق عادي.</small>">Three poster prompts<small>Classroom display at a size that survives being printed on ordinary paper.</small></li>
+            <li data-en-html="Three sticker prompts<small>The reward layer — and the fastest way to make a character feel like it belongs to your class.</small>" data-ar-html="ثلاثة برومبتات للستيكرات<small>طبقة المكافأة — وأسرع وسيلة لتجعل الشخصية تبدو كأنها من فصلك.</small>">Three sticker prompts<small>The reward layer — and the fastest way to make a character feel like it belongs to your class.</small></li>
+            <li data-en-html="Nine ready-made characters<small>Each with its own prompt that creates it. Generate it once, then reuse the picture as a reference.</small>" data-ar-html="تسع شخصيات جاهزة<small>لكل واحدة برومبت خاص يُنشئها. أنشئها مرة واحدة، ثم أعد استخدام الصورة مرجعًا.</small>">Nine ready-made characters<small>Each with its own prompt that creates it. Generate it once, then reuse the picture as a reference.</small></li>
+            <li data-en-html="English and Arabic, offline<small>The whole book flips language, searches, filters and remembers your favourites — from a single file on your own disk.</small>" data-ar-html="بالإنجليزية والعربية، وبلا إنترنت<small>الكتاب كله يقلب اللغة، ويبحث، ويرشّح، ويتذكّر مفضّلاتك — من ملف واحد على قرصك أنت.</small>">English and Arabic, offline<small>The whole book flips language, searches, filters and remembers your favourites — from a single file on your own disk.</small></li>
+          </ol>
+
+          <div class="giftcard">
+            <span class="app-badge" data-en="Included in the course" data-ar="مضمَّن في الدورة">Included in the course</span>
+            <h3 data-en="The Twelve · Edulixa Prompt Book" data-ar="الاثنا عشر · كتاب برومبتات إيدوليكسا">The Twelve · Edulixa Prompt Book</h3>
+            <p data-en="The best twelve, with your nine characters. Browse, filter, favourite, fill in the blanks, copy — then paste into your Gem. Opens straight from this course folder and works with no connection." data-ar="أفضل اثني عشر برومبتًا، مع شخصياتك التسع. تنقّل، ورشّح، وضع في المفضّلة، واملأ الفراغات، وانسخ — ثم الصق في الـ Gem الخاص بك. يُفتح مباشرة من مجلد الدورة ويعمل بلا اتصال.">The best twelve, with your nine characters. Browse, filter, favourite, fill in the blanks, copy — then paste into your Gem. Opens straight from this course folder and works with no connection.</p>
+            <a class="btn btn-accent" href="Session4_Edulixa_Prompt_Book.html">
+              <span data-en="Open The Twelve" data-ar="افتح الاثني عشر">Open The Twelve</span>
+              <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- ---------- APPS USED ---------- -->
+        <div class="block" id="apps">
+          <h2 class="display" data-en="Apps used in this session" data-ar="الأدوات المستخدمة في هذه المحاضرة">Apps used in this session</h2>
+          <p class="sub" data-en="Two AI assistants that read your attached files, and the prompt library that comes with the course." data-ar="مساعدان ذكيان يقرآن ملفاتك المرفقة، ومكتبة البرومبتات التي تأتي مع الدورة.">Two AI assistants that read your attached files, and the prompt library that comes with the course.</p>
+
+          <div class="apps">
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>ChatGPT</h3>
+              <p data-en="Attach the master prompt file, the lesson pages, the answer key and the student’s paper, and run all four prompts of this session in one conversation. It keeps the earlier files in view, which is why the diagnosis can feed the plan without you re-uploading anything." data-ar="أرفق ملف الأمر الرئيسي وصفحات الدرس ومفتاح الإجابة وورقة الطالبة، وشغِّل أوامر هذه المحاضرة الأربعة في محادثة واحدة. فهو يُبقي الملفات السابقة أمام عينيه، ولهذا يستطيع التشخيص أن يغذّي الخطة دون أن ترفع شيئًا من جديد.">Attach the master prompt file, the lesson pages, the answer key and the student’s paper, and run all four prompts of this session in one conversation. It keeps the earlier files in view, which is why the diagnosis can feed the plan without you re-uploading anything.</p>
+              <p class="app-url">https://chatgpt.com</p>
+              <a class="btn btn-primary" href="https://chatgpt.com" target="_blank" rel="noopener">
+                <span data-en="Open ChatGPT" data-ar="افتح ChatGPT">Open ChatGPT</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>Google Gemini</h3>
+              <p data-en="Better at reading a photograph of a handwritten page. Run the marking prompt here with a picture of the student’s paper, then compare its marking table with ChatGPT’s question by question. Where they disagree, your answer key decides." data-ar="أفضل في قراءة صورة صفحة مكتوبة بخط اليد. شغِّل أمر التصحيح هنا مع صورة لورقة الطالبة، ثم قارن جدول تصحيحه بجدول ChatGPT سؤالًا سؤالًا. وحيث يختلفان، يكون مفتاح إجابتك هو الحاكم.">Better at reading a photograph of a handwritten page. Run the marking prompt here with a picture of the student’s paper, then compare its marking table with ChatGPT’s question by question. Where they disagree, your answer key decides.</p>
+              <p class="app-url">https://gemini.google.com</p>
+              <a class="btn btn-primary" href="https://gemini.google.com" target="_blank" rel="noopener">
+                <span data-en="Open Gemini" data-ar="افتح Gemini">Open Gemini</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge" data-en="Included in the course" data-ar="مضمَّن في الدورة">Included in the course</span>
+              <h3 data-en="The Twelve · Edulixa Prompt Book" data-ar="الاثنا عشر · كتاب برومبتات إيدوليكسا">The Twelve · Edulixa Prompt Book</h3>
+              <p data-en="Today’s gift. Twelve prompts that already worked, nine reusable characters, and a fill-in-the-blanks panel for each one. Works offline from this folder, and every prompt has a button that hands it to your Gem." data-ar="هدية اليوم. اثنا عشر برومبتًا جرَّبناها ونجحت، وتسع شخصيات قابلة لإعادة الاستخدام، ولوحة لملء الفراغات لكل واحد منها. يعمل بلا اتصال من هذا المجلد، ولكل برومبت زر يسلّمه إلى الـ Gem الخاص بك.">Today’s gift. Twelve prompts that already worked, nine reusable characters, and a fill-in-the-blanks panel for each one. Works offline from this folder, and every prompt has a button that hands it to your Gem.</p>
+              <a class="btn btn-primary" href="Session4_Edulixa_Prompt_Book.html">
+                <span data-en="Open The Twelve" data-ar="افتح الاثني عشر">Open The Twelve</span>
+                <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Order of use: " data-ar="ترتيب الاستخدام: ">Order of use: </b><span data-en="save the master prompt as a file in Part 1, attach it with the lesson pages in Part 2, then stay in the same conversation for Parts 3, 4 and 5 so the marked paper and the diagnosis are still in view. Open the Prompt Book when you want a second worksheet without starting from a blank page." data-ar="احفظ الأمر الرئيسي ملفًّا في الجزء الأول، وأرفقه مع صفحات الدرس في الجزء الثاني، ثم ابقَ في المحادثة نفسها في الأجزاء الثالث والرابع والخامس حتى تبقى الورقة المصحَّحة والتشخيص أمام عينيك. وافتح كتاب البرومبتات إن أردت ورقة عمل ثانية دون أن تبدأ من صفحة فارغة.">save the master prompt as a file in Part 1, attach it with the lesson pages in Part 2, then stay in the same conversation for Parts 3, 4 and 5 so the marked paper and the diagnosis are still in view. Open the Prompt Book when you want a second worksheet without starting from a blank page.</span></p>
+          </div>
+        </div>
+
+        <!-- Pager -->
+        <nav class="pager">
+          <a class="btn btn-outline" href="session3.html">
+            <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            <span data-en="Back: Session 3 · Exam creation" data-ar="السابق: المحاضرة ٣ · إنشاء الاختبارات">Back: Session 3 · Exam creation</span>
+          </a>
+          <a class="btn btn-primary" href="index.html#sessions">
+            <span data-en="Next: Session 5 · Presentations with Gamma" data-ar="التالي: المحاضرة ٥ · العروض التعليمية بـ Gamma">Next: Session 5 · Presentations with Gamma</span>
+            <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <img src="assets/logo-reversed.png" alt="Edulixa 360">
+    <p data-en="Session 4 · AI-powered student assessment and feedback — AI Masterclass for Teachers, Level 1." data-ar="المحاضرة ٤ · تقييم أعمال الطلاب والتغذية الراجعة — الماستر كلاس للمعلمين بالذكاء الاصطناعي، المستوى الأول.">Session 4 · AI-powered student assessment and feedback — AI Masterclass for Teachers, Level 1.</p>
+    <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+  </div>
+</footer>
+
+<div class="backdock"><a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All sessions" data-ar="كل المحاضرات">All sessions</span></a></div>
+
+<script src="assets/edulixa.js"></script>
+</body>
+</html>
