@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-en="Session 5 · Creating educational presentations with Gamma — Level 1 · Edulixa 360" data-ar="المحاضرة ٥ · إنشاء العروض التعليمية باستخدام Gamma — المستوى الأول · Edulixa 360">Session 5 · Creating educational presentations with Gamma — Level 1 · Edulixa 360</title>
+<link rel="stylesheet" href="assets/edulixa.css">
+</head>
+<body>
+
+<a class="skip" href="#main" data-en="Skip to content" data-ar="تخطَّ إلى المحتوى">Skip to content</a>
+
+<!-- ============ TOP BAR ============ -->
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <img src="assets/logo-reversed.png" alt="Edulixa 360">
+      <span class="brand-tag" data-en="AI Masterclass · Level 1" data-ar="الماستر كلاس · المستوى الأول">AI Masterclass · Level 1</span>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn btn-ghost" href="index.html"><svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All sessions" data-ar="كل المحاضرات">All sessions</span></a>
+      <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero">
+  <div class="wrap">
+    <a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="Back to all sessions" data-ar="العودة إلى كل المحاضرات">Back to all sessions</span></a>
+    <p class="eyebrow" data-en="Session 5 of 5 · Main tools: Gamma, ChatGPT and Google Gemini" data-ar="المحاضرة ٥ من ٥ · الأدوات الرئيسية: Gamma وChatGPT وGoogle Gemini">Session 5 of 5 · Main tools: Gamma, ChatGPT and Google Gemini</p>
+    <h1 class="display" data-en="Turn your lesson plan into a presentation that follows it step by step." data-ar="حوِّل خطة درسك إلى عرض تقديمي يتبعها خطوةً خطوة.">Turn your lesson plan into a presentation that follows it step by step.</h1>
+    <p class="lede" data-en="Three things go in: the prompt, the lesson plan you already wrote, and the pages of the book. What comes out is a deck whose slides sit on the stages of your own plan — your order, your timings, your examples. You can build it inside Gamma, or ask ChatGPT to build it in Gamma for you, or build it in Gemini and send it to Google Slides." data-ar="ثلاثة أشياء تدخل: البرومبت، وخطة الدرس التي كتبتها بنفسك، وصفحات الكتاب. والذي يخرج عرضٌ تقوم شرائحه على مراحل خطتك أنت — بترتيبك، وأوقاتك، وأمثلتك. ويمكنك بناؤه داخل Gamma، أو أن تطلب من ChatGPT أن يبنيه لك في Gamma، أو أن تبنيه في Gemini وترسله إلى Google Slides.">Three things go in: the prompt, the lesson plan you already wrote, and the pages of the book. What comes out is a deck whose slides sit on the stages of your own plan — your order, your timings, your examples. You can build it inside Gamma, or ask ChatGPT to build it in Gamma for you, or build it in Gemini and send it to Google Slides.</p>
+    <div class="hero-actions">
+      <a class="btn btn-accent" href="#today" data-en="Start with today’s plan" data-ar="ابدأ بخطة اليوم">Start with today’s plan</a>
+      <a class="btn btn-outline" href="#prompt"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg><span data-en="Go straight to the master prompt" data-ar="اذهب مباشرة إلى الأمر الرئيسي">Go straight to the master prompt</span></a>
+      <button class="btn btn-lang" type="button" data-lang-toggle data-lang-keep data-en-label="Translate the whole session into Arabic" data-ar-label="ترجم المحاضرة كلها إلى الإنجليزية"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11M9 3v2c0 5-2.2 8.5-5.5 10M6 12.5c0 2.5 2.6 4.7 6 5.5M13.5 21l4-9 4 9M15.2 17.5h4.6"/></svg><span data-en="Translate everything to Arabic" data-ar="حوِّل كل شيء إلى الإنجليزية">Translate everything to Arabic</span></button>
+      <p class="langnote" data-en="One button. The page, the master prompt, the checklists and the cheat sheets all switch — and the prompt builder opens in the language you left the page in." data-ar="زر واحد. تتحول الصفحة والأمر الرئيسي وقوائم التحقق وبطاقات التعريف كلها — ويُفتح منشئ البرومبت باللغة التي تركت الصفحة عليها.">One button. The page, the master prompt, the checklists and the cheat sheets all switch — and the prompt builder opens in the language you left the page in.</p>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+<section class="sec">
+  <div class="wrap">
+    <div class="split">
+
+      <!-- ---------- STICKY RAIL ---------- -->
+      <aside class="rail">
+        <h2 data-en="Session at a glance" data-ar="المحاضرة في لمحة">Session at a glance</h2>
+        <p data-en="Six moves, in order." data-ar="ست خطوات بالترتيب.">Six moves, in order.</p>
+        <ol>
+          <li data-go="ingredients" data-en="Gather the three things the AI needs" data-ar="اجمع الأشياء الثلاثة التي يحتاجها الذكاء الاصطناعي">Gather the three things the AI needs</li>
+          <li data-go="prompt" data-en="Build the presentation prompt" data-ar="ابنِ برومبت العرض التقديمي">Build the presentation prompt</li>
+          <li data-go="gamma" data-en="Create the deck in Gamma" data-ar="أنشئ العرض في Gamma">Create the deck in Gamma</li>
+          <li data-go="routes" data-en="Or let ChatGPT or Gemini build it" data-ar="أو اترك ChatGPT أو Gemini يبنيه">Or let ChatGPT or Gemini build it</li>
+          <li data-go="check" data-en="Check the deck against your lesson plan" data-ar="راجع العرض مقابل خطة درسك">Check the deck against your lesson plan</li>
+          <li data-go="deliver" data-en="Edit, export and present" data-ar="عدِّل وصدِّر وقدِّم">Edit, export and present</li>
+        </ol>
+        <p class="rail-hint" data-en="Select a step to jump to it and switch its light on. Your lights are remembered." data-ar="اختر خطوة للانتقال إليها وإضاءة نورها. تُحفظ الأضواء التي أشعلتها.">Select a step to jump to it and switch its light on. Your lights are remembered.</p>
+        <a class="btn btn-accent" href="#thinkers" data-en="Open the cheat sheets" data-ar="افتح بطاقات التعريف">Open the cheat sheets</a>
+      </aside>
+
+      <!-- ---------- CONTENT ---------- -->
+      <div>
+
+        <!-- ============ SUMMARY ============ -->
+        <div class="block" id="today">
+          <h2 class="display" data-en="What we do in this session" data-ar="ماذا نفعل في هذه المحاضرة">What we do in this session</h2>
+          <p class="sub" data-en="Take the lesson plan you already wrote and turn it into a presentation that matches it slide by slide." data-ar="خُذ خطة الدرس التي كتبتها بنفسك وحوِّلها إلى عرض تقديمي يطابقها شريحةً شريحة.">Take the lesson plan you already wrote and turn it into a presentation that matches it slide by slide.</p>
+
+          <p data-en="Session 2 wrote the lesson plan. This session turns it into the slides you will stand in front of. The point is not a beautiful deck — it is a deck that teaches the lesson you planned, in the order you planned it, with the minutes you gave each stage. That only happens if you hand the AI your plan instead of describing your topic to it." data-ar="كتبت المحاضرة الثانية خطة الدرس، وتحوّل هذه المحاضرة تلك الخطة إلى الشرائح التي ستقف أمامها. والمقصود ليس عرضًا جميلًا، بل عرضًا يُدرِّس الدرس الذي خططته، بالترتيب الذي خططته، وبالدقائق التي أعطيتها لكل مرحلة. ولا يحدث ذلك إلا إن سلّمت الذكاء الاصطناعي خطتك بدلًا من أن تصف له موضوعك.">Session 2 wrote the lesson plan. This session turns it into the slides you will stand in front of. The point is not a beautiful deck — it is a deck that teaches the lesson you planned, in the order you planned it, with the minutes you gave each stage. That only happens if you hand the AI your plan instead of describing your topic to it.</p>
+
+          <p data-en="Ask any AI for “a presentation about the present continuous” and you will get a competent deck for somebody else’s lesson. Attach your plan and your book pages, and the same tool builds your lesson: your warm-up, your guided practice, your group task, your exit ticket, and your examples from the pages your class has in front of them." data-ar="اطلب من أي ذكاء اصطناعي «عرضًا عن المضارع المستمر» فستحصل على عرض متقن لدرس شخص آخر. أما إن أرفقت خطتك وصفحات كتابك، فالأداة نفسها تبني درسك أنت: تهيئتك، وتدريبك الموجَّه، ونشاطك الجماعي، وبطاقة خروجك، وأمثلتك من الصفحات التي بين يدي فصلك.">Ask any AI for “a presentation about the present continuous” and you will get a competent deck for somebody else’s lesson. Attach your plan and your book pages, and the same tool builds your lesson: your warm-up, your guided practice, your group task, your exit ticket, and your examples from the pages your class has in front of them.</p>
+
+          <h3 data-en="The eight things you will do today" data-ar="الأمور الثمانية التي ستفعلها اليوم">The eight things you will do today</h3>
+          <ol class="outputs">
+            <li data-en-html="Open the lesson plan you already wrote<small>The plan from Session 2, or any plan of your own. This is the spine of the presentation.</small>" data-ar-html="افتح خطة الدرس التي كتبتها بالفعل<small>الخطة من المحاضرة الثانية، أو أي خطة من عندك. وهي العمود الفقري للعرض.</small>">Open the lesson plan you already wrote<small>The plan from Session 2, or any plan of your own. This is the spine of the presentation.</small></li>
+            <li data-en-html="Choose the book pages the slides may use<small>Photograph or scan them. They become the only source of vocabulary, examples and exercises.</small>" data-ar-html="اختر صفحات الكتاب التي يُسمح للشرائح باستخدامها<small>صوِّرها أو امسحها ضوئيًا، فتصير المصدر الوحيد للمفردات والأمثلة والتدريبات.</small>">Choose the book pages the slides may use<small>Photograph or scan them. They become the only source of vocabulary, examples and exercises.</small></li>
+            <li class="is-new" data-en-html="Build the presentation prompt<small>22 red fields. Fill them by hand on this page, or let the builder write the whole prompt for you.</small>" data-ar-html="ابنِ برومبت العرض التقديمي<small>٢٢ حقلًا أحمر. املأها بيدك في هذه الصفحة، أو اترك المنشئ يكتب لك البرومبت كاملًا.</small>">Build the presentation prompt<small>22 red fields. Fill them by hand on this page, or let the builder write the whole prompt for you.</small></li>
+            <li class="is-new" data-en-html="Set the number of slides and the minutes<small>Two numbers decide whether the deck fits your period. Both go into the prompt and both get checked at the end.</small>" data-ar-html="حدِّد عدد الشرائح والدقائق<small>رقمان يحددان هل يناسب العرض حصتك أم لا. يدخلان في البرومبت ويُراجعان في النهاية.</small>">Set the number of slides and the minutes<small>Two numbers decide whether the deck fits your period. Both go into the prompt and both get checked at the end.</small></li>
+            <li class="is-new" data-en-html="Create the deck in Gamma<small>Paste the deck text into Gamma, read the outline before it builds, choose a theme, and generate.</small>" data-ar-html="أنشئ العرض في Gamma<small>الصق نص العرض في Gamma، واقرأ المخطط قبل أن يبني، واختر تصميمًا، ثم أنشئ.</small>">Create the deck in Gamma<small>Paste the deck text into Gamma, read the outline before it builds, choose a theme, and generate.</small></li>
+            <li class="is-new" data-en-html="Check every slide against your lesson plan<small>Nine checks. Every stage present, in your order, with your minutes and nothing invented.</small>" data-ar-html="راجع كل شريحة مقابل خطة درسك<small>تسع مراجعات. كل مرحلة موجودة، بترتيبك، وبدقائقك، وبلا شيء مختلق.</small>">Check every slide against your lesson plan<small>Nine checks. Every stage present, in your order, with your minutes and nothing invented.</small></li>
+            <li class="is-new" data-en-html="Fix the slides the AI got wrong<small>It merges stages, writes bullets you were meant to read out, and puts garbled words inside generated pictures.</small>" data-ar-html="أصلِح الشرائح التي أخطأ فيها الذكاء الاصطناعي<small>فهو يدمج المراحل، ويكتب نقاطًا كان عليك أن تقولها بصوتك، ويضع كلمات مشوَّهة داخل الصور المولَّدة.</small>">Fix the slides the AI got wrong<small>It merges stages, writes bullets you were meant to read out, and puts garbled words inside generated pictures.</small></li>
+            <li class="is-new" data-en-html="Export the deck and present it<small>A file for the projector, a PDF for the folder, and a link for the students who were absent.</small>" data-ar-html="صدِّر العرض وقدِّمه<small>ملف لجهاز العرض، وملف PDF للملف، ورابط للطلاب الغائبين.</small>">Export the deck and present it<small>A file for the projector, a PDF for the folder, and a link for the students who were absent.</small></li>
+          </ol>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="The order, in one line: " data-ar="الترتيب في سطر واحد: ">The order, in one line: </b><span data-en="lesson plan → book pages → prompt → deck text → Gamma → check against the plan → export. Every slide you show should be traceable back to a stage of the plan you wrote before the AI was involved." data-ar="خطة الدرس ← صفحات الكتاب ← البرومبت ← نص العرض ← Gamma ← المراجعة مقابل الخطة ← التصدير. وكل شريحة تعرضها ينبغي أن تُرجَع إلى مرحلة من الخطة التي كتبتها قبل أن يتدخل الذكاء الاصطناعي.">lesson plan → book pages → prompt → deck text → Gamma → check against the plan → export. Every slide you show should be traceable back to a stage of the plan you wrote before the AI was involved.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 1 · THE THREE INGREDIENTS ============ -->
+        <div class="block" id="ingredients">
+          <h2 class="display" data-en="Part 1 · Gather the three things the AI needs" data-ar="الجزء الأول · اجمع الأشياء الثلاثة التي يحتاجها الذكاء الاصطناعي">Part 1 · Gather the three things the AI needs</h2>
+          <p class="sub" data-en="The prompt, your lesson plan, and the pages of the book. Nothing else, and none of the three is optional." data-ar="البرومبت، وخطة درسك، وصفحات الكتاب. لا شيء غيرها، ولا واحد منها اختياري.">The prompt, your lesson plan, and the pages of the book. Nothing else, and none of the three is optional.</p>
+
+          <ol class="needs">
+            <li class="is-key" data-en-html="The prompt<small>The long instruction that tells the AI what a teaching presentation is: what every slide must carry, what it may take from your pages, and what it must never invent. It is on this page, and the builder writes it for you.</small>" data-ar-html="البرومبت<small>التعليمة الطويلة التي تخبر الذكاء الاصطناعي ما هو العرض التعليمي: ماذا تحمل كل شريحة، وما يجوز له أن يأخذه من صفحاتك، وما لا يجوز أن يختلقه أبدًا. وهو موجود في هذه الصفحة، والمنشئ يكتبه لك.</small>">The prompt<small>The long instruction that tells the AI what a teaching presentation is: what every slide must carry, what it may take from your pages, and what it must never invent. It is on this page, and the builder writes it for you.</small></li>
+            <li class="is-key" data-en-html="Your lesson plan<small>The spine. Its stages become the sections of the deck, in its order, with its minutes. Attach it as a file — a Word file, a PDF, or a photograph of the paper one your school uses.</small>" data-ar-html="خطة درسك<small>العمود الفقري. تصير مراحلها أقسام العرض، بترتيبها، وبدقائقها. أرفقها ملفًّا — ملف Word، أو PDF، أو صورة للنموذج الورقي الذي تستخدمه مدرستك.</small>">Your lesson plan<small>The spine. Its stages become the sections of the deck, in its order, with its minutes. Attach it as a file — a Word file, a PDF, or a photograph of the paper one your school uses.</small></li>
+            <li class="is-key" data-en-html="The book pages<small>The content. The vocabulary, the rule, the reading text and the exercises all come from here, so the slides say what your students’ own book says. One clear photograph per page is enough.</small>" data-ar-html="صفحات الكتاب<small>المحتوى. المفردات والقاعدة ونص القراءة والتدريبات كلها تأتي من هنا، فتقول الشرائح ما يقوله كتاب طلابك نفسه. وصورة واضحة واحدة لكل صفحة تكفي.</small>">The book pages<small>The content. The vocabulary, the rule, the reading text and the exercises all come from here, so the slides say what your students’ own book says. One clear photograph per page is enough.</small></li>
+          </ol>
+
+          <p data-en="Send all three in one message. The prompt tells the AI how to behave, the plan tells it what order to teach in, and the pages tell it what it is allowed to say. Leave out the plan and it invents a lesson structure. Leave out the pages and it invents examples your class has never seen — and both mistakes are invisible until you are standing in front of the room." data-ar="أرسل الثلاثة في رسالة واحدة. فالبرومبت يخبر الذكاء الاصطناعي كيف يتصرف، والخطة تخبره بترتيب التدريس، والصفحات تخبره بما يُسمح له أن يقوله. وإن حذفت الخطة اختلق بنية درس، وإن حذفت الصفحات اختلق أمثلة لم يرها فصلك قبلًا — وكلا الخطأين غير مرئي حتى تقف أمام الفصل.">Send all three in one message. The prompt tells the AI how to behave, the plan tells it what order to teach in, and the pages tell it what it is allowed to say. Leave out the plan and it invents a lesson structure. Leave out the pages and it invents examples your class has never seen — and both mistakes are invisible until you are standing in front of the room.</p>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>Photographing the book pages.</b> One page per photograph, taken from directly above, with the whole page in the frame and no shadow across the text. Name the files by page number before you upload them — <b>page-42.jpg</b>, <b>page-43.jpg</b> — and write those same page numbers in the prompt. Then, when a slide shows an example, you can find where it came from in seconds." data-ar-html="<b>تصوير صفحات الكتاب.</b> صفحة واحدة في كل صورة، من أعلى مباشرة، والصفحة كاملة في الإطار، وبلا ظل على النص. وسمِّ الملفات بأرقام الصفحات قبل رفعها — <b>page-42.jpg</b> و<b>page-43.jpg</b> — واكتب أرقام الصفحات نفسها في البرومبت. فحين تُظهر شريحةٌ مثالًا، تجد مصدره في ثوانٍ."><b>Photographing the book pages.</b> One page per photograph, taken from directly above, with the whole page in the frame and no shadow across the text. Name the files by page number before you upload them — <b>page-42.jpg</b>, <b>page-43.jpg</b> — and write those same page numbers in the prompt. Then, when a slide shows an example, you can find where it came from in seconds.</p>
+          </div>
+        </div>
+
+        <!-- ============ PART 2 · THE PROMPT ============ -->
+        <div class="block" id="prompt">
+          <h2 class="display" data-en="Part 2 · Build the presentation prompt" data-ar="الجزء الثاني · ابنِ برومبت العرض التقديمي">Part 2 · Build the presentation prompt</h2>
+          <p class="sub" data-en="22 red fields. Answer them in the builder, or edit them straight into the prompt below." data-ar="٢٢ حقلًا أحمر. أجب عنها في المنشئ، أو عدِّلها مباشرة في البرومبت أدناه.">22 red fields. Answer them in the builder, or edit them straight into the prompt below.</p>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>The red fields are the whole job.</b> Every field you must personalise is shown in red, like this: <span class=&quot;ph&quot;>[[EDIT: Grade or stage]]</span>. Select a red field and it highlights whole, so whatever you type replaces it. <b>Copy</b> takes the entire prompt with your edits inside it; <b>Start over</b> puts the original text back. Nothing outside the red fields needs to change." data-ar-html="<b>الحقول الحمراء هي العمل كله.</b> كل حقل عليك تخصيصه يظهر بالأحمر، هكذا: <span class=&quot;ph&quot;>[[تعديل: الصف أو المرحلة]]</span>. اختر حقلًا أحمر فيُظلَّل كاملًا، فيحلّ ما تكتبه مكانه. و<b>نسخ</b> يأخذ البرومبت كاملًا مع تعديلاتك داخله، و<b>إعادة الضبط</b> يعيد النص الأصلي. ولا شيء خارج الحقول الحمراء يحتاج إلى تغيير."><b>The red fields are the whole job.</b> Every field you must personalise is shown in red, like this: <span class="ph">[[EDIT: Grade or stage]]</span>. Select a red field and it highlights whole, so whatever you type replaces it. <b>Copy</b> takes the entire prompt with your edits inside it; <b>Start over</b> puts the original text back. Nothing outside the red fields needs to change.</p>
+          </div>
+
+          <h3 data-en="The builder — answer the fields, it writes the prompt" data-ar="المنشئ — أجب عن الحقول، فيكتب البرومبت">The builder — answer the fields, it writes the prompt</h3>
+          <p data-en="This is built into the course and works offline. It asks you the 22 questions the prompt needs, then writes the finished prompt in the language you are reading in. It also holds a cheat sheet on every thinker: select a name and read who he was before you decide whether he belongs in your speaker notes. Pick your route at the top right — Gamma, ChatGPT or Gemini — and the last line of the prompt changes to match." data-ar="هذا المنشئ مبني داخل الدورة ويعمل بلا اتصال. يسألك الأسئلة الـ٢٢ التي يحتاجها البرومبت، ثم يكتب البرومبت النهائي باللغة التي تقرأ بها. ويحمل كذلك بطاقة تعريف لكل مفكر: اختر الاسم واقرأ من هو قبل أن تقرر هل يستحق موضعًا في ملاحظات مُقدِّمك. واختر مسارك أعلى اليمين — Gamma أو ChatGPT أو Gemini — فيتغير آخر سطر في البرومبت ليطابقه.">This is built into the course and works offline. It asks you the 22 questions the prompt needs, then writes the finished prompt in the language you are reading in. It also holds a cheat sheet on every thinker: select a name and read who he was before you decide whether he belongs in your speaker notes. Pick your route at the top right — Gamma, ChatGPT or Gemini — and the last line of the prompt changes to match.</p>
+
+          <p data-en-html="<b>The design fields are menus, not blank boxes.</b> Choose a pastel palette, a visual style and a table style, and the builder writes the full instruction that sits behind your choice — including the rule that every table gets a coloured header band, alternating pastel rows and a border on all four sides of every cell. That rule is what keeps the deck looking rich after you export it to PDF, where a borderless table collapses into grey text. Every menu ends with <b>Other</b>, which opens a box for your own words." data-ar-html="<b>حقول التصميم قوائم منسدلة، لا صناديق فارغة.</b> اختر لوحة ألوان باستيلية، وأسلوبًا بصريًّا، وأسلوبًا للجداول، فيكتب المنشئ التعليمة الكاملة التي وراء اختيارك — ومنها أن لكل جدول شريط رأس ملوّنًا، وصفوفًا باستيلية متبادلة، وحدًّا على الجوانب الأربعة لكل خلية. وهذه القاعدة هي ما يُبقي العرض غنيًّا بعد تصديره إلى PDF، حيث ينهار الجدول بلا حدود إلى نص رمادي. وكل قائمة تنتهي بخيار <b>غير ذلك</b>، فيفتح صندوقًا لكلماتك أنت."><b>The design fields are menus, not blank boxes.</b> Choose a pastel palette, a visual style and a table style, and the builder writes the full instruction that sits behind your choice — including the rule that every table gets a coloured header band, alternating pastel rows and a border on all four sides of every cell. That rule is what keeps the deck looking rich after you export it to PDF, where a borderless table collapses into grey text. Every menu ends with <b>Other</b>, which opens a box for your own words.</p>
+
+          <p data-en-html="<b>Choose Arabic and the prompt changes shape.</b> The language menu is not only a label. Choose English and the prompt stays English. Choose Arabic, or Arabic and English together, and the builder adds the mandatory Arabic font-and-export block, which replaces every other font, direction, numeral, layout and export instruction in the prompt. It sets <b>Arial only</b> across the whole deck — Arial Bold for every heading, Arial Regular for every text, applied as both the heading font and the body font in the theme — and forbids mixing in a second font family, decorative faces, and anything PowerPoint does not have. It sets all Arabic text right to left and aligned right, keeps the letters joined and the word order intact, and allows Arabic-Indic numerals ٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩ only. And it closes a trap: <b>Arabic content may not be turned into a Timeline or any Gamma smart diagram</b> — plain text boxes, cards and tables only, because the clever layouts are where Arabic letters come apart. The last rule is the one that saves a lesson: export one test slide and look at it before you export the whole deck." data-ar-html="<b>اختر العربية فيتغيّر شكل البرومبت.</b> قائمة اللغة ليست مجرد وصف. اختر الإنجليزية فيبقى البرومبت بالإنجليزية. واختر العربية، أو العربية والإنجليزية معًا، فيضيف المنشئ قسم الخط والتصدير العربي الإلزامي، وهو يحل مكان كل تعليمة أخرى في البرومبت تتعلق بالخط أو الاتجاه أو الأرقام أو التخطيط أو التصدير. يضبط <b>خط Arial فقط</b> في العرض كاملًا — Arial Bold لجميع العناوين، وArial Regular لجميع النصوص، مطبَّقًا على خط العناوين وخط النص داخل Theme — ويمنع خلط عائلة خطوط ثانية، والخطوط الزخرفية، وكل ما لا يتوفر في PowerPoint. ويجعل النصوص العربية كلها من اليمين إلى اليسار ومحاذاةً إلى اليمين، ويحافظ على اتصال الحروف وترتيب الكلمات، ولا يسمح إلا بالأرقام العربية الهندية ٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩. ويسدّ ثغرة مهمة: <b>لا يجوز تحويل المحتوى العربي إلى Timeline ولا إلى أي مخطط ذكي في Gamma</b> — بل صناديق نص وبطاقات وجداول عادية فقط، فالتخطيطات الذكية هي موضع تفكُّك الحروف العربية. وآخر بند هو الذي يُنجي الدرس: صدِّر شريحة تجريبية واحدة وانظر إليها قبل أن تصدّر العرض كاملًا.">Choose Arabic and the prompt changes shape. Choose English and the prompt stays English. Choose Arabic and the builder adds the mandatory Arabic font-and-export block.</p>
+
+          <div class="viewer">
+            <iframe src="apps/app-gamma-presentation-builder.html" title="Presentation Prompt Builder" loading="lazy"></iframe>
+          </div>
+          <div class="viewer-actions">
+            <a class="btn btn-primary" href="apps/app-gamma-presentation-builder.html">
+              <span data-en="Open the builder in its own page" data-ar="افتح المنشئ في صفحته الخاصة">Open the builder in its own page</span>
+              <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+
+          <h3 data-en="Or save the master prompt as a file" data-ar="أو احفظ الأمر الرئيسي في ملف">Or save the master prompt as a file</h3>
+          <p data-en="A prompt this long does not belong pasted into a chat box. Pasted text arrives as a message and competes with everything else in the conversation; a file arrives as a document the AI can go back and re-read while it works. Save it once and attach it to every presentation you ever build, beside your lesson plan and your book pages." data-ar="برومبت بهذا الطول لا مكان له ملصوقًا في صندوق محادثة. فالنص الملصوق يصل رسالةً تتنافس مع كل ما في المحادثة، أما الملف فيصل مستندًا يستطيع الذكاء الاصطناعي أن يعود إليه ويقرأه من جديد وهو يعمل. احفظه مرة واحدة وأرفقه بكل عرض تبنيه، إلى جانب خطة درسك وصفحات كتابك.">A prompt this long does not belong pasted into a chat box. Pasted text arrives as a message and competes with everything else in the conversation; a file arrives as a document the AI can go back and re-read while it works. Save it once and attach it to every presentation you ever build, beside your lesson plan and your book pages.</p>
+          <div class="dlrow">
+            <a class="btn btn-primary" href="assets/prompts/Edulixa_Presentation_Master_Prompt_EN.md" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Master prompt · English (.md)" data-ar="الأمر الرئيسي · بالإنجليزية (md.)">Master prompt · English (.md)</span>
+            </a>
+            <a class="btn btn-primary" href="assets/prompts/Edulixa_Presentation_Master_Prompt_AR.md" download>
+              <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 11l5 5 5-5M4 21h16"/></svg>
+              <span data-en="Master prompt · Arabic (.md)" data-ar="الأمر الرئيسي · بالعربية (md.)">Master prompt · Arabic (.md)</span>
+            </a>
+          </div>
+          <p class="dlnote" data-en="Open the file in any text editor — Notepad, TextEdit and Google Docs all work — fill in the [[EDIT: … ]] fields, keep the .md ending, and send it with one line: “Follow the attached prompt. My lesson plan and my book pages are attached too.”" data-ar="افتح الملف في أي محرر نصوص — Notepad وTextEdit وGoogle Docs كلها تعمل — واملأ حقول [[تعديل: … ]]، وأبقِ الامتداد md.، وأرسله بسطر واحد: «اتبع البرومبت المرفق. وخطة درسي وصفحات كتابي مرفقة كذلك».">Open the file in any text editor — Notepad, TextEdit and Google Docs all work — fill in the [[EDIT: … ]] fields, keep the .md ending, and send it with one line: “Follow the attached prompt. My lesson plan and my book pages are attached too.”</p>
+
+          <h3 data-en="The master prompt, in full" data-ar="الأمر الرئيسي كاملًا">The master prompt, in full</h3>
+          <p class="prompt-label"><span data-en="English" data-ar="بالإنجليزية">English</span></p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p5-en" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p5-en" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall" id="p5-en" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable presentation master prompt in English" data-ar-label="الأمر الرئيسي للعرض التقديمي بالإنجليزية، قابل للتعديل"># EDULIXA MASTER PROMPT — TURN MY LESSON PLAN INTO A PRESENTATION
+## Written for Gamma, and it works in ChatGPT or Gemini too
+
+&gt; Teacher note: every `[[EDIT: ... ]]` field is meant to be changed before you send this. Everything else stays exactly as it is.
+
+---
+
+## R — ROLE
+
+Act as an expert educational presentation designer, instructional designer and educational storyteller. You build presentations a teacher can teach from, not slides that only look good. Your answer will be pasted straight into Gamma to become the finished deck, so it must be clean, complete and in the exact format asked for at the end.
+
+---
+
+## C — CONTEXT
+
+- Teacher: <span class="ph">[[EDIT: Teacher name]]</span>
+- Subject: <span class="ph">[[EDIT: Subject]]</span>
+- Grade or stage: <span class="ph">[[EDIT: Grade or stage]]</span>
+- Level or standard: <span class="ph">[[EDIT: Level or standard, or write “none”]]</span>
+- Lesson title: <span class="ph">[[EDIT: Lesson title]]</span>
+- Who is in the room: <span class="ph">[[EDIT: Who is in the room]]</span>
+- Lesson length: <span class="ph">[[EDIT: Lesson length — e.g. 30 minutes / 35 minutes / 40 minutes]]</span> minutes
+- Number of slides: <span class="ph">[[EDIT: Number of slides — e.g. 6 slides — a short input lesson / 8 slides / 10 slides — fits a free Gamma generation]]</span>
+- Language of the presentation: <span class="ph">[[EDIT: Language of the presentation — e.g. English / Arabic / Bilingual — Arabic and English]]</span>
+- Tone: <span class="ph">[[EDIT: Tone — e.g. Friendly and encouraging / Warm and playful / Calm and clear]]</span>
+
+### Two files are attached to this message
+
+1. **My lesson plan — <span class="ph">[[EDIT: File name of the lesson plan you attached]]</span>.** This is the spine of the presentation. The slides follow its stages, in its order, with its timings.
+2. **The book pages for this lesson — <span class="ph">[[EDIT: Book pages you attached — file names or page numbers]]</span>.** These are the only source of content: the vocabulary, the examples, the texts and the exercises come from these pages.
+
+### Source control — read this before you write anything
+
+- Follow my lesson plan **stage by stage**. Do not reorder it. Do not merge two stages into one slide. Do not add a stage that is not in it.
+- Take every fact, word, rule, example and exercise from the attached book pages. If a slide needs something that is not on those pages, write `[TEACHER TO ADD]` instead of inventing it.
+- Do not invent statistics, quotations, research findings, curriculum codes or page numbers.
+- Where my lesson plan gives a stage a time, put that time on the slide.
+- If my lesson plan and the book pages disagree, follow the lesson plan and say so at the end under **Questions for the teacher**.
+
+---
+
+## T — TASK
+
+### 1. Map the plan before you write a single slide
+
+Produce a mapping table first: one row for every stage of my lesson plan, the minutes it is given, and the slide numbers that carry it. Every stage must appear. Then check the total against the number of slides asked for above. If it does not fit, change how many slides a stage gets — never the order, and never by dropping a stage.
+
+### 2. The presentation must contain these stages
+
+<span class="ph">[[EDIT: Keep only the stages your lesson plan actually contains]]</span>
+
+- a warm-up that activates what the class already knows
+- a learning-objectives slide written with the verbs of my lesson plan
+- the explanation, broken into small pieces with an example before every rule
+- guided practice done with me, including a worked example and the expected answers
+- an individual task with clear instructions, a time and a success criterion
+- a group task with roles, a product and a time
+- free practice on a new example, not a copy of the guided one
+- a quick check of understanding tied to the objective
+- homework that extends the lesson instead of repeating it
+- a closing reflection or exit ticket
+
+Do not add an activity my lesson plan does not include.
+
+### 3. Every single slide carries all of this
+
+- **Title** — short, no more than eight words.
+- **Bullets** — three to five, one idea each, no more than twelve words each, sentence case, no full stop at the end.
+- **Speaker notes** — one or two sentences that say what I should actually say, ending with a sentence that leads into the next slide.
+- **Visual** — describe one specific visual. Never write "add an image". Say what it shows, who is in it and what the learner should look at. Choose from: photograph, educational illustration, diagram, timeline, flowchart, icon set, comparison table, map, infographic, chart, classroom scene.
+- **Layout** — one practical instruction: image left with text right, full-width visual with a text overlay, two-column comparison, one large central diagram, three cards, a timeline across the slide, or title on top with the activity panel below.
+- **Stage and time** — which stage of my lesson plan this slide belongs to, and its minutes.
+- **Activity block, on activity slides only** — the activity name, the instructions, the time, the materials, what the student produces, and the success criterion the student can check for themselves.
+
+### 4. Data and charts
+
+Where the attached book pages contain numbers worth showing, name the chart type, say what it must show, and leave a placeholder. Bar charts for comparisons, line charts for change over time, pie or donut only for a simple proportion, timelines for sequences, flowcharts for processes, tables for exact values. Do not invent data.
+
+### 5. Design — rich, colourful, and still readable once it is a PDF
+
+- Colour palette: <span class="ph">[[EDIT: Colour palette — e.g. Pastel rainbow — a tint per section / Cool pastels — mint, sky, lilac / Warm pastels — peach, apricot, cream]]</span>
+- Fonts: <span class="ph">[[EDIT: Fonts — e.g. Accessible — rounded headings, plain body / One clean modern sans / Serif headings, sans body]]</span>
+- Logo: <span class="ph">[[EDIT: Logo — e.g. Top-right, every slide / Top-left, every slide / Bottom-right, every slide]]</span>
+- Visual style: <span class="ph">[[EDIT: Visual style — e.g. Rich and colourful — pastel panels / Clean and minimal / Playful and child-friendly]]</span>
+- Image style: <span class="ph">[[EDIT: Image style — e.g. Real photographs / Flat vector illustration / Hand-drawn storybook]]</span>
+- Tables and frames: <span class="ph">[[EDIT: Tables and frames — e.g. Pastel fill, full frame border / Pastel header, full outer frame / White cells, full frame border]]</span>
+
+**Build a small colour system and hold to it.** Give each stage of my lesson plan its own tint from the palette above, and use that one tint for that stage's panel fill, its heading rule, its section tab and its table header — so a learner can tell from the colour alone which part of the lesson they are in. List the colours you settled on at the end of the deck text, with a name for each, so I can rebuild them.
+
+**Contrast is not a matter of taste.** Dark ink on a pastel fill. Never white text on a pastel fill. Never text laid directly over a busy photograph — put it on a solid or lightly tinted panel first.
+
+**Whenever a table appears — and only use one when the content is genuinely tabular — frame it fully.** A border on every side of every cell, a filled header row in a deeper tint of that section's colour, alternating pastel rows beneath it, generous padding inside the cells, no more than five columns, and a one-line caption above the table saying what it shows. Never a borderless table, and never a table used only to line text up.
+
+**Panels, boxes and callouts get the same treatment:** a pastel fill, a full border on all four sides, and a rounded corner. An activity box, a definition box and a "check yourself" box should each be recognisable by colour before the learner reads a word of them.
+
+**It will be exported to PDF and printed, so:** solid fills rather than gradients, borders no thinner than one point, no pale text on a pale ground, and nothing that depends on a hover or an animation to be understood.
+
+**Read this only if the presentation language above is Arabic, or Arabic and English together. If the presentation is in English only, ignore it.** **This block replaces every other font, direction, numeral, layout and export instruction anywhere in this prompt. Where it disagrees with anything above, it wins.**
+
+### الخط العربي والتصدير — متطلبات إلزامية
+- استخدم خط Arial فقط في العرض كاملًا
+- استخدم Arial Bold لجميع العناوين
+- استخدم Arial Regular لجميع النصوص
+- طبِّق Arial على خط العناوين وخط النص داخل Theme
+- لا تستخدم Arial Abjadhaus أو Noto Sans Arabic
+- لا تستخدم خطوطًا زخرفية أو غير متوفرة في PowerPoint
+- لا تخلط بين أكثر من عائلة خطوط داخل العرض
+- اجعل اتجاه جميع النصوص العربية من اليمين إلى اليسار RTL
+- اجعل محاذاة النصوص والقوائم والجداول إلى اليمين
+- حافظ على اتصال الحروف العربية وترتيب الكلمات الصحيح
+- استخدم الأرقام العربية الهندية فقط:
+  ٠، ١، ٢، ٣، ٤، ٥، ٦، ٧، ٨، ٩
+- تجنب مزج الكلمات الإنجليزية والعربية في السطر نفسه
+- لا تستخدم تأثيرات أو تدرجات على النصوص العربية
+- لا تحوِّل المحتوى العربي إلى Timeline أو Smart Diagram
+- لا تستخدم مخططات Gamma الذكية للنصوص العربية
+- استخدم صناديق نص وبطاقات وجداول عادية فقط
+- تأكد من ظهور النص العربي متصلًا في PDF وPowerPoint
+- راجع شريحة تجريبية بعد التصدير قبل تصدير العرض كاملًا
+
+### 6. Accessibility, because it will be read from the back of the room
+
+Strong visual hierarchy, large readable type, high contrast, no crowded slides, and visuals that carry meaning rather than decorate. A long explanation belongs in the speaker notes, never on the slide. The deck must still read on a phone screen.
+
+### 7. Must include
+
+<span class="ph">[[EDIT: A fact, definition, word list or curriculum point that must appear — or “none”]]</span>
+
+### 8. Theory, in the speaker notes only
+
+<span class="ph">[[EDIT: Thinkers to reference in the speaker notes, or write “none”]]</span>
+
+Where my lesson plan already does something one of these thinkers would recognise, add one short line in the **speaker notes** naming it and why the step works. Never on the slide itself, and never forced — if it does not fit, leave it out.
+
+---
+
+## F — FORMAT
+
+Return plain Markdown, in exactly this order, and nothing else. No greeting, no explanation before it, no comment after it.
+
+```
+===MAP===
+| Lesson plan stage | Minutes | Slides |
+| --- | --- | --- |
+| ... | ... | ... |
+
+===OUTLINE===
+1. [Slide title — purpose in six words]
+2. [Slide title — purpose in six words]
+(continue until every slide is listed)
+
+===SLIDES===
+
+### Slide 1 — [Title]
+**Stage:** [stage of my lesson plan] · **Time:** [minutes]
+**Bullets:**
+- [bullet]
+- [bullet]
+- [bullet]
+**Speaker notes:** [one or two sentences, ending with the transition]
+**Visual:** [specific description]
+**Layout:** [layout instruction]
+**Activity:** [name · instructions · time · materials · student product · success criterion]
+
+(repeat the same structure for every slide)
+
+===QUESTIONS FOR THE TEACHER===
+- [anything a slide needed that was not on the attached pages]
+```
+
+---
+
+## BEFORE YOU ANSWER — check these silently, then fix what fails
+
+1. Every stage of my lesson plan appears in `===MAP===`, in its original order.
+2. The number of slides matches the number asked for above.
+3. The minutes across the slides add up to the lesson length above.
+4. One idea per slide, and no bullet longer than twelve words.
+5. Every slide has speaker notes and a described visual — no slide says "add an image".
+6. Nothing appears that is not on the attached book pages, and anything missing is marked `[TEACHER TO ADD]`.
+7. No invented data, quotations, research or curriculum codes.
+8. Guided practice comes before the individual task, and the individual task before the free practice.
+9. The final slide gives the class one clear next step: <span class="ph">[[EDIT: The exact next step you want the class to take]]</span>
+
+Now build the presentation.
+</div>
+
+          <p class="prompt-label"><span data-en="Arabic" data-ar="بالعربية">Arabic</span></p>
+          <div class="prompt-tools">
+            <button class="btn btn-ghost" type="button" data-copy="p5-ar" data-en="Copy" data-ar="نسخ">Copy</button>
+            <button class="btn btn-ghost" type="button" data-reset="p5-ar" data-en="Start over" data-ar="إعادة الضبط">Start over</button>
+            <span class="copied" aria-live="polite"></span>
+          </div>
+          <div class="prompt-box is-tall is-ar" id="p5-ar" contenteditable="true" spellcheck="false" role="textbox" aria-multiline="true" data-en-label="Editable presentation master prompt in Arabic" data-ar-label="الأمر الرئيسي للعرض التقديمي بالعربية، قابل للتعديل"># برومبت إيدوليكسا الرئيسي — حوِّل خطة درسك إلى عرض تقديمي
+## مكتوب من أجل Gamma، ويعمل كذلك في ChatGPT أو Gemini
+
+&gt; ملاحظة للمعلم: كل حقل مكتوب فيه `[[تعديل: ... ]]` مخصص لتغييره قبل الإرسال. وكل ما عداه يبقى كما هو تمامًا.
+
+---
+
+## R — الدور
+
+تصرَّف بصفتك خبيرًا في تصميم العروض التعليمية، ومصممًا تعليميًا، وراويًا تربويًا بصريًا. أنت تبني عروضًا يستطيع المعلم أن يُدرِّس منها، لا شرائح جميلة الشكل فحسب. وسيُلصق جوابك مباشرة في Gamma ليصير العرض النهائي، فليكن نظيفًا كاملًا وبالصيغة المطلوبة في آخر هذا البرومبت بالضبط.
+
+---
+
+## C — السياق
+
+- المعلم: <span class="ph">[[تعديل: اسم المعلم]]</span>
+- المادة: <span class="ph">[[تعديل: المادة]]</span>
+- الصف أو المرحلة: <span class="ph">[[تعديل: الصف أو المرحلة]]</span>
+- المستوى أو المعيار: <span class="ph">[[تعديل: المستوى أو المعيار، أو اكتب «لا شيء»]]</span>
+- عنوان الدرس: <span class="ph">[[تعديل: عنوان الدرس]]</span>
+- الحاضرون: <span class="ph">[[تعديل: من الحاضرون]]</span>
+- مدة الدرس: <span class="ph">[[تعديل: مدة الدرس — مثل: 30 دقيقة / 35 دقيقة / 40 دقيقة]]</span> دقيقة
+- عدد الشرائح: <span class="ph">[[تعديل: عدد الشرائح — مثل: ٦ شرائح — درس قصير / ٨ شرائح / ١٠ شرائح — تناسب إنشاءً مجانيًا في Gamma]]</span>
+- لغة العرض: <span class="ph">[[تعديل: لغة العرض — مثل: الإنجليزية / العربية / ثنائي اللغة — عربي وإنجليزي]]</span>
+- النبرة: <span class="ph">[[تعديل: النبرة — مثل: ودّية ومشجِّعة / دافئة ومرحة / هادئة وواضحة]]</span>
+
+### ملفان مرفقان بهذه الرسالة
+
+١. **خطة درسي — <span class="ph">[[تعديل: اسم ملف خطة الدرس التي أرفقتها]]</span>.** هي العمود الفقري للعرض. تتبع الشرائح مراحلها، بترتيبها، وبأوقاتها.
+٢. **صفحات الكتاب لهذا الدرس — <span class="ph">[[تعديل: صفحات الكتاب التي أرفقتها — أسماء الملفات أو أرقام الصفحات]]</span>.** هي المصدر الوحيد للمحتوى: المفردات والأمثلة والنصوص والتدريبات تأتي من هذه الصفحات.
+
+### ضبط المصادر — اقرأ هذا قبل أن تكتب أي شيء
+
+- اتبع خطة درسي **مرحلةً مرحلةً**. لا تُعِد ترتيبها، ولا تدمج مرحلتين في شريحة واحدة، ولا تضف مرحلة ليست فيها.
+- خُذ كل معلومة وكلمة وقاعدة ومثال وتدريب من صفحات الكتاب المرفقة. وإن احتاجت شريحة إلى شيء غير موجود في تلك الصفحات، فاكتب `[على المعلم إضافته]` ولا تختلقه.
+- لا تختلق إحصاءات ولا اقتباسات ولا نتائج بحوث ولا رموز مناهج ولا أرقام صفحات.
+- حيث تُحدِّد خطة درسي وقتًا لمرحلة، ضع ذلك الوقت على الشريحة.
+- وإن اختلفت خطة درسي مع صفحات الكتاب، فاتبع خطة الدرس واذكر ذلك في النهاية تحت **أسئلة إلى المعلم**.
+
+---
+
+## T — المهمة
+
+### ١. اربط الخطة بالشرائح قبل أن تكتب شريحة واحدة
+
+أنتج جدول ربط أولًا: سطر لكل مرحلة من خطة درسي، والدقائق المخصصة لها، وأرقام الشرائح التي تحملها. ويجب أن تظهر كل مرحلة. ثم تحقق من المجموع مقابل عدد الشرائح المطلوب أعلاه. وإن لم يتوافق، فغيِّر عدد الشرائح المخصص لكل مرحلة — لا الترتيب، ولا بحذف مرحلة.
+
+### ٢. يجب أن يحتوي العرض على هذه المراحل
+
+<span class="ph">[[تعديل: أبقِ المراحل الموجودة فعلًا في خطة درسك فقط]]</span>
+
+- تهيئة تُنشِّط ما يعرفه الفصل بالفعل
+- شريحة أهداف تعليمية مكتوبة بأفعال خطة درسي
+- الشرح مقسَّمًا قطعًا صغيرة، ومثال قبل كل قاعدة
+- تدريب موجَّه يُؤدّى معي، مع مثال محلول والإجابات المتوقعة
+- نشاط فردي بتعليمات واضحة ووقت محدد ومعيار نجاح
+- نشاط جماعي بأدوار ومنتج ووقت محدد
+- تدريب حر على مثال جديد، لا نسخة من المثال الموجَّه
+- تحقُّق سريع من الفهم مرتبط بالهدف
+- واجب منزلي يوسّع الدرس ولا يكرره
+- تأمُّل ختامي أو بطاقة خروج
+
+ولا تضف نشاطًا لا تحتوي عليه خطة درسي.
+
+### ٣. كل شريحة تحمل كل ما يلي
+
+- **العنوان** — قصير، لا يزيد على ثماني كلمات.
+- **النقاط** — من ثلاث إلى خمس، فكرة واحدة لكل نقطة، ولا تزيد النقطة على اثنتي عشرة كلمة، ولا نقطة في نهايتها.
+- **ملاحظات المُقدِّم** — جملة أو جملتان تقولان ما ينبغي أن أقوله فعلًا، وتنتهيان بجملة تنقل إلى الشريحة التالية.
+- **العنصر البصري** — صِف عنصرًا بصريًا واحدًا محدَّدًا. ولا تكتب أبدًا «أضف صورة». قل ماذا تُظهر الصورة، ومن فيها، وإلى أي شيء ينظر المتعلم. واختر من: صورة فوتوغرافية، أو رسم تعليمي، أو مخطط، أو خط زمني، أو مخطط تدفُّق، أو مجموعة أيقونات، أو جدول مقارنة، أو خريطة، أو إنفوجرافيك، أو رسم بياني، أو مشهد صفّي.
+- **التخطيط** — تعليمة عملية واحدة: صورة يمينًا ونص شمالًا، أو عنصر بصري بعرض الشريحة والنص فوقه، أو مقارنة في عمودين، أو مخطط كبير في الوسط، أو ثلاث بطاقات، أو خط زمني بعرض الشريحة، أو عنوان أعلى ولوحة نشاط أسفل.
+- **المرحلة والوقت** — إلى أي مرحلة من خطة درسي تنتمي هذه الشريحة، وكم دقيقة لها.
+- **لوحة النشاط، في شرائح الأنشطة وحدها** — اسم النشاط، والتعليمات، والوقت، والمواد، وما يُنتجه الطالب، ومعيار النجاح الذي يستطيع الطالب أن يتحقق منه بنفسه.
+
+### ٤. البيانات والرسوم البيانية
+
+حيث تحتوي صفحات الكتاب المرفقة على أرقام تستحق العرض، حدِّد نوع الرسم البياني، وقل ماذا يجب أن يُظهر، واترك موضعًا له. الأعمدة للمقارنات، والخطوط للتغير عبر الزمن، والدائرة أو الحلقة لنسبة بسيطة فقط، والخط الزمني للتسلسل، ومخطط التدفُّق للعمليات، والجدول للقيم الدقيقة. ولا تختلق بيانات.
+
+### ٥. التصميم — غنيّ وملوّن، ويبقى مقروءًا حين يصير ملف PDF
+
+- لوحة الألوان: <span class="ph">[[تعديل: لوحة الألوان — مثل: قوس قزح باستيلي — لون لكل مرحلة / باستيل بارد — نعناعي وسماوي وليلكي / باستيل دافئ — خوخي ومشمشي وكريمي]]</span>
+- الخطوط: <span class="ph">[[تعديل: الخطوط — مثل: واضحة — عناوين مستديرة ونص بسيط / خط حديث واحد / عناوين مذنَّبة ونص بلا زوائد]]</span>
+- الشعار: <span class="ph">[[تعديل: الشعار — مثل: أعلى اليمين، كل شريحة / أعلى اليسار، كل شريحة / أسفل اليمين، كل شريحة]]</span>
+- الأسلوب البصري: <span class="ph">[[تعديل: الأسلوب البصري — مثل: غنيّ وملوّن — لوحات باستيلية / نظيف وبسيط / مرح ومناسب للأطفال]]</span>
+- أسلوب الصور: <span class="ph">[[تعديل: أسلوب الصور — مثل: صور فوتوغرافية حقيقية / رسم متجهي مسطَّح / رسم يدوي قصصي]]</span>
+- الجداول والإطارات: <span class="ph">[[تعديل: الجداول والإطارات — مثل: تعبئة باستيلية بإطار كامل / رأس باستيلي وإطار خارجي كامل / خلايا بيضاء بإطار كامل]]</span>
+
+**ابنِ نظامًا لونيًّا صغيرًا والتزم به.** أعطِ كل مرحلة من خطة درسي درجةً خاصة بها من اللوحة أعلاه، واستخدم تلك الدرجة وحدها لتعبئة لوحة تلك المرحلة، ولخط عنوانها، وللسانها، ولرأس جدولها — حتى يعرف المتعلم من اللون وحده في أي جزء من الدرس هو. واذكر في آخر نص العرض الألوان التي استقررت عليها، ولكل واحد اسم، حتى أستطيع إعادة بنائها.
+
+**التباين ليس مسألة ذوق.** حبر غامق على تعبئة باستيلية. ولا نص أبيض على تعبئة باستيلية أبدًا. ولا نص فوق صورة مزدحمة مباشرة — بل ضعه أولًا على لوحة مصمتة أو خفيفة التلوين.
+
+**وكلما ظهر جدول — ولا تستخدم الجدول إلا إذا كان المحتوى جدوليًّا حقًّا — فأطِّره كاملًا.** حدٌّ على كل جانب من كل خلية، وصف رأس معبَّأ بدرجة أغمق من لون تلك المرحلة، وصفوف باستيلية متبادلة تحته، وحشو سخيّ داخل الخلايا، ولا أكثر من خمسة أعمدة، وسطر تعليق واحد فوق الجدول يقول ماذا يعرض. ولا جدول بلا حدود أبدًا، ولا جدول يُستعمل لمجرد محاذاة النص.
+
+**واللوحات والصناديق والتنبيهات تأخذ المعاملة نفسها:** تعبئة باستيلية، وحدٌّ كامل على الجوانب الأربعة، وزاوية مستديرة. فصندوق النشاط، وصندوق التعريف، وصندوق «تحقَّق بنفسك» ينبغي أن يُعرف كلٌّ منها بلونه قبل أن يقرأ المتعلم منه كلمة.
+
+**وسيُصدَّر إلى PDF ويُطبع، لذلك:** تعبئات مصمتة لا متدرِّجة، وحدود لا تقلّ عن نقطة واحدة، ولا نص فاتح على أرضية فاتحة، ولا شيء يتوقف فهمه على تمرير مؤشر أو حركة.
+
+**اقرأ هذا فقط إذا كانت لغة العرض أعلاه هي العربية، أو العربية والإنجليزية معًا. وإن كان العرض بالإنجليزية وحدها فتجاوزه.** **هذا القسم يحل مكان كل تعليمة أخرى في هذا البرومبت تتعلق بالخط أو الاتجاه أو الأرقام أو التخطيط أو التصدير. وحيث يخالف ما سبق، فهو الحاكم.**
+
+### الخط العربي والتصدير — متطلبات إلزامية
+- استخدم خط Arial فقط في العرض كاملًا
+- استخدم Arial Bold لجميع العناوين
+- استخدم Arial Regular لجميع النصوص
+- طبِّق Arial على خط العناوين وخط النص داخل Theme
+- لا تستخدم Arial Abjadhaus أو Noto Sans Arabic
+- لا تستخدم خطوطًا زخرفية أو غير متوفرة في PowerPoint
+- لا تخلط بين أكثر من عائلة خطوط داخل العرض
+- اجعل اتجاه جميع النصوص العربية من اليمين إلى اليسار RTL
+- اجعل محاذاة النصوص والقوائم والجداول إلى اليمين
+- حافظ على اتصال الحروف العربية وترتيب الكلمات الصحيح
+- استخدم الأرقام العربية الهندية فقط:
+  ٠، ١، ٢، ٣، ٤، ٥، ٦، ٧، ٨، ٩
+- تجنب مزج الكلمات الإنجليزية والعربية في السطر نفسه
+- لا تستخدم تأثيرات أو تدرجات على النصوص العربية
+- لا تحوِّل المحتوى العربي إلى Timeline أو Smart Diagram
+- لا تستخدم مخططات Gamma الذكية للنصوص العربية
+- استخدم صناديق نص وبطاقات وجداول عادية فقط
+- تأكد من ظهور النص العربي متصلًا في PDF وPowerPoint
+- راجع شريحة تجريبية بعد التصدير قبل تصدير العرض كاملًا
+
+### ٦. سهولة القراءة، لأن العرض سيُقرأ من آخر الفصل
+
+تدرُّج بصري واضح، وخط كبير مقروء، وتباين عالٍ، ولا شرائح مزدحمة، وعناصر بصرية تحمل معنى لا تزيّن فقط. والشرح الطويل مكانه ملاحظات المُقدِّم، لا الشريحة. ويجب أن يبقى العرض مقروءًا على شاشة هاتف.
+
+### ٧. ما يجب أن يظهر
+
+<span class="ph">[[تعديل: معلومة أو تعريف أو قائمة مفردات أو نقطة من المنهج يجب أن تظهر — أو «لا شيء»]]</span>
+
+### ٨. النظرية، في ملاحظات المُقدِّم وحدها
+
+<span class="ph">[[تعديل: المفكرون الذين تريد ذكرهم في ملاحظات المُقدِّم، أو اكتب «لا شيء»]]</span>
+
+وحيث تفعل خطة درسي أصلًا شيئًا يعرفه أحد هؤلاء المفكرين، أضف سطرًا قصيرًا في **ملاحظات المُقدِّم** يسمّيه ويقول لماذا تنجح هذه الخطوة. ولا تضعه على الشريحة نفسها أبدًا، ولا تتكلَّفه — فإن لم يناسب، فاتركه.
+
+---
+
+## F — الصيغة
+
+أعِد النتيجة بصيغة Markdown عادية، بهذا الترتيب بالضبط، ولا شيء غيره. بلا تحية، وبلا شرح قبله، وبلا تعليق بعده.
+
+```
+===MAP===
+| مرحلة خطة الدرس | الدقائق | الشرائح |
+| --- | --- | --- |
+| ... | ... | ... |
+
+===OUTLINE===
+١. [عنوان الشريحة — الهدف في ست كلمات]
+٢. [عنوان الشريحة — الهدف في ست كلمات]
+(أكمل حتى تُدرِج كل الشرائح)
+
+===SLIDES===
+
+### الشريحة ١ — [العنوان]
+**المرحلة:** [مرحلة من خطة درسي] · **الوقت:** [الدقائق]
+**النقاط:**
+- [نقطة]
+- [نقطة]
+- [نقطة]
+**ملاحظات المُقدِّم:** [جملة أو جملتان تنتهيان بالانتقال]
+**العنصر البصري:** [وصف محدَّد]
+**التخطيط:** [تعليمة التخطيط]
+**النشاط:** [الاسم · التعليمات · الوقت · المواد · منتج الطالب · معيار النجاح]
+
+(أعِد البنية نفسها لكل شريحة)
+
+===QUESTIONS FOR THE TEACHER===
+- [أي شيء احتاجته شريحة ولم يكن في الصفحات المرفقة]
+```
+
+---
+
+## قبل أن تُجيب — تحقَّق من هذه بصمت، ثم أصلِح ما يفشل
+
+١. كل مرحلة من خطة درسي ظاهرة في `===MAP===`، بترتيبها الأصلي.
+٢. عدد الشرائح يطابق العدد المطلوب أعلاه.
+٣. مجموع الدقائق على الشرائح يساوي مدة الدرس المذكورة أعلاه.
+٤. فكرة واحدة في كل شريحة، ولا نقطة تزيد على اثنتي عشرة كلمة.
+٥. لكل شريحة ملاحظات مُقدِّم وعنصر بصري موصوف — ولا شريحة مكتوب فيها «أضف صورة».
+٦. لا يظهر شيء ليس في صفحات الكتاب المرفقة، وكل ناقص مكتوب أمامه `[على المعلم إضافته]`.
+٧. لا بيانات ولا اقتباسات ولا بحوث ولا رموز مناهج مختلقة.
+٨. التدريب الموجَّه قبل النشاط الفردي، والنشاط الفردي قبل التدريب الحر.
+٩. الشريحة الأخيرة تعطي الفصل خطوة تالية واحدة واضحة: <span class="ph">[[تعديل: الخطوة التالية التي تريد أن يتخذها الفصل بالضبط]]</span>
+
+الآن ابنِ العرض التقديمي.
+</div>
+        </div>
+
+        <!-- ============ PART 3 · GAMMA ============ -->
+        <div class="block" id="gamma">
+          <h2 class="display" data-en="Part 3 · Create the deck in Gamma" data-ar="الجزء الثالث · أنشئ العرض في Gamma">Part 3 · Create the deck in Gamma</h2>
+          <p class="sub" data-en="Route A — you write the deck text with the AI, then Gamma designs it." data-ar="المسار الأول — تكتب نص العرض مع الذكاء الاصطناعي، ثم يصمّمه Gamma.">Route A — you write the deck text with the AI, then Gamma designs it.</p>
+
+          <p data-en="Gamma is not a chatbot with slides attached. It is a design engine: you give it the words and the structure, and it lays out the cards, chooses the type sizes and finds the images. That division of labour is why this route gives you the most control — the teaching decisions are made in the deck text you already checked, and Gamma is only allowed to make the visual ones." data-ar="Gamma ليس روبوت محادثة أُلحقت به شرائح، بل محرك تصميم: تعطيه الكلمات والبنية، فيوزّع البطاقات، ويختار أحجام الخطوط، ويجد الصور. وهذا التقسيم للعمل هو سبب كون هذا المسار أكثرها تحكُّمًا — فالقرارات التعليمية تُتخذ في نص العرض الذي راجعته أنت، ولا يُسمح لـ Gamma إلا بالقرارات البصرية.">Gamma is not a chatbot with slides attached. It is a design engine: you give it the words and the structure, and it lays out the cards, chooses the type sizes and finds the images. That division of labour is why this route gives you the most control — the teaching decisions are made in the deck text you already checked, and Gamma is only allowed to make the visual ones.</p>
+
+          <ol class="numbered">
+            <li><b data-en="Run the prompt in ChatGPT or Gemini first" data-ar="شغِّل البرومبت في ChatGPT أو Gemini أولًا">Run the prompt in ChatGPT or Gemini first</b><span data-en="Attach the master prompt, your lesson plan and your book pages in one message. What comes back is the deck text: a mapping table, an outline, and every slide written out with its bullets, speaker notes, visual and layout. Read the mapping table before you go anywhere near Gamma — if a stage of your plan is missing, fix it here, in the text, where fixing is cheap." data-ar="أرفق الأمر الرئيسي وخطة درسك وصفحات كتابك في رسالة واحدة. والذي يعود نصُّ العرض: جدول ربط، ومخطط، وكل شريحة مكتوبة بنقاطها وملاحظات مُقدِّمها وعنصرها البصري وتخطيطها. واقرأ جدول الربط قبل أن تقترب من Gamma — فإن غابت مرحلة من خطتك فأصلِحها هنا، في النص، حيث الإصلاح رخيص.">Attach the master prompt, your lesson plan and your book pages in one message. What comes back is the deck text: a mapping table, an outline, and every slide written out with its bullets, speaker notes, visual and layout. Read the mapping table before you go anywhere near Gamma — if a stage of your plan is missing, fix it here, in the text, where fixing is cheap.</span></li>
+            <li><b data-en="Sign in at gamma.app and select New" data-ar="سجِّل الدخول في gamma.app واختر New">Sign in at gamma.app and select New</b><span data-en="There is nothing to install. Gamma offers you four ways to start: generate from a prompt, paste in text, start from a template, or import a file or a link." data-ar="لا شيء يُثبَّت. ويعرض عليك Gamma أربع طرق للبدء: الإنشاء من برومبت، أو لصق نص، أو البدء من قالب، أو استيراد ملف أو رابط.">There is nothing to install. Gamma offers you four ways to start: generate from a prompt, paste in text, start from a template, or import a file or a link.</span></li>
+            <li><b data-en="Choose “Paste in text”, not “Generate”" data-ar="اختر «Paste in text» لا «Generate»">Choose “Paste in text”, not “Generate”</b><span data-en="This is the step that decides whether the deck is yours. “Generate” asks Gamma to invent the content from a short description. “Paste in text” tells it to lay out the words you already wrote and checked. Paste the whole deck text — the outline and all the slides." data-ar="هذه هي الخطوة التي تحدد هل العرض عرضك أم لا. فـ«Generate» تطلب من Gamma أن يختلق المحتوى من وصف قصير، أما «Paste in text» فتقول له أن ينسّق الكلمات التي كتبتها وراجعتها بالفعل. الصق نص العرض كاملًا — المخطط وكل الشرائح.">This is the step that decides whether the deck is yours. “Generate” asks Gamma to invent the content from a short description. “Paste in text” tells it to lay out the words you already wrote and checked. Paste the whole deck text — the outline and all the slides.</span></li>
+            <li><b data-en="Set it to a presentation, and set the numbers" data-ar="اضبطه عرضًا تقديميًا، واضبط الأرقام">Set it to a presentation, and set the numbers</b><span data-en="Gamma can also make a document, a web page or a social post — choose presentation. Set the number of cards to the number of slides in your prompt, and choose 16:9 for a data projector. Fluid is for reading on a screen, not for a classroom wall." data-ar="يستطيع Gamma كذلك أن يصنع مستندًا أو صفحة ويب أو منشورًا اجتماعيًا — اختر العرض التقديمي. واضبط عدد البطاقات على عدد الشرائح في برومبتك، واختر 16:9 لجهاز العرض. أما Fluid فللقراءة على الشاشة، لا لحائط الفصل.">Gamma can also make a document, a web page or a social post — choose presentation. Set the number of cards to the number of slides in your prompt, and choose 16:9 for a data projector. Fluid is for reading on a screen, not for a classroom wall.</span></li>
+            <li><b data-en="Read the outline Gamma shows you before it builds" data-ar="اقرأ المخطط الذي يعرضه Gamma قبل أن يبني">Read the outline Gamma shows you before it builds</b><span data-en="Gamma pauses and shows you the card titles it is about to create. This is the cheapest moment in the whole session to catch a problem: check that every stage of your lesson plan has a card and that they are in your order. Edit titles here, add a card, delete one. Fixing the outline takes a minute; fixing forty finished slides does not." data-ar="يتوقف Gamma ويعرض عليك عناوين البطاقات التي هو على وشك إنشائها. وهذه أرخص لحظة في المحاضرة كلها لاكتشاف خلل: تحقق أن لكل مرحلة من خطة درسك بطاقة، وأنها بترتيبك أنت. عدِّل العناوين هنا، أو أضف بطاقة، أو احذف واحدة. فإصلاح المخطط يستغرق دقيقة، وإصلاح أربعين شريحة جاهزة لا يستغرق دقيقة.">Gamma pauses and shows you the card titles it is about to create. This is the cheapest moment in the whole session to catch a problem: check that every stage of your lesson plan has a card and that they are in your order. Edit titles here, add a card, delete one. Fixing the outline takes a minute; fixing forty finished slides does not.</span></li>
+            <li><b data-en="Choose how much text, which theme, and where images come from" data-ar="اختر كمية النص، والتصميم، ومصدر الصور">Choose how much text, which theme, and where images come from</b><span data-en="Text density: concise, for a class — the detail lives in the speaker notes. Theme: pick one and keep it for every deck you build this term, so your students learn to read your slides. Images: AI-generated, stock photographs, or none at all. For a language or a science lesson, stock photographs of real things usually beat generated art." data-ar="كمية النص: موجزة، لفصل — فالتفصيل مكانه ملاحظات المُقدِّم. والتصميم: اختر واحدًا وأبقِه في كل عرض تبنيه هذا الفصل الدراسي، فيتعلم طلابك قراءة شرائحك. والصور: مولَّدة بالذكاء الاصطناعي، أو صور من المكتبة، أو بلا صور. وفي درس لغة أو علوم، غالبًا ما تتغلب صور المكتبة للأشياء الحقيقية على الرسوم المولَّدة.">Text density: concise, for a class — the detail lives in the speaker notes. Theme: pick one and keep it for every deck you build this term, so your students learn to read your slides. Images: AI-generated, stock photographs, or none at all. For a language or a science lesson, stock photographs of real things usually beat generated art.</span></li>
+            <li><b data-en="Generate, then edit by selecting anything on the card" data-ar="أنشئ، ثم عدِّل باختيار أي شيء على البطاقة">Generate, then edit by selecting anything on the card</b><span data-en="The deck builds in front of you. Every piece of text and every picture is editable in place — select it and type. You can also change the theme after the deck exists, so do not spend time on the look until the teaching is right." data-ar="يُبنى العرض أمامك. وكل قطعة نص وكل صورة قابلة للتعديل في موضعها — اخترها واكتب. ويمكنك تغيير التصميم بعد وجود العرض، فلا تصرف وقتًا على الشكل قبل أن يستقيم التدريس.">The deck builds in front of you. Every piece of text and every picture is editable in place — select it and type. You can also change the theme after the deck exists, so do not spend time on the look until the teaching is right.</span></li>
+            <li><b data-en="Then run the nine checks" data-ar="ثم أجرِ المراجعات التسع">Then run the nine checks</b><span data-en="A finished-looking deck is not a finished deck. Part 5 is the list, and it is not optional." data-ar="العرض الذي يبدو جاهزًا ليس عرضًا جاهزًا. والجزء الخامس هو القائمة، وهو غير اختياري.">A finished-looking deck is not a finished deck. Part 5 is the list, and it is not optional.</span>
+              <p class="step-cta"><a class="btn btn-outline" href="#check" data-en="Go to the nine checks" data-ar="اذهب إلى المراجعات التسع">Go to the nine checks</a></p>
+            </li>
+          </ol>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>Ask for a number of cards you can actually get.</b> A free Gamma account caps how many cards one generation may produce — ten, at the time of writing — and every generation spends credits from your account. So set the slide count in your prompt to a number your plan can live inside. If your lesson genuinely needs more, build it as two decks, one for the first half of the lesson and one for the second, and check the card limit on your own plan before you promise yourself a twenty-slide deck." data-ar-html="<b>اطلب عددًا من البطاقات تستطيع الحصول عليه فعلًا.</b> حساب Gamma المجاني يحدّ عدد البطاقات التي يُنتجها الإنشاء الواحد — عشرًا، وقت كتابة هذا النص — وكل عملية إنشاء تستهلك رصيدًا من حسابك. فاضبط عدد الشرائح في برومبتك على عدد تستطيع خطتك أن تعيش داخله. وإن احتاج درسك فعلًا إلى أكثر، فابنِه عرضين، أحدهما للنصف الأول من الدرس والآخر للنصف الثاني، وتحقق من حدّ البطاقات في خطتك أنت قبل أن تَعِد نفسك بعرض من عشرين شريحة."><b>Ask for a number of cards you can actually get.</b> A free Gamma account caps how many cards one generation may produce — ten, at the time of writing — and every generation spends credits from your account. So set the slide count in your prompt to a number your plan can live inside. If your lesson genuinely needs more, build it as two decks, one for the first half of the lesson and one for the second, and check the card limit on your own plan before you promise yourself a twenty-slide deck.</p>
+          </div>
+        </div>
+
+        <!-- ============ PART 4 · THE OTHER TWO ROUTES ============ -->
+        <div class="block" id="routes">
+          <h2 class="display" data-en="Part 4 · Two other ways in" data-ar="الجزء الرابع · طريقان آخران للدخول">Part 4 · Two other ways in</h2>
+          <p class="sub" data-en="The same prompt, a different door. Connect Gamma to ChatGPT, or stay inside Google." data-ar="البرومبت نفسه، وباب مختلف. اربط Gamma بـ ChatGPT، أو ابقَ داخل Google.">The same prompt, a different door. Connect Gamma to ChatGPT, or stay inside Google.</p>
+
+          <p data-en="Route A keeps the writing and the designing in two separate places, which is why you see the deck text before anything is built. The next two routes join them: you ask once, and the presentation appears. You trade a little control for a lot of speed, so they suit the second and third deck you build, once you already know what a good one looks like." data-ar="يُبقي المسار الأول الكتابة والتصميم في مكانين منفصلين، ولهذا ترى نص العرض قبل أن يُبنى أي شيء. أما المساران التاليان فيجمعانهما: تطلب مرة واحدة فيظهر العرض. وأنت تبيع قليلًا من التحكم مقابل كثير من السرعة، فهما يناسبان العرض الثاني والثالث اللذين تبنيهما، بعد أن تعرف شكل العرض الجيد.">Route A keeps the writing and the designing in two separate places, which is why you see the deck text before anything is built. The next two routes join them: you ask once, and the presentation appears. You trade a little control for a lot of speed, so they suit the second and third deck you build, once you already know what a good one looks like.</p>
+
+          <div class="grid g2">
+            <div class="card card-accent">
+              <h3 data-en="Route B · ChatGPT builds it in Gamma" data-ar="المسار الثاني · ChatGPT يبنيه في Gamma">Route B · ChatGPT builds it in Gamma</h3>
+              <p data-en="Gamma is available as an app inside ChatGPT. You connect the two once, and after that ChatGPT can write the deck and create it in Gamma in the same conversation — you get a link back, and you open it in Gamma to finish the design." data-ar="Gamma متاح تطبيقًا داخل ChatGPT. تربط بينهما مرة واحدة، وبعدها يستطيع ChatGPT أن يكتب العرض وينشئه في Gamma في المحادثة نفسها — فيعود إليك برابط، وتفتحه في Gamma لتُتِمّ التصميم.">Gamma is available as an app inside ChatGPT. You connect the two once, and after that ChatGPT can write the deck and create it in Gamma in the same conversation — you get a link back, and you open it in Gamma to finish the design.</p>
+            </div>
+            <div class="card card-brand">
+              <h3 data-en="Route C · Gemini, then Google Slides" data-ar="المسار الثالث · Gemini ثم Google Slides">Route C · Gemini, then Google Slides</h3>
+              <p data-en="Gemini can build a presentation itself, in Canvas, with a theme and images — and then export it to Google Slides. If your school already lives in Google Workspace, this is the route where the finished file lands where your colleagues expect to find it." data-ar="يستطيع Gemini أن يبني العرض بنفسه، في Canvas، بتصميم وصور — ثم يصدّره إلى Google Slides. وإن كانت مدرستك تعيش أصلًا في Google Workspace، فهذا هو المسار الذي يهبط فيه الملف النهائي حيث يتوقع زملاؤك أن يجدوه.">Gemini can build a presentation itself, in Canvas, with a theme and images — and then export it to Google Slides. If your school already lives in Google Workspace, this is the route where the finished file lands where your colleagues expect to find it.</p>
+            </div>
+          </div>
+
+          <h3 data-en="Route B, step by step — connecting Gamma to ChatGPT" data-ar="المسار الثاني خطوةً خطوة — ربط Gamma بـ ChatGPT">Route B, step by step — connecting Gamma to ChatGPT</h3>
+          <ol class="numbered">
+            <li><b data-en="Create your Gamma account first" data-ar="أنشئ حساب Gamma أولًا">Create your Gamma account first</b><span data-en="Sign up at gamma.app before you go to ChatGPT. The connection links two accounts, so the Gamma one has to exist." data-ar="سجِّل في gamma.app قبل أن تذهب إلى ChatGPT. فالربط يصل بين حسابين، ولا بد أن يكون حساب Gamma موجودًا.">Sign up at gamma.app before you go to ChatGPT. The connection links two accounts, so the Gamma one has to exist.</span></li>
+            <li><b data-en="Find Gamma in ChatGPT’s apps and connect it" data-ar="ابحث عن Gamma في تطبيقات ChatGPT واربطه">Find Gamma in ChatGPT’s apps and connect it</b><span data-en="Open the apps directory in ChatGPT, search for Gamma, and sign in to your Gamma account when it asks. This is a one-time setup that lives in your ChatGPT account, not in this course — and it needs a paid ChatGPT plan." data-ar="افتح دليل التطبيقات في ChatGPT، وابحث عن Gamma، وسجِّل الدخول إلى حساب Gamma عندما يطلب منك. وهذا إعداد لمرة واحدة يبقى في حسابك على ChatGPT، لا في هذه الدورة — ويحتاج خطة ChatGPT مدفوعة.">Open the apps directory in ChatGPT, search for Gamma, and sign in to your Gamma account when it asks. This is a one-time setup that lives in your ChatGPT account, not in this course — and it needs a paid ChatGPT plan.</span></li>
+            <li><b data-en="Start a new chat and attach all three files" data-ar="ابدأ محادثة جديدة وأرفق الملفات الثلاثة">Start a new chat and attach all three files</b><span data-en="The master prompt, your lesson plan and your book pages, in one message — exactly as in Route A. Choose the ChatGPT route in the builder so the last line of your prompt asks for the deck to be created in Gamma." data-ar="الأمر الرئيسي وخطة درسك وصفحات كتابك، في رسالة واحدة — كما في المسار الأول تمامًا. واختر مسار ChatGPT في المنشئ ليطلب آخر سطر في برومبتك إنشاء العرض في Gamma.">The master prompt, your lesson plan and your book pages, in one message — exactly as in Route A. Choose the ChatGPT route in the builder so the last line of your prompt asks for the deck to be created in Gamma.</span></li>
+            <li><b data-en="Read the deck text in the chat before you open the link" data-ar="اقرأ نص العرض في المحادثة قبل أن تفتح الرابط">Read the deck text in the chat before you open the link</b><span data-en="This is why the prompt asks for the full text as well as the deck. The chat is where you can still see the mapping table and check it against your plan; once you are inside Gamma you are editing slides, not structure." data-ar="لهذا يطلب البرومبت النص الكامل مع العرض. فالمحادثة هي المكان الذي لا يزال بوسعك فيه رؤية جدول الربط ومقارنته بخطتك؛ وحين تدخل Gamma فأنت تعدّل شرائح لا بنية.">This is why the prompt asks for the full text as well as the deck. The chat is where you can still see the mapping table and check it against your plan; once you are inside Gamma you are editing slides, not structure.</span></li>
+            <li><b data-en="Open the deck in Gamma and finish it there" data-ar="افتح العرض في Gamma وأتمِمه هناك">Open the deck in Gamma and finish it there</b><span data-en="Theme, images, layouts and export all belong to Gamma’s own editor. ChatGPT made the deck; it does not redesign it." data-ar="التصميم والصور والتخطيطات والتصدير كلها من عمل محرِّر Gamma نفسه. فقد أنشأ ChatGPT العرض، وهو لا يعيد تصميمه.">Theme, images, layouts and export all belong to Gamma’s own editor. ChatGPT made the deck; it does not redesign it.</span></li>
+          </ol>
+
+          <h3 data-en="Route C, step by step — Gemini and Google Slides" data-ar="المسار الثالث خطوةً خطوة — Gemini وGoogle Slides">Route C, step by step — Gemini and Google Slides</h3>
+          <ol class="numbered">
+            <li><b data-en="Open Gemini and turn Canvas on" data-ar="افتح Gemini وشغِّل Canvas">Open Gemini and turn Canvas on</b><span data-en="Canvas is the working surface where Gemini builds something you can look at rather than only reply to. Select it before you send your message." data-ar="Canvas هي مساحة العمل التي يبني فيها Gemini شيئًا تنظر إليه، لا مجرد رد يقرأه. اخترها قبل أن ترسل رسالتك.">Canvas is the working surface where Gemini builds something you can look at rather than only reply to. Select it before you send your message.</span></li>
+            <li><b data-en="Attach the plan and the pages, and send the prompt" data-ar="أرفق الخطة والصفحات، وأرسل البرومبت">Attach the plan and the pages, and send the prompt</b><span data-en="Choose the Gemini route in the builder. The prompt then asks for the deck text first and the slides second, so you still get something to check." data-ar="اختر مسار Gemini في المنشئ. فيطلب البرومبت نص العرض أولًا والشرائح ثانيًا، فيبقى لديك ما تراجعه.">Choose the Gemini route in the builder. The prompt then asks for the deck text first and the slides second, so you still get something to check.</span></li>
+            <li><b data-en="Export to Google Slides and keep editing there" data-ar="صدِّر إلى Google Slides وأكمل التعديل هناك">Export to Google Slides and keep editing there</b><span data-en="From Canvas you can send the finished presentation straight to Google Slides, where your school’s template, fonts and sharing rules already apply." data-ar="من Canvas يمكنك إرسال العرض النهائي مباشرة إلى Google Slides، حيث تسري بالفعل قوالب مدرستك وخطوطها وقواعد المشاركة فيها.">From Canvas you can send the finished presentation straight to Google Slides, where your school’s template, fonts and sharing rules already apply.</span></li>
+          </ol>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Which route to choose: " data-ar="أي مسار تختار: ">Which route to choose: </b><span data-en="Gamma on its own if you want to read the deck text before a single slide exists — that is the route this session teaches. ChatGPT with Gamma connected if you would rather do everything in one conversation and you already trust the prompt. Gemini if your school runs on Google Workspace and the file has to end up in Google Slides." data-ar="Gamma وحده إن أردت أن تقرأ نص العرض قبل وجود أي شريحة — وهو المسار الذي تعلّمه هذه المحاضرة. وChatGPT مع ربط Gamma إن فضّلت أن تفعل كل شيء في محادثة واحدة وكنت تثق بالبرومبت أصلًا. وGemini إن كانت مدرستك تعمل على Google Workspace ولا بد أن ينتهي الملف في Google Slides.">Gamma on its own if you want to read the deck text before a single slide exists — that is the route this session teaches. ChatGPT with Gamma connected if you would rather do everything in one conversation and you already trust the prompt. Gemini if your school runs on Google Workspace and the file has to end up in Google Slides.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ PART 5 · THE THINKERS ============ -->
+        <div class="block" id="thinkers">
+          <h2 class="display" data-en="Part 5 · The thinkers behind your slides" data-ar="الجزء الخامس · المفكرون خلف شرائحك">Part 5 · The thinkers behind your slides</h2>
+          <p class="sub" data-en="Select a name and read the cheat sheet: who he was, his core idea, what it looks like in a classroom, and what it changes on a slide." data-ar="اختر اسمًا واقرأ بطاقة التعريف: من هو، وفكرته الأساسية، وكيف تظهر في الفصل، وما تغيّره في الشريحة.">Select a name and read the cheat sheet: who he was, his core idea, what it looks like in a classroom, and what it changes on a slide.</p>
+
+          <p data-en="The prompt lets you name educational thinkers, and the builder lets you tick them. Before you do, read what each one actually said — a theorist named on a slide he would not recognise costs you more credibility than leaving the theory out. The first six names are the ones teachers meet in training. The last two are here for a different reason: Richard Mayer and John Sweller are the only names on this list whose research is about the screen you are building." data-ar="يتيح لك البرومبت أن تسمّي مفكرين تربويين، ويتيح لك المنشئ أن تختارهم. وقبل أن تفعل، اقرأ ما قاله كل واحد منهم فعلًا — فالمنظّر الذي يُذكَر على شريحة لا يعرفها يكلّفك من المصداقية أكثر مما يكلّفك حذف النظرية. والأسماء الستة الأولى هي التي يلقاها المعلمون في التدريب. أما الاسمان الأخيران فلسبب آخر: ريتشارد ماير وجون سويلر هما الاسمان الوحيدان في هذه القائمة اللذان يتناول بحثهما الشاشة التي تبنيها أنت.">The prompt lets you name educational thinkers, and the builder lets you tick them. Before you do, read what each one actually said — a theorist named on a slide he would not recognise costs you more credibility than leaving the theory out. The first six names are the ones teachers meet in training. The last two are here for a different reason: Richard Mayer and John Sweller are the only names on this list whose research is about the screen you are building.</p>
+
+          <div class="thinkers">
+<button class="thinker" type="button" data-pop="sheet-vygotsky"><span class="thinker-n" data-en="Lev Vygotsky" data-ar="ليف فيجوتسكي">Lev Vygotsky</span><span class="thinker-t" data-en="Learning happens with help before it happens alone" data-ar="التعلُّم يحدث بمساعدة قبل أن يحدث وحده">Learning happens with help before it happens alone</span><span class="thinker-go" data-en="Read the cheat sheet" data-ar="اقرأ بطاقة التعريف">Read the cheat sheet</span></button>
+<button class="thinker" type="button" data-pop="sheet-piaget"><span class="thinker-n" data-en="Jean Piaget" data-ar="جان بياجيه">Jean Piaget</span><span class="thinker-t" data-en="The example has to arrive before the rule" data-ar="المثال يجب أن يأتي قبل القاعدة">The example has to arrive before the rule</span><span class="thinker-go" data-en="Read the cheat sheet" data-ar="اقرأ بطاقة التعريف">Read the cheat sheet</span></button>
+<button class="thinker" type="button" data-pop="sheet-bloom"><span class="thinker-n" data-en="Benjamin Bloom" data-ar="بنيامين بلوم">Benjamin Bloom</span><span class="thinker-t" data-en="The verb in your objective decides the task" data-ar="الفعل في هدفك هو ما يحدد المهمة">The verb in your objective decides the task</span><span class="thinker-go" data-en="Read the cheat sheet" data-ar="اقرأ بطاقة التعريف">Read the cheat sheet</span></button>
+<button class="thinker" type="button" data-pop="sheet-bandura"><span class="thinker-n" data-en="Albert Bandura" data-ar="ألبرت باندورا">Albert Bandura</span><span class="thinker-t" data-en="They copy what they watch, then believe they can do it" data-ar="يقلّدون ما يشاهدونه، ثم يصدّقون أنهم قادرون">They copy what they watch, then believe they can do it</span><span class="thinker-go" data-en="Read the cheat sheet" data-ar="اقرأ بطاقة التعريف">Read the cheat sheet</span></button>
+<button class="thinker" type="button" data-pop="sheet-krashen"><span class="thinker-n" data-en="Stephen Krashen" data-ar="ستيفن كراشن">Stephen Krashen</span><span class="thinker-t" data-en="Understandable language, just above where they are" data-ar="لغة مفهومة، أعلى قليلًا من مستواهم">Understandable language, just above where they are</span><span class="thinker-go" data-en="Read the cheat sheet" data-ar="اقرأ بطاقة التعريف">Read the cheat sheet</span></button>
+<button class="thinker" type="button" data-pop="sheet-goleman"><span class="thinker-n" data-en="Daniel Goleman" data-ar="دانيال جولمان">Daniel Goleman</span><span class="thinker-t" data-en="A class that feels safe is a class that answers" data-ar="الفصل الذي يشعر بالأمان فصلٌ يجيب">A class that feels safe is a class that answers</span><span class="thinker-go" data-en="Read the cheat sheet" data-ar="اقرأ بطاقة التعريف">Read the cheat sheet</span></button>
+<button class="thinker" type="button" data-pop="sheet-mayer"><span class="thinker-n" data-en="Richard Mayer" data-ar="ريتشارد ماير">Richard Mayer</span><span class="thinker-t" data-en="The research that is actually about slides" data-ar="البحث الذي يتناول الشرائح فعلًا">The research that is actually about slides</span><span class="thinker-go" data-en="Read the cheat sheet" data-ar="اقرأ بطاقة التعريف">Read the cheat sheet</span></button>
+<button class="thinker" type="button" data-pop="sheet-sweller"><span class="thinker-n" data-en="John Sweller" data-ar="جون سويلر">John Sweller</span><span class="thinker-t" data-en="Working memory is small; one idea per slide" data-ar="الذاكرة العاملة صغيرة؛ فكرة واحدة لكل شريحة">Working memory is small; one idea per slide</span><span class="thinker-go" data-en="Read the cheat sheet" data-ar="اقرأ بطاقة التعريف">Read the cheat sheet</span></button>
+</div>
+<div hidden id="sheet-vygotsky"><p class="pop-eyebrow" data-en="Cheat sheet · 1896–1934" data-ar="بطاقة تعريف · ١٨٩٦–١٩٣٤">Cheat sheet · 1896–1934</p><h3 data-en="Lev Vygotsky" data-ar="ليف فيجوتسكي">Lev Vygotsky</h3><p class="pop-tag" data-en="Learning happens with help before it happens alone" data-ar="التعلُّم يحدث بمساعدة قبل أن يحدث وحده">Learning happens with help before it happens alone</p><dl class="sheet"><dt data-en="Who he was" data-ar="من هو">Who he was</dt><dd data-en="A Soviet psychologist who died at 37 and whose work only reached the West in the 1960s. He studied how children think when an adult or a stronger classmate is beside them." data-ar="عالم نفس سوفييتي مات في السابعة والثلاثين، ولم يصل عمله إلى الغرب إلا في الستينيات. درس كيف يفكّر الطفل حين يجلس إلى جانبه بالغ أو زميل أقوى منه.">A Soviet psychologist who died at 37 and whose work only reached the West in the 1960s. He studied how children think when an adult or a stronger classmate is beside them.</dd><dt data-en="The core idea" data-ar="الفكرة الأساسية">The core idea</dt><dd data-en="The zone of proximal development: the distance between what a learner can do alone and what the same learner can do with support. Teaching aims at that gap, not below it and not far above it. Support is temporary and is withdrawn as the learner takes over — what later writers called scaffolding." data-ar="منطقة النمو القريبة: المسافة بين ما يستطيع المتعلم أداءه وحده وما يستطيع أداءه نفسه بمساعدة. والتدريس يستهدف هذه المسافة، لا ما دونها ولا ما يعلوها كثيرًا. والمساعدة مؤقتة تُرفع تدريجيًا حين يتولى المتعلم الأمر — وهو ما سمّاه اللاحقون «السقالات».">The zone of proximal development: the distance between what a learner can do alone and what the same learner can do with support. Teaching aims at that gap, not below it and not far above it. Support is temporary and is withdrawn as the learner takes over — what later writers called scaffolding.</dd><dt data-en="In the classroom" data-ar="في الفصل">In the classroom</dt><dd data-en="Model it, then do it together, then let them do it alone. Talk comes before writing: pair discussion is not a break from the lesson, it is where the thinking is built." data-ar="اعرض المثال، ثم أدِّه معهم، ثم اتركهم يؤدونه وحدهم. والكلام يأتي قبل الكتابة: فحوار الزميلين ليس فاصلًا في الدرس، بل هو المكان الذي يُبنى فيه التفكير.">Model it, then do it together, then let them do it alone. Talk comes before writing: pair discussion is not a break from the lesson, it is where the thinking is built.</dd><dt data-en="On your slides" data-ar="في شرائحك">On your slides</dt><dd data-en="Guided practice must have its own slide, and it must come before the individual task. Put the worked example on the slide, not in your head. A group slide needs roles and a product, or the talk has nothing to build." data-ar="التدريب الموجَّه يحتاج شريحة خاصة به، وموضعها قبل النشاط الفردي. وضع المثال المحلول على الشريحة، لا في رأسك. وشريحة العمل الجماعي تحتاج أدوارًا ومنتجًا، وإلا فلن يبني الكلام شيئًا.">Guided practice must have its own slide, and it must come before the individual task. Put the worked example on the slide, not in your head. A group slide needs roles and a product, or the talk has nothing to build.</dd></dl></div>
+<div hidden id="sheet-piaget"><p class="pop-eyebrow" data-en="Cheat sheet · 1896–1980" data-ar="بطاقة تعريف · ١٨٩٦–١٩٨٠">Cheat sheet · 1896–1980</p><h3 data-en="Jean Piaget" data-ar="جان بياجيه">Jean Piaget</h3><p class="pop-tag" data-en="The example has to arrive before the rule" data-ar="المثال يجب أن يأتي قبل القاعدة">The example has to arrive before the rule</p><dl class="sheet"><dt data-en="Who he was" data-ar="من هو">Who he was</dt><dd data-en="A Swiss psychologist who spent decades watching children reason — including his own three — and asking them why they answered as they did." data-ar="عالم نفس سويسري أمضى عقودًا يراقب تفكير الأطفال — ومن بينهم أبناؤه الثلاثة — ويسألهم لماذا أجابوا بما أجابوا.">A Swiss psychologist who spent decades watching children reason — including his own three — and asking them why they answered as they did.</dd><dt data-en="The core idea" data-ar="الفكرة الأساسية">The core idea</dt><dd data-en="Children are not small adults; they build knowledge in stages, fitting new experience into what they already have and reshaping their thinking when it will not fit. The mismatch is what drives learning. Most primary and lower-secondary learners reason from concrete cases before they can reason from abstract rules." data-ar="الأطفال ليسوا بالغين صغارًا؛ إنهم يبنون المعرفة على مراحل، فيُدخلون الخبرة الجديدة في ما لديهم، ويعيدون تشكيل تفكيرهم حين لا تدخل. وعدم التوافق هذا هو ما يدفع التعلُّم. ومعظم متعلمي المرحلتين الابتدائية والإعدادية يستدلّون من حالات محسوسة قبل أن يستدلّوا من قواعد مجرَّدة.">Children are not small adults; they build knowledge in stages, fitting new experience into what they already have and reshaping their thinking when it will not fit. The mismatch is what drives learning. Most primary and lower-secondary learners reason from concrete cases before they can reason from abstract rules.</dd><dt data-en="In the classroom" data-ar="في الفصل">In the classroom</dt><dd data-en="Give the concrete case first and let the rule be discovered from it. A definition handed over before any example is a sentence to memorise, not an idea to use." data-ar="أعطِ الحالة المحسوسة أولًا واترك القاعدة تُكتشف منها. فالتعريف الذي يُسلَّم قبل أي مثال جملةٌ تُحفظ، لا فكرةٌ تُستعمل.">Give the concrete case first and let the rule be discovered from it. A definition handed over before any example is a sentence to memorise, not an idea to use.</dd><dt data-en="On your slides" data-ar="في شرائحك">On your slides</dt><dd data-en="Order the explanation slides example → pattern → rule, never rule → example. One new idea per slide. For a class of eleven-year-olds a labelled diagram will do more work than a definition." data-ar="رتِّب شرائح الشرح: مثال ← نمط ← قاعدة، لا قاعدة ← مثال. وفكرة جديدة واحدة في كل شريحة. ولفصل من أبناء الحادية عشرة، يؤدي المخطط المُعنوَن عملًا أكبر من التعريف.">Order the explanation slides example → pattern → rule, never rule → example. One new idea per slide. For a class of eleven-year-olds a labelled diagram will do more work than a definition.</dd></dl></div>
+<div hidden id="sheet-bloom"><p class="pop-eyebrow" data-en="Cheat sheet · 1913–1999" data-ar="بطاقة تعريف · ١٩١٣–١٩٩٩">Cheat sheet · 1913–1999</p><h3 data-en="Benjamin Bloom" data-ar="بنيامين بلوم">Benjamin Bloom</h3><p class="pop-tag" data-en="The verb in your objective decides the task" data-ar="الفعل في هدفك هو ما يحدد المهمة">The verb in your objective decides the task</p><dl class="sheet"><dt data-en="Who he was" data-ar="من هو">Who he was</dt><dd data-en="An American educational psychologist who chaired the committee that classified educational objectives in 1956, and who later argued that almost all learners can reach mastery if they are given the time and the feedback." data-ar="عالم نفس تربوي أمريكي رأس اللجنة التي صنَّفت الأهداف التعليمية سنة ١٩٥٦، ثم رأى بعد ذلك أن جميع المتعلمين تقريبًا يستطيعون بلوغ التمكُّن إن أُعطوا الوقت والتغذية الراجعة.">An American educational psychologist who chaired the committee that classified educational objectives in 1956, and who later argued that almost all learners can reach mastery if they are given the time and the feedback.</dd><dt data-en="The core idea" data-ar="الفكرة الأساسية">The core idea</dt><dd data-en="Thinking tasks are not all the same size. Remember, understand, apply, analyse, evaluate, create — in the 2001 revision by Anderson and Krathwohl. An objective that says “understand” cannot be assessed by a task that only asks the class to remember." data-ar="مهام التفكير ليست كلها بحجم واحد: تذكُّر، وفهم، وتطبيق، وتحليل، وتقويم، وإنشاء — في مراجعة أندرسون وكراثوول سنة ٢٠٠١. والهدف الذي يقول «يفهم» لا يمكن قياسه بمهمة تطلب من الفصل أن يتذكّر فحسب.">Thinking tasks are not all the same size. Remember, understand, apply, analyse, evaluate, create — in the 2001 revision by Anderson and Krathwohl. An objective that says “understand” cannot be assessed by a task that only asks the class to remember.</dd><dt data-en="In the classroom" data-ar="في الفصل">In the classroom</dt><dd data-en="Write the objective with the verb you will actually assess, then build the task from that verb. Ladder your questions upward instead of asking eight questions from the same level." data-ar="اكتب الهدف بالفعل الذي ستقيسه فعلًا، ثم ابنِ المهمة من ذلك الفعل. واصعد بأسئلتك درجةً درجةً بدلًا من ثمانية أسئلة من المستوى نفسه.">Write the objective with the verb you will actually assess, then build the task from that verb. Ladder your questions upward instead of asking eight questions from the same level.</dd><dt data-en="On your slides" data-ar="في شرائحك">On your slides</dt><dd data-en="The objectives slide should carry the same verbs as your lesson plan, word for word. On the check-for-understanding slide, put the questions in rising order so the class can feel the climb." data-ar="شريحة الأهداف تحمل الأفعال نفسها الموجودة في خطة درسك، حرفًا بحرف. وفي شريحة التحقُّق من الفهم، رتِّب الأسئلة تصاعديًا حتى يشعر الفصل بالارتفاع.">The objectives slide should carry the same verbs as your lesson plan, word for word. On the check-for-understanding slide, put the questions in rising order so the class can feel the climb.</dd></dl></div>
+<div hidden id="sheet-bandura"><p class="pop-eyebrow" data-en="Cheat sheet · 1925–2021" data-ar="بطاقة تعريف · ١٩٢٥–٢٠٢١">Cheat sheet · 1925–2021</p><h3 data-en="Albert Bandura" data-ar="ألبرت باندورا">Albert Bandura</h3><p class="pop-tag" data-en="They copy what they watch, then believe they can do it" data-ar="يقلّدون ما يشاهدونه، ثم يصدّقون أنهم قادرون">They copy what they watch, then believe they can do it</p><dl class="sheet"><dt data-en="Who he was" data-ar="من هو">Who he was</dt><dd data-en="A Canadian-American psychologist at Stanford, best known for the Bobo doll experiments and for later putting the learner&#x27;s own belief in their ability at the centre of his theory." data-ar="عالم نفس كندي أمريكي في جامعة ستانفورد، أشهر ما عُرف به تجارب دمية بوبو، ثم وضع بعد ذلك إيمان المتعلم بقدرته في قلب نظريته.">A Canadian-American psychologist at Stanford, best known for the Bobo doll experiments and for later putting the learner&#x27;s own belief in their ability at the centre of his theory.</dd><dt data-en="The core idea" data-ar="الفكرة الأساسية">The core idea</dt><dd data-en="Much learning happens by watching someone else do it and seeing what follows — no direct reward to the learner required. And self-efficacy, the learner&#x27;s judgement of whether they can succeed, predicts how long they will persist when the work gets hard." data-ar="كثير من التعلُّم يحدث بمشاهدة غيرك يؤديه ورؤية ما يترتب على ذلك — دون حاجة إلى مكافأة مباشرة للمتعلم. ثم إن الكفاءة الذاتية، أي حكم المتعلم على قدرته على النجاح، تتنبأ بمدة صبره حين يصعب العمل.">Much learning happens by watching someone else do it and seeing what follows — no direct reward to the learner required. And self-efficacy, the learner&#x27;s judgement of whether they can succeed, predicts how long they will persist when the work gets hard.</dd><dt data-en="In the classroom" data-ar="في الفصل">In the classroom</dt><dd data-en="Demonstrate before you instruct. Let the class watch a classmate at their own level succeed, not only the teacher — a peer model is more convincing than an expert one. Break the skill into steps small enough to be finished." data-ar="اعرض قبل أن تشرح. واترك الفصل يرى زميلًا في مستواه ينجح، لا المعلم وحده — فالقدوة من الأقران أكثر إقناعًا من قدوة الخبير. وقسِّم المهارة خطوات صغيرة يمكن إتمامها.">Demonstrate before you instruct. Let the class watch a classmate at their own level succeed, not only the teacher — a peer model is more convincing than an expert one. Break the skill into steps small enough to be finished.</dd><dt data-en="On your slides" data-ar="في شرائحك">On your slides</dt><dd data-en="Add a worked-example slide the class watches before they try. Give every activity a success criterion written so a student can check it themselves — that is what turns finishing into confidence." data-ar="أضف شريحة مثال محلول يشاهدها الفصل قبل أن يحاول. وأعطِ كل نشاط معيار نجاح مكتوبًا بحيث يستطيع الطالب أن يتحقق منه بنفسه — فهذا ما يحوّل الإنجاز إلى ثقة.">Add a worked-example slide the class watches before they try. Give every activity a success criterion written so a student can check it themselves — that is what turns finishing into confidence.</dd></dl></div>
+<div hidden id="sheet-krashen"><p class="pop-eyebrow" data-en="Cheat sheet · b. 1941" data-ar="بطاقة تعريف · مولود ١٩٤١">Cheat sheet · b. 1941</p><h3 data-en="Stephen Krashen" data-ar="ستيفن كراشن">Stephen Krashen</h3><p class="pop-tag" data-en="Understandable language, just above where they are" data-ar="لغة مفهومة، أعلى قليلًا من مستواهم">Understandable language, just above where they are</p><dl class="sheet"><dt data-en="Who he was" data-ar="من هو">Who he was</dt><dd data-en="An American linguist at the University of Southern California whose account of second-language acquisition has shaped language teaching since the 1980s, and is still argued about." data-ar="لغوي أمريكي في جامعة جنوب كاليفورنيا، صاغ تصورًا لاكتساب اللغة الثانية شكَّل تعليم اللغات منذ الثمانينيات، ولا يزال محل نقاش.">An American linguist at the University of Southern California whose account of second-language acquisition has shaped language teaching since the 1980s, and is still argued about.</dd><dt data-en="The core idea" data-ar="الفكرة الأساسية">The core idea</dt><dd data-en="Language is acquired by understanding messages slightly beyond the learner&#x27;s current level — what he wrote as i+1 — not by studying rules about it. And anxiety works like a filter: a learner who is afraid of being wrong stops taking the language in." data-ar="تُكتسَب اللغة بفهم رسائل أعلى قليلًا من مستوى المتعلم الحالي — وهو ما كتبه i+1 — لا بدراسة القواعد عنها. والقلق يعمل كالمِصفاة: فالمتعلم الذي يخاف الخطأ يتوقف عن استقبال اللغة.">Language is acquired by understanding messages slightly beyond the learner&#x27;s current level — what he wrote as i+1 — not by studying rules about it. And anxiety works like a filter: a learner who is afraid of being wrong stops taking the language in.</dd><dt data-en="In the classroom" data-ar="في الفصل">In the classroom</dt><dd data-en="Fill the lesson with language they can almost understand, and let meaning come before form. Lower the stakes early so the quiet ones will speak." data-ar="املأ الدرس بلغة يكادون يفهمونها، واجعل المعنى قبل الشكل. واخفض المخاطرة مبكرًا حتى يتكلم الصامتون.">Fill the lesson with language they can almost understand, and let meaning come before form. Lower the stakes early so the quiet ones will speak.</dd><dt data-en="On your slides" data-ar="في شرائحك">On your slides</dt><dd data-en="Pitch the slide language a little above the class, and let the picture carry the meaning so the text can stay short. Do not open on a grammar rule — open on something they can understand and want to answer." data-ar="اجعل لغة الشريحة أعلى قليلًا من مستوى الفصل، واترك الصورة تحمل المعنى حتى يبقى النص قصيرًا. ولا تبدأ بقاعدة نحوية — بل بشيء يفهمونه ويريدون الإجابة عنه.">Pitch the slide language a little above the class, and let the picture carry the meaning so the text can stay short. Do not open on a grammar rule — open on something they can understand and want to answer.</dd></dl></div>
+<div hidden id="sheet-goleman"><p class="pop-eyebrow" data-en="Cheat sheet · b. 1946" data-ar="بطاقة تعريف · مولود ١٩٤٦">Cheat sheet · b. 1946</p><h3 data-en="Daniel Goleman" data-ar="دانيال جولمان">Daniel Goleman</h3><p class="pop-tag" data-en="A class that feels safe is a class that answers" data-ar="الفصل الذي يشعر بالأمان فصلٌ يجيب">A class that feels safe is a class that answers</p><dl class="sheet"><dt data-en="Who he was" data-ar="من هو">Who he was</dt><dd data-en="An American psychologist and science journalist whose 1995 book put emotional intelligence into ordinary language and into school policy." data-ar="عالم نفس وصحفي علمي أمريكي، أدخل كتابه سنة ١٩٩٥ «الذكاء العاطفي» إلى اللغة العادية وإلى سياسات المدارس.">An American psychologist and science journalist whose 1995 book put emotional intelligence into ordinary language and into school policy.</dd><dt data-en="The core idea" data-ar="الفكرة الأساسية">The core idea</dt><dd data-en="Recognising and handling emotion — your own and other people&#x27;s — is a set of learnable skills, not a fixed trait: self-awareness, self-regulation, motivation, empathy and social skill. It draws on Salovey and Mayer&#x27;s earlier research, and the strong claims about it are still debated." data-ar="التعرُّف على الانفعال والتعامل معه — انفعالك وانفعال الآخرين — مجموعة مهارات تُتعلَّم، لا سمة ثابتة: الوعي بالذات، وتنظيم الذات، والدافعية، والتعاطف، والمهارة الاجتماعية. وهي تستند إلى بحوث سالوفي وماير الأسبق، ولا تزال الدعاوى الكبيرة حولها محل نقاش.">Recognising and handling emotion — your own and other people&#x27;s — is a set of learnable skills, not a fixed trait: self-awareness, self-regulation, motivation, empathy and social skill. It draws on Salovey and Mayer&#x27;s earlier research, and the strong claims about it are still debated.</dd><dt data-en="In the classroom" data-ar="في الفصل">In the classroom</dt><dd data-en="Name feelings out loud, teach turn-taking as a skill, and make being wrong survivable. Thirty seconds of settling at the start buys more than it costs." data-ar="سمِّ الانفعالات بصوت مسموع، وعلِّم تبادل الأدوار مهارةً، واجعل الخطأ محتملًا. فثلاثون ثانية من التهيئة في البداية تُكسبك أكثر مما تكلّفك.">Name feelings out loud, teach turn-taking as a skill, and make being wrong survivable. Thirty seconds of settling at the start buys more than it costs.</dd><dt data-en="On your slides" data-ar="في شرائحك">On your slides</dt><dd data-en="Let the opening slide lower the stakes rather than test them. On a group slide, write down how to disagree, not only what to produce. End with a reflection slide the class answers for itself." data-ar="اجعل شريحة البداية تخفض المخاطرة لا تختبرهم. وفي شريحة العمل الجماعي، اكتب كيف يختلفون، لا ما يُنتجونه فقط. واختم بشريحة تأمُّل يجيب عنها الفصل لنفسه.">Let the opening slide lower the stakes rather than test them. On a group slide, write down how to disagree, not only what to produce. End with a reflection slide the class answers for itself.</dd></dl></div>
+<div hidden id="sheet-mayer"><p class="pop-eyebrow" data-en="Cheat sheet · b. 1947" data-ar="بطاقة تعريف · مولود ١٩٤٧">Cheat sheet · b. 1947</p><h3 data-en="Richard Mayer" data-ar="ريتشارد ماير">Richard Mayer</h3><p class="pop-tag" data-en="The research that is actually about slides" data-ar="البحث الذي يتناول الشرائح فعلًا">The research that is actually about slides</p><dl class="sheet"><dt data-en="Who he was" data-ar="من هو">Who he was</dt><dd data-en="An American educational psychologist at UC Santa Barbara who has spent thirty years running experiments on how people learn from words and pictures together. If you present anything on a screen, this is your evidence base." data-ar="عالم نفس تربوي أمريكي في جامعة كاليفورنيا سانتا باربرا، أمضى ثلاثين سنة يجري تجارب على كيفية تعلُّم الناس من الكلمات والصور معًا. وإن كنت تعرض أي شيء على شاشة، فهذا هو أساسك العلمي.">An American educational psychologist at UC Santa Barbara who has spent thirty years running experiments on how people learn from words and pictures together. If you present anything on a screen, this is your evidence base.</dd><dt data-en="The core idea" data-ar="الفكرة الأساسية">The core idea</dt><dd data-en="The cognitive theory of multimedia learning: people learn better from words and pictures together than from words alone — but only when the extra material is removed, the label sits next to the part it names, and the same words are not delivered twice at once. Reading your own bullet points aloud makes learning worse, not better." data-ar="نظرية التعلُّم متعدد الوسائط: يتعلم الناس من الكلمات والصور معًا أفضل من الكلمات وحدها — لكن بشرط حذف الزائد، ووضع التسمية إلى جانب الجزء الذي تسمّيه، وعدم تقديم الكلام نفسه مرتين في وقت واحد. وقراءة نقاطك بصوت عالٍ تُسيء إلى التعلُّم ولا تحسّنه.">The cognitive theory of multimedia learning: people learn better from words and pictures together than from words alone — but only when the extra material is removed, the label sits next to the part it names, and the same words are not delivered twice at once. Reading your own bullet points aloud makes learning worse, not better.</dd><dt data-en="In the classroom" data-ar="في الفصل">In the classroom</dt><dd data-en="Say more than the screen says. The screen is the caption; your voice is the explanation. Cut the decorative photograph, the background music and the animation that means nothing." data-ar="قل أكثر مما تقوله الشاشة. فالشاشة هي التعليق، وصوتك هو الشرح. واحذف الصورة الزخرفية، والموسيقى الخلفية، والحركة التي لا تعني شيئًا.">Say more than the screen says. The screen is the caption; your voice is the explanation. Cut the decorative photograph, the background music and the animation that means nothing.</dd><dt data-en="On your slides" data-ar="في شرائحك">On your slides</dt><dd data-en="Never write a sentence you intend to read out. Put each label on the diagram beside the thing it names, not in a legend underneath. Every image must do a job — if you cannot say what it teaches, delete it." data-ar="لا تكتب جملة تنوي قراءتها. وضع كل تسمية على المخطط إلى جانب ما تسمّيه، لا في مفتاح أسفله. وكل صورة تؤدي عملًا — فإن لم تستطع أن تقول ماذا تُعلِّم، فاحذفها.">Never write a sentence you intend to read out. Put each label on the diagram beside the thing it names, not in a legend underneath. Every image must do a job — if you cannot say what it teaches, delete it.</dd></dl></div>
+<div hidden id="sheet-sweller"><p class="pop-eyebrow" data-en="Cheat sheet · b. 1946" data-ar="بطاقة تعريف · مولود ١٩٤٦">Cheat sheet · b. 1946</p><h3 data-en="John Sweller" data-ar="جون سويلر">John Sweller</h3><p class="pop-tag" data-en="Working memory is small; one idea per slide" data-ar="الذاكرة العاملة صغيرة؛ فكرة واحدة لكل شريحة">Working memory is small; one idea per slide</p><dl class="sheet"><dt data-en="Who he was" data-ar="من هو">Who he was</dt><dd data-en="An Australian educational psychologist at the University of New South Wales who built cognitive load theory out of experiments on problem solving in the 1980s." data-ar="عالم نفس تربوي أسترالي في جامعة نيو ساوث ويلز، بنى نظرية الحمل المعرفي من تجارب على حل المشكلات في الثمانينيات.">An Australian educational psychologist at the University of New South Wales who built cognitive load theory out of experiments on problem solving in the 1980s.</dd><dt data-en="The core idea" data-ar="الفكرة الأساسية">The core idea</dt><dd data-en="Working memory holds only a few new items at a time. Some of the load is the material itself and cannot be removed; the rest comes from how it is presented, and that part is your responsibility. Splitting a learner&#x27;s attention between a diagram and a paragraph somewhere else costs them the lesson." data-ar="الذاكرة العاملة لا تحتفظ إلا بعناصر جديدة قليلة في الوقت الواحد. وبعض الحمل من المادة نفسها ولا يمكن إزالته، وأما الباقي فمن طريقة العرض، وهذا الجزء مسؤوليتك. وتشتيت انتباه المتعلم بين مخطط وفقرة في مكان آخر يُفقده الدرس.">Working memory holds only a few new items at a time. Some of the load is the material itself and cannot be removed; the rest comes from how it is presented, and that part is your responsibility. Splitting a learner&#x27;s attention between a diagram and a paragraph somewhere else costs them the lesson.</dd><dt data-en="In the classroom" data-ar="في الفصل">In the classroom</dt><dd data-en="Give beginners the worked example before the practice, not the practice first. As they get better, take the support away — the same help that carried a beginner slows an expert down." data-ar="أعطِ المبتدئين المثال المحلول قبل التدريب، لا التدريب أولًا. وحين يتحسّنون، اسحب المساعدة — فالمساعدة نفسها التي حملت المبتدئ تُبطئ المتقن.">Give beginners the worked example before the practice, not the practice first. As they get better, take the support away — the same help that carried a beginner slows an expert down.</dd><dt data-en="On your slides" data-ar="في شرائحك">On your slides</dt><dd data-en="One idea per slide, and split a heavy slide into two rather than shrinking the type. Keep a diagram and its labels on the same slide. Three to five short bullets, because a sixth one is not read." data-ar="فكرة واحدة في كل شريحة، وقسِّم الشريحة الثقيلة شريحتين بدلًا من تصغير الخط. وأبقِ المخطط وتسمياته في الشريحة نفسها. ومن ثلاث إلى خمس نقاط قصيرة، فالسادسة لا تُقرأ.">One idea per slide, and split a heavy slide into two rather than shrinking the type. Keep a diagram and its labels on the same slide. Three to five short bullets, because a sixth one is not read.</dd></dl></div>
+
+          <div class="hint">
+            <p style="margin:0" data-en-html="<b>Theory goes in the speaker notes, never on the slide.</b> A class of eleven-year-olds does not need to see the word “scaffolding”; they need the guided practice that scaffolding describes. Name the thinker for yourself, in the notes, as a reason the step is there — so that when a colleague or an inspector asks why your lesson is shaped this way, the answer is already written down. The master prompt enforces this, and so should you." data-ar-html="<b>النظرية مكانها ملاحظات المُقدِّم، لا الشريحة.</b> فصلٌ من أبناء الحادية عشرة لا يحتاج أن يرى كلمة «السقالات»، بل يحتاج التدريب الموجَّه الذي تصفه السقالات. سمِّ المفكر لنفسك، في الملاحظات، سببًا لوجود الخطوة — حتى إذا سألك زميل أو مشرف: لماذا صيغ درسك هكذا؟ يكون الجواب مكتوبًا سلفًا. والأمر الرئيسي يفرض هذا، وكذلك أنت افرضه."><b>Theory goes in the speaker notes, never on the slide.</b> A class of eleven-year-olds does not need to see the word “scaffolding”; they need the guided practice that scaffolding describes. Name the thinker for yourself, in the notes, as a reason the step is there — so that when a colleague or an inspector asks why your lesson is shaped this way, the answer is already written down. The master prompt enforces this, and so should you.</p>
+          </div>
+        </div>
+
+        <!-- ============ PART 6 · THE CHECKS ============ -->
+        <div class="block" id="check">
+          <h2 class="display" data-en="Part 6 · Check the deck against your lesson plan" data-ar="الجزء السادس · راجع العرض مقابل خطة درسك">Part 6 · Check the deck against your lesson plan</h2>
+          <p class="sub" data-en="Nine checks, with the plan open beside the deck. The presentation is not finished until all nine pass." data-ar="تسع مراجعات، والخطة مفتوحة إلى جانب العرض. ولا يكتمل العرض حتى تنجح التسع كلها.">Nine checks, with the plan open beside the deck. The presentation is not finished until all nine pass.</p>
+
+          <p data-en="Put your lesson plan on one side of the screen and the deck on the other, and work down this list. It takes about five minutes, and it is the difference between a deck that looks professional and a deck that teaches your lesson." data-ar="ضع خطة درسك في جهة من الشاشة والعرض في الجهة الأخرى، وامضِ في هذه القائمة. تستغرق نحو خمس دقائق، وهي الفارق بين عرض يبدو احترافيًا وعرض يُدرِّس درسك.">Put your lesson plan on one side of the screen and the deck on the other, and work down this list. It takes about five minutes, and it is the difference between a deck that looks professional and a deck that teaches your lesson.</p>
+
+          <ul class="ticks is-do">
+            <li data-en="Every stage of your lesson plan has at least one slide, and the stages are in your order." data-ar="لكل مرحلة من خطة درسك شريحة واحدة على الأقل، والمراحل بترتيبك أنت.">Every stage of your lesson plan has at least one slide, and the stages are in your order.</li>
+            <li data-en="The number of slides is the number you asked for." data-ar="عدد الشرائح هو العدد الذي طلبته.">The number of slides is the number you asked for.</li>
+            <li data-en="The minutes written on the slides add up to the length of your period." data-ar="الدقائق المكتوبة على الشرائح مجموعها يساوي مدة حصتك.">The minutes written on the slides add up to the length of your period.</li>
+            <li data-en="Nothing appears that is not on the book pages you attached — and whatever was missing is marked, not invented." data-ar="لا يظهر شيء ليس في صفحات الكتاب التي أرفقتها — وما كان ناقصًا مكتوب أنه ناقص، لا مختلقًا.">Nothing appears that is not on the book pages you attached — and whatever was missing is marked, not invented.</li>
+            <li data-en="No slide says “add an image”. Every visual is described, and every picture on the finished slide does a job you can name." data-ar="لا شريحة مكتوب فيها «أضف صورة». وكل عنصر بصري موصوف، وكل صورة على الشريحة النهائية تؤدي عملًا تستطيع أن تسمّيه.">No slide says “add an image”. Every visual is described, and every picture on the finished slide does a job you can name.</li>
+            <li data-en="Every slide has speaker notes, and no bullet is a sentence you were planning to read out." data-ar="لكل شريحة ملاحظات مُقدِّم، ولا نقطة منها جملة كنت تنوي قراءتها بصوتك.">Every slide has speaker notes, and no bullet is a sentence you were planning to read out.</li>
+            <li data-en="Guided practice comes before the individual task, and the individual task before the free practice." data-ar="التدريب الموجَّه قبل النشاط الفردي، والنشاط الفردي قبل التدريب الحر.">Guided practice comes before the individual task, and the individual task before the free practice.</li>
+            <li data-en="Every activity has a time, a product the student hands in, and a success criterion the student can check alone." data-ar="لكل نشاط وقت، ومنتج يسلّمه الطالب، ومعيار نجاح يستطيع الطالب أن يتحقق منه وحده.">Every activity has a time, a product the student hands in, and a success criterion the student can check alone.</li>
+            <li data-en="The last slide gives the class one clear next step, not a thank-you." data-ar="الشريحة الأخيرة تعطي الفصل خطوة تالية واحدة واضحة، لا كلمة شكر.">The last slide gives the class one clear next step, not a thank-you.</li>
+          </ul>
+
+          <h3 data-en="What the first generation usually gets wrong" data-ar="ما يخطئ فيه الإنشاء الأول عادةً">What the first generation usually gets wrong</h3>
+          <p data-en="This is not a warning about bad tools. These four things happen with good prompts and good tools, and the only reason you will catch them is that you are looking for them." data-ar="هذا ليس تحذيرًا من أدوات سيئة. فهذه الأمور الأربعة تحدث مع برومبتات جيدة وأدوات جيدة، ولن تكتشفها إلا لأنك تبحث عنها.">This is not a warning about bad tools. These four things happen with good prompts and good tools, and the only reason you will catch them is that you are looking for them.</p>
+          <ul class="outputs is-quiet">
+            <li data-en-html="It marries two stages into one slide<small>The warm-up and the objectives are the usual pair, and the exit ticket gets folded into the summary. Split them back apart — a stage without its own slide will be skipped in the room.</small>" data-ar-html="يدمج مرحلتين في شريحة واحدة<small>التهيئة والأهداف هما الزوج المعتاد، وبطاقة الخروج تُدمَج في الملخص. أعِد الفصل بينها — فالمرحلة التي لا شريحة لها ستُتخطّى في الفصل.</small>">It marries two stages into one slide<small>The warm-up and the objectives are the usual pair, and the exit ticket gets folded into the summary. Split them back apart — a stage without its own slide will be skipped in the room.</small></li>
+            <li data-en-html="It writes bullets you were meant to say out loud<small>Full sentences on the slide mean you and the screen are competing to say the same thing. Cut each one back to a caption of a few words and move the sentence into the speaker notes.</small>" data-ar-html="يكتب نقاطًا كان عليك أن تقولها بصوتك<small>الجمل الكاملة على الشريحة تعني أنك والشاشة تتنافسان على قول الشيء نفسه. اقطع كل واحدة إلى تعليق من كلمات قليلة، وانقل الجملة إلى ملاحظات المُقدِّم.</small>">It writes bullets you were meant to say out loud<small>Full sentences on the slide mean you and the screen are competing to say the same thing. Cut each one back to a caption of a few words and move the sentence into the speaker notes.</small></li>
+            <li data-en-html="It slips in an example your book pages do not contain<small>Usually a good example, which is what makes it dangerous. If it is not on the pages you attached, either delete it or say in the lesson that it is yours, not the book’s.</small>" data-ar-html="يُدخل مثالًا لا تحتوي عليه صفحات كتابك<small>ويكون مثالًا جيدًا عادةً، وهذا ما يجعله خطرًا. فإن لم يكن في الصفحات التي أرفقتها، فاحذفه أو قل في الدرس إنه مثالك أنت لا مثال الكتاب.</small>">It slips in an example your book pages do not contain<small>Usually a good example, which is what makes it dangerous. If it is not on the pages you attached, either delete it or say in the lesson that it is yours, not the book’s.</small></li>
+            <li data-en-html="Generated pictures come back with broken words inside them<small>AI image tools still cannot spell reliably inside a picture. Choose an image with no writing in it and put your words on top as real text, where you can correct them and a screen reader can find them.</small>" data-ar-html="الصور المولَّدة تعود بكلمات مشوَّهة داخلها<small>أدوات توليد الصور لا تزال غير موثوقة في كتابة الحروف داخل الصورة. اختر صورة لا كتابة فيها، وضع كلماتك فوقها نصًّا حقيقيًا، حيث تستطيع تصحيحها ويستطيع قارئ الشاشة أن يجدها.</small>">Generated pictures come back with broken words inside them<small>AI image tools still cannot spell reliably inside a picture. Choose an image with no writing in it and put your words on top as real text, where you can correct them and a screen reader can find them.</small></li>
+          </ul>
+        </div>
+
+        <!-- ============ PART 7 · DELIVER ============ -->
+        <div class="block" id="deliver">
+          <h2 class="display" data-en="Part 7 · Edit, export and present" data-ar="الجزء السابع · عدِّل وصدِّر وقدِّم">Part 7 · Edit, export and present</h2>
+          <p class="sub" data-en="The last twenty minutes, and the ones that decide what the class actually sees." data-ar="العشرون دقيقة الأخيرة، وهي التي تحدد ما يراه الفصل فعلًا.">The last twenty minutes, and the ones that decide what the class actually sees.</p>
+
+          <ol class="numbered">
+            <li><b data-en="Fix the slides the checks caught" data-ar="أصلِح الشرائح التي أوقفتها المراجعة">Fix the slides the checks caught</b><span data-en="Split the merged stage, cut the read-aloud bullets, delete or credit the invented example, replace the picture with broken writing in it. Do the teaching fixes before any design fixes." data-ar="افصل المرحلة المدموجة، واقطع النقاط المقروءة بصوتك، واحذف المثال المختلق أو انسبه إلى نفسك، واستبدل الصورة التي فيها كتابة مشوَّهة. وأجرِ إصلاحات التدريس قبل أي إصلاح للتصميم.">Split the merged stage, cut the read-aloud bullets, delete or credit the invented example, replace the picture with broken writing in it. Do the teaching fixes before any design fixes.</span></li>
+            <li><b data-en="Put your school’s identity on it" data-ar="ضع هوية مدرستك عليه">Put your school’s identity on it</b><span data-en="Your theme, your colours, your logo in the same corner on every slide. Set it once in the theme rather than pasting the logo onto each card." data-ar="تصميمك، وألوانك، وشعارك في الزاوية نفسها في كل شريحة. اضبطه مرة واحدة في التصميم بدلًا من لصق الشعار على كل بطاقة.">Your theme, your colours, your logo in the same corner on every slide. Set it once in the theme rather than pasting the logo onto each card.</span></li>
+            <li><b data-en="Read it from the back of your own classroom" data-ar="اقرأه من آخر فصلك أنت">Read it from the back of your own classroom</b><span data-en="Open the deck on the projector you will actually use and walk to the back wall. Type that is comfortable on a laptop disappears at four metres, and a low-contrast theme that looked elegant at your desk becomes unreadable under classroom lights." data-ar="افتح العرض على جهاز العرض الذي ستستخدمه فعلًا، وامشِ إلى الحائط الخلفي. فالخط المريح على حاسوب محمول يختفي على بُعد أربعة أمتار، والتصميم منخفض التباين الذي بدا أنيقًا على مكتبك يصير غير مقروء تحت مصابيح الفصل.">Open the deck on the projector you will actually use and walk to the back wall. Type that is comfortable on a laptop disappears at four metres, and a low-contrast theme that looked elegant at your desk becomes unreadable under classroom lights.</span></li>
+            <li><b data-en="Export what you need, and check the export" data-ar="صدِّر ما تحتاجه، وتحقق من الملف المصدَّر">Export what you need, and check the export</b><span data-en="A PowerPoint file if your school requires .pptx, a PDF for the lesson folder, and the link for students who were absent. Then open the exported file and look for three things: that the layouts survived, that the table borders and the pastel fills are still there, and that your speaker notes came with it. Notes are the part that most often does not travel. On an Arabic deck, do one thing before you export anything else: export a single test slide, open it, and look at whether the letters are still joined and still running right to left. Check it in the PDF and in the PowerPoint file, because they can fail differently. One test slide costs a minute; a whole deck exported wrong costs the lesson." data-ar="ملف PowerPoint إن كانت مدرستك تشترط pptx.، وملف PDF لملف الدرس، والرابط للطلاب الغائبين. ثم افتح الملف المصدَّر وابحث عن ثلاثة أمور: هل نجت التخطيطات، وهل بقيت حدود الجداول والتعبئات الباستيلية، وهل جاءت ملاحظات المُقدِّم معه. فالملاحظات هي الجزء الذي لا ينتقل في أكثر الأحيان. وفي العرض العربي افعل أمرًا واحدًا قبل أن تصدّر أي شيء آخر: صدِّر شريحة تجريبية واحدة، وافتحها، وانظر هل بقيت الحروف متصلة وما زالت تسير من اليمين إلى اليسار. وافحصها في ملف PDF وفي ملف PowerPoint، فقد يفشل كل منهما على نحو مختلف. فشريحة تجريبية واحدة تكلّف دقيقة، أما عرض كامل صُدِّر خطأً فيكلّف الدرس.">A PowerPoint file if your school requires .pptx, a PDF for the lesson folder, and the link for students who were absent. Then open the exported file and look for three things: that the layouts survived, that the table borders and the pastel fills are still there, and that your speaker notes came with it. Notes are the part that most often does not travel. On an Arabic deck, do one thing before you export anything else: export a single test slide, open it, and look at whether the letters are still joined and still running right to left. Check it in the PDF and in the PowerPoint file, because they can fail differently. One test slide costs a minute; a whole deck exported wrong costs the lesson.</span></li>
+            <li><b data-en="Teach from the notes, not from the screen" data-ar="درِّس من الملاحظات لا من الشاشة">Teach from the notes, not from the screen</b><span data-en="The slide is the caption; you are the explanation. If you find yourself reading the bullets to the class, the slide has too many words on it — and you now know exactly which line to cut before next lesson." data-ar="الشريحة هي التعليق، وأنت الشرح. فإن وجدت نفسك تقرأ النقاط للفصل، فالشريحة فيها كلمات أكثر من اللازم — وأنت تعرف الآن أي سطر تحذفه قبل الدرس القادم.">The slide is the caption; you are the explanation. If you find yourself reading the bullets to the class, the slide has too many words on it — and you now know exactly which line to cut before next lesson.</span></li>
+          </ol>
+        </div>
+
+        <!-- ============ APPS ============ -->
+        <div class="block" id="apps">
+          <h2 class="display" data-en="Apps used in this session" data-ar="التطبيقات المستخدمة في هذه المحاضرة">Apps used in this session</h2>
+          <p class="sub" data-en="One built into the course, three you open in a browser." data-ar="واحد مبني داخل الدورة، وثلاثة تفتحها في المتصفح.">One built into the course, three you open in a browser.</p>
+
+          <div class="apps">
+
+            <div class="app">
+              <span class="app-badge" data-en="Included in the course" data-ar="مضمَّن في الدورة">Included in the course</span>
+              <h3 data-en="Presentation Prompt Builder" data-ar="منشئ برومبت العرض التقديمي">Presentation Prompt Builder</h3>
+              <p data-en="Answer 22 questions and it writes the whole master prompt in your language, with the route you chose built into the last line. It also holds the eight thinker cheat sheets. Works offline from this folder." data-ar="أجب عن ٢٢ سؤالًا فيكتب لك الأمر الرئيسي كاملًا بلغتك، مع المسار الذي اخترته مبنيًّا في آخر سطر. ويحمل كذلك بطاقات التعريف الثماني للمفكرين. يعمل بلا اتصال من هذا المجلد.">Answer 22 questions and it writes the whole master prompt in your language, with the route you chose built into the last line. It also holds the eight thinker cheat sheets. Works offline from this folder.</p>
+              <p class="app-url">apps/app-gamma-presentation-builder.html</p>
+              <a class="btn btn-primary" href="apps/app-gamma-presentation-builder.html">
+                <span data-en="Open the builder" data-ar="افتح المنشئ">Open the builder</span>
+                <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>Gamma</h3>
+              <p data-en="Where the deck is built. Paste in the text your AI wrote, read the outline before it generates, choose a theme, and edit any card in place. It also exports to PowerPoint and PDF." data-ar="حيث يُبنى العرض. الصق النص الذي كتبه ذكاؤك الاصطناعي، واقرأ المخطط قبل الإنشاء، واختر تصميمًا، وعدِّل أي بطاقة في موضعها. ويصدّر كذلك إلى PowerPoint وPDF.">Where the deck is built. Paste in the text your AI wrote, read the outline before it generates, choose a theme, and edit any card in place. It also exports to PowerPoint and PDF.</p>
+              <p class="app-url">https://gamma.app</p>
+              <a class="btn btn-primary" href="https://gamma.app" target="_blank" rel="noopener">
+                <span data-en="Open Gamma" data-ar="افتح Gamma">Open Gamma</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>ChatGPT</h3>
+              <p data-en="Where the deck text is written. Attach the master prompt, your lesson plan and your book pages in one message. Connect the Gamma app to your account and it can also create the presentation in Gamma without leaving the conversation." data-ar="حيث يُكتب نص العرض. أرفق الأمر الرئيسي وخطة درسك وصفحات كتابك في رسالة واحدة. واربط تطبيق Gamma بحسابك فيستطيع كذلك أن ينشئ العرض في Gamma دون أن يخرج من المحادثة.">Where the deck text is written. Attach the master prompt, your lesson plan and your book pages in one message. Connect the Gamma app to your account and it can also create the presentation in Gamma without leaving the conversation.</p>
+              <p class="app-url">https://chatgpt.com</p>
+              <a class="btn btn-primary" href="https://chatgpt.com" target="_blank" rel="noopener">
+                <span data-en="Open ChatGPT" data-ar="افتح ChatGPT">Open ChatGPT</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+            <div class="app">
+              <span class="app-badge is-ext" data-en="External tool" data-ar="أداة خارجية">External tool</span>
+              <h3>Google Gemini</h3>
+              <p data-en="Better at reading a photograph of a book page, which matters when your source is two pictures of a student book. It can also build the slides itself in Canvas and export them to Google Slides." data-ar="أفضل في قراءة صورة صفحة من كتاب، وهذا مهم حين يكون مصدرك صورتين من كتاب الطالب. ويستطيع كذلك أن يبني الشرائح بنفسه في Canvas ويصدّرها إلى Google Slides.">Better at reading a photograph of a book page, which matters when your source is two pictures of a student book. It can also build the slides itself in Canvas and export them to Google Slides.</p>
+              <p class="app-url">https://gemini.google.com</p>
+              <a class="btn btn-primary" href="https://gemini.google.com" target="_blank" rel="noopener">
+                <span data-en="Open Gemini" data-ar="افتح Gemini">Open Gemini</span>
+                <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+              </a>
+            </div>
+
+          </div>
+
+          <div class="callout">
+            <p style="margin:0"><b data-en="Order of use: " data-ar="ترتيب الاستخدام: ">Order of use: </b><span data-en="build the prompt in the builder, run it in ChatGPT or Gemini with your lesson plan and book pages attached, paste the deck text into Gamma, then come back to Part 6 with the plan open beside the deck." data-ar="ابنِ البرومبت في المنشئ، وشغِّله في ChatGPT أو Gemini مع إرفاق خطة درسك وصفحات كتابك، والصق نص العرض في Gamma، ثم ارجع إلى الجزء السادس والخطة مفتوحة إلى جانب العرض.">build the prompt in the builder, run it in ChatGPT or Gemini with your lesson plan and book pages attached, paste the deck text into Gamma, then come back to Part 6 with the plan open beside the deck.</span></p>
+          </div>
+        </div>
+
+        <!-- ============ END OF LEVEL ============ -->
+        <div class="block" id="finish">
+          <h2 class="display" data-en="You have finished Level 1" data-ar="لقد أتممت المستوى الأول">You have finished Level 1</h2>
+          <p class="sub" data-en="Five sessions, and five things you can now do for any lesson you teach." data-ar="خمس محاضرات، وخمسة أمور تستطيع الآن أن تفعلها لأي درس تُدرِّسه.">Five sessions, and five things you can now do for any lesson you teach.</p>
+
+          <p data-en="Everything in this level was built from one frame and one lesson. You wrote a strong prompt, planned the lesson, built the exam, marked a student’s paper and wrote home about it, and today you turned the plan into the slides. The next time you teach a new unit, you can do all five in an afternoon — and every document will agree with the others, because they all come from the same plan." data-ar="كل ما في هذا المستوى بُني من إطار واحد ودرس واحد. كتبت أمرًا قويًّا، وخطّطت الدرس، وبنيت الاختبار، وصحّحت ورقة طالبة وكتبت إلى بيتها، ثم حوّلت اليوم الخطة إلى شرائح. وفي المرة القادمة التي تُدرِّس فيها وحدة جديدة، تستطيع أن تؤدي الخمسة كلها في عصر يوم واحد — وستتفق كل المستندات بعضها مع بعض، لأنها كلها تأتي من الخطة نفسها.">Everything in this level was built from one frame and one lesson. You wrote a strong prompt, planned the lesson, built the exam, marked a student’s paper and wrote home about it, and today you turned the plan into the slides. The next time you teach a new unit, you can do all five in an afternoon — and every document will agree with the others, because they all come from the same plan.</p>
+
+          <h3 data-en="What you can hand in" data-ar="ما تستطيع أن تسلّمه">What you can hand in</h3>
+          <ol class="outputs">
+            <li data-en-html="A strong prompt in the RCTF frame<small>Session 1 — role, context, task, format, for text and for pictures.</small>" data-ar-html="أمر قوي في إطار RCTF<small>المحاضرة الأولى — الدور والسياق والمهمة والتنسيق، للنص وللصور.</small>">A strong prompt in the RCTF frame<small>Session 1 — role, context, task, format, for text and for pictures.</small></li>
+            <li data-en-html="A full lesson plan on your school’s template<small>Session 2 — built from the book pages, with the thirteen things a plan needs.</small>" data-ar-html="خطة درس كاملة على نموذج مدرستك<small>المحاضرة الثانية — مبنية من صفحات الكتاب، وفيها الأمور الثلاثة عشر التي تحتاجها الخطة.</small>">A full lesson plan on your school’s template<small>Session 2 — built from the book pages, with the thirteen things a plan needs.</small></li>
+            <li data-en-html="An exam with its answer key and mark scheme<small>Session 3 — matched to a blueprint, in your school’s house style.</small>" data-ar-html="اختبار بمفتاح إجابته ومخطط درجاته<small>المحاضرة الثالثة — مطابق لمخطط، وبأسلوب مدرستك.</small>">An exam with its answer key and mark scheme<small>Session 3 — matched to a blueprint, in your school’s house style.</small></li>
+            <li data-en-html="A corrected paper, an action plan and a parents report<small>Session 4 — every sentence traceable back to a question number.</small>" data-ar-html="ورقة مصحَّحة وخطة علاجية وتقرير أولياء أمور<small>المحاضرة الرابعة — كل جملة تُرجَع إلى رقم سؤال.</small>">A corrected paper, an action plan and a parents report<small>Session 4 — every sentence traceable back to a question number.</small></li>
+            <li class="is-new" data-en-html="A presentation that follows the plan stage by stage<small>Session 5 — checked against the plan, exported for the projector.</small>" data-ar-html="عرض تقديمي يتبع الخطة مرحلةً مرحلة<small>المحاضرة الخامسة — مراجَع مقابل الخطة، ومصدَّر لجهاز العرض.</small>">A presentation that follows the plan stage by stage<small>Session 5 — checked against the plan, exported for the projector.</small></li>
+          </ol>
+        </div>
+
+        <!-- Pager -->
+        <nav class="pager">
+          <a class="btn btn-outline" href="session4.html">
+            <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            <span data-en="Back: Session 4 · Assessment and feedback" data-ar="السابق: المحاضرة ٤ · التقييم والتغذية الراجعة">Back: Session 4 · Assessment and feedback</span>
+          </a>
+          <a class="btn btn-primary" href="index.html#sessions">
+            <span data-en="Back to all five sessions" data-ar="العودة إلى المحاضرات الخمس">Back to all five sessions</span>
+            <svg class="ic flip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <img src="assets/logo-reversed.png" alt="Edulixa 360">
+    <p data-en="Session 5 · Creating educational presentations with Gamma — AI Masterclass for Teachers, Level 1." data-ar="المحاضرة ٥ · إنشاء العروض التعليمية باستخدام Gamma — الماستر كلاس للمعلمين بالذكاء الاصطناعي، المستوى الأول.">Session 5 · Creating educational presentations with Gamma — AI Masterclass for Teachers, Level 1.</p>
+    <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+  </div>
+</footer>
+
+<div class="backdock"><a class="backlink" href="index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="All sessions" data-ar="كل المحاضرات">All sessions</span></a></div>
+
+<!-- The single popup card every cheat sheet is poured into -->
+<dialog class="pop" id="pop">
+  <div class="pop-card">
+    <button class="pop-close" type="button" data-pop-close data-en-label="Close" data-ar-label="إغلاق" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="pop-body"></div>
+  </div>
+</dialog>
+
+<script src="assets/edulixa.js"></script>
+</body>
+</html>

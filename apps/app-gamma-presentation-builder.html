@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-en="Presentation Prompt Builder · Session 5 — Edulixa 360" data-ar="منشئ برومبت العرض التقديمي · المحاضرة ٥ — Edulixa 360">Presentation Prompt Builder · Session 5 — Edulixa 360</title>
+<style>
+:root{
+  --brand:#0F695D;
+  --brand-lift:oklch(0.735 0.088 180);
+  --bg:oklch(0.165 0.020 185);
+  --bg-2:oklch(0.200 0.024 185);
+  --surface:oklch(0.230 0.026 185);
+  --surface-2:oklch(0.272 0.028 185);
+  --line:oklch(0.335 0.028 185);
+  --line-soft:oklch(0.283 0.026 185);
+  --ink:oklch(0.968 0.008 185);
+  --ink-2:oklch(0.884 0.012 185);
+  --muted:oklch(0.822 0.018 185);
+  --accent:#EE3A23;
+  --accent-text:oklch(0.790 0.160 34);
+  --accent-dim:oklch(0.520 0.185 31);
+  --on-accent:oklch(0.170 0.032 185);
+  --signal:oklch(0.790 0.140 168);
+  --lamp:oklch(0.885 0.150 96);
+  --lamp-soft:oklch(0.885 0.150 96 / .14);
+  --sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --display:Anton,Impact,"Arial Narrow",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --ar:Cairo,"Segoe UI",Tahoma,system-ui,sans-serif;
+  --r-sm:8px; --r:12px; --r-md:14px; --r-lg:18px; --r-pill:999px;
+  --ease:cubic-bezier(0.4,0,0.2,1);
+  --shadow-lift:0 16px 40px rgba(0,0,0,.46);
+}
+@font-face{font-family:Anton;src:url(../assets/fonts/anton-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(../assets/fonts/inter-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Inter;src:url(../assets/fonts/inter-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:Inter;src:url(../assets/fonts/inter-latin-600-normal.woff2) format('woff2');font-weight:600;font-display:swap}
+@font-face{font-family:Inter;src:url(../assets/fonts/inter-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url(../assets/fonts/jetbrains-mono-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'JetBrains Mono';src:url(../assets/fonts/jetbrains-mono-latin-500-normal.woff2) format('woff2');font-weight:500;font-display:swap}
+@font-face{font-family:Cairo;src:url(../assets/fonts/cairo-arabic-400-normal.woff2) format('woff2');font-weight:400;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Cairo;src:url(../assets/fonts/cairo-arabic-600-normal.woff2) format('woff2');font-weight:600;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Cairo;src:url(../assets/fonts/cairo-arabic-700-normal.woff2) format('woff2');font-weight:700;font-display:swap;unicode-range:U+0600-06FF,U+0750-077F,U+FB50-FDFF,U+FE70-FEFF}
+@font-face{font-family:Cairo;src:url(../assets/fonts/cairo-latin-400-normal.woff2) format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:Cairo;src:url(../assets/fonts/cairo-latin-700-normal.woff2) format('woff2');font-weight:700;font-display:swap}
+
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink-2);font-family:var(--sans);
+  font-size:17px;font-weight:500;line-height:1.65;-webkit-font-smoothing:antialiased}
+html[dir="rtl"] body{font-family:var(--ar);font-size:18px;line-height:1.9;font-weight:400}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.topbar{background:var(--bg-2);border-bottom:1px solid var(--line-soft);position:sticky;top:0;z-index:30}
+.topbar-in{max-width:1260px;margin-inline:auto;padding:12px 24px;display:flex;
+  align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:14px;min-width:0}
+.brand img{width:132px}
+.brand-tag{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brand-lift)}
+html[dir="rtl"] .brand-tag{font-family:var(--ar);letter-spacing:0;text-transform:none;font-size:14px;font-weight:700}
+.topbar-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+.btn{display:inline-flex;align-items:center;gap:9px;border:0;cursor:pointer;font-family:inherit;
+  font-size:15px;font-weight:600;padding:10px 18px;border-radius:var(--r-pill);
+  text-decoration:none;transition:all 160ms var(--ease)}
+.btn-ghost{background:var(--surface);color:var(--ink);border:1px solid var(--line)}
+.btn-ghost:hover{background:var(--surface-2);border-color:var(--brand-lift)}
+.btn-primary{background:var(--brand-lift);color:var(--on-accent)}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{filter:brightness(1.1)}
+.btn-outline{background:transparent;color:var(--brand-lift);border:1.5px solid var(--brand-lift)}
+.btn-outline:hover{background:var(--surface-2);color:var(--ink)}
+.btn .ic{width:17px;height:17px;flex:0 0 auto}
+
+.hero{padding:44px 0 34px;background:
+  radial-gradient(circle at 12% 0%,oklch(0.300 0.050 180 / .55),transparent 58%),var(--bg)}
+.wrap{max-width:1260px;margin-inline:auto;padding-inline:24px}
+.eyebrow{margin:0 0 12px;font-family:var(--mono);font-size:12px;font-weight:500;
+  letter-spacing:.18em;text-transform:uppercase;color:var(--accent-text)}
+html[dir="rtl"] .eyebrow{font-family:var(--ar);letter-spacing:0;text-transform:none;font-size:15px;font-weight:700}
+h1{margin:0 0 14px;font-family:var(--display);font-weight:400;letter-spacing:.01em;
+  font-size:clamp(34px,4.6vw,54px);line-height:1.02;color:var(--ink);max-width:22ch}
+html[dir="rtl"] h1{font-family:var(--ar);font-weight:700;line-height:1.3;letter-spacing:0}
+.lede{margin:0;max-width:62ch;font-size:18.5px;color:var(--ink-2)}
+
+main{padding:8px 0 60px}
+.cols{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:26px;align-items:start}
+@media (max-width:1000px){.cols{grid-template-columns:minmax(0,1fr)}}
+
+.panel{background:var(--surface);border:1px solid var(--line-soft);border-radius:var(--r-lg);padding:24px}
+.panel > h2{margin:0 0 6px;font-family:var(--display);font-weight:400;font-size:30px;
+  line-height:1.06;color:var(--ink)}
+html[dir="rtl"] .panel > h2{font-family:var(--ar);font-weight:700;line-height:1.35}
+.panel > .sub{margin:0 0 20px;color:var(--accent-text);font-size:16px;font-weight:600}
+.out-panel{position:sticky;top:78px}
+@media (max-width:1000px){.out-panel{position:static}}
+
+.fgroup{border:1px solid var(--line-soft);border-radius:var(--r-md);background:var(--bg-2);
+  margin:0 0 16px;padding:6px 18px 18px}
+.fgroup legend{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--brand-lift);padding-inline:8px}
+html[dir="rtl"] .fgroup legend{font-family:var(--ar);letter-spacing:0;text-transform:none;font-size:15px;font-weight:700}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:end}
+@media (max-width:620px){.fgrid{grid-template-columns:minmax(0,1fr)}}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.is-wide{grid-column:1 / -1}
+.flabel{font-size:14.5px;font-weight:600;color:var(--ink)}
+.fnote{margin:0 0 4px;font-size:14.5px;color:var(--muted);line-height:1.55}
+input[type=text],input[type=number],textarea,select{
+  width:100%;font-family:inherit;font-size:15.5px;font-weight:500;color:var(--ink);
+  background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:10px 13px;
+  transition:border-color 160ms var(--ease)}
+html[dir="rtl"] input,html[dir="rtl"] textarea,html[dir="rtl"] select{font-family:var(--ar)}
+textarea{resize:vertical;line-height:1.6}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--brand-lift);background:var(--bg-2)}
+input::placeholder,textarea::placeholder{color:var(--muted);opacity:.62}
+select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-inline-end:38px;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23bcd2ce' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");
+  background-repeat:no-repeat;background-position:right 13px center}
+html[dir="rtl"] select{background-position:left 13px center}
+select option{background:var(--bg-2);color:var(--ink)}
+.other-in{margin-top:8px}
+.fnote.is-after{margin:7px 0 0}
+
+.ticks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:8px}
+.tick{display:flex;align-items:flex-start;gap:9px;background:var(--bg);border:1px solid var(--line);
+  border-radius:var(--r);padding:9px 12px;font-size:15px;cursor:pointer;color:var(--ink-2)}
+.tick:hover{border-color:var(--brand-lift)}
+.tick input{margin:3px 0 0;accent-color:var(--brand-lift);flex:0 0 auto}
+.tick:has(input:checked){border-color:var(--brand-lift);color:var(--ink)}
+
+.thinker-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:10px}
+.tchip{position:relative;display:flex;align-items:flex-start;gap:10px;background:var(--bg);
+  border:1px solid var(--line);border-radius:var(--r-md);padding:12px 13px}
+.tchip:has(input:checked){border-color:var(--brand-lift)}
+.tchip input{position:absolute;opacity:0;width:1px;height:1px}
+.tchip-box{flex:0 0 auto;width:20px;height:20px;margin-top:3px;border-radius:6px;cursor:pointer;
+  border:1.5px solid var(--line);background:var(--bg-2);display:block;position:relative}
+.tchip-box:hover{border-color:var(--brand-lift)}
+.tchip input:focus-visible + .tchip-box{outline:3px solid var(--accent);outline-offset:2px}
+.tchip input:checked + .tchip-box{background:var(--brand-lift);border-color:var(--brand-lift)}
+.tchip input:checked + .tchip-box:after{content:"";position:absolute;inset-inline-start:5px;top:3px;
+  width:7px;height:11px;border:2.4px solid var(--on-accent);border-top:0;border-inline-start:0;
+  transform:rotate(38deg)}
+.tname{flex:1;min-width:0;text-align:start;background:none;border:0;padding:0;cursor:pointer;
+  font-family:inherit;color:inherit;display:flex;flex-direction:column;gap:3px}
+.tname-n{font-family:var(--display);font-weight:400;font-size:20px;line-height:1.12;color:var(--ink)}
+html[dir="rtl"] .tname-n{font-family:var(--ar);font-weight:700;font-size:18px;line-height:1.4}
+.tname-t{font-size:13.5px;font-weight:500;color:var(--muted);line-height:1.45}
+.tname:hover .tname-n{color:var(--brand-lift)}
+.tname.is-seen .tname-n{color:var(--brand-lift)}
+
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:4px}
+.note{margin:14px 0 0;font-size:14.5px;color:var(--muted);line-height:1.55}
+.count{font-family:var(--mono);font-size:13px;font-weight:500;color:var(--accent-text)}
+html[dir="rtl"] .count{font-family:var(--ar);font-size:15px}
+.count.is-clear{color:var(--signal)}
+.copied{font-size:15px;font-weight:700;color:var(--signal)}
+
+.route{display:grid;gap:8px;margin:0 0 18px}
+.route-opt{display:flex;align-items:flex-start;gap:10px;background:var(--bg-2);
+  border:1px solid var(--line);border-radius:var(--r-md);padding:12px 14px;cursor:pointer}
+.route-opt:hover{border-color:var(--brand-lift)}
+.route-opt:has(input:checked){border-color:var(--accent-dim);background:var(--surface-2)}
+.route-opt input{margin:4px 0 0;accent-color:var(--accent);flex:0 0 auto}
+.route-opt b{display:block;color:var(--ink);font-weight:700;font-size:15.5px}
+.route-opt small{display:block;color:var(--muted);font-size:14px;line-height:1.5;margin-top:2px}
+
+#out{width:100%;min-height:520px;resize:vertical;font-family:var(--mono);font-size:13.5px;
+  line-height:1.62;color:var(--ink-2);background:var(--bg);border:1px solid var(--line);
+  border-radius:var(--r);padding:18px;white-space:pre-wrap}
+html[dir="rtl"] #out.is-ar{direction:rtl;text-align:right;font-family:var(--ar);font-size:15.5px}
+#out.has-ar:not(.is-ar){font-family:var(--ar);font-size:14.5px;line-height:1.72}
+#out.is-ar{direction:rtl;text-align:right;font-family:var(--ar);font-size:15.5px}
+#out.has-ar:not(.is-ar){font-family:var(--ar);font-size:14.5px;line-height:1.72}
+
+dialog.pop{border:0;padding:0;background:transparent;max-width:none;max-height:none}
+dialog.pop::backdrop{background:oklch(0.135 0.018 185 / .74);backdrop-filter:blur(3px)}
+.pop-card{width:min(640px,calc(100vw - 36px));max-height:min(80vh,760px);overflow:auto;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);
+  box-shadow:var(--shadow-lift);padding:30px 32px 26px;position:relative}
+.pop-eyebrow{margin:0 0 8px;font-family:var(--mono);font-size:12px;font-weight:500;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--brand-lift)}
+html[dir="rtl"] .pop-eyebrow{font-family:var(--ar);letter-spacing:0;text-transform:none;font-size:15px;font-weight:700}
+.pop-card h3{margin:0 0 6px;font-family:var(--display);font-weight:400;font-size:32px;
+  line-height:1.06;color:var(--ink)}
+html[dir="rtl"] .pop-card h3{font-family:var(--ar);font-weight:700;line-height:1.35}
+.pop-tag{margin:0 0 18px;color:var(--accent-text);font-size:16px;font-weight:600}
+.pop-close{position:absolute;top:16px;inset-inline-end:16px;width:36px;height:36px;border-radius:50%;
+  display:grid;place-items:center;background:var(--bg-2);border:1px solid var(--line);
+  color:var(--muted);cursor:pointer}
+.pop-close:hover{background:var(--surface-2);color:var(--ink)}
+.pop-close svg{width:16px;height:16px;stroke:currentColor;stroke-width:2.4}
+.sheet{margin:0}
+.sheet dt{font-family:var(--mono);font-size:11.5px;font-weight:500;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--brand-lift);margin:18px 0 5px}
+html[dir="rtl"] .sheet dt{font-family:var(--ar);letter-spacing:0;text-transform:none;font-size:15px;font-weight:700}
+.sheet dt:first-child{margin-top:0}
+.sheet dd{margin:0;font-size:16.5px;line-height:1.68;color:var(--ink-2)}
+
+.foot{border-top:1px solid var(--line-soft);background:var(--bg-2);padding:26px 0}
+.foot-in{max-width:1260px;margin-inline:auto;padding-inline:24px;display:flex;
+  align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.foot p{margin:0;font-size:15px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand">
+      <img src="../assets/logo-reversed.png" alt="Edulixa 360">
+      <span class="brand-tag" data-en="Session 5 · Presentations" data-ar="المحاضرة ٥ · العروض التقديمية">Session 5 · Presentations</span>
+    </div>
+    <div class="topbar-actions">
+      <a class="btn btn-ghost" href="../session5.html"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M11 18l-6-6 6-6"/></svg><span data-en="Back to Session 5" data-ar="العودة إلى المحاضرة ٥">Back to Session 5</span></a>
+      <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow" data-en="Built for this course · Works offline" data-ar="مبني لهذه الدورة · يعمل بلا اتصال">Built for this course · Works offline</p>
+    <h1 data-en="Presentation Prompt Builder" data-ar="منشئ برومبت العرض التقديمي">Presentation Prompt Builder</h1>
+    <p class="lede" data-en="Answer the fields on the left and this builds the whole master prompt for you — the one that makes the slides follow your lesson plan stage by stage. Copy it, attach your lesson plan and your book pages, and send it to Gamma, ChatGPT or Gemini." data-ar="أجب عن الحقول على اليسار، فيبني لك هذا البرومبت الرئيسي كاملًا — البرومبت الذي يجعل الشرائح تتبع خطة درسك مرحلةً مرحلةً. انسخه، وأرفق خطة درسك وصفحات كتابك، وأرسله إلى Gamma أو ChatGPT أو Gemini.">Answer the fields on the left and this builds the whole master prompt for you — the one that makes the slides follow your lesson plan stage by stage. Copy it, attach your lesson plan and your book pages, and send it to Gamma, ChatGPT or Gemini.</p>
+  </div>
+</div>
+
+<main>
+  <div class="wrap">
+    <div class="cols">
+
+      <section class="panel">
+        <h2 data-en="Your lesson" data-ar="درسك">Your lesson</h2>
+        <p class="sub" data-en="Leave a field empty and it stays a red field you can fill in later." data-ar="اترك أي حقل فارغًا فيبقى حقلًا أحمر تملؤه فيما بعد.">Leave a field empty and it stays a red field you can fill in later.</p>
+        <fieldset class="fgroup">
+<legend data-en="Teacher and class" data-ar="المعلم والفصل">Teacher and class</legend>
+<div class="fgrid">
+<div class="field is-wide"><label class="flabel" for="f-teacher" data-en="Teacher name" data-ar="اسم المعلم">Teacher name</label><input type="text" id="f-teacher" data-en-ph="Ms. Abir Wafa" data-ar-ph="أ. عبير وفا" placeholder="Ms. Abir Wafa"></div>
+<div class="field"><label class="flabel" for="f-subject" data-en="Subject" data-ar="المادة">Subject</label><input type="text" id="f-subject" data-en-ph="English" data-ar-ph="اللغة الإنجليزية" placeholder="English"></div>
+<div class="field"><label class="flabel" for="f-grade" data-en="Grade or stage" data-ar="الصف أو المرحلة">Grade or stage</label><input type="text" id="f-grade" data-en-ph="Grade 6" data-ar-ph="الصف السادس" placeholder="Grade 6"></div>
+<div class="field is-wide"><label class="flabel" for="f-standard" data-en="Level or standard, or write “none”" data-ar="المستوى أو المعيار، أو اكتب «لا شيء»">Level or standard, or write “none”</label><input type="text" id="f-standard" data-en-ph="CEFR A2 · Cambridge Lower Secondary" data-ar-ph="CEFR A2 · كامبريدج للمرحلة الإعدادية" placeholder="CEFR A2 · Cambridge Lower Secondary"></div>
+</div></fieldset>
+<fieldset class="fgroup">
+<legend data-en="The lesson" data-ar="الدرس">The lesson</legend>
+<div class="fgrid">
+<div class="field is-wide"><label class="flabel" for="f-title" data-en="Lesson title" data-ar="عنوان الدرس">Lesson title</label><input type="text" id="f-title" data-en-ph="Unit 4 — Every day, right now" data-ar-ph="الوحدة الرابعة — كل يوم، الآن" placeholder="Unit 4 — Every day, right now"></div>
+<div class="field is-wide"><label class="flabel" for="f-audience" data-en="Who is in the room" data-ar="من الحاضرون">Who is in the room</label><input type="text" id="f-audience" data-en-ph="28 students, ages 11–12, mixed ability" data-ar-ph="٢٨ طالبًا، من ١١ إلى ١٢ سنة، قدرات متفاوتة" placeholder="28 students, ages 11–12, mixed ability"></div>
+<div class="field"><label class="flabel" for="f-minutes" data-en="Lesson length" data-ar="مدة الدرس">Lesson length</label><select id="f-minutes" data-other="o-minutes"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="30" data-var="30" data-en="30 minutes" data-ar="30 دقيقة">30 minutes</option><option value="o1" data-ven="35" data-var="35" data-en="35 minutes" data-ar="35 دقيقة">35 minutes</option><option value="o2" data-ven="40" data-var="40" data-en="40 minutes" data-ar="40 دقيقة">40 minutes</option><option value="o3" data-ven="45" data-var="45" data-en="45 minutes" data-ar="45 دقيقة">45 minutes</option><option value="o4" data-ven="50" data-var="50" data-en="50 minutes" data-ar="50 دقيقة">50 minutes</option><option value="o5" data-ven="60" data-var="60" data-en="60 minutes" data-ar="60 دقيقة">60 minutes</option><option value="o6" data-ven="90" data-var="90" data-en="90 minutes" data-ar="90 دقيقة">90 minutes</option><option value="o7" data-ven="120" data-var="120" data-en="120 minutes" data-ar="120 دقيقة">120 minutes</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-minutes" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Lesson length" data-ar-label="إجابتك أنت عن مدة الدرس"></div>
+<div class="field"><label class="flabel" for="f-slides" data-en="Number of slides" data-ar="عدد الشرائح">Number of slides</label><select id="f-slides" data-other="o-slides"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="6" data-var="6" data-en="6 slides — a short input lesson" data-ar="٦ شرائح — درس قصير">6 slides — a short input lesson</option><option value="o1" data-ven="8" data-var="8" data-en="8 slides" data-ar="٨ شرائح">8 slides</option><option value="o2" data-ven="10" data-var="10" data-en="10 slides — fits a free Gamma generation" data-ar="١٠ شرائح — تناسب إنشاءً مجانيًا في Gamma">10 slides — fits a free Gamma generation</option><option value="o3" data-ven="12" data-var="12" data-en="12 slides" data-ar="١٢ شريحة">12 slides</option><option value="o4" data-ven="14" data-var="14" data-en="14 slides" data-ar="١٤ شريحة">14 slides</option><option value="o5" data-ven="16" data-var="16" data-en="16 slides — a double period" data-ar="١٦ شريحة — حصتان">16 slides — a double period</option><option value="o6" data-ven="20" data-var="20" data-en="20 slides — build it as two decks" data-ar="٢٠ شريحة — ابنِها عرضين">20 slides — build it as two decks</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-slides" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Number of slides" data-ar-label="إجابتك أنت عن عدد الشرائح"></div>
+<div class="field is-wide"><label class="flabel" for="f-tone" data-en="Tone" data-ar="النبرة">Tone</label><select id="f-tone" data-other="o-tone"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="Friendly and encouraging" data-var="ودّية ومشجِّعة" data-en="Friendly and encouraging" data-ar="ودّية ومشجِّعة">Friendly and encouraging</option><option value="o1" data-ven="Warm and playful, with a little humour" data-var="دافئة ومرحة، مع قليل من الطرافة" data-en="Warm and playful" data-ar="دافئة ومرحة">Warm and playful</option><option value="o2" data-ven="Calm and clear, no exclamation marks" data-var="هادئة وواضحة، بلا علامات تعجب" data-en="Calm and clear" data-ar="هادئة وواضحة">Calm and clear</option><option value="o3" data-ven="Formal and academic" data-var="رسمية وأكاديمية" data-en="Formal and academic" data-ar="رسمية وأكاديمية">Formal and academic</option><option value="o4" data-ven="Energetic and fast-moving" data-var="حيوية وسريعة الإيقاع" data-en="Energetic and fast-moving" data-ar="حيوية وسريعة الإيقاع">Energetic and fast-moving</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-tone" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Tone" data-ar-label="إجابتك أنت عن النبرة"></div>
+<div class="field is-wide"><label class="flabel" for="f-language" data-en="Language of the presentation" data-ar="لغة العرض">Language of the presentation</label><select id="f-language" data-other="o-language"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="English" data-var="الإنجليزية" data-en="English" data-ar="الإنجليزية">English</option><option value="o1" data-ven="Arabic, written right to left" data-var="العربية، مكتوبة من اليمين إلى اليسار" data-en="Arabic" data-ar="العربية">Arabic</option><option value="o2" data-ven="Arabic and English side by side on every slide, Arabic first" data-var="العربية والإنجليزية جنبًا إلى جنب في كل شريحة، والعربية أولًا" data-en="Bilingual — Arabic and English" data-ar="ثنائي اللغة — عربي وإنجليزي">Bilingual — Arabic and English</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-language" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Language of the presentation" data-ar-label="إجابتك أنت عن لغة العرض"><p class="fnote is-after" data-en="Choose Arabic, or Arabic and English together, and the prompt adds the Arabic font and export requirements on its own: Arial only — Bold for headings, Regular for text — right-to-left, Arabic-Indic numerals, no Gamma smart diagrams, and a test slide checked after export." data-ar="اختر العربية، أو العربية والإنجليزية معًا، فيضيف البرومبت قسم ضبط النص العربي من تلقاء نفسه: خط Arial فقط — Bold للعناوين وRegular للنصوص — ومن اليمين إلى اليسار، والأرقام العربية الهندية، وبلا مخططات Gamma الذكية، وشريحة تجريبية تُراجع بعد التصدير.">Choose Arabic, or Arabic and English together, and the prompt adds the Arabic font and export requirements on its own: Arial only — Bold for headings, Regular for text — right-to-left, Arabic-Indic numerals, no Gamma smart diagrams, and a test slide checked after export.</p></div>
+</div></fieldset>
+<fieldset class="fgroup">
+<legend data-en="The two files you will attach" data-ar="الملفان الذي ترفقهما">The two files you will attach</legend>
+<div class="fgrid">
+<div class="field is-wide"><label class="flabel" for="f-plan_file" data-en="File name of the lesson plan you attached" data-ar="اسم ملف خطة الدرس التي أرفقتها">File name of the lesson plan you attached</label><input type="text" id="f-plan_file" data-en-ph="Unit4_LessonPlan.docx" data-ar-ph="خطة_درس_الوحدة٤.docx" placeholder="Unit4_LessonPlan.docx"></div>
+<div class="field is-wide"><label class="flabel" for="f-book_pages" data-en="Book pages you attached — file names or page numbers" data-ar="صفحات الكتاب التي أرفقتها — أسماء الملفات أو أرقام الصفحات">Book pages you attached — file names or page numbers</label><input type="text" id="f-book_pages" data-en-ph="Student book pages 42–43" data-ar-ph="صفحتا ٤٢ و٤٣ من كتاب الطالب" placeholder="Student book pages 42–43"></div>
+</div></fieldset>
+<fieldset class="fgroup">
+<legend data-en="What must appear" data-ar="ما يجب أن يظهر">What must appear</legend>
+<div class="fgrid">
+<div class="field is-wide"><label class="flabel" for="f-must" data-en="A fact, definition, word list or curriculum point that must appear — or “none”" data-ar="معلومة أو تعريف أو قائمة مفردات أو نقطة من المنهج يجب أن تظهر — أو «لا شيء»">A fact, definition, word list or curriculum point that must appear — or “none”</label><textarea id="f-must" rows="3" data-en-ph="The six signal words on page 43 must appear exactly as printed." data-ar-ph="المفردات الدالة الست في صفحة ٤٣ يجب أن تظهر كما هي مطبوعة." placeholder="The six signal words on page 43 must appear exactly as printed."></textarea></div>
+<div class="field is-wide"><span class="flabel" data-en="Keep only the stages your lesson plan actually contains" data-ar="أبقِ المراحل الموجودة فعلًا في خطة درسك فقط">Keep only the stages your lesson plan actually contains</span><div class="ticks-grid"><label class="tick"><input type="checkbox" id="st-warmup" checked><span data-en="Warm-up or hook" data-ar="تهيئة أو نشاط افتتاحي">Warm-up or hook</span></label><label class="tick"><input type="checkbox" id="st-objectives" checked><span data-en="Learning objectives" data-ar="الأهداف التعليمية">Learning objectives</span></label><label class="tick"><input type="checkbox" id="st-explain" checked><span data-en="Explanation of the new idea" data-ar="شرح الفكرة الجديدة">Explanation of the new idea</span></label><label class="tick"><input type="checkbox" id="st-guided" checked><span data-en="Guided practice" data-ar="تدريب موجَّه">Guided practice</span></label><label class="tick"><input type="checkbox" id="st-individual" checked><span data-en="Individual task" data-ar="نشاط فردي">Individual task</span></label><label class="tick"><input type="checkbox" id="st-group" checked><span data-en="Group task" data-ar="نشاط جماعي">Group task</span></label><label class="tick"><input type="checkbox" id="st-free" checked><span data-en="Free practice" data-ar="تدريب حر">Free practice</span></label><label class="tick"><input type="checkbox" id="st-check" checked><span data-en="Quick check of understanding" data-ar="تحقُّق سريع من الفهم">Quick check of understanding</span></label><label class="tick"><input type="checkbox" id="st-homework" checked><span data-en="Homework or extension" data-ar="واجب منزلي أو نشاط إثرائي">Homework or extension</span></label><label class="tick"><input type="checkbox" id="st-exit" checked><span data-en="Closing reflection or exit ticket" data-ar="تأمُّل ختامي أو بطاقة خروج">Closing reflection or exit ticket</span></label></div></div>
+</div></fieldset>
+<fieldset class="fgroup">
+<legend data-en="Design — this is what makes the PDF beautiful" data-ar="التصميم — وهو ما يجعل ملف الـ PDF جميلًا">Design — this is what makes the PDF beautiful</legend>
+<div class="fgrid">
+<div class="field is-wide"><label class="flabel" for="f-colours" data-en="Colour palette" data-ar="لوحة الألوان">Colour palette</label><select id="f-colours" data-other="o-colours"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="A pastel rainbow — a different soft tint for each section of the lesson: mint, sky blue, lilac, peach and butter yellow, all on white, with dark ink text" data-var="قوس قزح باستيلي — لكل مرحلة من الدرس لون فاتح مختلف: نعناعي، وسماوي، وليلكي، وخوخي، وأصفر زبدي، كلها على أبيض، والنص بحبر غامق" data-en="Pastel rainbow — a tint per section" data-ar="قوس قزح باستيلي — لون لكل مرحلة">Pastel rainbow — a tint per section</option><option value="o1" data-ven="Soft cool pastels — mint, sky blue and lilac on white, with dark ink text" data-var="باستيل بارد ناعم — نعناعي وسماوي وليلكي على أبيض، والنص بحبر غامق" data-en="Cool pastels — mint, sky, lilac" data-ar="باستيل بارد — نعناعي وسماوي وليلكي">Cool pastels — mint, sky, lilac</option><option value="o2" data-ven="Soft warm pastels — peach, apricot, butter yellow and cream on white, with dark ink text" data-var="باستيل دافئ ناعم — خوخي ومشمشي وأصفر زبدي وكريمي على أبيض، والنص بحبر غامق" data-en="Warm pastels — peach, apricot, cream" data-ar="باستيل دافئ — خوخي ومشمشي وكريمي">Warm pastels — peach, apricot, cream</option><option value="o3" data-ven="Teal and coral as the two accents, with pastel tints of both for the panels, the table headers and the section tabs" data-var="الأزرق المخضرّ والمرجاني لونان مميّزان، مع درجات باستيلية منهما للوحات ورؤوس الجداول وألسنة المراحل" data-en="Teal and coral, with pastel tints" data-ar="مخضرّ ومرجاني بدرجات باستيلية">Teal and coral, with pastel tints</option><option value="o4" data-ven="My school colours as the accents, and pastel tints of those same colours as the panel and table fills — ask me for the exact colours if you need them" data-var="ألوان مدرستي لونًا مميّزًا، ودرجات باستيلية من الألوان نفسها لتعبئة اللوحات والجداول — واسألني عن الألوان بدقة إن احتجتها" data-en="My school colours, in pastel tints" data-ar="ألوان مدرستي بدرجات باستيلية">My school colours, in pastel tints</option><option value="o5" data-ven="Bold saturated colour blocks with white text on them, and white slides between" data-var="كتل لونية قوية ومشبعة بنص أبيض عليها، وشرائح بيضاء بينها" data-en="Bold and saturated" data-ar="قوية ومشبعة">Bold and saturated</option><option value="o6" data-ven="Black ink on white, printer friendly, no large colour fills" data-var="حبر أسود على أبيض، مناسب للطباعة، بلا تعبئات لونية كبيرة" data-en="Black on white — printer friendly" data-ar="أسود على أبيض — مناسب للطباعة">Black on white — printer friendly</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-colours" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Colour palette" data-ar-label="إجابتك أنت عن لوحة الألوان"></div>
+<div class="field is-wide"><label class="flabel" for="f-visual_style" data-en="Visual style" data-ar="الأسلوب البصري">Visual style</label><select id="f-visual_style" data-other="o-visual_style"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="Rich and colourful: each section of the lesson sits on its own pastel panel with a coloured tab carrying the stage name, generous white space around it, and one strong image per slide" data-var="غنيّ وملوّن: تجلس كل مرحلة من الدرس على لوحة باستيلية خاصة بها، وعليها لسان ملوّن يحمل اسم المرحلة، وحولها فراغ أبيض سخيّ، وصورة واحدة قوية في كل شريحة" data-en="Rich and colourful — pastel panels" data-ar="غنيّ وملوّن — لوحات باستيلية">Rich and colourful — pastel panels</option><option value="o1" data-ven="Clean and minimal: white slides, one idea each, one image, thin rules" data-var="نظيف وبسيط: شرائح بيضاء، فكرة واحدة في كل واحدة، وصورة واحدة، وخطوط رقيقة" data-en="Clean and minimal" data-ar="نظيف وبسيط">Clean and minimal</option><option value="o2" data-ven="Playful and child-friendly: rounded shapes, pastel panels, big friendly numbers, and an illustrated character who appears on the activity slides" data-var="مرح ومناسب للأطفال: أشكال مستديرة، ولوحات باستيلية، وأرقام كبيرة ودودة، وشخصية مرسومة تظهر في شرائح الأنشطة" data-en="Playful and child-friendly" data-ar="مرح ومناسب للأطفال">Playful and child-friendly</option><option value="o3" data-ven="Academic and formal: restrained colour, clear headings, and tables and diagrams in place of photographs" data-var="أكاديمي ورسمي: لون محسوب، وعناوين واضحة، وجداول ومخططات بدلًا من الصور" data-en="Academic and formal" data-ar="أكاديمي ورسمي">Academic and formal</option><option value="o4" data-ven="Infographic-led: every idea shown as a numbered diagram, a chart or a flow rather than as bullet points" data-var="قائم على الإنفوجرافيك: كل فكرة تُعرض مخططًا مرقَّمًا أو رسمًا بيانيًا أو تدفُّقًا بدلًا من نقاط" data-en="Infographic-led" data-ar="قائم على الإنفوجرافيك">Infographic-led</option><option value="o5" data-ven="Storybook: a full-bleed illustration with a short caption panel over it" data-var="كأنه كتاب قصص: رسمة تملأ الشريحة ولوحة تعليق قصيرة فوقها" data-en="Storybook" data-ar="كأنه كتاب قصص">Storybook</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-visual_style" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Visual style" data-ar-label="إجابتك أنت عن الأسلوب البصري"></div>
+<div class="field is-wide"><label class="flabel" for="f-table_style" data-en="Tables and frames" data-ar="الجداول والإطارات">Tables and frames</label><select id="f-table_style" data-other="o-table_style"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="Pastel fill with a full frame: a deeper-tint header band, alternating pastel rows beneath it, and a visible border on every side of every cell" data-var="تعبئة باستيلية بإطار كامل: شريط رأس بدرجة أغمق، وصفوف باستيلية متبادلة تحته، وحدٌّ ظاهر على كل جانب من كل خلية" data-en="Pastel fill, full frame border" data-ar="تعبئة باستيلية بإطار كامل">Pastel fill, full frame border</option><option value="o1" data-ven="A pastel header band, hairline gridlines inside, and a full outer frame" data-var="شريط رأس باستيلي، وخطوط شبكية رقيقة في الداخل، وإطار خارجي كامل" data-en="Pastel header, full outer frame" data-ar="رأس باستيلي وإطار خارجي كامل">Pastel header, full outer frame</option><option value="o2" data-ven="White cells with a visible border on every side of every cell, dark ink text" data-var="خلايا بيضاء بحدٍّ ظاهر على كل جانب من كل خلية، والنص بحبر غامق" data-en="White cells, full frame border" data-ar="خلايا بيضاء بإطار كامل">White cells, full frame border</option><option value="o3" data-ven="Pastel zebra stripes, a full outer frame, and no inner vertical lines" data-var="خطوط باستيلية متبادلة، وإطار خارجي كامل، وبلا خطوط رأسية داخلية" data-en="Pastel zebra stripes" data-ar="خطوط باستيلية متبادلة">Pastel zebra stripes</option><option value="o4" data-ven="Do not use tables — show a comparison as two coloured columns instead" data-var="لا تستخدم الجداول — واعرض المقارنة في عمودين ملوّنين بدلًا منها" data-en="No tables" data-ar="بلا جداول">No tables</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-table_style" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Tables and frames" data-ar-label="إجابتك أنت عن الجداول والإطارات"></div>
+<div class="field is-wide"><label class="flabel" for="f-fonts" data-en="Fonts" data-ar="الخطوط">Fonts</label><select id="f-fonts" data-other="o-fonts"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="Choose accessible fonts: a rounded friendly sans for the headings and a plain sans for the body, nothing below 18 point" data-var="اختر خطوطًا واضحة: خطًّا بلا زوائد مستدير الحروف للعناوين، وخطًّا بلا زوائد بسيطًا للنص، ولا شيء أصغر من ١٨ نقطة" data-en="Accessible — rounded headings, plain body" data-ar="واضحة — عناوين مستديرة ونص بسيط">Accessible — rounded headings, plain body</option><option value="o1" data-ven="One clean modern sans throughout, at large sizes" data-var="خط واحد حديث بلا زوائد في كل شيء، وبأحجام كبيرة" data-en="One clean modern sans" data-ar="خط حديث واحد">One clean modern sans</option><option value="o2" data-ven="A classic serif for the headings and a clean sans for the body" data-var="خط مذنَّب كلاسيكي للعناوين وخط بلا زوائد نظيف للنص" data-en="Serif headings, sans body" data-ar="عناوين مذنَّبة ونص بلا زوائد">Serif headings, sans body</option><option value="o3" data-ven="A playful display font for the headings, suitable for young learners, and a plain sans for everything else" data-var="خط عرضي مرح للعناوين يناسب صغار المتعلمين، وخط بلا زوائد بسيط لكل ما عداها" data-en="Playful headings, for young learners" data-ar="عناوين مرحة لصغار المتعلمين">Playful headings, for young learners</option><option value="o4" data-ven="Arial only, across the whole deck — Arial Bold for every heading and Arial Regular for every body text, applied as both the heading font and the body font in the theme. Do not mix in a second font family anywhere" data-var="خط Arial فقط في العرض كاملًا — Arial Bold لجميع العناوين وArial Regular لجميع النصوص، مطبَّقًا على خط العناوين وخط النص داخل Theme. ولا تخلط عائلة خطوط ثانية في أي موضع" data-en="Arial only — required for an Arabic deck" data-ar="Arial فقط — مطلوب لعرض عربي">Arial only — required for an Arabic deck</option><option value="o5" data-ven="Match the fonts in my school template" data-var="طابق الخطوط الموجودة في نموذج مدرستي" data-en="Match my school template" data-ar="طابق نموذج مدرستي">Match my school template</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-fonts" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Fonts" data-ar-label="إجابتك أنت عن الخطوط"></div>
+<div class="field is-wide"><label class="flabel" for="f-logo" data-en="Logo" data-ar="الشعار">Logo</label><select id="f-logo" data-other="o-logo"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="The school logo, small, in the top-right corner of every slide" data-var="شعار المدرسة، صغيرًا، في الزاوية العلوية اليمنى من كل شريحة" data-en="Top-right, every slide" data-ar="أعلى اليمين، كل شريحة">Top-right, every slide</option><option value="o1" data-ven="The school logo, small, in the top-left corner of every slide" data-var="شعار المدرسة، صغيرًا، في الزاوية العلوية اليسرى من كل شريحة" data-en="Top-left, every slide" data-ar="أعلى اليسار، كل شريحة">Top-left, every slide</option><option value="o2" data-ven="The school logo, small, in the bottom-right corner of every slide" data-var="شعار المدرسة، صغيرًا، في الزاوية السفلية اليمنى من كل شريحة" data-en="Bottom-right, every slide" data-ar="أسفل اليمين، كل شريحة">Bottom-right, every slide</option><option value="o3" data-ven="The school logo on the title slide and the closing slide only" data-var="شعار المدرسة في شريحة العنوان وشريحة الختام فقط" data-en="Title and closing slide only" data-ar="شريحة العنوان والختام فقط">Title and closing slide only</option><option value="o4" data-ven="No logo" data-var="بلا شعار" data-en="No logo" data-ar="بلا شعار">No logo</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-logo" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Logo" data-ar-label="إجابتك أنت عن الشعار"></div>
+<div class="field is-wide"><label class="flabel" for="f-image_style" data-en="Image style" data-ar="أسلوب الصور">Image style</label><select id="f-image_style" data-other="o-image_style"><option value="" data-en="— choose one —" data-ar="— اختر واحدًا —">— choose one —</option><option value="o0" data-ven="Photographs of real classrooms, real people and real objects" data-var="صور فوتوغرافية لفصول حقيقية وأشخاص حقيقيين وأشياء حقيقية" data-en="Real photographs" data-ar="صور فوتوغرافية حقيقية">Real photographs</option><option value="o1" data-ven="Flat vector illustration in the same pastel palette as the slides" data-var="رسم متجهي مسطَّح بلوحة الألوان الباستيلية نفسها التي في الشرائح" data-en="Flat vector illustration" data-ar="رسم متجهي مسطَّح">Flat vector illustration</option><option value="o2" data-ven="Hand-drawn storybook illustration" data-var="رسم يدوي بأسلوب كتب القصص" data-en="Hand-drawn storybook" data-ar="رسم يدوي قصصي">Hand-drawn storybook</option><option value="o3" data-ven="Icons and diagrams only, no photographs" data-var="أيقونات ومخططات فقط، بلا صور فوتوغرافية" data-en="Icons and diagrams only" data-ar="أيقونات ومخططات فقط">Icons and diagrams only</option><option value="o4" data-ven="Three-dimensional educational visuals" data-var="عناصر بصرية تعليمية ثلاثية الأبعاد" data-en="3D educational visuals" data-ar="عناصر ثلاثية الأبعاد">3D educational visuals</option><option value="o5" data-ven="No images at all — carry the meaning with colour, shape and type" data-var="بلا صور إطلاقًا — احمل المعنى باللون والشكل والخط" data-en="No images — colour and type only" data-ar="بلا صور — لون وخط فقط">No images — colour and type only</option><option value="__other__" data-en="Other — I will type it" data-ar="غير ذلك — سأكتبه بنفسي">Other — I will type it</option></select><input type="text" class="other-in" id="o-image_style" hidden data-en-ph="Type your own" data-ar-ph="اكتب ما تريد" placeholder="Type your own" data-en-label="Your own answer for Image style" data-ar-label="إجابتك أنت عن أسلوب الصور"></div>
+</div></fieldset>
+<fieldset class="fgroup">
+<legend data-en="The thinkers behind the lesson" data-ar="المفكرون خلف الدرس">The thinkers behind the lesson</legend>
+<div class="fgrid">
+<div class="field is-wide"><span class="flabel" data-en="Thinkers to reference in the speaker notes, or write “none”" data-ar="المفكرون الذين تريد ذكرهم في ملاحظات المُقدِّم، أو اكتب «لا شيء»">Thinkers to reference in the speaker notes, or write “none”</span><p class="fnote" data-en="Tick the small box to have a thinker named in the speaker notes. Select the name itself to read the cheat sheet — who he was, his core idea, what it looks like in a classroom, and what it changes on a slide." data-ar="ضع علامة في المربع الصغير ليُذكَر المفكر في ملاحظات المُقدِّم. واختر الاسم نفسه لتقرأ بطاقة التعريف — من هو، وفكرته الأساسية، وكيف تظهر في الفصل، وما تغيّره في الشريحة.">Tick the small box to have a thinker named in the speaker notes. Select the name itself to read the cheat sheet — who he was, his core idea, what it looks like in a classroom, and what it changes on a slide.</p><div class="thinker-grid"><div class="tchip"><input type="checkbox" id="th-vygotsky"><label class="tchip-box" for="th-vygotsky"><span class="vh" data-en="Reference Lev Vygotsky" data-ar="اذكر ليف فيجوتسكي">Reference Lev Vygotsky</span></label><button class="tname" type="button" data-sheet="vygotsky"><span class="tname-n" data-en="Lev Vygotsky" data-ar="ليف فيجوتسكي">Lev Vygotsky</span><span class="tname-t" data-en="Learning happens with help before it happens alone" data-ar="التعلُّم يحدث بمساعدة قبل أن يحدث وحده">Learning happens with help before it happens alone</span></button></div><div class="tchip"><input type="checkbox" id="th-piaget"><label class="tchip-box" for="th-piaget"><span class="vh" data-en="Reference Jean Piaget" data-ar="اذكر جان بياجيه">Reference Jean Piaget</span></label><button class="tname" type="button" data-sheet="piaget"><span class="tname-n" data-en="Jean Piaget" data-ar="جان بياجيه">Jean Piaget</span><span class="tname-t" data-en="The example has to arrive before the rule" data-ar="المثال يجب أن يأتي قبل القاعدة">The example has to arrive before the rule</span></button></div><div class="tchip"><input type="checkbox" id="th-bloom"><label class="tchip-box" for="th-bloom"><span class="vh" data-en="Reference Benjamin Bloom" data-ar="اذكر بنيامين بلوم">Reference Benjamin Bloom</span></label><button class="tname" type="button" data-sheet="bloom"><span class="tname-n" data-en="Benjamin Bloom" data-ar="بنيامين بلوم">Benjamin Bloom</span><span class="tname-t" data-en="The verb in your objective decides the task" data-ar="الفعل في هدفك هو ما يحدد المهمة">The verb in your objective decides the task</span></button></div><div class="tchip"><input type="checkbox" id="th-bandura"><label class="tchip-box" for="th-bandura"><span class="vh" data-en="Reference Albert Bandura" data-ar="اذكر ألبرت باندورا">Reference Albert Bandura</span></label><button class="tname" type="button" data-sheet="bandura"><span class="tname-n" data-en="Albert Bandura" data-ar="ألبرت باندورا">Albert Bandura</span><span class="tname-t" data-en="They copy what they watch, then believe they can do it" data-ar="يقلّدون ما يشاهدونه، ثم يصدّقون أنهم قادرون">They copy what they watch, then believe they can do it</span></button></div><div class="tchip"><input type="checkbox" id="th-krashen"><label class="tchip-box" for="th-krashen"><span class="vh" data-en="Reference Stephen Krashen" data-ar="اذكر ستيفن كراشن">Reference Stephen Krashen</span></label><button class="tname" type="button" data-sheet="krashen"><span class="tname-n" data-en="Stephen Krashen" data-ar="ستيفن كراشن">Stephen Krashen</span><span class="tname-t" data-en="Understandable language, just above where they are" data-ar="لغة مفهومة، أعلى قليلًا من مستواهم">Understandable language, just above where they are</span></button></div><div class="tchip"><input type="checkbox" id="th-goleman"><label class="tchip-box" for="th-goleman"><span class="vh" data-en="Reference Daniel Goleman" data-ar="اذكر دانيال جولمان">Reference Daniel Goleman</span></label><button class="tname" type="button" data-sheet="goleman"><span class="tname-n" data-en="Daniel Goleman" data-ar="دانيال جولمان">Daniel Goleman</span><span class="tname-t" data-en="A class that feels safe is a class that answers" data-ar="الفصل الذي يشعر بالأمان فصلٌ يجيب">A class that feels safe is a class that answers</span></button></div><div class="tchip"><input type="checkbox" id="th-mayer"><label class="tchip-box" for="th-mayer"><span class="vh" data-en="Reference Richard Mayer" data-ar="اذكر ريتشارد ماير">Reference Richard Mayer</span></label><button class="tname" type="button" data-sheet="mayer"><span class="tname-n" data-en="Richard Mayer" data-ar="ريتشارد ماير">Richard Mayer</span><span class="tname-t" data-en="The research that is actually about slides" data-ar="البحث الذي يتناول الشرائح فعلًا">The research that is actually about slides</span></button></div><div class="tchip"><input type="checkbox" id="th-sweller"><label class="tchip-box" for="th-sweller"><span class="vh" data-en="Reference John Sweller" data-ar="اذكر جون سويلر">Reference John Sweller</span></label><button class="tname" type="button" data-sheet="sweller"><span class="tname-n" data-en="John Sweller" data-ar="جون سويلر">John Sweller</span><span class="tname-t" data-en="Working memory is small; one idea per slide" data-ar="الذاكرة العاملة صغيرة؛ فكرة واحدة لكل شريحة">Working memory is small; one idea per slide</span></button></div></div></div>
+</div></fieldset>
+<fieldset class="fgroup">
+<legend data-en="The last slide" data-ar="الشريحة الأخيرة">The last slide</legend>
+<div class="fgrid">
+<div class="field is-wide"><label class="flabel" for="f-next_step" data-en="The exact next step you want the class to take" data-ar="الخطوة التالية التي تريد أن يتخذها الفصل بالضبط">The exact next step you want the class to take</label><input type="text" id="f-next_step" data-en-ph="Write five sentences about your own morning and read one aloud tomorrow." data-ar-ph="اكتب خمس جملات عن صباحك واقرأ واحدة منها بصوت عالٍ غدًا." placeholder="Write five sentences about your own morning and read one aloud tomorrow."></div>
+</div></fieldset>
+
+        <div class="bar">
+          <button class="btn btn-accent" type="button" id="build"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM8 9h8M8 13h8M8 17h5"/></svg><span data-en="Build my prompt" data-ar="ابنِ برومبتي">Build my prompt</span></button>
+          <button class="btn btn-outline" type="button" id="example" data-en="Fill in the worked example" data-ar="املأ المثال المحلول">Fill in the worked example</button>
+          <button class="btn btn-ghost" type="button" id="clear" data-en="Empty the form" data-ar="أفرِغ النموذج">Empty the form</button>
+        </div>
+        <p class="note" data-en="The worked example is the Grade 6 lesson used across this level — Unit 4, present simple and present continuous, CEFR A2, book pages 42 and 43." data-ar="المثال المحلول هو درس الصف السادس المستخدم في هذا المستوى كله — الوحدة الرابعة، المضارع البسيط والمضارع المستمر، مستوى CEFR A2، صفحتا ٤٢ و٤٣ من الكتاب.">The worked example is the Grade 6 lesson used across this level — Unit 4, present simple and present continuous, CEFR A2, book pages 42 and 43.</p>
+      </section>
+
+      <section class="panel out-panel">
+        <h2 data-en="Your prompt" data-ar="برومبتك">Your prompt</h2>
+        <p class="sub" data-en="Where are you going to send it?" data-ar="إلى أين ستُرسله؟">Where are you going to send it?</p>
+
+        <div class="route">
+          <label class="route-opt"><input type="radio" name="route" value="gamma" checked>
+            <span><b data-en="Straight into Gamma" data-ar="مباشرة إلى Gamma">Straight into Gamma</b>
+            <small data-en="gamma.app → New → Paste in text. You paste the deck text and Gamma designs it." data-ar="gamma.app ← جديد ← Paste in text. تلصق نص العرض فيصمّمه Gamma.">gamma.app → New → Paste in text. You paste the deck text and Gamma designs it.</small></span></label>
+          <label class="route-opt"><input type="radio" name="route" value="chatgpt">
+            <span><b data-en="ChatGPT, with Gamma connected" data-ar="ChatGPT مع ربط Gamma">ChatGPT, with Gamma connected</b>
+            <small data-en="ChatGPT writes the deck and then builds it in Gamma for you, in one conversation." data-ar="يكتب ChatGPT العرض ثم يبنيه لك في Gamma، في محادثة واحدة.">ChatGPT writes the deck and then builds it in Gamma for you, in one conversation.</small></span></label>
+          <label class="route-opt"><input type="radio" name="route" value="gemini">
+            <span><b data-en="Gemini, then Google Slides" data-ar="Gemini ثم Google Slides">Gemini, then Google Slides</b>
+            <small data-en="Gemini builds the slides in Canvas and exports them to Google Slides." data-ar="يبني Gemini الشرائح في Canvas ثم يصدّرها إلى Google Slides.">Gemini builds the slides in Canvas and exports them to Google Slides.</small></span></label>
+        </div>
+
+        <div class="bar" style="margin-bottom:12px">
+          <button class="btn btn-primary" type="button" id="copy"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9h10v10H9zM5 15V5h10"/></svg><span data-en="Copy the prompt" data-ar="انسخ البرومبت">Copy the prompt</span></button>
+          <button class="btn btn-ghost" type="button" id="save" data-en="Save it as a file" data-ar="احفظه ملفًّا">Save it as a file</button>
+          <span class="copied" aria-live="polite" id="copied"></span>
+          <span class="count" id="count"></span>
+        </div>
+
+        <textarea id="out" spellcheck="false" data-en-label="The prompt this builder wrote" data-ar-label="البرومبت الذي كتبه هذا المنشئ" data-en-ph="Answer the fields on the left, then select “Build my prompt”." data-ar-ph="أجب عن الحقول على اليسار، ثم اختر «ابنِ برومبتي»." placeholder="Answer the fields on the left, then select “Build my prompt”."></textarea>
+
+        <p class="note" data-en="Red fields you have not filled in stay in the prompt as [[EDIT: … ]] so nothing is silently invented. Fill them in the AI conversation, or come back here." data-ar="الحقول الحمراء التي لم تملأها تبقى في البرومبت بصيغة [[تعديل: … ]] حتى لا يُختلق شيء في صمت. املأها في محادثة الذكاء الاصطناعي، أو ارجع إلى هنا.">Red fields you have not filled in stay in the prompt as [[EDIT: … ]] so nothing is silently invented. Fill them in the AI conversation, or come back here.</p>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="foot-in">
+    <p data-en="Session 5 · Creating educational presentations — AI Masterclass for Teachers, Level 1." data-ar="المحاضرة ٥ · إنشاء العروض التعليمية — الماستر كلاس للمعلمين بالذكاء الاصطناعي، المستوى الأول.">Session 5 · Creating educational presentations — AI Masterclass for Teachers, Level 1.</p>
+    <button class="btn btn-ghost" data-lang-toggle type="button" lang="ar">العربية</button>
+  </div>
+</footer>
+
+<dialog class="pop" id="pop">
+  <div class="pop-card">
+    <button class="pop-close" type="button" data-pop-close data-en-label="Close" data-ar-label="إغلاق" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p class="pop-eyebrow" id="pop-eyebrow"></p>
+    <h3 id="pop-name"></h3>
+    <p class="pop-tag" id="pop-tag"></p>
+    <dl class="sheet" id="pop-sheet"></dl>
+  </div>
+</dialog>
+
+<script>
+var DATA = {"tmpl": {"en": "# EDULIXA MASTER PROMPT — TURN MY LESSON PLAN INTO A PRESENTATION\n## Written for Gamma, and it works in ChatGPT or Gemini too\n\n> Teacher note: every `[[EDIT: ... ]]` field is meant to be changed before you send this. Everything else stays exactly as it is.\n\n---\n\n## R — ROLE\n\nAct as an expert educational presentation designer, instructional designer and educational storyteller. You build presentations a teacher can teach from, not slides that only look good. Your answer will be pasted straight into Gamma to become the finished deck, so it must be clean, complete and in the exact format asked for at the end.\n\n---\n\n## C — CONTEXT\n\n- Teacher: {{teacher}}\n- Subject: {{subject}}\n- Grade or stage: {{grade}}\n- Level or standard: {{standard}}\n- Lesson title: {{title}}\n- Who is in the room: {{audience}}\n- Lesson length: {{minutes}} minutes\n- Number of slides: {{slides}}\n- Language of the presentation: {{language}}\n- Tone: {{tone}}\n\n### Two files are attached to this message\n\n1. **My lesson plan — {{plan_file}}.** This is the spine of the presentation. The slides follow its stages, in its order, with its timings.\n2. **The book pages for this lesson — {{book_pages}}.** These are the only source of content: the vocabulary, the examples, the texts and the exercises come from these pages.\n\n### Source control — read this before you write anything\n\n- Follow my lesson plan **stage by stage**. Do not reorder it. Do not merge two stages into one slide. Do not add a stage that is not in it.\n- Take every fact, word, rule, example and exercise from the attached book pages. If a slide needs something that is not on those pages, write `[TEACHER TO ADD]` instead of inventing it.\n- Do not invent statistics, quotations, research findings, curriculum codes or page numbers.\n- Where my lesson plan gives a stage a time, put that time on the slide.\n- If my lesson plan and the book pages disagree, follow the lesson plan and say so at the end under **Questions for the teacher**.\n\n---\n\n## T — TASK\n\n### 1. Map the plan before you write a single slide\n\nProduce a mapping table first: one row for every stage of my lesson plan, the minutes it is given, and the slide numbers that carry it. Every stage must appear. Then check the total against the number of slides asked for above. If it does not fit, change how many slides a stage gets — never the order, and never by dropping a stage.\n\n### 2. The presentation must contain these stages\n\n{{activities}}\n\nDo not add an activity my lesson plan does not include.\n\n### 3. Every single slide carries all of this\n\n- **Title** — short, no more than eight words.\n- **Bullets** — three to five, one idea each, no more than twelve words each, sentence case, no full stop at the end.\n- **Speaker notes** — one or two sentences that say what I should actually say, ending with a sentence that leads into the next slide.\n- **Visual** — describe one specific visual. Never write \"add an image\". Say what it shows, who is in it and what the learner should look at. Choose from: photograph, educational illustration, diagram, timeline, flowchart, icon set, comparison table, map, infographic, chart, classroom scene.\n- **Layout** — one practical instruction: image left with text right, full-width visual with a text overlay, two-column comparison, one large central diagram, three cards, a timeline across the slide, or title on top with the activity panel below.\n- **Stage and time** — which stage of my lesson plan this slide belongs to, and its minutes.\n- **Activity block, on activity slides only** — the activity name, the instructions, the time, the materials, what the student produces, and the success criterion the student can check for themselves.\n\n### 4. Data and charts\n\nWhere the attached book pages contain numbers worth showing, name the chart type, say what it must show, and leave a placeholder. Bar charts for comparisons, line charts for change over time, pie or donut only for a simple proportion, timelines for sequences, flowcharts for processes, tables for exact values. Do not invent data.\n\n### 5. Design — rich, colourful, and still readable once it is a PDF\n\n- Colour palette: {{colours}}\n- Fonts: {{fonts}}\n- Logo: {{logo}}\n- Visual style: {{visual_style}}\n- Image style: {{image_style}}\n- Tables and frames: {{table_style}}\n\n**Build a small colour system and hold to it.** Give each stage of my lesson plan its own tint from the palette above, and use that one tint for that stage's panel fill, its heading rule, its section tab and its table header — so a learner can tell from the colour alone which part of the lesson they are in. List the colours you settled on at the end of the deck text, with a name for each, so I can rebuild them.\n\n**Contrast is not a matter of taste.** Dark ink on a pastel fill. Never white text on a pastel fill. Never text laid directly over a busy photograph — put it on a solid or lightly tinted panel first.\n\n**Whenever a table appears — and only use one when the content is genuinely tabular — frame it fully.** A border on every side of every cell, a filled header row in a deeper tint of that section's colour, alternating pastel rows beneath it, generous padding inside the cells, no more than five columns, and a one-line caption above the table saying what it shows. Never a borderless table, and never a table used only to line text up.\n\n**Panels, boxes and callouts get the same treatment:** a pastel fill, a full border on all four sides, and a rounded corner. An activity box, a definition box and a \"check yourself\" box should each be recognisable by colour before the learner reads a word of them.\n\n**It will be exported to PDF and printed, so:** solid fills rather than gradients, borders no thinner than one point, no pale text on a pale ground, and nothing that depends on a hover or an animation to be understood.\n\n{{arabic}}\n\n### 6. Accessibility, because it will be read from the back of the room\n\nStrong visual hierarchy, large readable type, high contrast, no crowded slides, and visuals that carry meaning rather than decorate. A long explanation belongs in the speaker notes, never on the slide. The deck must still read on a phone screen.\n\n### 7. Must include\n\n{{must}}\n\n### 8. Theory, in the speaker notes only\n\n{{thinkers}}\n\nWhere my lesson plan already does something one of these thinkers would recognise, add one short line in the **speaker notes** naming it and why the step works. Never on the slide itself, and never forced — if it does not fit, leave it out.\n\n---\n\n## F — FORMAT\n\nReturn plain Markdown, in exactly this order, and nothing else. No greeting, no explanation before it, no comment after it.\n\n```\n===MAP===\n| Lesson plan stage | Minutes | Slides |\n| --- | --- | --- |\n| ... | ... | ... |\n\n===OUTLINE===\n1. [Slide title — purpose in six words]\n2. [Slide title — purpose in six words]\n(continue until every slide is listed)\n\n===SLIDES===\n\n### Slide 1 — [Title]\n**Stage:** [stage of my lesson plan] · **Time:** [minutes]\n**Bullets:**\n- [bullet]\n- [bullet]\n- [bullet]\n**Speaker notes:** [one or two sentences, ending with the transition]\n**Visual:** [specific description]\n**Layout:** [layout instruction]\n**Activity:** [name · instructions · time · materials · student product · success criterion]\n\n(repeat the same structure for every slide)\n\n===QUESTIONS FOR THE TEACHER===\n- [anything a slide needed that was not on the attached pages]\n```\n\n---\n\n## BEFORE YOU ANSWER — check these silently, then fix what fails\n\n1. Every stage of my lesson plan appears in `===MAP===`, in its original order.\n2. The number of slides matches the number asked for above.\n3. The minutes across the slides add up to the lesson length above.\n4. One idea per slide, and no bullet longer than twelve words.\n5. Every slide has speaker notes and a described visual — no slide says \"add an image\".\n6. Nothing appears that is not on the attached book pages, and anything missing is marked `[TEACHER TO ADD]`.\n7. No invented data, quotations, research or curriculum codes.\n8. Guided practice comes before the individual task, and the individual task before the free practice.\n9. The final slide gives the class one clear next step: {{next_step}}\n\nNow build the presentation.\n", "ar": "# برومبت إيدوليكسا الرئيسي — حوِّل خطة درسك إلى عرض تقديمي\n## مكتوب من أجل Gamma، ويعمل كذلك في ChatGPT أو Gemini\n\n> ملاحظة للمعلم: كل حقل مكتوب فيه `[[تعديل: ... ]]` مخصص لتغييره قبل الإرسال. وكل ما عداه يبقى كما هو تمامًا.\n\n---\n\n## R — الدور\n\nتصرَّف بصفتك خبيرًا في تصميم العروض التعليمية، ومصممًا تعليميًا، وراويًا تربويًا بصريًا. أنت تبني عروضًا يستطيع المعلم أن يُدرِّس منها، لا شرائح جميلة الشكل فحسب. وسيُلصق جوابك مباشرة في Gamma ليصير العرض النهائي، فليكن نظيفًا كاملًا وبالصيغة المطلوبة في آخر هذا البرومبت بالضبط.\n\n---\n\n## C — السياق\n\n- المعلم: {{teacher}}\n- المادة: {{subject}}\n- الصف أو المرحلة: {{grade}}\n- المستوى أو المعيار: {{standard}}\n- عنوان الدرس: {{title}}\n- الحاضرون: {{audience}}\n- مدة الدرس: {{minutes}} دقيقة\n- عدد الشرائح: {{slides}}\n- لغة العرض: {{language}}\n- النبرة: {{tone}}\n\n### ملفان مرفقان بهذه الرسالة\n\n١. **خطة درسي — {{plan_file}}.** هي العمود الفقري للعرض. تتبع الشرائح مراحلها، بترتيبها، وبأوقاتها.\n٢. **صفحات الكتاب لهذا الدرس — {{book_pages}}.** هي المصدر الوحيد للمحتوى: المفردات والأمثلة والنصوص والتدريبات تأتي من هذه الصفحات.\n\n### ضبط المصادر — اقرأ هذا قبل أن تكتب أي شيء\n\n- اتبع خطة درسي **مرحلةً مرحلةً**. لا تُعِد ترتيبها، ولا تدمج مرحلتين في شريحة واحدة، ولا تضف مرحلة ليست فيها.\n- خُذ كل معلومة وكلمة وقاعدة ومثال وتدريب من صفحات الكتاب المرفقة. وإن احتاجت شريحة إلى شيء غير موجود في تلك الصفحات، فاكتب `[على المعلم إضافته]` ولا تختلقه.\n- لا تختلق إحصاءات ولا اقتباسات ولا نتائج بحوث ولا رموز مناهج ولا أرقام صفحات.\n- حيث تُحدِّد خطة درسي وقتًا لمرحلة، ضع ذلك الوقت على الشريحة.\n- وإن اختلفت خطة درسي مع صفحات الكتاب، فاتبع خطة الدرس واذكر ذلك في النهاية تحت **أسئلة إلى المعلم**.\n\n---\n\n## T — المهمة\n\n### ١. اربط الخطة بالشرائح قبل أن تكتب شريحة واحدة\n\nأنتج جدول ربط أولًا: سطر لكل مرحلة من خطة درسي، والدقائق المخصصة لها، وأرقام الشرائح التي تحملها. ويجب أن تظهر كل مرحلة. ثم تحقق من المجموع مقابل عدد الشرائح المطلوب أعلاه. وإن لم يتوافق، فغيِّر عدد الشرائح المخصص لكل مرحلة — لا الترتيب، ولا بحذف مرحلة.\n\n### ٢. يجب أن يحتوي العرض على هذه المراحل\n\n{{activities}}\n\nولا تضف نشاطًا لا تحتوي عليه خطة درسي.\n\n### ٣. كل شريحة تحمل كل ما يلي\n\n- **العنوان** — قصير، لا يزيد على ثماني كلمات.\n- **النقاط** — من ثلاث إلى خمس، فكرة واحدة لكل نقطة، ولا تزيد النقطة على اثنتي عشرة كلمة، ولا نقطة في نهايتها.\n- **ملاحظات المُقدِّم** — جملة أو جملتان تقولان ما ينبغي أن أقوله فعلًا، وتنتهيان بجملة تنقل إلى الشريحة التالية.\n- **العنصر البصري** — صِف عنصرًا بصريًا واحدًا محدَّدًا. ولا تكتب أبدًا «أضف صورة». قل ماذا تُظهر الصورة، ومن فيها، وإلى أي شيء ينظر المتعلم. واختر من: صورة فوتوغرافية، أو رسم تعليمي، أو مخطط، أو خط زمني، أو مخطط تدفُّق، أو مجموعة أيقونات، أو جدول مقارنة، أو خريطة، أو إنفوجرافيك، أو رسم بياني، أو مشهد صفّي.\n- **التخطيط** — تعليمة عملية واحدة: صورة يمينًا ونص شمالًا، أو عنصر بصري بعرض الشريحة والنص فوقه، أو مقارنة في عمودين، أو مخطط كبير في الوسط، أو ثلاث بطاقات، أو خط زمني بعرض الشريحة، أو عنوان أعلى ولوحة نشاط أسفل.\n- **المرحلة والوقت** — إلى أي مرحلة من خطة درسي تنتمي هذه الشريحة، وكم دقيقة لها.\n- **لوحة النشاط، في شرائح الأنشطة وحدها** — اسم النشاط، والتعليمات، والوقت، والمواد، وما يُنتجه الطالب، ومعيار النجاح الذي يستطيع الطالب أن يتحقق منه بنفسه.\n\n### ٤. البيانات والرسوم البيانية\n\nحيث تحتوي صفحات الكتاب المرفقة على أرقام تستحق العرض، حدِّد نوع الرسم البياني، وقل ماذا يجب أن يُظهر، واترك موضعًا له. الأعمدة للمقارنات، والخطوط للتغير عبر الزمن، والدائرة أو الحلقة لنسبة بسيطة فقط، والخط الزمني للتسلسل، ومخطط التدفُّق للعمليات، والجدول للقيم الدقيقة. ولا تختلق بيانات.\n\n### ٥. التصميم — غنيّ وملوّن، ويبقى مقروءًا حين يصير ملف PDF\n\n- لوحة الألوان: {{colours}}\n- الخطوط: {{fonts}}\n- الشعار: {{logo}}\n- الأسلوب البصري: {{visual_style}}\n- أسلوب الصور: {{image_style}}\n- الجداول والإطارات: {{table_style}}\n\n**ابنِ نظامًا لونيًّا صغيرًا والتزم به.** أعطِ كل مرحلة من خطة درسي درجةً خاصة بها من اللوحة أعلاه، واستخدم تلك الدرجة وحدها لتعبئة لوحة تلك المرحلة، ولخط عنوانها، وللسانها، ولرأس جدولها — حتى يعرف المتعلم من اللون وحده في أي جزء من الدرس هو. واذكر في آخر نص العرض الألوان التي استقررت عليها، ولكل واحد اسم، حتى أستطيع إعادة بنائها.\n\n**التباين ليس مسألة ذوق.** حبر غامق على تعبئة باستيلية. ولا نص أبيض على تعبئة باستيلية أبدًا. ولا نص فوق صورة مزدحمة مباشرة — بل ضعه أولًا على لوحة مصمتة أو خفيفة التلوين.\n\n**وكلما ظهر جدول — ولا تستخدم الجدول إلا إذا كان المحتوى جدوليًّا حقًّا — فأطِّره كاملًا.** حدٌّ على كل جانب من كل خلية، وصف رأس معبَّأ بدرجة أغمق من لون تلك المرحلة، وصفوف باستيلية متبادلة تحته، وحشو سخيّ داخل الخلايا، ولا أكثر من خمسة أعمدة، وسطر تعليق واحد فوق الجدول يقول ماذا يعرض. ولا جدول بلا حدود أبدًا، ولا جدول يُستعمل لمجرد محاذاة النص.\n\n**واللوحات والصناديق والتنبيهات تأخذ المعاملة نفسها:** تعبئة باستيلية، وحدٌّ كامل على الجوانب الأربعة، وزاوية مستديرة. فصندوق النشاط، وصندوق التعريف، وصندوق «تحقَّق بنفسك» ينبغي أن يُعرف كلٌّ منها بلونه قبل أن يقرأ المتعلم منه كلمة.\n\n**وسيُصدَّر إلى PDF ويُطبع، لذلك:** تعبئات مصمتة لا متدرِّجة، وحدود لا تقلّ عن نقطة واحدة، ولا نص فاتح على أرضية فاتحة، ولا شيء يتوقف فهمه على تمرير مؤشر أو حركة.\n\n{{arabic}}\n\n### ٦. سهولة القراءة، لأن العرض سيُقرأ من آخر الفصل\n\nتدرُّج بصري واضح، وخط كبير مقروء، وتباين عالٍ، ولا شرائح مزدحمة، وعناصر بصرية تحمل معنى لا تزيّن فقط. والشرح الطويل مكانه ملاحظات المُقدِّم، لا الشريحة. ويجب أن يبقى العرض مقروءًا على شاشة هاتف.\n\n### ٧. ما يجب أن يظهر\n\n{{must}}\n\n### ٨. النظرية، في ملاحظات المُقدِّم وحدها\n\n{{thinkers}}\n\nوحيث تفعل خطة درسي أصلًا شيئًا يعرفه أحد هؤلاء المفكرين، أضف سطرًا قصيرًا في **ملاحظات المُقدِّم** يسمّيه ويقول لماذا تنجح هذه الخطوة. ولا تضعه على الشريحة نفسها أبدًا، ولا تتكلَّفه — فإن لم يناسب، فاتركه.\n\n---\n\n## F — الصيغة\n\nأعِد النتيجة بصيغة Markdown عادية، بهذا الترتيب بالضبط، ولا شيء غيره. بلا تحية، وبلا شرح قبله، وبلا تعليق بعده.\n\n```\n===MAP===\n| مرحلة خطة الدرس | الدقائق | الشرائح |\n| --- | --- | --- |\n| ... | ... | ... |\n\n===OUTLINE===\n١. [عنوان الشريحة — الهدف في ست كلمات]\n٢. [عنوان الشريحة — الهدف في ست كلمات]\n(أكمل حتى تُدرِج كل الشرائح)\n\n===SLIDES===\n\n### الشريحة ١ — [العنوان]\n**المرحلة:** [مرحلة من خطة درسي] · **الوقت:** [الدقائق]\n**النقاط:**\n- [نقطة]\n- [نقطة]\n- [نقطة]\n**ملاحظات المُقدِّم:** [جملة أو جملتان تنتهيان بالانتقال]\n**العنصر البصري:** [وصف محدَّد]\n**التخطيط:** [تعليمة التخطيط]\n**النشاط:** [الاسم · التعليمات · الوقت · المواد · منتج الطالب · معيار النجاح]\n\n(أعِد البنية نفسها لكل شريحة)\n\n===QUESTIONS FOR THE TEACHER===\n- [أي شيء احتاجته شريحة ولم يكن في الصفحات المرفقة]\n```\n\n---\n\n## قبل أن تُجيب — تحقَّق من هذه بصمت، ثم أصلِح ما يفشل\n\n١. كل مرحلة من خطة درسي ظاهرة في `===MAP===`، بترتيبها الأصلي.\n٢. عدد الشرائح يطابق العدد المطلوب أعلاه.\n٣. مجموع الدقائق على الشرائح يساوي مدة الدرس المذكورة أعلاه.\n٤. فكرة واحدة في كل شريحة، ولا نقطة تزيد على اثنتي عشرة كلمة.\n٥. لكل شريحة ملاحظات مُقدِّم وعنصر بصري موصوف — ولا شريحة مكتوب فيها «أضف صورة».\n٦. لا يظهر شيء ليس في صفحات الكتاب المرفقة، وكل ناقص مكتوب أمامه `[على المعلم إضافته]`.\n٧. لا بيانات ولا اقتباسات ولا بحوث ولا رموز مناهج مختلقة.\n٨. التدريب الموجَّه قبل النشاط الفردي، والنشاط الفردي قبل التدريب الحر.\n٩. الشريحة الأخيرة تعطي الفصل خطوة تالية واحدة واضحة: {{next_step}}\n\nالآن ابنِ العرض التقديمي.\n"}, "labels": {"en": {"teacher": "Teacher name", "subject": "Subject", "grade": "Grade or stage", "standard": "Level or standard, or write “none”", "title": "Lesson title", "audience": "Who is in the room", "minutes": "Lesson length", "slides": "Number of slides", "language": "Language of the presentation", "tone": "Tone", "plan_file": "File name of the lesson plan you attached", "book_pages": "Book pages you attached — file names or page numbers", "must": "A fact, definition, word list or curriculum point that must appear — or “none”", "activities": "Keep only the stages your lesson plan actually contains", "colours": "Colour palette", "fonts": "Fonts", "logo": "Logo", "visual_style": "Visual style", "image_style": "Image style", "table_style": "Tables and frames", "thinkers": "Thinkers to reference in the speaker notes, or write “none”", "next_step": "The exact next step you want the class to take"}, "ar": {"teacher": "اسم المعلم", "subject": "المادة", "grade": "الصف أو المرحلة", "standard": "المستوى أو المعيار، أو اكتب «لا شيء»", "title": "عنوان الدرس", "audience": "من الحاضرون", "minutes": "مدة الدرس", "slides": "عدد الشرائح", "language": "لغة العرض", "tone": "النبرة", "plan_file": "اسم ملف خطة الدرس التي أرفقتها", "book_pages": "صفحات الكتاب التي أرفقتها — أسماء الملفات أو أرقام الصفحات", "must": "معلومة أو تعريف أو قائمة مفردات أو نقطة من المنهج يجب أن تظهر — أو «لا شيء»", "activities": "أبقِ المراحل الموجودة فعلًا في خطة درسك فقط", "colours": "لوحة الألوان", "fonts": "الخطوط", "logo": "الشعار", "visual_style": "الأسلوب البصري", "image_style": "أسلوب الصور", "table_style": "الجداول والإطارات", "thinkers": "المفكرون الذين تريد ذكرهم في ملاحظات المُقدِّم، أو اكتب «لا شيء»", "next_step": "الخطوة التالية التي تريد أن يتخذها الفصل بالضبط"}}, "stages": {"en": {"warmup": "a warm-up that activates what the class already knows", "objectives": "a learning-objectives slide written with the verbs of my lesson plan", "explain": "the explanation, broken into small pieces with an example before every rule", "guided": "guided practice done with me, including a worked example and the expected answers", "individual": "an individual task with clear instructions, a time and a success criterion", "group": "a group task with roles, a product and a time", "free": "free practice on a new example, not a copy of the guided one", "check": "a quick check of understanding tied to the objective", "homework": "homework that extends the lesson instead of repeating it", "exit": "a closing reflection or exit ticket"}, "ar": {"warmup": "تهيئة تُنشِّط ما يعرفه الفصل بالفعل", "objectives": "شريحة أهداف تعليمية مكتوبة بأفعال خطة درسي", "explain": "الشرح مقسَّمًا قطعًا صغيرة، ومثال قبل كل قاعدة", "guided": "تدريب موجَّه يُؤدّى معي، مع مثال محلول والإجابات المتوقعة", "individual": "نشاط فردي بتعليمات واضحة ووقت محدد ومعيار نجاح", "group": "نشاط جماعي بأدوار ومنتج ووقت محدد", "free": "تدريب حر على مثال جديد، لا نسخة من المثال الموجَّه", "check": "تحقُّق سريع من الفهم مرتبط بالهدف", "homework": "واجب منزلي يوسّع الدرس ولا يكرره", "exit": "تأمُّل ختامي أو بطاقة خروج"}}, "stageKeys": ["warmup", "objectives", "explain", "guided", "individual", "group", "free", "check", "homework", "exit"], "fields": ["teacher", "subject", "grade", "standard", "title", "audience", "minutes", "slides", "language", "tone", "plan_file", "book_pages", "must", "colours", "fonts", "logo", "visual_style", "image_style", "table_style", "next_step"], "selects": ["minutes", "slides", "language", "tone", "colours", "fonts", "logo", "visual_style", "image_style", "table_style"], "thinkers": {"vygotsky": {"en": "Lev Vygotsky", "ar": "ليف فيجوتسكي"}, "piaget": {"en": "Jean Piaget", "ar": "جان بياجيه"}, "bloom": {"en": "Benjamin Bloom", "ar": "بنيامين بلوم"}, "bandura": {"en": "Albert Bandura", "ar": "ألبرت باندورا"}, "krashen": {"en": "Stephen Krashen", "ar": "ستيفن كراشن"}, "goleman": {"en": "Daniel Goleman", "ar": "دانيال جولمان"}, "mayer": {"en": "Richard Mayer", "ar": "ريتشارد ماير"}, "sweller": {"en": "John Sweller", "ar": "جون سويلر"}}, "example": {"en": {"teacher": "Ms. Abir Wafa", "subject": "English", "grade": "Grade 6", "standard": "CEFR A2 · Cambridge Lower Secondary", "title": "Unit 4 — Every day, right now: present simple and present continuous", "audience": "28 students, ages 11–12, mixed ability, one data projector", "plan_file": "Unit4_LessonPlan.docx", "book_pages": "Student book pages 42–43 (two photographs)", "must": "The six signal words on page 43 must appear exactly as printed: every day, usually, always, now, at the moment, look.", "next_step": "Write five sentences about your own morning, using two signal words, and read one aloud tomorrow."}, "ar": {"teacher": "أ. عبير وفا", "subject": "اللغة الإنجليزية", "grade": "الصف السادس", "standard": "CEFR A2 · كامبريدج للمرحلة الإعدادية", "title": "الوحدة الرابعة — كل يوم، الآن: المضارع البسيط والمضارع المستمر", "audience": "٢٨ طالبًا، من ١١ إلى ١٢ سنة، قدرات متفاوتة، وجهاز عرض واحد", "plan_file": "خطة_درس_الوحدة٤.docx", "book_pages": "صفحتا ٤٢ و٤٣ من كتاب الطالب (صورتان)", "must": "المفردات الدالة الست في صفحة ٤٣ يجب أن تظهر كما هي مطبوعة: every day, usually, always, now, at the moment, look.", "next_step": "اكتب خمس جملات عن صباحك مستخدمًا مفردتين دالّتين، واقرأ واحدة منها بصوت عالٍ غدًا."}}, "exampleSel": {"minutes": 3, "slides": 2, "language": 0, "tone": 0, "colours": 0, "fonts": 0, "logo": 0, "visual_style": 0, "image_style": 0, "table_style": 0}, "route": {"gamma": {"en": "\n---\n\nI will paste your answer straight into Gamma using **Paste in text**, so return the deck text only — no greeting before it and no comment after it.", "ar": "\n---\n\nسألصق جوابك مباشرة في Gamma عبر **Paste in text**، فأعِد نص العرض وحده — بلا تحية قبله ولا تعليق بعده."}, "chatgpt": {"en": "\n---\n\nWhen the deck text is finished, create it in Gamma through the connected Gamma app, using the number of cards asked for above, and give me the link. Keep the full deck text in the chat as well, so I can check it against my lesson plan.", "ar": "\n---\n\nوحين يكتمل نص العرض، أنشئه في Gamma عبر تطبيق Gamma المتصل، بعدد الشرائح المطلوب أعلاه، وأعطني الرابط. وأبقِ نص العرض كاملًا في المحادثة أيضًا لأقارنه بخطة درسي."}, "gemini": {"en": "\n---\n\nWhen the deck text is finished, build it in Canvas as a presentation, then export it to Google Slides and tell me the file name. Keep the full deck text in the chat as well, so I can check it against my lesson plan.", "ar": "\n---\n\nوحين يكتمل نص العرض، ابنِه في Canvas عرضًا تقديميًا، ثم صدِّره إلى Google Slides وأخبرني باسم الملف. وأبقِ نص العرض كاملًا في المحادثة أيضًا لأقارنه بخطة درسي."}}, "arabic": {"firm": {"en": "**The presentation is in Arabic.** **This block replaces every other font, direction, numeral, layout and export instruction anywhere in this prompt. Where it disagrees with anything above, it wins.**\n\n### الخط العربي والتصدير — متطلبات إلزامية\n- استخدم خط Arial فقط في العرض كاملًا\n- استخدم Arial Bold لجميع العناوين\n- استخدم Arial Regular لجميع النصوص\n- طبِّق Arial على خط العناوين وخط النص داخل Theme\n- لا تستخدم Arial Abjadhaus أو Noto Sans Arabic\n- لا تستخدم خطوطًا زخرفية أو غير متوفرة في PowerPoint\n- لا تخلط بين أكثر من عائلة خطوط داخل العرض\n- اجعل اتجاه جميع النصوص العربية من اليمين إلى اليسار RTL\n- اجعل محاذاة النصوص والقوائم والجداول إلى اليمين\n- حافظ على اتصال الحروف العربية وترتيب الكلمات الصحيح\n- استخدم الأرقام العربية الهندية فقط:\n  ٠، ١، ٢، ٣، ٤، ٥، ٦، ٧، ٨، ٩\n- تجنب مزج الكلمات الإنجليزية والعربية في السطر نفسه\n- لا تستخدم تأثيرات أو تدرجات على النصوص العربية\n- لا تحوِّل المحتوى العربي إلى Timeline أو Smart Diagram\n- لا تستخدم مخططات Gamma الذكية للنصوص العربية\n- استخدم صناديق نص وبطاقات وجداول عادية فقط\n- تأكد من ظهور النص العربي متصلًا في PDF وPowerPoint\n- راجع شريحة تجريبية بعد التصدير قبل تصدير العرض كاملًا", "ar": "**العرض بالعربية.** **هذا القسم يحل مكان كل تعليمة أخرى في هذا البرومبت تتعلق بالخط أو الاتجاه أو الأرقام أو التخطيط أو التصدير. وحيث يخالف ما سبق، فهو الحاكم.**\n\n### الخط العربي والتصدير — متطلبات إلزامية\n- استخدم خط Arial فقط في العرض كاملًا\n- استخدم Arial Bold لجميع العناوين\n- استخدم Arial Regular لجميع النصوص\n- طبِّق Arial على خط العناوين وخط النص داخل Theme\n- لا تستخدم Arial Abjadhaus أو Noto Sans Arabic\n- لا تستخدم خطوطًا زخرفية أو غير متوفرة في PowerPoint\n- لا تخلط بين أكثر من عائلة خطوط داخل العرض\n- اجعل اتجاه جميع النصوص العربية من اليمين إلى اليسار RTL\n- اجعل محاذاة النصوص والقوائم والجداول إلى اليمين\n- حافظ على اتصال الحروف العربية وترتيب الكلمات الصحيح\n- استخدم الأرقام العربية الهندية فقط:\n  ٠، ١، ٢، ٣، ٤، ٥، ٦، ٧، ٨، ٩\n- تجنب مزج الكلمات الإنجليزية والعربية في السطر نفسه\n- لا تستخدم تأثيرات أو تدرجات على النصوص العربية\n- لا تحوِّل المحتوى العربي إلى Timeline أو Smart Diagram\n- لا تستخدم مخططات Gamma الذكية للنصوص العربية\n- استخدم صناديق نص وبطاقات وجداول عادية فقط\n- تأكد من ظهور النص العربي متصلًا في PDF وPowerPoint\n- راجع شريحة تجريبية بعد التصدير قبل تصدير العرض كاملًا"}, "none": {"en": "The presentation is in English, so no right-to-left typesetting is needed. Set the text left to right and save everything as UTF-8.", "ar": "العرض بالإنجليزية، فلا حاجة إلى ضبط من اليمين إلى اليسار. اجعل النص من اليسار إلى اليمين، واحفظ كل شيء بترميز UTF-8."}}, "arabicOpts": ["o1", "o2"], "editWord": {"en": "EDIT", "ar": "تعديل"}, "noThinkers": {"en": "Do not reference named thinkers.", "ar": "لا تذكر مفكرين بأسمائهم."}, "someThinkers": {"en": "Reference these thinkers where the lesson plan already earns it: ", "ar": "اذكر هؤلاء المفكرين حيث تستحق خطة الدرس ذلك: "}, "none": {"en": "none", "ar": "لا شيء"}, "sheets": {"vygotsky": {"en": {"name": "Lev Vygotsky", "years": "1896–1934", "tag": "Learning happens with help before it happens alone", "rows": [["Who he was", "A Soviet psychologist who died at 37 and whose work only reached the West in the 1960s. He studied how children think when an adult or a stronger classmate is beside them."], ["The core idea", "The zone of proximal development: the distance between what a learner can do alone and what the same learner can do with support. Teaching aims at that gap, not below it and not far above it. Support is temporary and is withdrawn as the learner takes over — what later writers called scaffolding."], ["In the classroom", "Model it, then do it together, then let them do it alone. Talk comes before writing: pair discussion is not a break from the lesson, it is where the thinking is built."], ["On your slides", "Guided practice must have its own slide, and it must come before the individual task. Put the worked example on the slide, not in your head. A group slide needs roles and a product, or the talk has nothing to build."]]}, "ar": {"name": "ليف فيجوتسكي", "years": "1896–1934", "tag": "التعلُّم يحدث بمساعدة قبل أن يحدث وحده", "rows": [["من هو", "عالم نفس سوفييتي مات في السابعة والثلاثين، ولم يصل عمله إلى الغرب إلا في الستينيات. درس كيف يفكّر الطفل حين يجلس إلى جانبه بالغ أو زميل أقوى منه."], ["الفكرة الأساسية", "منطقة النمو القريبة: المسافة بين ما يستطيع المتعلم أداءه وحده وما يستطيع أداءه نفسه بمساعدة. والتدريس يستهدف هذه المسافة، لا ما دونها ولا ما يعلوها كثيرًا. والمساعدة مؤقتة تُرفع تدريجيًا حين يتولى المتعلم الأمر — وهو ما سمّاه اللاحقون «السقالات»."], ["في الفصل", "اعرض المثال، ثم أدِّه معهم، ثم اتركهم يؤدونه وحدهم. والكلام يأتي قبل الكتابة: فحوار الزميلين ليس فاصلًا في الدرس، بل هو المكان الذي يُبنى فيه التفكير."], ["في شرائحك", "التدريب الموجَّه يحتاج شريحة خاصة به، وموضعها قبل النشاط الفردي. وضع المثال المحلول على الشريحة، لا في رأسك. وشريحة العمل الجماعي تحتاج أدوارًا ومنتجًا، وإلا فلن يبني الكلام شيئًا."]]}}, "piaget": {"en": {"name": "Jean Piaget", "years": "1896–1980", "tag": "The example has to arrive before the rule", "rows": [["Who he was", "A Swiss psychologist who spent decades watching children reason — including his own three — and asking them why they answered as they did."], ["The core idea", "Children are not small adults; they build knowledge in stages, fitting new experience into what they already have and reshaping their thinking when it will not fit. The mismatch is what drives learning. Most primary and lower-secondary learners reason from concrete cases before they can reason from abstract rules."], ["In the classroom", "Give the concrete case first and let the rule be discovered from it. A definition handed over before any example is a sentence to memorise, not an idea to use."], ["On your slides", "Order the explanation slides example → pattern → rule, never rule → example. One new idea per slide. For a class of eleven-year-olds a labelled diagram will do more work than a definition."]]}, "ar": {"name": "جان بياجيه", "years": "1896–1980", "tag": "المثال يجب أن يأتي قبل القاعدة", "rows": [["من هو", "عالم نفس سويسري أمضى عقودًا يراقب تفكير الأطفال — ومن بينهم أبناؤه الثلاثة — ويسألهم لماذا أجابوا بما أجابوا."], ["الفكرة الأساسية", "الأطفال ليسوا بالغين صغارًا؛ إنهم يبنون المعرفة على مراحل، فيُدخلون الخبرة الجديدة في ما لديهم، ويعيدون تشكيل تفكيرهم حين لا تدخل. وعدم التوافق هذا هو ما يدفع التعلُّم. ومعظم متعلمي المرحلتين الابتدائية والإعدادية يستدلّون من حالات محسوسة قبل أن يستدلّوا من قواعد مجرَّدة."], ["في الفصل", "أعطِ الحالة المحسوسة أولًا واترك القاعدة تُكتشف منها. فالتعريف الذي يُسلَّم قبل أي مثال جملةٌ تُحفظ، لا فكرةٌ تُستعمل."], ["في شرائحك", "رتِّب شرائح الشرح: مثال ← نمط ← قاعدة، لا قاعدة ← مثال. وفكرة جديدة واحدة في كل شريحة. ولفصل من أبناء الحادية عشرة، يؤدي المخطط المُعنوَن عملًا أكبر من التعريف."]]}}, "bloom": {"en": {"name": "Benjamin Bloom", "years": "1913–1999", "tag": "The verb in your objective decides the task", "rows": [["Who he was", "An American educational psychologist who chaired the committee that classified educational objectives in 1956, and who later argued that almost all learners can reach mastery if they are given the time and the feedback."], ["The core idea", "Thinking tasks are not all the same size. Remember, understand, apply, analyse, evaluate, create — in the 2001 revision by Anderson and Krathwohl. An objective that says “understand” cannot be assessed by a task that only asks the class to remember."], ["In the classroom", "Write the objective with the verb you will actually assess, then build the task from that verb. Ladder your questions upward instead of asking eight questions from the same level."], ["On your slides", "The objectives slide should carry the same verbs as your lesson plan, word for word. On the check-for-understanding slide, put the questions in rising order so the class can feel the climb."]]}, "ar": {"name": "بنيامين بلوم", "years": "1913–1999", "tag": "الفعل في هدفك هو ما يحدد المهمة", "rows": [["من هو", "عالم نفس تربوي أمريكي رأس اللجنة التي صنَّفت الأهداف التعليمية سنة ١٩٥٦، ثم رأى بعد ذلك أن جميع المتعلمين تقريبًا يستطيعون بلوغ التمكُّن إن أُعطوا الوقت والتغذية الراجعة."], ["الفكرة الأساسية", "مهام التفكير ليست كلها بحجم واحد: تذكُّر، وفهم، وتطبيق، وتحليل، وتقويم، وإنشاء — في مراجعة أندرسون وكراثوول سنة ٢٠٠١. والهدف الذي يقول «يفهم» لا يمكن قياسه بمهمة تطلب من الفصل أن يتذكّر فحسب."], ["في الفصل", "اكتب الهدف بالفعل الذي ستقيسه فعلًا، ثم ابنِ المهمة من ذلك الفعل. واصعد بأسئلتك درجةً درجةً بدلًا من ثمانية أسئلة من المستوى نفسه."], ["في شرائحك", "شريحة الأهداف تحمل الأفعال نفسها الموجودة في خطة درسك، حرفًا بحرف. وفي شريحة التحقُّق من الفهم، رتِّب الأسئلة تصاعديًا حتى يشعر الفصل بالارتفاع."]]}}, "bandura": {"en": {"name": "Albert Bandura", "years": "1925–2021", "tag": "They copy what they watch, then believe they can do it", "rows": [["Who he was", "A Canadian-American psychologist at Stanford, best known for the Bobo doll experiments and for later putting the learner's own belief in their ability at the centre of his theory."], ["The core idea", "Much learning happens by watching someone else do it and seeing what follows — no direct reward to the learner required. And self-efficacy, the learner's judgement of whether they can succeed, predicts how long they will persist when the work gets hard."], ["In the classroom", "Demonstrate before you instruct. Let the class watch a classmate at their own level succeed, not only the teacher — a peer model is more convincing than an expert one. Break the skill into steps small enough to be finished."], ["On your slides", "Add a worked-example slide the class watches before they try. Give every activity a success criterion written so a student can check it themselves — that is what turns finishing into confidence."]]}, "ar": {"name": "ألبرت باندورا", "years": "1925–2021", "tag": "يقلّدون ما يشاهدونه، ثم يصدّقون أنهم قادرون", "rows": [["من هو", "عالم نفس كندي أمريكي في جامعة ستانفورد، أشهر ما عُرف به تجارب دمية بوبو، ثم وضع بعد ذلك إيمان المتعلم بقدرته في قلب نظريته."], ["الفكرة الأساسية", "كثير من التعلُّم يحدث بمشاهدة غيرك يؤديه ورؤية ما يترتب على ذلك — دون حاجة إلى مكافأة مباشرة للمتعلم. ثم إن الكفاءة الذاتية، أي حكم المتعلم على قدرته على النجاح، تتنبأ بمدة صبره حين يصعب العمل."], ["في الفصل", "اعرض قبل أن تشرح. واترك الفصل يرى زميلًا في مستواه ينجح، لا المعلم وحده — فالقدوة من الأقران أكثر إقناعًا من قدوة الخبير. وقسِّم المهارة خطوات صغيرة يمكن إتمامها."], ["في شرائحك", "أضف شريحة مثال محلول يشاهدها الفصل قبل أن يحاول. وأعطِ كل نشاط معيار نجاح مكتوبًا بحيث يستطيع الطالب أن يتحقق منه بنفسه — فهذا ما يحوّل الإنجاز إلى ثقة."]]}}, "krashen": {"en": {"name": "Stephen Krashen", "years": "b. 1941", "tag": "Understandable language, just above where they are", "rows": [["Who he was", "An American linguist at the University of Southern California whose account of second-language acquisition has shaped language teaching since the 1980s, and is still argued about."], ["The core idea", "Language is acquired by understanding messages slightly beyond the learner's current level — what he wrote as i+1 — not by studying rules about it. And anxiety works like a filter: a learner who is afraid of being wrong stops taking the language in."], ["In the classroom", "Fill the lesson with language they can almost understand, and let meaning come before form. Lower the stakes early so the quiet ones will speak."], ["On your slides", "Pitch the slide language a little above the class, and let the picture carry the meaning so the text can stay short. Do not open on a grammar rule — open on something they can understand and want to answer."]]}, "ar": {"name": "ستيفن كراشن", "years": "b. 1941", "tag": "لغة مفهومة، أعلى قليلًا من مستواهم", "rows": [["من هو", "لغوي أمريكي في جامعة جنوب كاليفورنيا، صاغ تصورًا لاكتساب اللغة الثانية شكَّل تعليم اللغات منذ الثمانينيات، ولا يزال محل نقاش."], ["الفكرة الأساسية", "تُكتسَب اللغة بفهم رسائل أعلى قليلًا من مستوى المتعلم الحالي — وهو ما كتبه i+1 — لا بدراسة القواعد عنها. والقلق يعمل كالمِصفاة: فالمتعلم الذي يخاف الخطأ يتوقف عن استقبال اللغة."], ["في الفصل", "املأ الدرس بلغة يكادون يفهمونها، واجعل المعنى قبل الشكل. واخفض المخاطرة مبكرًا حتى يتكلم الصامتون."], ["في شرائحك", "اجعل لغة الشريحة أعلى قليلًا من مستوى الفصل، واترك الصورة تحمل المعنى حتى يبقى النص قصيرًا. ولا تبدأ بقاعدة نحوية — بل بشيء يفهمونه ويريدون الإجابة عنه."]]}}, "goleman": {"en": {"name": "Daniel Goleman", "years": "b. 1946", "tag": "A class that feels safe is a class that answers", "rows": [["Who he was", "An American psychologist and science journalist whose 1995 book put emotional intelligence into ordinary language and into school policy."], ["The core idea", "Recognising and handling emotion — your own and other people's — is a set of learnable skills, not a fixed trait: self-awareness, self-regulation, motivation, empathy and social skill. It draws on Salovey and Mayer's earlier research, and the strong claims about it are still debated."], ["In the classroom", "Name feelings out loud, teach turn-taking as a skill, and make being wrong survivable. Thirty seconds of settling at the start buys more than it costs."], ["On your slides", "Let the opening slide lower the stakes rather than test them. On a group slide, write down how to disagree, not only what to produce. End with a reflection slide the class answers for itself."]]}, "ar": {"name": "دانيال جولمان", "years": "b. 1946", "tag": "الفصل الذي يشعر بالأمان فصلٌ يجيب", "rows": [["من هو", "عالم نفس وصحفي علمي أمريكي، أدخل كتابه سنة ١٩٩٥ «الذكاء العاطفي» إلى اللغة العادية وإلى سياسات المدارس."], ["الفكرة الأساسية", "التعرُّف على الانفعال والتعامل معه — انفعالك وانفعال الآخرين — مجموعة مهارات تُتعلَّم، لا سمة ثابتة: الوعي بالذات، وتنظيم الذات، والدافعية، والتعاطف، والمهارة الاجتماعية. وهي تستند إلى بحوث سالوفي وماير الأسبق، ولا تزال الدعاوى الكبيرة حولها محل نقاش."], ["في الفصل", "سمِّ الانفعالات بصوت مسموع، وعلِّم تبادل الأدوار مهارةً، واجعل الخطأ محتملًا. فثلاثون ثانية من التهيئة في البداية تُكسبك أكثر مما تكلّفك."], ["في شرائحك", "اجعل شريحة البداية تخفض المخاطرة لا تختبرهم. وفي شريحة العمل الجماعي، اكتب كيف يختلفون، لا ما يُنتجونه فقط. واختم بشريحة تأمُّل يجيب عنها الفصل لنفسه."]]}}, "mayer": {"en": {"name": "Richard Mayer", "years": "b. 1947", "tag": "The research that is actually about slides", "rows": [["Who he was", "An American educational psychologist at UC Santa Barbara who has spent thirty years running experiments on how people learn from words and pictures together. If you present anything on a screen, this is your evidence base."], ["The core idea", "The cognitive theory of multimedia learning: people learn better from words and pictures together than from words alone — but only when the extra material is removed, the label sits next to the part it names, and the same words are not delivered twice at once. Reading your own bullet points aloud makes learning worse, not better."], ["In the classroom", "Say more than the screen says. The screen is the caption; your voice is the explanation. Cut the decorative photograph, the background music and the animation that means nothing."], ["On your slides", "Never write a sentence you intend to read out. Put each label on the diagram beside the thing it names, not in a legend underneath. Every image must do a job — if you cannot say what it teaches, delete it."]]}, "ar": {"name": "ريتشارد ماير", "years": "b. 1947", "tag": "البحث الذي يتناول الشرائح فعلًا", "rows": [["من هو", "عالم نفس تربوي أمريكي في جامعة كاليفورنيا سانتا باربرا، أمضى ثلاثين سنة يجري تجارب على كيفية تعلُّم الناس من الكلمات والصور معًا. وإن كنت تعرض أي شيء على شاشة، فهذا هو أساسك العلمي."], ["الفكرة الأساسية", "نظرية التعلُّم متعدد الوسائط: يتعلم الناس من الكلمات والصور معًا أفضل من الكلمات وحدها — لكن بشرط حذف الزائد، ووضع التسمية إلى جانب الجزء الذي تسمّيه، وعدم تقديم الكلام نفسه مرتين في وقت واحد. وقراءة نقاطك بصوت عالٍ تُسيء إلى التعلُّم ولا تحسّنه."], ["في الفصل", "قل أكثر مما تقوله الشاشة. فالشاشة هي التعليق، وصوتك هو الشرح. واحذف الصورة الزخرفية، والموسيقى الخلفية، والحركة التي لا تعني شيئًا."], ["في شرائحك", "لا تكتب جملة تنوي قراءتها. وضع كل تسمية على المخطط إلى جانب ما تسمّيه، لا في مفتاح أسفله. وكل صورة تؤدي عملًا — فإن لم تستطع أن تقول ماذا تُعلِّم، فاحذفها."]]}}, "sweller": {"en": {"name": "John Sweller", "years": "b. 1946", "tag": "Working memory is small; one idea per slide", "rows": [["Who he was", "An Australian educational psychologist at the University of New South Wales who built cognitive load theory out of experiments on problem solving in the 1980s."], ["The core idea", "Working memory holds only a few new items at a time. Some of the load is the material itself and cannot be removed; the rest comes from how it is presented, and that part is your responsibility. Splitting a learner's attention between a diagram and a paragraph somewhere else costs them the lesson."], ["In the classroom", "Give beginners the worked example before the practice, not the practice first. As they get better, take the support away — the same help that carried a beginner slows an expert down."], ["On your slides", "One idea per slide, and split a heavy slide into two rather than shrinking the type. Keep a diagram and its labels on the same slide. Three to five short bullets, because a sixth one is not read."]]}, "ar": {"name": "جون سويلر", "years": "b. 1946", "tag": "الذاكرة العاملة صغيرة؛ فكرة واحدة لكل شريحة", "rows": [["من هو", "عالم نفس تربوي أسترالي في جامعة نيو ساوث ويلز، بنى نظرية الحمل المعرفي من تجارب على حل المشكلات في الثمانينيات."], ["الفكرة الأساسية", "الذاكرة العاملة لا تحتفظ إلا بعناصر جديدة قليلة في الوقت الواحد. وبعض الحمل من المادة نفسها ولا يمكن إزالته، وأما الباقي فمن طريقة العرض، وهذا الجزء مسؤوليتك. وتشتيت انتباه المتعلم بين مخطط وفقرة في مكان آخر يُفقده الدرس."], ["في الفصل", "أعطِ المبتدئين المثال المحلول قبل التدريب، لا التدريب أولًا. وحين يتحسّنون، اسحب المساعدة — فالمساعدة نفسها التي حملت المبتدئ تُبطئ المتقن."], ["في شرائحك", "فكرة واحدة في كل شريحة، وقسِّم الشريحة الثقيلة شريحتين بدلًا من تصغير الخط. وأبقِ المخطط وتسمياته في الشريحة نفسها. ومن ثلاث إلى خمس نقاط قصيرة، فالسادسة لا تُقرأ."]]}}}};
+(function(){
+  'use strict';
+  var KEY = 'edulixa-l1-lang';
+  function current(){ try{ return localStorage.getItem(KEY)==='ar'?'ar':'en'; }catch(e){ return 'en'; } }
+
+  function apply(lang){
+    var isAr = lang==='ar';
+    var root = document.documentElement;
+    root.setAttribute('lang', isAr?'ar':'en');
+    root.setAttribute('dir', isAr?'rtl':'ltr');
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      var v = isAr?el.getAttribute('data-ar'):el.getAttribute('data-en');
+      if(v!==null) el.textContent = v;
+    });
+    document.querySelectorAll('[data-en-ph]').forEach(function(el){
+      var v = isAr?el.getAttribute('data-ar-ph'):el.getAttribute('data-en-ph');
+      if(v!==null) el.setAttribute('placeholder', v);
+    });
+    document.querySelectorAll('[data-en-label]').forEach(function(el){
+      var v = isAr?el.getAttribute('data-ar-label'):el.getAttribute('data-en-label');
+      if(v!==null) el.setAttribute('aria-label', v);
+    });
+    var t = document.querySelector('title');
+    if(t && t.getAttribute('data-ar')) document.title = isAr?t.getAttribute('data-ar'):t.getAttribute('data-en');
+    document.querySelectorAll('[data-lang-toggle]').forEach(function(b){
+      b.textContent = isAr?'English':'العربية';
+      b.setAttribute('aria-label', isAr?'Switch to English':'التبديل إلى العربية');
+      b.setAttribute('lang', isAr?'en':'ar');
+    });
+    var pop = document.getElementById('pop');
+    if(pop && pop.open) pop.close();
+    try{ localStorage.setItem(KEY, lang); }catch(e){}
+    var out = document.getElementById('out');
+    out.classList.toggle('is-ar', isAr);
+    if(out.value.trim()) build();
+    paintCount();
+  }
+
+  /* ---------- building the prompt ---------- */
+  function lang(){ return document.documentElement.getAttribute('dir')==='rtl'?'ar':'en'; }
+  function editField(id, L){
+    return '[[' + DATA.editWord[L] + ': ' + DATA.labels[L][id] + ']]';
+  }
+  function val(id){
+    var el = document.getElementById('f-'+id);
+    if(!el) return '';
+    if(el.tagName === 'SELECT'){
+      var o = el.options[el.selectedIndex];
+      if(!o || !o.value) return '';
+      if(o.value === '__other__'){
+        var t = document.getElementById('o-'+id);
+        return t ? t.value.trim() : '';
+      }
+      return (lang()==='ar' ? o.getAttribute('data-var') : o.getAttribute('data-ven')) || '';
+    }
+    return el.value.trim();
+  }
+
+  /* A menu whose last row is "Other" reveals a text box for the teacher's own words */
+  function syncOther(sel){
+    var box = document.getElementById(sel.getAttribute('data-other'));
+    if(!box) return;
+    var o = sel.options[sel.selectedIndex];
+    box.hidden = !(o && o.value === '__other__');
+  }
+  document.querySelectorAll('select[data-other]').forEach(function(sel){
+    sel.addEventListener('change', function(){
+      syncOther(sel);
+      if(document.getElementById('out').value.trim()) build();
+    });
+    syncOther(sel);
+  });
+  function tickedStages(){
+    return DATA.stageKeys.filter(function(k){
+      var el = document.getElementById('st-'+k);
+      return el && el.checked;
+    });
+  }
+  function tickedThinkers(){
+    return Object.keys(DATA.thinkers).filter(function(k){
+      var el = document.getElementById('th-'+k);
+      return el && el.checked;
+    });
+  }
+  function missing(){
+    var L = lang(), n = 0;
+    DATA.fields.forEach(function(id){ if(!val(id)) n++; });
+    return n;
+  }
+  function paintCount(){
+    var L = lang(), n = missing(), el = document.getElementById('count');
+    var total = DATA.fields.length;
+    if(!document.getElementById('out').value.trim()){ el.textContent = ''; el.classList.remove('is-clear'); return; }
+    if(n===0){
+      el.textContent = L==='ar' ? 'كل الحقول ممتلئة' : 'Every field is filled in';
+      el.classList.add('is-clear');
+    }else{
+      el.textContent = L==='ar'
+        ? ('بقي ' + n + ' من ' + total + ' حقلًا أحمر')
+        : (n + ' of ' + total + ' fields still red');
+      el.classList.remove('is-clear');
+    }
+  }
+
+  /* The Arabic typesetting block is not a field the teacher fills in — it is
+     decided by the language menu, so choosing Arabic can never be separated from
+     the right-to-left, UTF-8, Arial-bold rules that make Arabic slides legible. */
+  function isArabicDeck(){
+    var sel = document.getElementById('f-language');
+    if(!sel) return false;
+    var o = sel.options[sel.selectedIndex];
+    if(!o) return false;
+    if(DATA.arabicOpts.indexOf(o.value) !== -1) return true;
+    if(o.value === '__other__'){
+      var t = document.getElementById('o-language');
+      var v = t ? t.value.toLowerCase() : '';
+      return /arab|عرب/.test(v);
+    }
+    return false;
+  }
+
+  function build(){
+    var L = lang();
+    var txt = DATA.tmpl[L];
+    txt = txt.replace(/\{\{(\w+)\}\}/g, function(_, id){
+      if(id==='activities'){
+        var keys = tickedStages();
+        if(!keys.length) return editField('activities', L);
+        return keys.map(function(k){ return '- ' + DATA.stages[L][k]; }).join('\n');
+      }
+      if(id==='arabic'){
+        return DATA.arabic[isArabicDeck() ? 'firm' : 'none'][L];
+      }
+      if(id==='thinkers'){
+        var t = tickedThinkers();
+        if(!t.length) return DATA.noThinkers[L];
+        return DATA.someThinkers[L] + t.map(function(k){ return DATA.thinkers[k][L]; }).join(' · ') + '.';
+      }
+      var v = val(id);
+      return v ? v : editField(id, L);
+    });
+    var r = document.querySelector('input[name=route]:checked');
+    txt += DATA.route[r ? r.value : 'gamma'][L];
+    var outEl = document.getElementById('out');
+    outEl.value = txt;
+    /* An English prompt that now carries an Arabic block needs a font that can
+       draw Arabic — the mono face renders it as disconnected boxes. */
+    outEl.classList.toggle('has-ar', /[؀-ۿ]/.test(txt));
+    paintCount();
+  }
+
+  document.getElementById('build').addEventListener('click', build);
+
+  var langOther = document.getElementById('o-language');
+  if(langOther){
+    langOther.addEventListener('input', function(){
+      if(document.getElementById('out').value.trim()) build();
+    });
+  }
+
+  document.getElementById('example').addEventListener('click', function(){
+    var L = lang();
+    Object.keys(DATA.example[L]).forEach(function(id){
+      var el = document.getElementById('f-'+id);
+      if(el) el.value = DATA.example[L][id] || '';
+    });
+    Object.keys(DATA.exampleSel).forEach(function(id){
+      var sel = document.getElementById('f-'+id);
+      if(sel){ sel.selectedIndex = DATA.exampleSel[id] + 1; syncOther(sel); }
+    });
+    DATA.stageKeys.forEach(function(k){
+      var el = document.getElementById('st-'+k); if(el) el.checked = true;
+    });
+    ['vygotsky','mayer','sweller'].forEach(function(k){
+      var el = document.getElementById('th-'+k); if(el) el.checked = true;
+    });
+    build();
+  });
+
+  document.getElementById('clear').addEventListener('click', function(){
+    DATA.fields.forEach(function(id){
+      var el = document.getElementById('f-'+id);
+      if(!el) return;
+      if(el.tagName === 'SELECT'){ el.selectedIndex = 0; syncOther(el); }
+      else { el.value = ''; }
+      var other = document.getElementById('o-'+id);
+      if(other){ other.value = ''; other.hidden = true; }
+    });
+    Object.keys(DATA.thinkers).forEach(function(k){
+      var el = document.getElementById('th-'+k); if(el) el.checked = false;
+    });
+    DATA.stageKeys.forEach(function(k){
+      var el = document.getElementById('st-'+k); if(el) el.checked = true;
+    });
+    document.getElementById('out').value = '';
+    paintCount();
+  });
+
+  document.querySelectorAll('input[name=route]').forEach(function(r){
+    r.addEventListener('change', function(){
+      if(document.getElementById('out').value.trim()) build();
+    });
+  });
+
+  /* ---------- copy and save ---------- */
+  function copyText(text, done){
+    var legacy = function(){
+      var ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly','');
+      ta.style.cssText = 'position:fixed;top:-1000px;left:0;opacity:0';
+      document.body.appendChild(ta); ta.select();
+      try{ document.execCommand('copy'); }catch(e){}
+      document.body.removeChild(ta); done();
+    };
+    if(navigator.clipboard && window.isSecureContext){
+      navigator.clipboard.writeText(text).then(done, legacy);
+    } else { legacy(); }
+  }
+  document.getElementById('copy').addEventListener('click', function(){
+    var out = document.getElementById('out');
+    if(!out.value.trim()) build();
+    if(!out.value.trim()) return;
+    copyText(out.value, function(){
+      var n = document.getElementById('copied');
+      n.textContent = lang()==='ar' ? '✓ تم النسخ' : '✓ Copied';
+      setTimeout(function(){ n.textContent=''; }, 2400);
+    });
+  });
+  document.getElementById('save').addEventListener('click', function(){
+    var out = document.getElementById('out');
+    if(!out.value.trim()) build();
+    if(!out.value.trim()) return;
+    var blob = new Blob([out.value], {type:'text/markdown;charset=utf-8'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = lang()==='ar' ? 'برومبت_العرض_التقديمي.md' : 'Presentation_Prompt.md';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 4000);
+  });
+
+  /* ---------- thinker cheat sheets ---------- */
+  var pop = document.getElementById('pop');
+  var lastOpener = null;
+  document.querySelectorAll('.tname').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var key = btn.getAttribute('data-sheet');
+      var L = lang();
+      var s = DATA.sheets[key][L];
+      document.getElementById('pop-eyebrow').textContent =
+        (L==='ar' ? 'بطاقة تعريف · ' : 'Cheat sheet · ') + DATA.sheets[key].en.years;
+      document.getElementById('pop-name').textContent = s.name;
+      document.getElementById('pop-tag').textContent = s.tag;
+      var dl = document.getElementById('pop-sheet');
+      dl.innerHTML = '';
+      s.rows.forEach(function(row){
+        var dt = document.createElement('dt'); dt.textContent = row[0];
+        var dd = document.createElement('dd'); dd.textContent = row[1];
+        dl.appendChild(dt); dl.appendChild(dd);
+      });
+      btn.classList.add('is-seen');
+      lastOpener = btn;
+      if(typeof pop.showModal === 'function') pop.showModal(); else pop.setAttribute('open','');
+    });
+  });
+  pop.querySelectorAll('[data-pop-close]').forEach(function(b){
+    b.addEventListener('click', function(){ pop.close(); });
+  });
+  pop.addEventListener('click', function(e){ if(e.target===pop) pop.close(); });
+  pop.addEventListener('close', function(){ if(lastOpener){ lastOpener.focus(); lastOpener=null; } });
+
+  document.querySelectorAll('[data-lang-toggle]').forEach(function(b){
+    b.addEventListener('click', function(){ apply(current()==='ar'?'en':'ar'); });
+  });
+
+  apply(current());
+})();
+</script>
+</body>
+</html>
